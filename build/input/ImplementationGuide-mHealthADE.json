@@ -1,0 +1,117 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mHealthADE",
+  "url": "http://hl7.org/fhir/mHealth-ADE/ImplementationGuide/mHealthADE",
+  "version": "0.1.0",
+  "name": "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth",
+  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "status": "active",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Mobile Health Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/MH/Mobile+Health"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "asdf",
+  "packageId": "mHealthADE",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/mhealth-ade-device"
+        },
+        "name": "mHealth ADE Device profile",
+        "description": "Defines constraints on the Device Resource for data communicating about the source of device data.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mhealth-ade-observation"
+        },
+        "name": "mHealth ADE Observation profile",
+        "description": "Defines constraints and extensions on the Observation Resource for data communicated from devices",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "appendices.html",
+          "title": "Appendices",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "conformance.html",
+          "title": "Conformance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "functionalrequirements.html",
+          "title": "Functionalrequirements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "resourceprofiles.html",
+          "title": "Resourceprofiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases.html",
+          "title": "Usecases",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usingthisguide.html",
+          "title": "Usingthisguide",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

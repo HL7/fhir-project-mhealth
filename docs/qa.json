@@ -1,0 +1,12 @@
+{
+  "url": "http://hl7.org/fhir/mHealth-ADE/ImplementationGuide/mHealthADE",
+  "name": "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth",
+  "package-id": "mHealthADE",
+  "ig-ver": "0.1.0",
+  "date": "Mon, 17 Feb, 2020 15:33:47 -0500",
+  "errs": 0,
+  "warnings": 6,
+  "hints": 0,
+  "version": "4.0.1",
+  "tool": "4.2.0 (3)"
+}
