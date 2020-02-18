@@ -11,7 +11,7 @@
   <name value="ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth"/>
   <title value="Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health"/>
   <status value="active"/>
-  <date value="2020-02-17T15:33:47-05:00"/>
+  <date value="2020-02-18T01:53:19-05:00"/>
   <publisher value="HL7 International"/>
   <contact>
     <name value="HL7 Mobile Health Workgroup"/>
@@ -206,8 +206,18 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="actors.html"/>
+        <title value="Actors"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="appendices.html"/>
         <title value="Appendices"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="attribution.html"/>
+        <title value="Attribution"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -216,8 +226,28 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="datasharing.html"/>
+        <title value="Datasharing"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="deviceattributes.html"/>
+        <title value="Deviceattributes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="deviceconfig.html"/>
+        <title value="Deviceconfig"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="functionalrequirements.html"/>
         <title value="Functionalrequirements"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="observations.html"/>
+        <title value="Observations"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -233,6 +263,16 @@
       <page>
         <nameUrl value="usecases.html"/>
         <title value="Usecases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="userattributes.html"/>
+        <title value="Userattributes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="userdemographics.html"/>
+        <title value="Userdemographics"/>
         <generation value="markdown"/>
       </page>
       <page>

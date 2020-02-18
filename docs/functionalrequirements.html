@@ -39,8 +39,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"4"}
-    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
         
@@ -79,39 +79,97 @@
             <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
               <ul class="nav navbar-nav">
-  <li><a href="index.html">IG Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">mHealth ADE Profile<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-	  <li><a href="overview.html">Overview</a></li>
-      <li><a href="usingthisguide.html">Using This Guide</a></li>
-    </ul>
-  </li>
-  <li><a href="usecases.html">Use Cases</a></li>
-  <li><a name="8024b0ea-d76a-4497-96aa-6d76a41bc55b">​</a><a href="actors.html">Actors</a></li>
-  <li><a href="conformance.html">Conformance</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Requirements<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="functionalrequirements.html">Requirements</a></li>
-      <li><a href="functionalrequirements.html">Category 1</a></li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resource Profiles<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a name="f700739d-3f94-41c2-ab39-f983d1694e14">​</a><a href="mhealth-ade-observation.html">Observation</a></li>
-      <li><a name="72802492-714c-49fb-95ea-6e1724ed0b0d">​</a><a href="mhealth-ade-device.html">Device</a></li>
-    </ul>
-  </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			mHealth ADE Profile
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="overview.html">Overview</a>
+			</li>
+			<li>
+				<a href="usecases.html">Use Cases</a>
+			</li>
+			<li>
+				<a href="actors.html">Actors</a>
+			</li>
+
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			Use of this Guide
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="usingthisguide.html">Using The Guide</a>
+			</li>
+			<li>
+				<a href="conformance.html">Conformance</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			Functional Requirements
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="functionalrequirements.html">Requirements</a>
+			</li>
+			<li>
+				<a href="attribution.html">1. Attribution of Data</a>
+			</li>
+			<li>
+				<a href="userdemographics.html">2. User Demographics</a>
+			</li>
+			<li>
+				<a href="userattributes.html">3. User Attributes</a>
+			</li>
+			<li>
+				<a href="deviceconfig.html">4. Device Configuration and Capabilities</a>
+			</li>
+			<li>
+				<a href="deviceattributes.html">5. Device Attributes</a>
+			</li>
+			<li>
+				<a href="observations.html">6. Observations</a>
+			</li>
+			<li>
+				<a href="datasharing.html">7. Data Sharing</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			Resource Profiles
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="StructureDefinition-mhealth-ade-device.html">Device</a>
+			</li>
+			<li>
+				<a href="StructureDefinition-mhealth-ade-observation.html">Observation</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="artifacts.html">Artifact Index</a>
+	</li>
 </ul>
 
             </div>    <!-- /.nav-collapse -->
@@ -147,18 +205,39 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
 <div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#scenario-or-category-1" id="markdown-toc-scenario-or-category-1">Scenario or Category 1</a></li>
-  <li><a href="#scenario-or-category-2" id="markdown-toc-scenario-or-category-2">Scenario or Category 2</a></li>
-</ul>
 
 </div>
-<p>This is where we put SHALL/SHALL NOT, SHOULD/SHOULD NOT statements.</p>
+<p>The functional requirements of this implementation guide are distributed in the following
+sections.</p>
 
-<p>Q: Do we address MAY/NEED NOT? Keith believes these are clarifying, rather than evaluating.</p>
-
-<h3 id="scenario-or-category-1">Scenario or Category 1</h3>
-<h3 id="scenario-or-category-2">Scenario or Category 2</h3>
+<ol>
+  <li><a href="attribution.html">Attribution of Data</a></li>
+  <li><a href="userdemographics.html">User Demographics</a></li>
+  <li><a href="userattributes.html">User Attributes</a></li>
+  <li><a href="deviceconfig.html">Device Configuration and Capabilities</a></li>
+  <li><a href="deviceattributes.html">Device Attributes</a></li>
+  <li><a name="ce629c1c-051c-4f18-b8d4-4002a930ee13">​</a><a href="observations.html">Observations</a>
+ a. <a href="basicobservations.html">Basic Vitals</a>
+     1. <a href="basicheightweight.html">Basic Height and Weight</a>
+     2. <a href="basicbloodpressure.html">Basic Blood Pressure</a>
+     3. <a href="basicheightweight.html">Basic Respiration and Pulse</a>
+     4. <a href="basicspo2.html">Basic SPO2</a>
+     5. <a href="basictempurature.html">Basic Tempurature</a>
+ b. <a href="clinicalobservations.html">Clinical Vitals</a>
+     NOTE: Clinical Vitals adds to reqirements of Basic Vitals. When Clinical
+     vitals or any subset are assessed, the SUT must also be tested against
+     the rquirements of the related Basic vitals set.
+     1. <a href="clinheightweight.html">Clinical Height and Weight</a>
+     2. <a href="clinbloodpressure.html">Clinical Blood Pressure</a>
+     3. <a href="clinheightweight.html">Clinical Respiration and Pulse Rate</a>
+     4. <a href="clinspo2.html">Clinical SPO2</a>
+     5. <a href="clintempurature.html">Clinical Tempurature</a>
+ c. <a href="physicalandsleep.html">Physical Activity and Sleep</a>
+     1. <a href="physical.html">Physical Activity</a>
+     2. <a href="sleep.html">Sleep</a></li>
+  <li><a href="datasharing.html">Data Sharing</a></li>
+  <li><a name="8a60708d-a15e-4a49-83fd-463ed99e2f08">​</a><a href="general.html">General Requirements</a></li>
+</ol>
 
 
 </div>
@@ -172,7 +251,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/MH/Mobile+Health">HL7 International</a>.  Package mHealthADE#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 17, 2020 15:33-0500">2020-02-17</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/MH/Mobile+Health">HL7 International</a>.  Package mHealthADE#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 18, 2020 01:53-0500">2020-02-18</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

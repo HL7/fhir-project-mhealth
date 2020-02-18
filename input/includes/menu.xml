@@ -1,35 +1,93 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li><a href="index.html">IG Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">mHealth ADE Profile<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-	  <li><a href="overview.html">Overview</a></li>
-      <li><a href="usingthisguide.html">Using This Guide</a></li>
-    </ul>
-  </li>
-  <li><a href="usecases.html">Use Cases</a></li>
-  <li><a href="actors.html">Actors</a></li>
-  <li><a href="conformance.html">Conformance</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Requirements<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="functionalrequirements.html">Requirements</a></li>
-      <li><a href="functionalrequirements.html">Category 1</a></li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resource Profiles<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="mhealth-ade-observation.html">Observation</a></li>
-      <li><a href="mhealth-ade-device.html">Device</a></li>
-    </ul>
-  </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			mHealth ADE Profile
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="overview.html">Overview</a>
+			</li>
+			<li>
+				<a href="usecases.html">Use Cases</a>
+			</li>
+			<li>
+				<a href="actors.html">Actors</a>
+			</li>
+
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			Use of this Guide
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="usingthisguide.html">Using The Guide</a>
+			</li>
+			<li>
+				<a href="conformance.html">Conformance</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			Functional Requirements
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="functionalrequirements.html">Requirements</a>
+			</li>
+			<li>
+				<a href="attribution.html">1. Attribution of Data</a>
+			</li>
+			<li>
+				<a href="userdemographics.html">2. User Demographics</a>
+			</li>
+			<li>
+				<a href="userattributes.html">3. User Attributes</a>
+			</li>
+			<li>
+				<a href="deviceconfig.html">4. Device Configuration and Capabilities</a>
+			</li>
+			<li>
+				<a href="deviceattributes.html">5. Device Attributes</a>
+			</li>
+			<li>
+				<a href="observations.html">6. Observations</a>
+			</li>
+			<li>
+				<a href="datasharing.html">7. Data Sharing</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+			Resource Profiles
+			<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="StructureDefinition-mhealth-ade-device.html">Device</a>
+			</li>
+			<li>
+				<a href="StructureDefinition-mhealth-ade-observation.html">Observation</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="artifacts.html">Artifact Index</a>
+	</li>
 </ul>

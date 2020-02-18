@@ -63,8 +63,18 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "actors.html",
+          "title": "Actors",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "appendices.html",
           "title": "Appendices",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "attribution.html",
+          "title": "Attribution",
           "generation": "markdown"
         },
         {
@@ -73,8 +83,28 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "datasharing.html",
+          "title": "Datasharing",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "deviceattributes.html",
+          "title": "Deviceattributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "deviceconfig.html",
+          "title": "Deviceconfig",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "functionalrequirements.html",
           "title": "Functionalrequirements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "observations.html",
+          "title": "Observations",
           "generation": "markdown"
         },
         {
@@ -90,6 +120,16 @@
         {
           "nameUrl": "usecases.html",
           "title": "Usecases",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "userattributes.html",
+          "title": "Userattributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "userdemographics.html",
+          "title": "Userdemographics",
           "generation": "markdown"
         },
         {

@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth"];
   fhir:ImplementationGuide.title [ fhir:value "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-02-17T15:33:47-05:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-02-18T01:53:19-05:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -297,36 +297,76 @@
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "actors.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Actors" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "appendices.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Appendices" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 2;
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "attribution.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Attribution" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "conformance.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Conformance" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 3;
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "datasharing.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Datasharing" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "deviceattributes.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Deviceattributes" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 7;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "deviceconfig.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Deviceconfig" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 8;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "functionalrequirements.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Functionalrequirements" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 4;
+         fhir:index 9;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "observations.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Observations" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 10;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "overview.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Overview" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 5;
+         fhir:index 11;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "resourceprofiles.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Resourceprofiles" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 6;
+         fhir:index 12;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "usecases.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Usecases" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 7;
+         fhir:index 13;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "userattributes.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Userattributes" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 14;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "userdemographics.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Userdemographics" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 15;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "usingthisguide.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Usingthisguide" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]

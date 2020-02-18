@@ -10,7 +10,7 @@
   "name": "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth",
   "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
   "status": "active",
-  "date": "2020-02-17T15:33:47-05:00",
+  "date": "2020-02-18T01:53:19-05:00",
   "publisher": "HL7 International",
   "contact": [
     {
@@ -311,8 +311,18 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "actors.html",
+          "title": "Actors",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "appendices.html",
           "title": "Appendices",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "attribution.html",
+          "title": "Attribution",
           "generation": "markdown"
         },
         {
@@ -321,8 +331,28 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "datasharing.html",
+          "title": "Datasharing",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "deviceattributes.html",
+          "title": "Deviceattributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "deviceconfig.html",
+          "title": "Deviceconfig",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "functionalrequirements.html",
           "title": "Functionalrequirements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "observations.html",
+          "title": "Observations",
           "generation": "markdown"
         },
         {
@@ -338,6 +368,16 @@
         {
           "nameUrl": "usecases.html",
           "title": "Usecases",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "userattributes.html",
+          "title": "Userattributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "userdemographics.html",
+          "title": "Userdemographics",
           "generation": "markdown"
         },
         {
