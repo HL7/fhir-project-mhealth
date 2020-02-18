@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth"];
   fhir:ImplementationGuide.title [ fhir:value "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-02-18T01:53:19-05:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-02-18T02:14:00-05:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;

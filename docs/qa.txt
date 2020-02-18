@@ -3,7 +3,7 @@
 
 err = 0, warn = 6, info = 0
 IG Publisher Version: v1.0.64-SNAPSHOT
-Generated Tue Feb 18 01:53:47 EST 2020. FHIR version 4.0.1 for mHealthADE#0.1.0 (canonical = http://hl7.org/fhir/mHealth-ADE)
+Generated Tue Feb 18 02:14:28 EST 2020. FHIR version 4.0.1 for mHealthADE#0.1.0 (canonical = http://hl7.org/fhir/mHealth-ADE)
 
  Build Errors : 16 / 0
  C:\Users\kboone\git\fhir-project-mhealth\input\ImplementationGuide-mHealthADE : 0 / 0
@@ -11,22 +11,22 @@ Generated Tue Feb 18 01:53:47 EST 2020. FHIR version 4.0.1 for mHealthADE#0.1.0 
  C:\Users\kboone\git\fhir-project-mhealth\input\resources\structuredefinition-mhealth-ade-observation : 0 / 2
 </table>
 == n/a ==
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 220, column 6: The link 'basicobservations.html' for "Basic Vitals" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 221, column 10: The link 'basicheightweight.html' for "Basic Height and Weight" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 222, column 10: The link 'basicbloodpressure.html' for "Basic Blood Pressure" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 223, column 10: The link 'basicheightweight.html' for "Basic Respiration and Pulse" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 224, column 10: The link 'basicspo2.html' for "Basic SPO2" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 225, column 10: The link 'basictempurature.html' for "Basic Tempurature" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 226, column 6: The link 'clinicalobservations.html' for "Clinical Vitals" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 230, column 10: The link 'clinheightweight.html' for "Clinical Height and Weight" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 231, column 10: The link 'clinbloodpressure.html' for "Clinical Blood Pressure" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 232, column 10: The link 'clinheightweight.html' for "Clinical Respiration and Pulse Rate" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 233, column 10: The link 'clinspo2.html' for "Clinical SPO2" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 234, column 10: The link 'clintempurature.html' for "Clinical Tempurature" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 235, column 6: The link 'physicalandsleep.html' for "Physical Activity and Sleep" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 236, column 10: The link 'physical.html' for "Physical Activity" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 237, column 10: The link 'sleep.html' for "Sleep" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 239, column 8: The link 'general.html' for "General Requirements" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/p/a at Line 222, column 12: The link 'basicobservations.html' for "Basic Vitals" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 224, column 12: The link 'basicheightweight.html' for "Basic Height and Weight" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 225, column 12: The link 'basicbloodpressure.html' for "Basic Blood Pressure" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 226, column 12: The link 'basicheightweight.html' for "Basic Respiration and Pulse" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 227, column 12: The link 'basicspo2.html' for "Basic SPO2" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 228, column 12: The link 'basictemperature.html' for "Basic Temperature" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/p/a at Line 231, column 12: The link 'clinicalobservations.html' for "Clinical Vitals" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 236, column 12: The link 'clinheightweight.html' for "Clinical Height and Weight" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 237, column 12: The link 'clinbloodpressure.html' for "Clinical Blood Pressure" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 238, column 12: The link 'clinheightweight.html' for "Clinical Respiration and Pulse Rate" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 239, column 12: The link 'clinspo2.html' for "Clinical SPO2" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 240, column 12: The link 'clintemperature.html' for "Clinical Temperature" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/p/a at Line 243, column 12: The link 'physicalandsleep.html' for "Physical Activity and Sleep" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 245, column 12: The link 'physical.html' for "Physical Activity" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 246, column 12: The link 'sleep.html' for "Sleep" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-project-mhealth\output\functionalrequirements.html#/html/body/div/div/div/div/div/ol/li/a at Line 250, column 8: The link 'general.html' for "General Requirements" cannot be resolved
 == C:\Users\kboone\git\fhir-project-mhealth\input\ImplementationGuide-mHealthADE.json ==
 == C:\Users\kboone\git\fhir-project-mhealth\input\resources\StructureDefinition-mhealth-ade-device.json ==
 WARNING: http://hl7.org/fhir/mHealth-ADE/StructureDefinition/mhealth-ade-device: The Implementation Guide contains no examples for this profile
