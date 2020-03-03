@@ -209,7 +209,7 @@ following form:
 Indent categories under subcategories if they are displayed in the same area.
 
 An example report is given below:
-> Physical Activity and Sleep ![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)1+2/6+6
+> Physical Activity and Sleep <span style='clear: left'>![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)</span>1+2/6+6
 > > Physical Activity <span style='clear: left'>![](star.png)![](star.png)![](star.png)![](star.png)![](star.png)</span> 0+1/3+3<br/>
 > > Sleep <span style='clear: left'>![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)</span> 1+1/3+3<br/>
 
