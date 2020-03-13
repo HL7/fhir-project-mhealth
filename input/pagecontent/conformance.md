@@ -22,83 +22,29 @@ subjective assessors, this guide defines a rating system which is based on objec
 criteria, which should be more readily reproducable across different assessors.
 
 #### Scoring
-The following demonstrates the scoring: where 0 stars is fully non-conforming, 1 star
-meets some requirements, 2 starts meets most of the requirements, 3 stars meets all
-required criteria, 4 meets all required criteria and some degree of recommended criteria,
+The following demonstrates the scoring:
+where 0 stars is fully non-conforming, 1 star meets some requirements,
+2 stars meets most of the requirements, 3 stars meets all required criteria,
+4 meets all required criteria and some degree of recommended criteria,
 and 5 stars meets all required criteria, and most or all of the recommended criteria.
 
-<span class="glyphicon text-danger" aria-hidden="true">
-<span class="glyphicon-star-empty" >
-</span><span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty" aria-hidden="true">
-</span><span class="glyphicon-star-empty">
-</span>
-</span>(0 stars)
-: The device or system under test (SUT) does not meet any **SHALL** criteria.
-
-
-<span class="glyphicon text-success" aria-hidden="true">
-<span class="glyphicon-star" >
-</span><span class="glyphicon text-danger" aria-hidden="true">
-<span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty" aria-hidden="true">
-</span>
-</span>(1 star)
-1 star
-: The SUT meets some (but not most) of the **SHALL** criteria.
-
-
-<span class="glyphicon text-success" aria-hidden="true">
-<span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span><span class="glyphicon text-danger" aria-hidden="true">
-<span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty" aria-hidden="true">
-</span>
-</span>(2 stars)
-: The SUT meets most of the **SHALL** criteria.
-
-
-<span class="glyphicon text-success" aria-hidden="true">
-<span class="glyphicon-star" >
-</span><span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span>
-<span class="glyphicon text-danger" aria-hidden="true">
-<span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty" aria-hidden="true">
-</span>
-</span>(3 stars)
-: The SUT meets all of the **SHALL** criteria.
-
-
-<span class="glyphicon text-success" aria-hidden="true">
-<span class="glyphicon-star" >
-</span><span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span><span class="glyphicon text-danger" aria-hidden="true">
-<span class="glyphicon-star-empty">
-</span><span class="glyphicon-star-empty" aria-hidden="true">
-</span>
-</span>(4 stars)
-: The SUT meets all of the **SHALL** criteria, and some (but not most) of the **SHOULD** criteria.
-
-
-<span class="glyphicon text-success" aria-hidden="true">
-<span class="glyphicon-star" >
-</span><span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span><span class="glyphicon-star">
-</span>
-</span>(5 stars)
-: The SUT meets all of the **SHALL** criteria and most or all of the **SHOULD** criteria.
+> <span class="glyphicon stars0" aria-hidden="true">
+> : (0 stars) The device or system under test (SUT) does not meet any **SHALL** criteria.
+>
+> <span class="glyphicon stars1" aria-hidden="true">
+> : (1 star) The SUT meets some (but not most) of the **SHALL** criteria.
+>
+> <span class="glyphicon stars2" aria-hidden="true">
+> : (2 stars) The SUT meets most of the **SHALL** criteria.
+>
+> <span class="glyphicon stars3" aria-hidden="true">
+> : (3 stars) The SUT meets all of the **SHALL** criteria.
+>
+> <span class="glyphicon stars4" aria-hidden="true">
+> : (4 stars) The SUT meets all of the **SHALL** criteria, and some (but not most) of the **SHOULD** criteria.
+>
+> <span class="glyphicon stars5" aria-hidden="true">
+> : (5 stars) The SUT meets all of the **SHALL** criteria and most or all of the **SHOULD** criteria.
 
 
 For the purposes of this guide, most is defined as 50% or more. [_should this be higher?_
@@ -170,6 +116,8 @@ category.
 
 #### Assessment Result Reporting
 To report the assessment, the following values should be provided:
+* the names, models, and software versions of the app, device, and infrastructure
+  components that were tested.
 * The star ranking.
 * The number of shall criteria met.
 * The total number of shall criteria that are applicable for the device in that category.
@@ -249,29 +197,73 @@ For a given criteria group in this guide, the reporting recommendations are as f
 
 ###### Reporting against a System
 Display the category name, followed by a number of filled stars given by the assessment
-ranking in green (or black for B&W images).  Follow that by a number of open stars
-outlined in red (or black for B&W images) necessary to ensure that there are
-always 5 stars displayed.  After the stars include four numbers reported in the
-following form:
+ranking in gold (or light gray for B&W images).  Follow that by a number of open stars
+outlined in black necessary to ensure that there are always 5 stars displayed.
+After the stars include four numbers reported in the following form:
 {SHALL-passed}/{SHALL-total}+{SHOULD-passed}/{SHOULD-total}
 
 Indent categories under subcategories if they are displayed in the same area.
 
 An example report is given below:
-> Physical Activity and Sleep <span class="glyphicon stars0" aria-hidden="true"></span> 0/3+1/3<br/>
-> > Sleep <span class="glyphicon stars1" aria-hidden="true"></span> 1/3+1/3<br/>
-> Basic Vital Signs <span class="glyphicon stars3" aria-hidden="true"></span> 10/11+3/11
-> > Basic SPO2 <span class="glyphicon stars3" aria-hidden="true"></span> 2/3+1/3<br/>
-> > Basic Respiration and Pulse <span class="glyphicon stars3" aria-hidden="true"></span> 3/3+0/3<br/>
-> > Basic Blood Pressure <span class="glyphicon stars4" aria-hidden="true"></span> 3/3+1/3<br/>
-> > Basic Height and Weight <span class="glyphicon stars5" aria-hidden="true"></span> 2/3+1/2<br/>
+<table class='grid'>
+  <tbody><tr>
+<td class='invert'>
+<dl>
+  <dt>DEVICE</dt>
+  <dd>Sample Device
+  <dl class='default'><dt>Model</dt><dd>Prototype</dd>
+      <dt>Software Version</dt><dd>0.9.0</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+<td class='invert'>
+<dl>
+  <dt>APP</dt>
+  <dd>Sample App
+  <dl class='default'><dt>Model</dt><dd>Demo</dd>
+      <dt>Software Version</dt><dd>0.0.7</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+<td class='invert'>
+<dl>
+  <dt>INFRA</dt>
+  <dd>Sample API Server
+  <dl class='default'><dt>Model</dt><dd>Flint API Server</dd>
+      <dt>Software Version</dt><dd>Steel 0.80</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td colspan='3'>
+<blockquote class="report">
+  Physical Activity and Sleep <span class="glyphicon stars0" aria-hidden="true"></span> <b>(0 stars)</b> 0/3+1/3<br/>
+  <blockquote class="report">
+    Sleep <span class="glyphicon stars1" aria-hidden="true"></span> <b>(1 star)</b> 1/3+1/3<br/>
+  </blockquote>
+  Basic Vital Signs <span class="glyphicon stars3" aria-hidden="true"></span> <b>(2 stars)</b> 10/11+3/11<br/>
+  <blockquote class="report">
+    Basic SPO2 <span class="glyphicon stars3" aria-hidden="true"></span> <b>(3 stars)</b> 2/3+1/3<br/>
+    Basic Respiration and Pulse <span class="glyphicon stars3" aria-hidden="true"></span> <b>(3 stars)</b> 3/3+0/3<br/>
+    Basic Blood Pressure <span class="glyphicon stars4" aria-hidden="true"></span> <b>(4 stars)</b> 3/3+1/3<br/>
+    Basic Height and Weight <span class="glyphicon stars5" aria-hidden="true"></span> <b>(5 stars)</b> 2/3+1/2<br/>
+  </blockquote>
+</blockquote>
+</td>
+</tr>
+</tbody></table>
+
 
 ###### Reporting against a Specification,
-Display the category name, followed by a number of stars filled in green (or light-gray
+Display the category name, followed by a number of stars filled in gold (or light-gray
 screen for B&W images) given by the minimal assessment ranking. Follow that by a number
-of open stars in green (or light-gray screen in B&W images) necessary to bring the
+of open stars in gold (or light-gray screen in B&W images) necessary to bring the
 total up to the maximal assessment ranking (this may be 0). Follow that by a number
-of open stars outlined in red (or black for B&W images) necessary to ensure that
+of open stars outlined in black necessary to ensure that
 there are always 5 stars displayed. After the stars include four - six numbers
 reported in the form:
 {SHALL-min-passed}-{SHALL-max-passed}/{SHALL-total}+{SHOULD-min-passed}-{SHOULD-max-passed}/{SHOULD-total}
@@ -283,17 +275,49 @@ Indent categories under subcategories if they are displayed in the same area.
 
 An example report is given below:
 
-> Physical Activity and Sleep <span class="glyphicon stars1" aria-hidden="true"></span> 1+2/6+6
-> > Physical Activity <span class="glyphicon stars0" aria-hidden="true"></span> 0+1/3+3<br/>
-> > Sleep <span class="glyphicon stars1" aria-hidden="true"></span> 1+1/3+3<br/>
+<table class='grid'>
+  <thead><tr><th colspan='2' class='invert'>IG Name</th></tr></thead>
+  <tbody><tr>
+<td class='invert'>
+<dl>
+  <dt>APP</dt>
+  <dd><dl class='default'><dt>Actor</dt><dd>Client Actor Name</dd>
+      <dt>Specification Version</dt><dd>IG R1</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+<td class='invert'>
+<dl>
+  <dt>INFRA</dt>
+  <dd><dl class='default'><dt>Model</dt><dd>Server Actor Name</dd>
+      <dt>Specification Version</dt><dd>IG R1</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+<blockquote class="report">
+ Physical Activity and Sleep <span class="glyphicon stars1" aria-hidden="true"></span> <b>(1 star)</b> 1/6+2/6<br/>
+  <blockquote class="report">
+    Physical Activity <span class="glyphicon stars0" aria-hidden="true"></span> <b>(0 stars)</b> 0/3+1/3<br/>
+    Sleep <span class="glyphicon stars1" aria-hidden="true"></span> <b>(1 star)</b> 1/3+1/3<br/>
+  </blockquote>
+  Basic Vital Signs <span class="glyphicon stars3-5" aria-hidden="true"></span> <b>(3-5 stars)</b> 10-11/11+4-9/11<br/>
+  <blockquote class="report">
+    Basic SPO2 <span class="glyphicon stars2-3" aria-hidden="true"></span> <b>(2-3 stars)</b> 2-3/3+1-3/3<br/>
+    Basic Respiration and Pulse <span class="glyphicon stars3-5" aria-hidden="true"></span> <b>(3-5 stars)</b> 3/3+0-2/3<br/>
+    Basic Blood Pressure <span class="glyphicon stars3-5" aria-hidden="true"></span> <b>(3-5 stars)</b> 3/3+1-3/3<br/>
+    Basic Height and Weight <span class="glyphicon stars5" aria-hidden="true"></span> <b>(5 stars)</b> 2/2+1/2<br/>
+  </blockquote>
+</blockquote>
+</td>
+</tr>
+</tbody></table>
 
-> Basic Vital Signs <span class="glyphicon stars3-5" aria-hidden="true"></span> 10-11+4-9/11+11
-> > Basic SPO2 <span class="glyphicon stars2-3" aria-hidden="true"></span> 2-3+1-3/3+3<br/>
-> > Basic Respiration and Pulse <span class="glyphicon stars3-5" aria-hidden="true"></span> 3+0-2/3+3<br/>
-> > Basic Blood Pressure <span class="glyphicon stars3-5" aria-hidden="true"></span> 3+1-3/3+3<br/>
-> > Basic Height and Weight <span class="glyphicon stars5" aria-hidden="true"></span> 2+1-2/2+2<br/>
-
-NOTE: Colors for Red and Green should be selected from a color-blind safe pallette.
+NOTE: The colors of Gold and Black provide a color-blind safe pallette.
 
 
 
