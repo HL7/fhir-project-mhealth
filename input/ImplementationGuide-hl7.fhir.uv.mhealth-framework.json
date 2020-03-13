@@ -1,0 +1,257 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.uv.mhealth-framework",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/ImplementationGuide/hl7.fhir.uv.mhealth-framework",
+  "version": "0.1.0",
+  "name": "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth",
+  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "status": "active",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Mobile Health Workgroup",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/mobile/index.cfm"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "asdf",
+  "packageId": "hl7.fhir.uv.mhealth-framework",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/mhealth-ade-device"
+        },
+        "name": "mHealth ADE Device profile",
+        "description": "Defines constraints on the Device Resource for data communicating about the source of device data.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mhealth-ade-observation"
+        },
+        "name": "mHealth ADE Observation profile",
+        "description": "Defines constraints and extensions on the Observation Resource for data communicated from devices",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "introduction.html",
+          "title": "Introduction",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "use_cases.html",
+          "title": "Use Cases",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "actors.html",
+          "title": "Actors",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "using_this_guide.html",
+          "title": "Using This Guide",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "conformance.html",
+          "title": "Conformance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "functional_requirements.html",
+          "title": "Functional Requirements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "resource_profiles.html",
+          "title": "Resource Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "appendices.html",
+          "title": "Appendices",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "attribution.html",
+          "title": "Attribution",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "user_data.html",
+          "title": "User Data",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "system_data.html",
+          "title": "System Data",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "observations.html",
+          "title": "Observations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "data_sharing.html",
+          "title": "Data Sharing",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "general_requirements.html",
+          "title": "General Requirements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "user_demographics.html",
+          "title": "User Demographics",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "user_attributes.html",
+          "title": "User Attributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "system_configuration.html",
+          "title": "System Configuration",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "system_capabilities.html",
+          "title": "System Capabilities",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "system_attributes.html",
+          "title": "System Attributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_vital_signs.html",
+          "title": "Basic Vital Signs",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_vital_signs.html",
+          "title": "Clinical Vital Signs",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "physical_activity_and_sleep.html",
+          "title": "Physical Activity and Sleep",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_blood_pressure.html",
+          "title": "Basic Blood Pressure",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_height_and_weight.html",
+          "title": "Basic Height and Weight",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_respiration_and_pulse.html",
+          "title": "Basic Respiration and Pulse",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_spo2.html",
+          "title": "Basic Spo 2",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_temperature.html",
+          "title": "Basic Temperature",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_blood_pressure.html",
+          "title": "Clinical Blood Pressure",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_height_and_weight.html",
+          "title": "Clinical Height and Weight",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_respiration_and_pulse.html",
+          "title": "Clinical Respiration and Pulse",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_spo2.html",
+          "title": "Clinical Spo 2",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_temperature.html",
+          "title": "Clinical Temperature",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "physical_activity.html",
+          "title": "Physical Activity",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "sleep.html",
+          "title": "Sleep",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}
