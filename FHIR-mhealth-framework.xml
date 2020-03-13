@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               url="http://hl7.org/fhir/uv/mhealth-framework"
+               ciUrl="http://hl7.org/fhir/uv/mhealth-framework"
+               defaultWorkgroup=""
+               defaultVersion="current"
+               xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
+               ballotUrl="http://hl7.org/fhir/uv/mhealth-framework">
+   <version code="current" url="http://hl7.org/fhir/uv/mhealth-framework"/>
+   <version code="0.1.0" url="http://hl7.org/fhir/uv/mhealth-framework"/>
+   <artifactPageExtension value="-definitions"/>
+   <artifactPageExtension value="-examples"/>
+   <artifactPageExtension value="-mappings"/>
+   <artifact name="mHealth ADE Device profile"
+             key="StructureDefinition-mhealth-ade-device"
+             id="StructureDefinition/mhealth-ade-device"/>
+   <artifact name="mHealth ADE Observation profile"
+             key="StructureDefinition-mhealth-ade-observation"
+             id="StructureDefinition/mhealth-ade-observation"/>
+   <page name="(NA)" key="NA"/>
+   <page name="(many)" key="many"/>
+   <page name="Table of Contents" key="toc"/>
+   <page name="Home" key="index"/>
+   <page name="Introduction" key="introduction"/>
+   <page name="Overview" key="overview"/>
+   <page name="Use Cases" key="use_cases"/>
+   <page name="Actors" key="actors"/>
+   <page name="Using This Guide" key="using_this_guide"/>
+   <page name="Conformance" key="conformance"/>
+   <page name="Functional Requirements" key="functional_requirements"/>
+   <page name="Resource Profiles" key="resource_profiles"/>
+   <page name="Appendices" key="appendices"/>
+   <page name="Attribution" key="attribution"/>
+   <page name="User Data" key="user_data"/>
+   <page name="System Data" key="system_data"/>
+   <page name="Observations" key="observations"/>
+   <page name="Data Sharing" key="data_sharing"/>
+   <page name="General Requirements" key="general_requirements"/>
+   <page name="User Demographics" key="user_demographics"/>
+   <page name="User Attributes" key="user_attributes"/>
+   <page name="System Configuration" key="system_configuration"/>
+   <page name="System Capabilities" key="system_capabilities"/>
+   <page name="System Attributes" key="system_attributes"/>
+   <page name="Basic Vital Signs" key="basic_vital_signs"/>
+   <page name="Clinical Vital Signs" key="clinical_vital_signs"/>
+   <page name="Physical Activity and Sleep" key="physical_activity_and_sleep"/>
+   <page name="Basic Blood Pressure" key="basic_blood_pressure"/>
+   <page name="Basic Height and Weight" key="basic_height_and_weight"/>
+   <page name="Basic Respiration and Pulse" key="basic_respiration_and_pulse"/>
+   <page name="Basic Spo 2" key="basic_spo2"/>
+   <page name="Basic Temperature" key="basic_temperature"/>
+   <page name="Clinical Blood Pressure" key="clinical_blood_pressure"/>
+   <page name="Clinical Height and Weight" key="clinical_height_and_weight"/>
+   <page name="Clinical Respiration and Pulse"
+         key="clinical_respiration_and_pulse"/>
+   <page name="Clinical Spo 2" key="clinical_spo2"/>
+   <page name="Clinical Temperature" key="clinical_temperature"/>
+   <page name="Physical Activity" key="physical_activity"/>
+   <page name="Sleep" key="sleep"/>
+   <page name="Artifacts Summary" key="artifacts"/>
+</specification>

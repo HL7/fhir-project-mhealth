@@ -6,3 +6,5 @@ template
 output
 /build/
 /input/
+/save/
+/target/

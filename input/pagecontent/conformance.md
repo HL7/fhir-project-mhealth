@@ -27,28 +27,77 @@ meets some requirements, 2 starts meets most of the requirements, 3 stars meets 
 required criteria, 4 meets all required criteria and some degree of recommended criteria,
 and 5 stars meets all required criteria, and most or all of the recommended criteria.
 
-![](star.png)![](star.png)![](star.png)![](star.png)![](star.png)(0 stars)
+<span class="glyphicon text-danger" aria-hidden="true">
+<span class="glyphicon-star-empty" >
+</span><span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty" aria-hidden="true">
+</span><span class="glyphicon-star-empty">
+</span>
+</span>(0 stars)
 : The device or system under test (SUT) does not meet any **SHALL** criteria.
 
 
-![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)(1 star)
+<span class="glyphicon text-success" aria-hidden="true">
+<span class="glyphicon-star" >
+</span><span class="glyphicon text-danger" aria-hidden="true">
+<span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty" aria-hidden="true">
+</span>
+</span>(1 star)
 1 star
 : The SUT meets some (but not most) of the **SHALL** criteria.
 
 
-![](star1.png)![](star1.png)![](star.png)![](star.png)![](star.png)(2 stars)
+<span class="glyphicon text-success" aria-hidden="true">
+<span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span><span class="glyphicon text-danger" aria-hidden="true">
+<span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty" aria-hidden="true">
+</span>
+</span>(2 stars)
 : The SUT meets most of the **SHALL** criteria.
 
 
-![](star1.png)![](star1.png)![](star1.png)![](star.png)![](star.png)(3 stars)
+<span class="glyphicon text-success" aria-hidden="true">
+<span class="glyphicon-star" >
+</span><span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span>
+<span class="glyphicon text-danger" aria-hidden="true">
+<span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty" aria-hidden="true">
+</span>
+</span>(3 stars)
 : The SUT meets all of the **SHALL** criteria.
 
 
-![](star1.png)![](star1.png)![](star1.png)![](star1.png)![](star.png)(4 stars)
+<span class="glyphicon text-success" aria-hidden="true">
+<span class="glyphicon-star" >
+</span><span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span><span class="glyphicon text-danger" aria-hidden="true">
+<span class="glyphicon-star-empty">
+</span><span class="glyphicon-star-empty" aria-hidden="true">
+</span>
+</span>(4 stars)
 : The SUT meets all of the **SHALL** criteria, and some (but not most) of the **SHOULD** criteria.
 
 
-![](star1.png)![](star1.png)![](star1.png)![](star1.png)![](star1.png)(5 stars)
+<span class="glyphicon text-success" aria-hidden="true">
+<span class="glyphicon-star" >
+</span><span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span><span class="glyphicon-star">
+</span>
+</span>(5 stars)
 : The SUT meets all of the **SHALL** criteria and most or all of the **SHOULD** criteria.
 
 
@@ -202,32 +251,30 @@ For a given criteria group in this guide, the reporting recommendations are as f
 Display the category name, followed by a number of filled stars given by the assessment
 ranking in green (or black for B&W images).  Follow that by a number of open stars
 outlined in red (or black for B&W images) necessary to ensure that there are
-always 5 stars displayed.  After the stars include three - four numbers reported in the
+always 5 stars displayed.  After the stars include four numbers reported in the
 following form:
-{SHALL-passed}+{SHOULD-passed}/{SHALL-total}+{SHOULD-total}
+{SHALL-passed}/{SHALL-total}+{SHOULD-passed}/{SHOULD-total}
 
 Indent categories under subcategories if they are displayed in the same area.
 
 An example report is given below:
-> Physical Activity and Sleep <span style='clear: left'>![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)</span>1+2/6+6
-> > Physical Activity <span style='clear: left'>![](star.png)![](star.png)![](star.png)![](star.png)![](star.png)</span> 0+1/3+3<br/>
-> > Sleep <span style='clear: left'>![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)</span> 1+1/3+3<br/>
-
-> Basic Vital Signs <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star.png)![](star.png)</span>10+3/11+11
-> > Basic SPO2 <span style='clear: left'>![](star1.png)![](star1.png)![](star.png)![](star.png)![](star.png)</span> 2+1/3+3<br/>
-> > Basic Respiration and Pulse <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star.png)![](star.png)</span> 3+0/3+3<br/>
-> > Basic Blood Pressure <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star1.png)![](star.png)</span> 3+1/3+3<br/>
-> > Basic Height and Weight <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star1.png)![](star1.png)</span> 2+1/2+2<br/>
+> Physical Activity and Sleep <span class="glyphicon stars0" aria-hidden="true"></span> 0/3+1/3<br/>
+> > Sleep <span class="glyphicon stars1" aria-hidden="true"></span> 1/3+1/3<br/>
+> Basic Vital Signs <span class="glyphicon stars3" aria-hidden="true"></span> 10/11+3/11
+> > Basic SPO2 <span class="glyphicon stars3" aria-hidden="true"></span> 2/3+1/3<br/>
+> > Basic Respiration and Pulse <span class="glyphicon stars3" aria-hidden="true"></span> 3/3+0/3<br/>
+> > Basic Blood Pressure <span class="glyphicon stars4" aria-hidden="true"></span> 3/3+1/3<br/>
+> > Basic Height and Weight <span class="glyphicon stars5" aria-hidden="true"></span> 2/3+1/2<br/>
 
 ###### Reporting against a Specification,
-Display the category name, followed by a number of stars filled in red (or black
-for B&W images) given by the minimal assessment ranking. Follow that by a number
-of filled stars in yellow (or light-gray screen in B&W images) necessary to bring the
+Display the category name, followed by a number of stars filled in green (or light-gray
+screen for B&W images) given by the minimal assessment ranking. Follow that by a number
+of open stars in green (or light-gray screen in B&W images) necessary to bring the
 total up to the maximal assessment ranking (this may be 0). Follow that by a number
 of open stars outlined in red (or black for B&W images) necessary to ensure that
-there are always 5 stars displayed. After the stars include three - six numbers
+there are always 5 stars displayed. After the stars include four - six numbers
 reported in the form:
-{SHALL-min-passed}-{SHALL-max-passed}+{SHOULD-min-passed}-{SHOULD-max-passed}/{SHALL-total}+{SHOULD-total}
+{SHALL-min-passed}-{SHALL-max-passed}/{SHALL-total}+{SHOULD-min-passed}-{SHOULD-max-passed}/{SHOULD-total}
 
 When min-passed and max-passed are the same value, they should be reported as a single
 number.
@@ -235,18 +282,20 @@ number.
 Indent categories under subcategories if they are displayed in the same area.
 
 An example report is given below:
-<div style='align: right'>
-> Physical Activity and Sleep ![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)1+2/6+6
-> > Physical Activity <span style='clear: left'>![](star.png)![](star.png)![](star.png)![](star.png)![](star.png)</span> 0+1/3+3<br/>
-> > Sleep <span style='clear: left'>![](star1.png)![](star.png)![](star.png)![](star.png)![](star.png)</span> 1+1/3+3<br/>
 
-> Basic Vital Signs <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star2.png)![](star2.png)</span>10-11+4-9/11+11
-> > Basic SPO2 <span style='clear: left'>![](star1.png)![](star1.png)![](star2.png)![](star.png)![](star.png)</span> 2-3+1-3/3+3<br/>
-> > Basic Respiration and Pulse <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star2.png)![](star2.png)</span> 3+0-2/3+3<br/>
-> > Basic Blood Pressure <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star2.png)![](star2.png)</span> 3+1-3/3+3<br/>
-> > Basic Height and Weight <span style='clear: left'>![](star1.png)![](star1.png)![](star1.png)![](star1.png)![](star1.png)</span> 2+1-2/2+2<br/>
-</div>
-NOTE: Colors for Red, Green and Yellow should be selected from a color-blind safe pallette.
+> Physical Activity and Sleep <span class="glyphicon stars1" aria-hidden="true"></span> 1+2/6+6
+> > Physical Activity <span class="glyphicon stars0" aria-hidden="true"></span> 0+1/3+3<br/>
+> > Sleep <span class="glyphicon stars1" aria-hidden="true"></span> 1+1/3+3<br/>
+
+> Basic Vital Signs <span class="glyphicon stars3-5" aria-hidden="true"></span> 10-11+4-9/11+11
+> > Basic SPO2 <span class="glyphicon stars2-3" aria-hidden="true"></span> 2-3+1-3/3+3<br/>
+> > Basic Respiration and Pulse <span class="glyphicon stars3-5" aria-hidden="true"></span> 3+0-2/3+3<br/>
+> > Basic Blood Pressure <span class="glyphicon stars3-5" aria-hidden="true"></span> 3+1-3/3+3<br/>
+> > Basic Height and Weight <span class="glyphicon stars5" aria-hidden="true"></span> 2+1-2/2+2<br/>
+
+NOTE: Colors for Red and Green should be selected from a color-blind safe pallette.
+
+
 
 
 #### Gherkin
@@ -316,19 +365,37 @@ Rule: A screen saver must be present that **SHALL** hide the users data after a 
 period of time has elapsed.
 
 
-Scenario: Example Scenario
-> `GIVEN` the screen saver is configured to hide the screen after 5 minutes.<br/>
-> `WHEN` the time period has elapsed<br/>
-> `THEN` screen is hidden,<br/>
-> `AND` the user must reenter their password to resume work,<br/>
-> `BUT` the user is not logged out.
+###### Scenario: Example Scenario
+GIVEN
+: the screen saver is configured to hide the screen after 5 minutes.
+
+WHEN
+: the time period has elapsed
+
+THEN
+: screen is hidden,
+
+AND
+: the user must reenter their password to resume work,
+
+BUT
+: the user is not logged out.
 
 Rule: If the user does not configure the screen saver, then the
 default timeout period **SHALL** be used.
 
-Scenario: Default Scenario
-> `GIVEN` the screen saver has NOT been configured by the user<br/>
-> `WHEN` the default timeout period has elapsed<br/>
-> `THEN` screen is hidden,<br/>
-> `AND` the user must reenter their password to resume work,<br/>
-> `BUT` the user is not logged out.
+###### Scenario: Default Scenario
+GIVEN:
+the screen saver has NOT been configured by the user
+
+WHEN
+: the default timeout period has elapsed
+
+THEN
+: screen is hidden,
+
+AND
+: the user must reenter their password to resume work,<br/>
+
+BUT
+: the user is not logged out.

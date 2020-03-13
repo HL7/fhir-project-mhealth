@@ -1,0 +1,23 @@
+This section describes the top level requirement categories identified for this guide.
+You can navigate to the sub-categories listed below, or select a specific category in
+the [Table of Contents](toc.html).### Category: Functional Requirements 
+
+The Functional Requirements Category includes all requirements for from the following subcategories:
+ * [Attribution](attribution.html)
+   Features in the Attribution category ensure that metadata about reported measurements are included to identify the device creating a measurement, the author creating manually entered data, and that devices are not permanently linked to a given user and can be readily replaced at need
+
+ * [User Data](user_data.html)
+   User data, including demographics and other user attributes, are used to configure the device or app, and associate it with the current user of the device.
+
+ * [System Data](system_data.html)
+   System data includes configuration, capabilities and attributes of a device, application or infrastructure that describes the essentials to ensure proper operation of the system
+
+ * [Observations](observations.html)
+   The Description.md category supports [<span class='text-error'>...</span>](#error)
+
+ * [Data Sharing](data_sharing.html)
+   The Description.md category supports [<span class='text-error'>...</span>](#error)
+
+ * [General Requirements](general_requirements.html)
+   The Description.md category supports [<span class='text-error'>...</span>](#error)
+

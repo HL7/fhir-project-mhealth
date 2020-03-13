@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Built-By: kboone
+Build-Jdk: 11.0.3
+Class-Path: lib/commons-io/commons-io/2.6/commons-io-2.6.jar lib/org/apa
+ che/commons/commons-text/1.8/commons-text-1.8.jar lib/org/apache/common
+ s/commons-lang3/3.9/commons-lang3-3.9.jar lib/io/cucumber/gherkin/11.0.
+ 0/gherkin-11.0.0.jar lib/io/cucumber/messages/10.0.3/messages-10.0.3.ja
+ r lib/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine
+ -5.5.2.jar lib/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.
+ 1.0.jar lib/org/junit/platform/junit-platform-engine/1.5.2/junit-platfo
+ rm-engine-1.5.2.jar lib/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.
+ 0.jar lib/org/junit/platform/junit-platform-commons/1.5.2/junit-platfor
+ m-commons-1.5.2.jar lib/org/junit/jupiter/junit-jupiter-api/5.5.2/junit
+ -jupiter-api-5.5.2.jar
+Main-Class: org.hl7.mhealth.ade.Convert
+Created-By: Maven Integration for Eclipse
+

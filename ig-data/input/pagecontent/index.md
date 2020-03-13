@@ -18,32 +18,28 @@ This document is organized into three main sections:
 1. Overview
 
    This section provides:
-   * An [Introduction](introduction.html) to the mHealth ADE Project, it's scope of work, audience, contributors,
-     and conventions used in this guide,
+   * An [Introduction](introduction.html) to the mHealth ADE Project, it's audience, scope of work, conventions used, contributors
+     and glossary for this guide,
    * An [Overview](overview.html) of the challenges this guide is trying to solve,
-   * Describes the four key [Use Cases](usecases.html) associated with this implementation guide, and
+   * Describes the four key [Use Cases](use_cases.html) associated with this implementation guide, and
    * Describes the [Actors](actors.html) (systems and users) that are affected by this implementation guide,
      and their roles and responsibilities.
 
 2. Using the Guide
 
    This section explains:
-
-   * how implementers, users and assessors of solutions can [Use This Guide](usingthisguide.html),
+   * how implementers, users and assessors of solutions can [Use This Guide](using_this_guide.html),
      to facilitate integration of mobile health devices and applications into their health
      information technology solutions; and
-
    * how they can communicate [Conformance](conformance.html) claims to it.
 
 3. Requirements
 
    This section provides:
-
-   * the [Functional Requirements](functionalrequirements.html) against which
-   a device, system, or implementation specification can be assessed, and
-
-   * Provides FHIR [Resource Profiles](resourceprofiles.html) against which
-   FHIR Resources, Profiles and Implementation guides can be assessed for conformance.
+   * the [Functional Requirements](functional_requirements.html) against which
+     a device, system, or implementation specification can be assessed, and
+   * Provides FHIR [Resource Profiles](resource_profiles.html) against which
+     FHIR Resources, Profiles and Implementation guides can be assessed for conformance.
 
    > NOTE: These profiles are provided to enable the automated computation of assessments
    > of these requirements against published specifications.  They are not generally intended
