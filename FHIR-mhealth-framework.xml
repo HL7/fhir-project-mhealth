@@ -28,34 +28,41 @@
    <page name="Using This Guide" key="using_this_guide"/>
    <page name="Conformance" key="conformance"/>
    <page name="Functional Requirements" key="functional_requirements"/>
-   <page name="Resource Profiles" key="resource_profiles"/>
-   <page name="Appendices" key="appendices"/>
    <page name="Attribution" key="attribution"/>
    <page name="User Data" key="user_data"/>
-   <page name="System Data" key="system_data"/>
-   <page name="Observations" key="observations"/>
-   <page name="Data Sharing" key="data_sharing"/>
-   <page name="General Requirements" key="general_requirements"/>
    <page name="User Demographics" key="user_demographics"/>
    <page name="User Attributes" key="user_attributes"/>
+   <page name="System Data" key="system_data"/>
    <page name="System Configuration" key="system_configuration"/>
    <page name="System Capabilities" key="system_capabilities"/>
    <page name="System Attributes" key="system_attributes"/>
+   <page name="Observations" key="observations"/>
+   <page name="General" key="general"/>
+   <page name="General Observations" key="general_observations"/>
+   <page name="Coded Observations" key="coded_observations"/>
+   <page name="Numeric Observations" key="numeric_observations"/>
    <page name="Basic Vital Signs" key="basic_vital_signs"/>
-   <page name="Clinical Vital Signs" key="clinical_vital_signs"/>
-   <page name="Physical Activity and Sleep" key="physical_activity_and_sleep"/>
-   <page name="Basic Blood Pressure" key="basic_blood_pressure"/>
    <page name="Basic Height and Weight" key="basic_height_and_weight"/>
-   <page name="Basic Respiration and Pulse" key="basic_respiration_and_pulse"/>
+   <page name="Basic Blood Pressure" key="basic_blood_pressure"/>
+   <page name="Basic Heart Rate" key="basic_heart_rate"/>
+   <page name="Basic Respiration" key="basic_respiration"/>
    <page name="Basic Spo 2" key="basic_spo2"/>
    <page name="Basic Temperature" key="basic_temperature"/>
-   <page name="Clinical Blood Pressure" key="clinical_blood_pressure"/>
+   <page name="Clinical Vital Signs" key="clinical_vital_signs"/>
    <page name="Clinical Height and Weight" key="clinical_height_and_weight"/>
-   <page name="Clinical Respiration and Pulse"
-         key="clinical_respiration_and_pulse"/>
+   <page name="Clinical Blood Pressure" key="clinical_blood_pressure"/>
+   <page name="Clinical Heart Rate" key="clinical_heart_rate"/>
+   <page name="Clinical Respiration" key="clinical_respiration"/>
    <page name="Clinical Spo 2" key="clinical_spo2"/>
    <page name="Clinical Temperature" key="clinical_temperature"/>
-   <page name="Physical Activity" key="physical_activity"/>
-   <page name="Sleep" key="sleep"/>
+   <page name="General Clinical Measurements"
+         key="general_clinical_measurements"/>
+   <page name="Physical Activity and Sleep" key="physical_activity_and_sleep"/>
+   <page name="Data Sharing" key="data_sharing"/>
+   <page name="User Choice" key="user_choice"/>
+   <page name="Sharing Mechanism" key="sharing_mechanism"/>
+   <page name="General Requirements" key="general_requirements"/>
+   <page name="Resource Profiles" key="resource_profiles"/>
+   <page name="Appendices" key="appendices"/>
    <page name="Artifacts Summary" key="artifacts"/>
 </specification>

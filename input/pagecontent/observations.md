@@ -1,6 +1,12 @@
-The Description.md category supports [<span class='text-error'>...</span>](#error)### Category: Observations 
+The Observations Category supports recording of measurement of vital signs, physical activity and
+sleep, and data associated with those measurements
+<span id='4-observations'/>
+### Category: 4 Observations
 
-The Observations Category includes all requirements for from the following subcategories:
+The Category: 4 Observations Category includes all requirements for from the following subcategories:
+ * [General Observations](general_observations.html)
+   This category describes general requirements of all systems for which observations are assessed
+
  * [Basic Vital Signs](basic_vital_signs.html)
    Basic Vital Signs is a category that includes just the measurements of the most common vital signs that can be measured for a given user
 
@@ -8,5 +14,5 @@ The Observations Category includes all requirements for from the following subca
    Clinical Vital Signs is a category that includes the measurements of other factors that can affect the primary measurement
 
  * [Physical Activity And Sleep](physical_activity_and_sleep.html)
-   The Description.md category supports [<span class='text-error'>...</span>](#error)
+   The Physical Activity and Sleep category supports the capture of duration and quality measurements about physical and sleep activities
 

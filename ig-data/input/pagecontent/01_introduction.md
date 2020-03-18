@@ -142,6 +142,10 @@ of this document.  A Mobile Health Application is one that can be accessed via a
 devices such as a smart watch, smart phone or tablet.  Such an App may also be accessible via
 the Internet or a personal computer.
 
+App Runner
+: A system, such as a mobile phone, tablet, Laptop Computer or Web Browser which runs
+an App, or an instance of such a system.
+
 Application
 : In this guide, the term application refers to a collection of computer software which
 provides some computing functionality to an end user. This functionality can be spread
@@ -187,7 +191,7 @@ Software
 how to operate to perform some function. An application is a collection of software
 components. This guide makes NO distinction between software and firmware (basically
 read-only or unmodifiable software included in many computing devices). Today's computing
-platfoms include software known as a Basic Input Output System (BIOS) that in prior years was
+platforms include software known as a Basic Input Output System (BIOS) that in prior years was
 not designed to be replaced or altered by the end-user. Most systems today now use
 some form of non-volatile memory to store this software, which was previously known
 as "firmware" because it couldn't be easily changed (it still can't be easily changed,
@@ -201,3 +205,4 @@ System
 : A system is a collection of both hardware and software which provided computing capabilities
 to an end user.  It is distinct from "application" in that in includes both the application
 and the computing components, whereas "application" includes only the software components.
+

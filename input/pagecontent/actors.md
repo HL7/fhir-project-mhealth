@@ -10,7 +10,7 @@ devices.  These devices are often accompanied by applications (see below) and ma
 be designed to work with specific data repositories. Devices may be regulated health
 devices, but need not be.
 
-Requirements, Rules and test Scenarios applicable to Device actors will be marked with
+Features, Rules and test Scenarios applicable to Device actors will be marked with
 the @Device tag.
 
 #### App
@@ -31,7 +31,7 @@ and make it possible for users to access, analyze and aggregate data across devi
 These applications may also enable population analysis for select populations.
 
 Requirements, Rules and test Scenarios applicable to Data Repository actors will be marked with
-the @Repository tag.
+the @Infra tag.
 
 #### Data Consumer
 Mobile Health Data Consumers can access one or more Mobile Health Data Repositories

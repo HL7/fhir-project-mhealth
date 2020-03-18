@@ -14,3 +14,108 @@ Some configuration data may also come from [User Demographics](user_demographics
 such as age and gender.  Note though, care must be taken to avoid confusing physical
 attributes (such as birth sex) which may be necessary to properly configure a device
 and gender identity, which should be a user preference.
+<span id='user-height'/>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Height
+
+    If User Height is essential to compute an observation the app/infra **SHALL** be
+able to capture/report the user's height as an attribute of the user .
+
+NOTE: Information is considered to be essential to compute an observation
+when the value of that observation would change if the information changes.
+Examples for height include distance traveld or calories used during an
+activity (e.g., steps or stairs climbed)
+
+
+<span id='height-is-available'/>
+#### Scenario: Height is Available
+
+    NOTE 1: Additional steps may be necessary to access the Height given that the User is known.
+This may include retrieving the height in some way as an attribute of the user
+
+NOTE 2: If the height is not essential for measurement, (i.e., the precondition is not met)
+then this test is not applicable and not reported during the assessment.
+
+GIVEN
+: a <i>&lt;User&gt;</i> with <i>&lt;Height&gt;</i>
+
+   AND
+   : an <i>&lt;App&gt;</i>
+
+   AND
+   : <i>&lt;Height&gt;</i> is essential for the operation of <i>&lt;App&gt;</i>
+
+   AND
+   : a <i>&lt;UserRecord&gt;</i> for <i>&lt;User&gt;</i>
+
+WHEN
+: the <i>&lt;UserRecord&gt;</i> is retrieved
+
+THEN
+: the <i>&lt;Height&gt;</i> can be determined from the <i>&lt;UserRecord&gt;</i>
+
+
+<span id='user-weight'/>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Weight
+
+    If the User's weight is essential to compute an observation the app/infra **SHALL**
+    be able to capture/report the user's weight as an attribute of the user .
+
+NOTE: Information is considered to be essential to compute an observation
+when the value of that observation would change if the information changes.
+Examples for weight include calories used during an activity (e.g., steps or stairs climbed)
+
+
+<span id='weight-is-available'/>
+#### Scenario: Weight is Available
+
+    NOTE 1: Additional steps may be necessary to access the Weight given that the User is known.
+This may include retrieving the height in some way as an attribute of the user
+
+NOTE 2: If the weight is not essential for measurement, (i.e., the precondition is not met)
+then this test is not applicable and not reported during the assessment.
+
+GIVEN
+: a <i>&lt;User&gt;</i> with <i>&lt;Weight&gt;</i>
+
+   AND
+   : an <i>&lt;App&gt;</i>
+
+   AND
+   : <i>&lt;Height&gt;</i> is essential for the operation of <i>&lt;App&gt;</i>
+
+   AND
+   : a <i>&lt;UserRecord&gt;</i> for <i>&lt;User&gt;</i>
+
+WHEN
+: the <i>&lt;UserRecord&gt;</i> is retrieved
+
+THEN
+: the <i>&lt;Weight&gt;</i> can be determined from the <i>&lt;UserRecord&gt;</i>
+
+
+<span id='birth-sex'/>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Birth Sex
+
+    If the user's birth sex is essential to compute a measurement, the App/Infrastructure
+    **SHALL** be able to associate/report the birth sex of the user.
+
+
+<span id='birth-sex-exists'/>
+#### Scenario: Birth Sex Exists
+
+
+GIVEN
+: Birth Sex is essential to device configuration
+
+   AND
+   : a <i>&lt;User&gt;</i> Record
+
+   AND
+   : a <i>&lt;Birth Sex&gt;</i>
+
+WHEN
+: <i>&lt;User&gt;</i> is retrieved
+
+THEN
+: <i>&lt;User&gt;</i> contains <i>&lt;Sex&gt;</i>
+

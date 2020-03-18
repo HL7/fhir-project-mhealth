@@ -1,0 +1,1 @@
+The Sharing Mechanism category ensures that sharing is possible and that the mechanism is described.

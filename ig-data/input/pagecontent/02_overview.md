@@ -8,6 +8,8 @@ The approach taken in this guide is to establish sets of requirements in various
 and to associate those requirements with the different [Actors](actors.html) and levels
 of conformance (SHALL vs. SHOULD).
 
+Requirements are written in the [Gherkin] Language and transformed into the guide content.
+
 #### Categories
 Categories provide a means to group requirements functionally, and also allow groups
 of requirements to be broken up in ways that allow for different levels of functionality

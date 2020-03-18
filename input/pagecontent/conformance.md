@@ -19,7 +19,7 @@ conformity assessment in general.
 This guide describes a more user friendly stars rating system on an ordinal scale of 1 to 5.
 However, unlike some stars rating systems which simply based on aggregated ratings of
 subjective assessors, this guide defines a rating system which is based on objective
-criteria, which should be more readily reproducable across different assessors.
+criteria, which should be more readily reproduced by different assessors.
 
 #### Scoring
 The following demonstrates the scoring:
@@ -51,16 +51,29 @@ For the purposes of this guide, most is defined as 50% or more. [_should this be
 --KWB]
 
 ### Assessing Conformance
-Each requirement criterion is individually measured on a pass/fail basis, and includes
+Each feature is individually measured on a pass/fail basis for a SUT, and includes
 one or more scenarios containing GIVEN/WHEN/THEN statements describing how to perform
 the test.  Only **SHALL** and **SHOULD** criteria are used in this assessment.  Criteria
-using **MAY** or **NEED NOT** are merely present to clarify allowed behavior and describe
+using **MAY** or **NEED NOT** may be present to clarify allowed behavior and describe
 optional behaviors for which there is no value judgment. These criteria are often
 provided to clarify to implementors nuances that might be confusing without further
 explanation.
 
-For any given requirement, if any test scenario fails, the SUT fails to conform to the
-requirement. Otherwise the SUT conforms to this requirement.
+Features, Rules and Scenarios are referred to collectively as requirements.
+
+A feature can have one or more rules or scenarios.  Rules will have one or more scenarios.
+Each scenario represents an individual test.  If the test fails, the enclosing rule
+and/or feature fails.  A feature fails if one or more of it's applicable tests fails.
+
+Requirements are applicable to Apps, Devices or Infrastructure based
+on the presence of the @App, @Device or @Infra tags in the requirement.
+When a requirement begins with **IF** this is a precondition that must be true
+for the requirement to be applicable.  For example, an App may allow for
+manual entry of data.  When it does, there are certain requirements that
+become applicable.
+
+Only applicable tests are performed, and only applicable features are reported in a
+result.
 
 #### Conformance Testing Results
 The results of conformance testing for a given SUT include:
@@ -69,6 +82,10 @@ The results of conformance testing for a given SUT include:
 * The collection of requirement categories that were tested.
 * The pass/fail/not-applicable/not-tested status for each requirement in those categories.
 
+##### Applicable Requirements
+A system is tested against all applicable requirements.  Unless otherwise specified,
+a requirement ()
+
 ##### Not Applicable vs. Not Tested
 A given requirement may not be applicable to a given SUT, or the assessor may not have
 performed a specified test on the SUT (e.g., because test sponsor did not require those
@@ -76,7 +93,9 @@ tests be performed).
 
 For example, there is a requirement that the results of a blood pressure measurement
 be displayed to the user.  This is a requirement of an App, but is NOT a requirement
-of a Device.  Thus, the results for this test would be reported as Not Applicable.
+of a Device.  Thus, the results for this test would not be reported as they are 
+Not Applicable for the device.
+
 In another case, the there are requirements on devices to be able to report blood
 pressure, heart rate, and respiration rate. However, these three observations are
 not reported by all devices, and aren't always needed for every use case.  Thus, a clinic
@@ -89,6 +108,7 @@ the test "not applicable" when the category for basic device operations is chose
 This is a failure of the device to support that function. This does NOT indicate a flaw
 in the device.  It merely reports the device's inability to support that requirement.
 
+<span id='assessment'/>
 #### Conformance Testing Assessments
 As in laboratory diagnostics, tests provide objective evidence.  Assessments perform
 computations on those results to enable interpretation of test results.  The 0-5 star
@@ -192,6 +212,7 @@ results for the minimal case.  Reporting both assessments enables users who may 
 access to an implementation supporting S to also support G, and to assess how much additional
 work is needed to make the output of the implementation of S support G.
 
+<span id='reporting'/>
 ##### Reporting Display Recommendations
 For a given criteria group in this guide, the reporting recommendations are as follows:
 
@@ -257,7 +278,6 @@ An example report is given below:
 </tr>
 </tbody></table>
 
-
 ###### Reporting against a Specification,
 Display the category name, followed by a number of stars filled in gold (or light-gray
 screen for B&W images) given by the minimal assessment ranking. Follow that by a number
@@ -319,9 +339,6 @@ An example report is given below:
 
 NOTE: The colors of Gold and Black provide a color-blind safe pallette.
 
-
-
-
 #### Gherkin
 [Gherkin](https://cucumber.io/docs/gherkin/reference/) describes a language that is used for testing
 applications. The core of this language is made up of three keywords `GIVEN`, `WHEN` and
@@ -363,8 +380,8 @@ condition `BUT`.
 This guide uses tags to identifier the actors to which a feature is applicable. The
 form of these tags is @{Actor-Name}[-{Shall|Should}]
 
-When only the actor name is given, the feature represents a Shall requirement, as in
-@App below. This can be made explicit by using @App-Shall instead.
+When only the actor name is given, the feature has Shall and Should requirements and
+these are described in more detail for rules or scenarios within the feature.
 
 Specific rules or scenarios can also be marked with these tags to create rules specific
 to the actors to which they are applied.
@@ -390,6 +407,7 @@ period of time has elapsed.
 
 
 ###### Scenario: Example Scenario
+
 GIVEN
 : the screen saver is configured to hide the screen after 5 minutes.
 
@@ -409,8 +427,9 @@ Rule: If the user does not configure the screen saver, then the
 default timeout period **SHALL** be used.
 
 ###### Scenario: Default Scenario
-GIVEN:
-the screen saver has NOT been configured by the user
+
+GIVEN
+: the screen saver has NOT been configured by the user
 
 WHEN
 : the default timeout period has elapsed

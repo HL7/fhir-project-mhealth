@@ -16,3 +16,166 @@ the software that it runs.  Generally the distinction is made that "it's soft" i
 can be easily changed, and "firm" if it requires a special mode of operation to change
 it.  But it's all stored in some form of memory that is very likely rewritable.
 
+
+<span id='the-mechanism-to-obtain-the-system-configuration-is-documented.'/>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: The Mechanism to Obtain the System Configuration is Documented.
+
+The means by which a system configuration can be inspected is documented.
+
+Configuration includes the system identifier, software version, and other
+configurable system attributes (e.g., units).
+
+
+<span id='the-means-to-access-system-configuration-shall-be-documented'/>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: The Means to Access System Configuration Shall be Documented
+
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+   AND
+   : <i>&lt;Documentation&gt;</i> for it
+
+WHEN
+: the <i>&lt;Documentation&gt;</i> is examined
+
+THEN
+: the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
+
+
+<span id='device-can-be-identified'/>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Device Can be Identified
+
+    The device that performs a measurement **SHALL** be uniquely identified.
+
+Each type of device has attributes with regard to precision, accuracy and quality which
+can impact the interpretation of measurements taken by the device.  Knowledge of the
+device helps greatly in interpreting the results.
+
+
+<span id='device-identifier-is-unique'/>
+#### Scenario: Device Identifier is Unique
+
+    The device identifier shall be unique within the namespace defined by the system
+    (Device + App + Infrastructure).
+
+    The point of this assessment is that the mechanism by which devices are identified
+be sufficient demonstrate that identifiers are unique.
+
+GIVEN
+: A <i>&lt;Device&gt;</i> that performs a measurement
+
+   AND
+   : an <i>&lt;App&gt;</i> that records a measurement
+
+   AND
+   : <i>&lt;Infrastructure&gt;</i> that reports a measurement
+
+   AND
+   : An <i>&lt;Identifier&gt;</i> for that <i>&lt;Device&gt;</i>
+
+WHEN
+: The mechanism for assigning <i>&lt;Identifier&gt;</i> is examined
+
+THEN
+: <i>&lt;Identifier&gt;</i> is uniquely assigned to <i>&lt;Device&gt;</i>
+
+
+<span id='the-device-has-a-unique-device-identifier-(udi)'/>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: The Device Has a Unique Device Identifier (UDI)
+
+    The device should have a UDI.
+
+    The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
+(UDI System) enables users of device related data to identify the devices providing measurements
+and enables analysis of device data with regard to issues, errors, accuracy, et cetera.
+
+NOTE: The UDI need not be the primary identifier for the device
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+WHEN
+: The <i>&lt;Device Record&gt;</i> is examined
+
+THEN
+: The <i>&lt;Device Record&gt;</i> contains a UDI for the device
+
+
+<span id='network-address'/>
+### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Feature: Network Address
+
+    The network address of a device **SHOULD** be reported.
+
+    The network address can be the physical network address (e.g., MAC address) or other identifier
+    assigned to uniquely identify the device on a network (wired or unwired)
+
+
+<span id='network-address-can-be-accessed'/>
+#### Scenario: Network Address Can be Accessed
+
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+   AND
+   : a <i>&lt;Network Address&gt;</i>
+
+   AND
+   : an <i>&lt;App&gt;</i> running on <i>&lt;App Runner&gt;</i>
+
+WHEN
+: The <i>&lt;Device&gt;</i> is connected to the <i>&lt;App&gt;</i> and <i>&lt;App Runner&gt;</i>
+
+THEN
+: <i>&lt;Network Address&gt;</i> can be discovered
+
+
+<span id='network-address'/>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Network Address
+
+    The network address of a device can be discovered.
+
+
+<span id='network-address-can-be-accessed'/>
+#### Scenario: Network Address Can be Accessed
+
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+   AND
+   : a <i>&lt;Network Address&gt;</i>
+
+WHEN
+: The <i>&lt;Device Record&gt;</i> is examined
+
+THEN
+: <i>&lt;Network Address&gt;</i> can be found in <i>&lt;Device Record&gt;</i>
+
+
+<span id='battery-charge'/>
+### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Feature: Battery Charge
+
+    The level of battery charge for a device **SHOULD** be reported.
+
+    Reporting the battery charge level for a device enables an App to alert
+    a user that the device needs recharging.
+
+
+<span id='battery-charge-can-be-accessed'/>
+#### Scenario: Battery Charge Can be Accessed
+
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+   AND
+   : a <i>&lt;Charge Level&gt;</i>
+
+WHEN
+: The <i>&lt;Device&gt;</i> is connected to the <i>&lt;App&gt;</i> and <i>&lt;App Runner&gt;</i>
+
+THEN
+: <i>&lt;Charge Level&gt;</i> for <i>&lt;Device&gt;</i> is reported by <i>&lt;App&gt;</i>
+

@@ -1,1 +1,0 @@
-The Description.md category supports [<span class='text-error'>...</span>](#error)

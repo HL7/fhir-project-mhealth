@@ -30,21 +30,29 @@ with these systems.
 
 [^1]: Clark CE, Taylor RS, Shore AC, Ukoumunne OC, Campbell JL.
 [Association of a difference in systolic blood pressure between arms with vascular disease and mortality: a systematic review and meta-analysis](https://www.ncbi.nlm.nih.gov/pubmed/22293369/).
-Lancet. 2012 Mar 10;379(9819):905-914. doi: 10.1016/S0140-6736(11)61710-8. Epub 2012 Jan 30. Review. PubMed PMID: 22293369.### Category: Clinical Vital Signs 
+Lancet. 2012 Mar 10;379(9819):905-914. doi: 10.1016/S0140-6736(11)61710-8. Epub 2012 Jan 30. Review. PubMed PMID: 22293369.
+<span id='2-clinical-vital-signs'/>
+### Category: 2 Clinical Vital Signs
 
-The Clinical Vital Signs Category includes all requirements for from the following subcategories:
- * [Clinical Blood Pressure](clinical_blood_pressure.html)
-   The Description.md category supports [<span class='text-error'>...</span>](#error)
-
+The Category: 2 Clinical Vital Signs Category includes all requirements for from the following subcategories:
  * [Clinical Height And Weight](clinical_height_and_weight.html)
-   The Description.md category supports [<span class='text-error'>...</span>](#error)
+   The Clinical Height and Weight category supports additional requirements used in clinical settings for the interpretation of height and weight measures
 
- * [Clinical Respiration And Pulse](clinical_respiration_and_pulse.html)
-   The Description.md category supports [<span class='text-error'>...</span>](#error)
+ * [Clinical Blood Pressure](clinical_blood_pressure.html)
+   The Clinical Blood Pressure category supports the reporting of additional measurements supporting clinical interpretation of results
+
+ * [Clinical Heart Rate](clinical_heart_rate.html)
+   The Clinical Heart Rate Pressure category supports the reporting of additional measurements supporting clinical interpretation of results.
+
+ * [Clinical Respiration](clinical_respiration.html)
+   The Clinical Respiration Category supports the reporting of additional measurements supporting clinical interpretation of results
 
  * [Clinical Spo2](clinical_spo2.html)
-   The Description.md category supports [<span class='text-error'>...</span>](#error)
+   The Clinical SPO2 category supports [<span class='text-error'>...</span>](#error) For device type and characteristics data, see [general_clinical_measurements.html]
 
  * [Clinical Temperature](clinical_temperature.html)
-   The Description.md category supports [<span class='text-error'>...</span>](#error)
+   The Clinical Temperature Category supports capture of measurement site data
+
+ * [General Clinical Measurements](general_clinical_measurements.html)
+   The General Clinical Measurements category includes requirements for all clinical vital signs measurements
 

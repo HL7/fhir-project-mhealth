@@ -16,6 +16,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -37,8 +39,9 @@ import io.cucumber.messages.internal.com.google.protobuf.GeneratedMessageV3;
 
 public class Convert {
     private static IdGenerator gen = new IdGenerator.Incrementing();
-    private static int errors, warnings;
-
+    private static int errors, warnings, numInputFiles, numOutputFiles;
+    private static Map<String, String> files = new TreeMap<>();
+    private static int fileNumber = 10;
     public static void main(String args[]) throws IOException {
         String output = "./ig-data/input/pagecontent";
         for (String arg : args) {
@@ -57,6 +60,10 @@ public class Convert {
                 continue;
             }
             convert(f, new File(output));
+            System.out.printf("Produced %d outputs from %d inputs with %d Errors and %d Warnings%n",
+                numOutputFiles, numInputFiles, errors, warnings);
+            System.err.printf("Produced %d outputs from %d inputs with %d Errors and %d Warnings%n",
+                numOutputFiles, numInputFiles, errors, warnings);
         }
     }
 
@@ -181,11 +188,13 @@ public class Convert {
 
             String content = input.exists() ? FileUtils.readFileToString(input, StandardCharsets.UTF_8)
                 : String.format("Missing description for %s.%n%n", input.getPath());
-
+            if (input.exists()) {
+                numInputFiles++;
+            }
             firstSentence = StringUtils.substringBefore(content.replaceAll("\\s+", " "), ". ");
             FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
             root.setTitle(makeTitle(input.getName()));
-            root.setDescription(firstSentence);
+            root.setDescription(highlightRequirements(firstSentence));
 
         } catch (IOException e) {
             error(input, "Unexpected %s reading file.", e.getClass().getName());
@@ -207,10 +216,13 @@ public class Convert {
             parts[i] = StringUtils.join(subparts, '_');
         }
         path = parts[parts.length - 1];
-        if (number.length() > 0) {
-            path = number + "_" + path;
+        String name = files.get(path);
+        if (name == null) {
+            files.put(path, name = String.format("%d_%s.md", fileNumber++,
+                path.replaceAll("^_+", "").replaceAll("__+", "_")));
         }
-        return new File(outputFolder, path.replaceAll("_+", "_") + ".md");
+        File f = new File(outputFolder, name);
+        return f;
     }
 
     private static void processSubfolders(Hierarchy<GeneratedMessageV3> root, File inputFolder, File outputFolder) {
@@ -218,8 +230,9 @@ public class Convert {
 
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-        String category = makeTitle(inputFolder.getName());
-        pw.printf("### Category: %s %n%n", category);
+        String category = makeTitle("Category Content");
+        root.setTitle(category);
+        printHeading(pw, 3, root);
 
         pw.printf("The %s Category includes all requirements for from the following subcategories:%n", category);
         for (File f : inputFolder.listFiles(f -> f.isDirectory())) {
@@ -243,6 +256,14 @@ public class Convert {
                 error(outputFile, "Error writing to file");
             }
         }
+    }
+
+    private static Object makeId(String category) {
+
+        return String.format("<span id='%s'/>",
+            (category.contains(":") ?
+                StringUtils.substringAfter(category, ":") : category)
+            .trim().toLowerCase().replace(" ", "-"));
     }
 
     private static String makeTitle(String name) {
@@ -270,6 +291,8 @@ public class Convert {
         }
 
         File outputFile = computeOutputFile(inputFolder, outputFolder);
+        numOutputFiles++;
+
 
         for (File input : collection) {
             GherkinDocument doc = null;
@@ -277,6 +300,8 @@ public class Convert {
                 try (BufferedReader r = new BufferedReader(new FileReader(input));) {
                     Parser<GherkinDocument.Builder> parser = new Parser<>(new GherkinDocumentBuilder(gen));
                     doc = parser.parse(r).build();
+
+                    numInputFiles++;
                 } catch (FileNotFoundException e) {
                     error(pw, input, "File '%s' not found.");
                 } catch (IOException e) {
@@ -310,18 +335,13 @@ public class Convert {
     }
 
     private static void printHeading(PrintWriter pw, int i, Hierarchy<GeneratedMessageV3> hier) {
-        pw.printf("%1$s %3$s%2$s%n%n", "######".substring(0, i), hier.getTitle(), getTagIcons(hier.getTags()));
-    }
-
-    private static void error(PrintWriter pw, File input, String string, String name, File input2) {
-        // TODO Auto-generated method stub
-
+        pw.printf("%n%s%n%s %s%s%n%n", makeId(hier.getTitle()), "######".substring(0, i), getTagIcons(hier.getTags()), hier.getTitle());
     }
 
     private static Pattern REQ_TERMS = Pattern.compile("(?i)\\b(SHALL|SHALL NOT|SHOULD|SHOULD NOT)\\b");
-    private static Object highlightRequirements(String text) {
+    private static String highlightRequirements(String text) {
         Matcher matcher = REQ_TERMS.matcher(text);
-        return matcher.replaceAll(m -> "**" + m.group().toUpperCase() + "**");
+        return matcher.replaceAll(m -> "**" + m.group().toUpperCase() + "**").replaceAll("\\n[ \\t]+", "").trim();
     }
 
     private static void handleFeatureChildren(PrintWriter pw, int l, Hierarchy<GeneratedMessageV3> root, List<FeatureChild> childrenList) {
@@ -393,31 +413,35 @@ public class Convert {
                 keyword = "BUT";
                 break;
             case "* ":
-                pw.printf("  * %s%n%n", step.getText());
+                pw.printf("  * %s%n%n", escapeVariables(step.getText()));
                 continue;
             default:
                 error(null, "Unknown keyword %s", step.getKeyword());
                 continue;
             }
-            pw.printf("%s%s%n%s: %s%n%n", delim, keyword, delim, step.getText());
+            pw.printf("%s%s%n%s: %s%n%n", delim, keyword, delim, escapeVariables(step.getText()));
         }
+    }
+
+    private static String escapeVariables(String text) {
+        return text.replaceAll("<([^>]+)>", "<i>&lt;$1&gt;</i>");
     }
 
     private static List<Step> handleScenario(Hierarchy<GeneratedMessageV3> node, Scenario scenario) {
         node.setTitle(scenario.getKeyword() + ": " + makeTitle(scenario.getName()));
-        node.setDescription(scenario.getDescription());
+        node.setDescription(highlightRequirements(scenario.getDescription()));
         scenario.getTagsList().forEach(t -> node.addTag(t.getName()));
         return scenario.getStepsList();
     }
 
     private static void handleRule(PrintWriter pw, int l, Hierarchy<GeneratedMessageV3> node, Rule rule) {
         node.setTitle(rule.getKeyword() + ": " + makeTitle(rule.getName()));
-        node.setDescription(rule.getDescription());
+        node.setDescription(highlightRequirements(rule.getDescription()));
     }
 
     private static List<Step> handleBackground(Hierarchy<GeneratedMessageV3> node, Background background) {
         node.setTitle(background.getKeyword() + ": " + makeTitle(background.getName()));
-        node.setDescription(background.getDescription());
+        node.setDescription(highlightRequirements(background.getDescription()));
         return background.getStepsList();
     }
 

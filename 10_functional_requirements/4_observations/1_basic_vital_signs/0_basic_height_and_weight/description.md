@@ -1,0 +1,1 @@
+The Basic Height and Weight category supports capturing measures of the user's height and weight.

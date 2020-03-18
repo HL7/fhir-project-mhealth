@@ -98,16 +98,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "resource_profiles.html",
-          "title": "Resource Profiles",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "appendices.html",
-          "title": "Appendices",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "attribution.html",
           "title": "Attribution",
           "generation": "markdown"
@@ -118,26 +108,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "system_data.html",
-          "title": "System Data",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "observations.html",
-          "title": "Observations",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "data_sharing.html",
-          "title": "Data Sharing",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "general_requirements.html",
-          "title": "General Requirements",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "user_demographics.html",
           "title": "User Demographics",
           "generation": "markdown"
@@ -145,6 +115,11 @@
         {
           "nameUrl": "user_attributes.html",
           "title": "User Attributes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "system_data.html",
+          "title": "System Data",
           "generation": "markdown"
         },
         {
@@ -163,23 +138,33 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "observations.html",
+          "title": "Observations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "general.html",
+          "title": "General",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "general_observations.html",
+          "title": "General Observations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "coded_observations.html",
+          "title": "Coded Observations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "numeric_observations.html",
+          "title": "Numeric Observations",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "basic_vital_signs.html",
           "title": "Basic Vital Signs",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "clinical_vital_signs.html",
-          "title": "Clinical Vital Signs",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "physical_activity_and_sleep.html",
-          "title": "Physical Activity and Sleep",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "basic_blood_pressure.html",
-          "title": "Basic Blood Pressure",
           "generation": "markdown"
         },
         {
@@ -188,8 +173,18 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "basic_respiration_and_pulse.html",
-          "title": "Basic Respiration and Pulse",
+          "nameUrl": "basic_blood_pressure.html",
+          "title": "Basic Blood Pressure",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_heart_rate.html",
+          "title": "Basic Heart Rate",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "basic_respiration.html",
+          "title": "Basic Respiration",
           "generation": "markdown"
         },
         {
@@ -203,8 +198,8 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "clinical_blood_pressure.html",
-          "title": "Clinical Blood Pressure",
+          "nameUrl": "clinical_vital_signs.html",
+          "title": "Clinical Vital Signs",
           "generation": "markdown"
         },
         {
@@ -213,8 +208,18 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "clinical_respiration_and_pulse.html",
-          "title": "Clinical Respiration and Pulse",
+          "nameUrl": "clinical_blood_pressure.html",
+          "title": "Clinical Blood Pressure",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_heart_rate.html",
+          "title": "Clinical Heart Rate",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "clinical_respiration.html",
+          "title": "Clinical Respiration",
           "generation": "markdown"
         },
         {
@@ -228,13 +233,43 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "physical_activity.html",
-          "title": "Physical Activity",
+          "nameUrl": "general_clinical_measurements.html",
+          "title": "General Clinical Measurements",
           "generation": "markdown"
         },
         {
-          "nameUrl": "sleep.html",
-          "title": "Sleep",
+          "nameUrl": "physical_activity_and_sleep.html",
+          "title": "Physical Activity and Sleep",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "data_sharing.html",
+          "title": "Data Sharing",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "user_choice.html",
+          "title": "User Choice",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "sharing_mechanism.html",
+          "title": "Sharing Mechanism",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "general_requirements.html",
+          "title": "General Requirements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "resource_profiles.html",
+          "title": "Resource Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "appendices.html",
+          "title": "Appendices",
           "generation": "markdown"
         }
       ]
