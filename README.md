@@ -3,4 +3,4 @@ Mobile apps and devices provide their own APIs and methods for collecting device
 
 This repository is the source code for the Implementation Guide. 
 
-The currently published version of the guide can be found [here](https://hl7.github.io/fhir-project-mhealth/).
+The currently published version of the guide can be found [here](http://build.fhir.org/ig/HL7/fhir-project-mhealth/).
