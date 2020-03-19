@@ -6,8 +6,8 @@ data with other systems and users.
 
 The Category Content Category includes all requirements for from the following subcategories:
  * [User Choice](user_choice.html)
-   The user choice category ensures that a user has control over how sharing occurs
+   The user choice category ensures that a user has control over how sharing occurs.
 
  * [Sharing Mechanism](sharing_mechanism.html)
-   The Sharing Mechanism category ensures that sharing is possible and that the mechanism is described.
+   The Sharing Mechanism category ensures that sharing is possible and that the mechanism is described..
 

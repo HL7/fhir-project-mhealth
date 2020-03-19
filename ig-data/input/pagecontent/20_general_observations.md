@@ -10,7 +10,8 @@ can support.
 
 The Category Content Category includes all requirements for from the following subcategories:
  * [Coded Observations](coded_observations.html)
+   .
 
  * [Numeric Observations](numeric_observations.html)
-   This section describes requirements of observations which reflect numeric values
+   This section describes requirements of observations which reflect numeric values.
 

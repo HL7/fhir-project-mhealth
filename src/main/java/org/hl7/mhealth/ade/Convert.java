@@ -69,13 +69,30 @@ public class Convert {
 
     public static class Hierarchy<Type extends Object> {
         private Type entry;
+        private String name;
         private String title;
         private String description;
+        private String detail;
         private List<String> tags = new ArrayList<>();
+        private List<String> variables = new ArrayList<>();
         private List<Hierarchy<Type>> children = new ArrayList<>();
 
         Hierarchy(Type entry) {
             this.entry = entry;
+        }
+
+        /**
+         * @return the name
+         */
+        public String getName() {
+            return name;
+        }
+
+        /**
+         * @param name the name to set
+         */
+        public void setName(String name) {
+            this.name = name;
         }
 
         public Type getEntry() {
@@ -111,12 +128,34 @@ public class Convert {
         }
 
 
+        /**
+         * @return the detail
+         */
+        public String getDetail() {
+            return detail;
+        }
+
+        /**
+         * @param detail the detail to set
+         */
+        public void setDetail(String detail) {
+            this.detail = detail;
+        }
+
         public List<String> getTags() {
             return tags;
         }
 
         public void addTag(String tag) {
             tags.add(tag);
+        }
+
+        public List<String> getVariables() {
+            return variables;
+        }
+
+        public void addVariable(String variable) {
+            variables.add(variable);
         }
 
         Hierarchy<Type> add(Type child) {
@@ -158,10 +197,11 @@ public class Convert {
 
     private static String[] FEATURE_EXT = { "feature" };
 
-    private static void convert(File inputFolder, File outputFolder) {
+    private static Hierarchy<GeneratedMessageV3> convert(File inputFolder, File outputFolder) {
         Hierarchy<GeneratedMessageV3> root = new Hierarchy<>(null);
         processDescription(root, inputFolder, outputFolder);
         processSubfolders(root, inputFolder, outputFolder);
+        return root;
     }
 
     private static String processDescription(Hierarchy<GeneratedMessageV3> root, File inputFolder, File outputFolder) {
@@ -183,7 +223,7 @@ public class Convert {
             }
         }
 
-        String firstSentence = null;
+        String firstSentence = null, detail = null;
         try {
 
             String content = input.exists() ? FileUtils.readFileToString(input, StandardCharsets.UTF_8)
@@ -191,10 +231,13 @@ public class Convert {
             if (input.exists()) {
                 numInputFiles++;
             }
-            firstSentence = StringUtils.substringBefore(content.replaceAll("\\s+", " "), ". ");
+            String content2 = content.replaceAll("\\s+", " ").trim();
+            firstSentence = StringUtils.substringBefore(content2, ". ") + ".";
+            detail = StringUtils.substringAfter(content, ".\\s+");
             FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
             root.setTitle(makeTitle(input.getName()));
             root.setDescription(highlightRequirements(firstSentence));
+            root.setDetail(detail);
 
         } catch (IOException e) {
             error(input, "Unexpected %s reading file.", e.getClass().getName());

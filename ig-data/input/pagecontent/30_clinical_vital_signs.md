@@ -40,23 +40,23 @@ Review. PubMed PMID: 22293369.
 
 The Category Content Category includes all requirements for from the following subcategories:
  * [Clinical Height And Weight](clinical_height_and_weight.html)
-   The Clinical Height and Weight category supports additional requirements used in clinical settings for the interpretation of height and weight measures
+   The Clinical Height and Weight category supports additional requirements used in clinical settings for the interpretation of height and weight measures..
 
  * [Clinical Blood Pressure](clinical_blood_pressure.html)
-   The Clinical Blood Pressure category supports the reporting of additional measurements supporting clinical interpretation of results
+   The Clinical Blood Pressure category supports the reporting of additional measurements supporting clinical interpretation of results.
 
  * [Clinical Heart Rate](clinical_heart_rate.html)
-   The Clinical Heart Rate Pressure category supports the reporting of additional measurements supporting clinical interpretation of results.
+   The Clinical Heart Rate Pressure category supports the reporting of additional measurements supporting clinical interpretation of results..
 
  * [Clinical Respiration](clinical_respiration.html)
-   The Clinical Respiration Category supports the reporting of additional measurements supporting clinical interpretation of results
+   The Clinical Respiration Category supports the reporting of additional measurements supporting clinical interpretation of results.
 
  * [Clinical Spo2](clinical_spo2.html)
-   The Clinical SPO2 category supports the capture of measurement site data when Oxygen Saturation is collected
+   The Clinical SPO2 category supports the capture of measurement site data when Oxygen Saturation is collected.
 
  * [Clinical Temperature](clinical_temperature.html)
-   The Clinical Temperature Category supports capture of measurement site data when Temperature is collected
+   The Clinical Temperature Category supports capture of measurement site data when Temperature is collected.
 
  * [General Clinical Measurements](general_clinical_measurements.html)
-   The General Clinical Measurements category includes requirements for all clinical vital signs measurements
+   The General Clinical Measurements category includes requirements for all clinical vital signs measurements.
 
