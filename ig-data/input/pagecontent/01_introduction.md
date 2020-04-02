@@ -2,17 +2,15 @@
 Mobile apps and devices provide their own APIs and methods for collecting device data and communicating it to EHR, PHR and research endpoints. Much of this data can (and has been) readily converted to FHIR resources. However, some limits have been encountered which demonstrate that essential data needed to generate, interpret and use the FHIR resources is sometimes missing. The purpose of this implementation guide is to document the functional requirements that can be used to assess mobile health devices, apps, and FHIR profiles to ensure that the essential data needed for clinical, patient and research uses is present.
 
 ### Target Audience
-The target audience for this document includes executive leaders, senior managers,
-and development staff interested in integrating mobile health devices into the health
-care eco-system.
+The target audience for this document includes executive leaders, senior managers, and development staff interested in integrating mobile health devices and apps into the health care eco-system.
 
 This includes:
-* Members of organizations developing standards or regulation supporting these capabilities
+* Members of organizations developing standards and/or regulations supporting these capabilities
   including:
 
     + Public Health Agencies
     + Quality Reporting Agencies
-    + Regulators and Law-makers
+    + Regulators and Lawmakers
 
 * Organizations developing or assessing the functionality of
     + Electronic Health Record (EHR) systems,
@@ -21,25 +19,23 @@ This includes:
     + Mobile Health Devices, and
     + Mobile Health Apps or infrastructure.
 
-* Healthcare Institutions using, purchasing, or connecting to these systems to their
+* Healthcare Institutions using, purchasing, or connecting these systems to their
   EHR systems.
 
-* Health Information Exchange organizations facilitating such connections.
+* Health Information Exchange (HIE) organizations facilitating such connections.
 
 ### Scope of Work
-The scope of this project is to develop the assessment framework and functional requirements
-for consumer medical devices and applications required to support the exchange of
-observations and other data in support of consumer health monitoring. This project
-will focus on functional requirements of devices, apps, and infrastructure regarding
-the observations and device related communicating data about:
+The scope of this project is to develop the assessment framework and functional requirements for mobile health devices and apps to support the exchange of observations and other data in support of consumer health monitoring. This project will focus on functional requirements of mobile health devices, apps, and infrastructure regarding the observations and related communication on the following data:
 
-* vital signs, including
+* Vital signs, including
     + height,
     + weight,
     + blood pressure,
     + O2 saturation,
-    + respiration and heart rate,
-* physical activity (including sleep).
+    + respiration, 
+    + heart rate,
+    + physical activity 
+    + sleep. 
 
 #### Out of Scope
 This guide is focused on _functional_ requirements.  As such, it specifically leaves
@@ -50,21 +46,20 @@ these issues.
 Out of scope items include:
 
 * Privacy and Security - Devices and applications are expected to operate in a secure
-  environment, but this specification provides no guidance in assessing the security
-  or privacy of these components.
-* Reliability, Accuracy Precision - Devices and applications are expected to operate
-  reliably and produce results with adequate precision and accuracy, however, this
+  environment, but this specification provides no guidance in assessing privacy or security of these components.
+* Reliability, Accuracy and Precision - Devices and applications are expected to operate
+  reliably and produce results with adequate precision and accuracy. However, this
   specification does not document how these are assessed.
 * Performance, Scalability, Cost, Quality, et cetera.
 * FHIR Profiles specifically intended for the purpose of exchange. The profiles
-  in this guide are intended to be used as aid to automate the computation of
+  in this guide are intended to be used as an aid to automate the computation of
   assessments against the requirements of this guide. Existing profiles, such as
   the [FHIR Use Core](https://www.hl7.org/fhir/us/core/) and the
   [Observation Vital Signs Profile](https://www.hl7.org/fhir/observation-vitalsigns.html)
   should be used for these purposes.
 
 ### Document Conventions
-Explains Meaning of key words and other conventions or structures used in the document.
+This section explains the meaning of key words and other conventions and/or structures used in the document.
 
 The phrases: **SHALL**, **SHOULD**, **MAY**, **SHALL NOT**, **SHOULD NOT**, **NEED
 NOT**, when appearing in this document in **BOLD UPPERCASE** have the following meanings:
@@ -84,7 +79,7 @@ choosing a different course.
 MAY/NEED NOT: This is truly optional language for an implementation; can be
 included or omitted as the implementer decides with no implications.
 
-This are similar to the [Conformance Language](https://www.hl7.org/fhir/conformance-rules.html#conflang)
+The keywords above are similar to the [Conformance Language](https://www.hl7.org/fhir/conformance-rules.html#conflang)
 used in HL7 FHIR and have the same meanings.
 
 FHIR Resource names and field names will appear in text as `Resource`.  Field names
@@ -96,23 +91,23 @@ HL7 would like to thank the following individuals and organizations for contribu
 to this effort.
 
 **Individuals**
-* [Ida Sim](https://www.linkedin.com/in/ida-sim-b67b993/), MD, PhD, Co-Director,
-  Informatics & Research Innovation, UCSF Clinical and Translational Sciences Institute
-* [Simona Carini](https://www.linkedin.com/in/simona-carini-1a0b265/), MS, Programmer/Analyst,
-  UCSF
 * [Keith W. Boone](https://www.linkedin.com/in/keithwboone/), MBI, Informatics Adept,
-  Audacious Inquiry
-* [Christina Caraballo](https://www.linkedin.com/in/christinacaraballo/), Director,
   Audacious Inquiry
 * [Nathan Botts](https://www.linkedin.com/in/nathanbotts/), MA, PhD, Senior Study
   Director, Westat
+* [Christina Caraballo](https://www.linkedin.com/in/christinacaraballo/), MBA, Director,
+  Audacious Inquiry
+* [Simona Carini](https://www.linkedin.com/in/simona-carini-1a0b265/), MS, Programmer/Analyst,
+  UCSF
 * [Gora Datta](https://www.linkedin.com/in/goradatta/), MS, CEO, CAL2CAL
-* [Frank Ploeg](https://www.linkedin.com/in/flodurf/), Enterprise Architect, University
-  Medical Hospital Groningen
-* [Matthew Graham](https://www.linkedin.com/in/matthew-graham-8623002b/), BS, Technical
-  Specialist II, Mayo Clinic
 * [Lawrence Garber](https://www.linkedin.com/in/larry-garber-1516129/), MD, Medical
   Director of Informatics, Reliant Medical Group
+* [Matthew Graham](https://www.linkedin.com/in/matthew-graham-8623002b/), BS, Technical
+  Specialist II, Mayo Clinic
+* [Frank Ploeg](https://www.linkedin.com/in/flodurf/), Enterprise Architect, University
+  Medical Hospital Groningen
+* [Ida Sim](https://www.linkedin.com/in/ida-sim-b67b993/), MD, PhD, Co-Director,
+  Informatics & Research Innovation, UCSF Clinical and Translational Sciences Institute
 
 **Organizations**
 * [US Office of the National Coordinator for Health IT](https://www.healthit.gov/)
@@ -136,15 +131,15 @@ devices such as a smart watch, smart phone or tablet.  Such an App may also be a
 the Internet or a personal computer.
 
 App Runner
-: A system, such as a mobile phone, tablet, Laptop Computer or Web Browser which runs
+: A system, such as a mobile phone, tablet, laptop computer or Web browser which runs
 an App, or an instance of such a system.
 
 Application
 : In this guide, the term application refers to a collection of computer software which
 provides some computing functionality to an end user. This functionality can be spread
-across multiple computing devices or executed within a single computing devices.
+across multiple computing devices or executed within a single computing device.
 While all Apps are also applications according to this guide, not all applications
-may be considered to be Apps.
+are considered to be Apps.
 
 Assessor
 : An assessor is one who measures. In the context of this guide, an assessor is an individual
@@ -153,41 +148,41 @@ guide measures up against the criteria specified in this guide.
 
 Mobile Computing Device
 : Mobile computing devices are designed to be easily carried around (i.e., either worn
-or carried in an possibly over-sized pocket), can perform general purpose computing on
+or carried in a possibly over-sized pocket), can perform general purpose computing on
 behalf of a user, contain sensors that measure data about a user, and can connect wirelessly
-to a network (e.g., via WiFi, Cellular, Bluetooth or other technology). The principle form
+to a network (e.g., via WiFi, Cellular, Bluetooth or other technology). The principal form
 of input for a mobile device is generally a touch screen. These include devices such as
 a smart watch, smart phone or tablet computer. Laptop computers (even 2-in-1 units)
 are not considered in this guide to be a mobile computing device. While "mobile" in
-the general sense, they aren't the kind of thing that you can fit into an over-sized
+the general sense, they cannot fit into an over-sized
 pocket easily and usually rely on external keyboard input for certain tasks.
 
 Mobile Device
 : Mobile Devices include sensors that measure data about a user or their environment
 and can connect to mobile (or other) computing devices.  Mobile computing devices are
-considered to be mobile devices.
+considered mobile devices.
 
 Mobile Health
-: Mobile Health is often used as an adjective to describe devices, applications,
+: Mobile Health (mHealth) is often used as an adjective to describe devices, applications,
 data repositories and other systems used with mobile computing devices such as a smart watch,
-smart phone, or tablet or wireless networks (WiFi, Cellular, Bluetooth or other).
+smart phone, or tablet and wireless networks (WiFi, Cellular, Bluetooth or other).
 
 Regulated Health Device
 : A regulated device is one which is subject to some form of regulatory health authority (e.g.,
 in the US, the Food and Drug Administration (FDA)).  Devices may also be subject to
 other regulation (e.g., if they contain a radio transmitter, they may be regulated by
-the FCC, they may be regulated by by authorities such as UL or CE), but in the context
+the FCC, they may be regulated by authorities such as UL or CE), but in the context
 of this guide, the term specifically addresses devices regulated by health authorities.
 
 Software
-: Software is a collection computing instructions which tells a computing system
+: Software is a collection of computing instructions which tells a computing system
 how to operate to perform some function. An application is a collection of software
 components. This guide makes NO distinction between software and firmware (basically
 read-only or unmodifiable software included in many computing devices). Today's computing
 platforms include software known as a Basic Input Output System (BIOS) that in prior years was
-not designed to be replaced or altered by the end-user. Most systems today now use
+not designed to be replaced or altered by the end-user. Most systems today use
 some form of non-volatile memory to store this software, which was previously known
-as "firmware" because it couldn't be easily changed (it still can't be easily changed,
+as "firmware" because it couldn't be easily changed (Note: It still can't be easily changed,
 but that's another story).
 
 SUT
@@ -195,7 +190,7 @@ SUT
 the context of this guide, other specifications or implementation guides may also be tested.
 
 System
-: A system is a collection of both hardware and software which provided computing capabilities
-to an end user.  It is distinct from "application" in that in includes both the application
+: A system is a collection of both hardware and software which provide computing capabilities
+to an end user.  It is distinct from "application" in that it includes both the application
 and the computing components, whereas "application" includes only the software components.
 
