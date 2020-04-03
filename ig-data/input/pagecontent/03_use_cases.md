@@ -5,7 +5,7 @@ the assessment of mobile health devices, apps, infrastructure and accompanying s
 The use cases below describe how the framework described in this IG enables assessment
 and selection of devices, apps, and infrastructure to support exchange of data in mobile health solutions.
 
-#### Performing an Assessment of a Device, App or Infrastructure
+#### Performing an Assessment of a Mobile Health Device, App or Infrastructure
 Provider and developer organizations developing Mobile Health solutions need to assess existing devices,
 apps and/or infrastructure (including existing EHR or PHR systems) in order to successfully
 deploy these solutions.
