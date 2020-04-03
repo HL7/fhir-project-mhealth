@@ -1,7 +1,5 @@
-The first section below describes how the assessment framework in this guide enables
-the assessment of devices, apps, infrastructure and accompanying specifications.  The
-section that follows describes the various use cases supported by the functional requirements
-in this guide.
+This section describes how the App Data Exchange Assessment Framework in this implementation guide enables
+the assessment of mobile health devices, apps, infrastructure and accompanying specifications. Additionally, it describes the various use cases the implementation guide is intended to support. 
 
 ### Assessment Framework Use Cases
 The use cases below describe how the framework described in this IG enables assessment
@@ -45,10 +43,7 @@ to be collected (e.g., weight, blood pressure, physical activity, et cetera)
 
 #### Performing an Assessment of an IG or other Specification
 Systems to be assessed may already claim and be verified as conforming to a specific
-implementation guide and/or other specification.  That specification may ensure some
-or all of the providers selected requirements, requiring that the provider only assess
-certain gaps.  In this case, an assessment of a specification can be performed to
-enable a provider to identify the gaps that need to be assessed.
+implementation guide and/or other specification. Some specifications may ensure conformance to some or part of the providers requirements and, thus, require only assessment of the remaining gaps. In this case, an assessment of a specification can be performed to enable a provider to identify the gaps that need to be assessed.
 
 **Preconditions**
 * A specification or Implementation Guide exists for which a selected device has been
@@ -80,36 +75,35 @@ score to be computed and used for evaluation and selection.
   be performed.
 
 ### Use Cases Functional Requirements in this Guide
-The high level use cases below demonstrate the kinds of exchange that the functional
-requirements of implementation guide support. These use cases provide functional requirements the
-guide supports, and so are not described in further detail.
+The high-level use cases below demonstrate the kinds of exchange that the functional
+requirements of the implementation guide support. These use cases provide functional requirements the
+guide supports, and, therefore, they are not described in further detail.
 
 #### Capturing Routine Weight Measurement
 A Health Care Provider wishes to capture routine weight measurement data to monitor
-patients with CHF.  This guide will enable providers to assess
-devices, apps and infrastructure to determine those that will meet there needs for developing
+patients with Chronic Hearth Failure (CHF).  This guide will enable providers to assess
+devices, apps and infrastructure to determine those that will meet their needs for developing
 a program to support monitoring and communications of weight data to their EHR system.
 
 #### Glucose Monitoring (w/ manual Insulin Dose reporting)
 Patients with Diabetes taking insulin routinely journal information about their blood
-sugar levels and insulin dose.  Healthcare providers periodically may review these journals.
+sugar levels and insulin dose.  Healthcare providers may periodically review these journals.
 A Healthcare provider wishing to capture this data automatically can assess devices regarding
 capabilities to support this data capture, and can also determine the degree to which it supports
 the providers insulin dosing recommendations based on blood sugar dose.
 
 This implementation guide will enable providers to assess additional manual data capture enabled
-by the device or app, and to understand how the these may be configured to support
+by the mobile health device or app and understand how the these may be configured to support
 the providers treatment recommendations.
 
 #### Communicating Vital Signs, including Blood Pressure
 Blood pressure measurements can be captured for a number of different purposes.  The
-AMA has recommendations for self-measured blood pressure that require collection of
+American Medical Association (AMA) has recommendations for self-measured blood pressure that require collection of
 additional data (e.g., patient position, recency and type of physical activity, location
-where the measurement was taken, type and manufacturer of device, etc.).  This implementation
-guide
+where the measurement was taken, type and manufacturer of device, etc.). 
 
 #### Recording Physical Activity
-Monitoring of Physical activity including sleep is an important component for monitoring
-treatment for certain conditions.  This collection of data is still in the early stages
-of collection and use, and experience in use of it is limit. This guide only addresses
+Monitoring of physical activity, including sleep, is an important component for monitoring
+treatment for certain conditions.  This data is still in the early stages
+of collection and use, and experience using it is limited. This guide only addresses
 basic requirements for this data.
