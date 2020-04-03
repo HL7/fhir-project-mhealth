@@ -32,7 +32,7 @@ to base their assessments on their specific needs.
 
 Specific categories include both Simple and Enhanced Data Collection capabilities, the
 ability to include additional manual inputs from the user, specific kinds of measurements
-to be collected (e.g., weight, blood pressure, physical activity, et cetera)
+to be collected (e.g., weight, blood pressure, physical activity, et cetera).
 
 **Preconditions**
 * The provider organization can select specific functional areas (categories) that are important
