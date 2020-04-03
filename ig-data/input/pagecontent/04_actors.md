@@ -7,17 +7,17 @@ Mobile Health Devices (or simply Devices) include blood pressure cuffs, weight s
 fitness trackers, smart watches, gps trackers, medical devices (e.g., a C-PAP machine),
 thermometers, SPO2 monitors, respiration devices, and clothing with embedded smart
 devices.  These devices are often accompanied by applications (see below) and may
-be designed to work with specific data repositories. Devices may be regulated health
-devices, but need not be.
+be designed to work with specific data repositories. Devices may or may not be regulated health
+devices.
 
 Features, Rules and test Scenarios applicable to Device actors will be marked with
 the @Device tag.
 
 #### App
 Mobile Health Applications (a.k.a. Mobile Health Apps or simply Apps) include integrated
-smart-phone Apps such as Google Health, Apple Health, and Samsung Health,
-activity and fitness tracking Apps such as Runkeeper, weight and diet monitoring
-applications, and other physical fitness and health monitoring Apps.
+smart-phone Apps (e.g., Google Health, Apple Health, and Samsung Health),
+activity and fitness tracking Apps (e.g., FitBit and Runkeeper), weight and diet monitoring
+applications (e.g., Withings), and other physical fitness and health monitoring Apps.
 
 Mobile Health Applications can also be web-based applications, so long as they are designed
 to be accessible via a mobile health device.
@@ -37,13 +37,6 @@ the @Infra tag.
 Mobile Health Data Consumers can access one or more Mobile Health Data Repositories
 and potentially other sources.  These components provide additional tools enabling users
 to analyze mobile health data.
-[_Do we need this category?  It seems like it my be useful. --KWB_]
 
 Requirements, Rules and test Scenarios applicable to Data Consumer actors will be marked with
 the @Consumer tag.
-
-#### Implementation Guide or Specification
-
-### Users
-#### Device User
-#### Healthcare Provider or Caregiver
