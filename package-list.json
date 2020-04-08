@@ -2,7 +2,7 @@
   "package-id": "hl7.fhir.uv.mhealth-framework",
   "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
   "canonical": "http://hl7.org/fhir/uv/mhealth-framework",
-  "introduction": "asdf",
+  "introduction": "This guide provides an assessment framework and functional requirements for consumer medical devices and applications required to support the exchange of observations and other data in support of consumer health monitoring.",
   "list": [
     {
       "version": "current",
