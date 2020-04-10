@@ -41,10 +41,10 @@ The scope of this project is to develop the assessment framework and functional 
     + weight,
     + blood pressure,
     + O2 saturation,
-    + respiration,
+    + respiration, 
     + heart rate,
-    + physical activity
-    + sleep.
+    + physical activity 
+    + sleep. 
 
 #### Out of Scope
 This guide is focused on _functional_ requirements.  As such, it specifically leaves
@@ -60,6 +60,12 @@ Out of scope items include:
   reliably and produce results with adequate precision and accuracy. However, this
   specification does not document how these are assessed.
 * Performance, Scalability, Cost, Quality, et cetera.
+* FHIR Profiles specifically intended for the purpose of exchange. The profiles
+  in this guide are intended to be used as an aid to automate the computation of
+  assessments against the requirements of this guide. Existing profiles, such as
+  the [FHIR Use Core](https://www.hl7.org/fhir/us/core/) and the
+  [Observation Vital Signs Profile](https://www.hl7.org/fhir/observation-vitalsigns.html)
+  should be used for these purposes.
 
 ### Document Conventions
 This section explains the meaning of key words and other conventions and/or structures used in the document.
