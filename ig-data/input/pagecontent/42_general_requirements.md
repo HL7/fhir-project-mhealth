@@ -3,8 +3,10 @@ accurate interpretation of device measurements in a clinical setting.
 <span id='a-time-stamp-or-time-period-is-recorded-for-each-measurement'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: A Time Stamp or Time Period is Recorded for Each Measurement
 
-The time stamp or time period **SHALL** be recorded and reported for each measurement taken
-Note: These requirements are checked for each vital sign, physical activity or sleep measure for which the system isbeing assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.
+ The time stamp or time period **SHALL** be recorded and reported for each measurement taken
+
+ Note: These requirements are checked for each vital sign, physical activity or sleep measure for which the system is
+ being assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.
 
 
 <span id='vital-signs-have-a-time-stamp'/>
@@ -83,10 +85,10 @@ BUT
 <span id='record-a-measurement-for-multiple-users-w/o-re-pairing'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Scenario: Record a Measurement for Multiple Users W/o Re-pairing
 
-Ideally, a device **SHOULD** be able to be paired with a small number
+Ideally, a device should be able to be paired with a small number
 of other systems to enable it to be used by different people or
 with different systems (e.g., a smart phone or a tablet). This
-**SHOULD** not require repairing (though it may require activating
+should not require repairing (though it may require activating
 an already paired connection).
 
 GIVEN
@@ -170,7 +172,7 @@ THEN
 <span id='alternative-device'/>
 ##### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Scenario: Alternative Device
 
-A user **SHOULD** be able to acquire and use a similar or different kind
+A user should be able to acquire and use a similar or different kind
 of device to work with an application to enable data collection
 under different circumstances or in different environments.
 
@@ -200,8 +202,11 @@ THEN
 <span id='user-manual-entry'/>
 ### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Feature: User Manual Entry
 
-An App **SHOULD** allow for manual recording of data from external sources.
-Users of a device or app for tracking a particular type of measurement may also want to keep track of externally generatedmeasurements for the purposes of verifying device calibration, keeping general track of what the device helps them monitor,or for other reasons.
+  An App **SHOULD** allow for manual recording of data from external sources.
+
+  Users of a device or app for tracking a particular type of measurement may also want to keep track of externally generated
+  measurements for the purposes of verifying device calibration, keeping general track of what the device helps them monitor,
+  or for other reasons.
 
 
 <span id='manual-entry-of-a-measurement'/>

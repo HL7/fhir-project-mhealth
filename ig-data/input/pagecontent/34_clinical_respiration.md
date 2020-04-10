@@ -11,7 +11,7 @@ The system **SHALL** be able to capture and report additional data used for clin
 <span id='report-measurement-site'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Report Measurement Site
 
-The measurement site **SHALL** be able to be reported with each heart rate measurement
+The measurement site shall be able to be reported with each heart rate measurement
 
 GIVEN
 : a <i>&lt;System&gt;</i> that can report respiration rate

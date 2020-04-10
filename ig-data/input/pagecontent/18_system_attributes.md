@@ -46,7 +46,7 @@ THEN
 <span id='device-can-be-identified'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Device Can be Identified
 
-The device that performs a measurement **SHALL** be uniquely identified.
+    The device that performs a measurement **SHALL** be uniquely identified.
 
 Each type of device has attributes with regard to precision, accuracy and quality which
 can impact the interpretation of measurements taken by the device.  Knowledge of the
@@ -56,8 +56,10 @@ device helps greatly in interpreting the results.
 <span id='device-identifier-is-unique'/>
 #### Scenario: Device Identifier is Unique
 
-The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).
-The point of this assessment is that the mechanism by which devices are identified
+    The device identifier shall be unique within the namespace defined by the system
+    (Device + App + Infrastructure).
+
+    The point of this assessment is that the mechanism by which devices are identified
 be sufficient demonstrate that identifiers are unique.
 
 GIVEN
@@ -82,8 +84,9 @@ THEN
 <span id='the-device-has-a-unique-device-identifier-(udi)'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: The Device Has a Unique Device Identifier (UDI)
 
-The device **SHOULD** have a UDI.
-The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
+    The device should have a UDI.
+
+    The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
 (UDI System) enables users of device related data to identify the devices providing measurements
 and enables analysis of device data with regard to issues, errors, accuracy, et cetera.
 
@@ -102,8 +105,10 @@ THEN
 <span id='network-address'/>
 ### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Feature: Network Address
 
-The network address of a device **SHOULD** be reported.
-The network address can be the physical network address (e.g., MAC address) or other identifierassigned to uniquely identify the device on a network (wired or unwired)
+    The network address of a device **SHOULD** be reported.
+
+    The network address can be the physical network address (e.g., MAC address) or other identifier
+    assigned to uniquely identify the device on a network (wired or unwired)
 
 
 <span id='network-address-can-be-accessed'/>
@@ -129,7 +134,7 @@ THEN
 <span id='network-address'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Network Address
 
-The network address of a device can be discovered.
+    The network address of a device can be discovered.
 
 
 <span id='network-address-can-be-accessed'/>
@@ -152,8 +157,10 @@ THEN
 <span id='battery-charge'/>
 ### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Feature: Battery Charge
 
-The level of battery charge for a device **SHOULD** be reported.
-Reporting the battery charge level for a device enables an App to alerta user that the device needs recharging.
+    The level of battery charge for a device **SHOULD** be reported.
+
+    Reporting the battery charge level for a device enables an App to alert
+    a user that the device needs recharging.
 
 
 <span id='battery-charge-can-be-accessed'/>

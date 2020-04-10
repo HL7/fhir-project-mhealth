@@ -83,11 +83,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "using_this_guide.html",
-          "title": "Using This Guide",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "conformance.html",
           "title": "Conformance",
           "generation": "markdown"
@@ -263,11 +258,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "resource_profiles.html",
-          "title": "Resource Profiles",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "appendices.html",
           "title": "Appendices",
           "generation": "markdown"
@@ -286,6 +276,10 @@
       {
         "code": "show-inherited-invariants",
         "value": "false"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/fhir/uv/mhealth-framework/history.html"
       }
     ]
   }

@@ -39,7 +39,7 @@ THEN
 <span id='loinc-coded-temperature-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Temperature Measurement
 
-The system **SHOULD** provide LOINC codes along with measurements.
+The system should provide LOINC codes along with measurements.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of temperature
@@ -57,7 +57,7 @@ THEN
 <span id='ucum-coded-temperature-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Temperature Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of temperature

@@ -48,7 +48,7 @@ If codes are present in measurements, standard terminology **SHOULD** be used fo
 <span id='codes-describing-observations-use-loinc&reg;-or-snomed-ct&reg;'/>
 #### Scenario: Codes Describing Observations Use LOINC&reg; or SNOMED CT&reg;
 
-Measurements **SHOULD** be described using LOINC and/or SNOMED CT
+Measurements should be described using LOINC and/or SNOMED CT
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i>
@@ -63,7 +63,7 @@ THEN
 <span id='units-are-coded-using-the-ucum-unit-terminology-system'/>
 #### Scenario: Units Are Coded Using the UCUM Unit Terminology System
 
-Units **SHOULD** be coded using UCUM
+Units should be coded using UCUM
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i>
@@ -78,7 +78,7 @@ THEN
 <span id='coded-values-use-snomed-ct-or-icd-10'/>
 #### Scenario: Coded Values Use SNOMED CT or ICD-10
 
-Result values in a measurement **SHOULD** use SNOMED CT or ICD-10
+Result values in a measurement should use SNOMED CT or ICD-10
 NOTE: ICD-10 may include national variants (e.g., ICD-10-CM in the US)
 
 GIVEN

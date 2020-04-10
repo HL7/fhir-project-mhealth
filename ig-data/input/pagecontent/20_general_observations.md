@@ -5,13 +5,12 @@ the requirements in this category **SHALL** also be assessed.
 Specifically, if an App, Device or Infrastructure supports reporting for a given measurement
 the requirements in this category are tested for each of the measurements that the device
 can support.
-<span id='category-content'/>
-### Category Content
+<span id='0-general-observations'/>
+### Category: 0 General Observations
 
-The Category Content Category includes all requirements for from the following subcategories:
+The Category: 0 General Observations Category includes all requirements for from the following subcategories:
  * [Coded Observations](coded_observations.html)
-   .
 
  * [Numeric Observations](numeric_observations.html)
-   This section describes requirements of observations which reflect numeric values.
+   This section describes requirements of observations which reflect numeric values
 

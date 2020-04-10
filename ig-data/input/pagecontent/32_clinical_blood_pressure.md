@@ -14,7 +14,7 @@ cuff size (where applicable) **SHALL** be reported.
 <span id='report-mean-blood-pressure'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: Report Mean Blood Pressure
 
-The system **SHOULD** be able to report mean blood pressure as computed from systolic and dyastolic measures
+The system should be able to report mean blood pressure as computed from systolic and dyastolic measures
 or through other means.
 
 GIVEN
@@ -30,7 +30,7 @@ THEN
 <span id='report-measurement-site'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Report Measurement Site
 
-The measurement site **SHALL** be able to be reported with each blood pressure measurement
+The measurement site shall be able to be reported with each blood pressure measurement
 
 GIVEN
 : a <i>&lt;System&gt;</i> that can report blood pressure
@@ -45,7 +45,7 @@ THEN
 <span id='report-cuff-size'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Report Cuff Size
 
-If a cuff is used to measure blood pressure, the cuff size **SHALL** be able to be reported with each blood pressure measurement.
+If a cuff is used to measure blood pressure, the cuff size shall be able to be reported with each blood pressure measurement.
 
 GIVEN
 : a <i>&lt;System&gt;</i> that can report blood pressure

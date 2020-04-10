@@ -25,7 +25,6 @@
    <page name="Overview" key="overview"/>
    <page name="Use Cases" key="use_cases"/>
    <page name="Actors" key="actors"/>
-   <page name="Using This Guide" key="using_this_guide"/>
    <page name="Conformance" key="conformance"/>
    <page name="Functional Requirements" key="functional_requirements"/>
    <page name="Attribution" key="attribution"/>
@@ -62,7 +61,6 @@
    <page name="User Choice" key="user_choice"/>
    <page name="Sharing Mechanism" key="sharing_mechanism"/>
    <page name="General Requirements" key="general_requirements"/>
-   <page name="Resource Profiles" key="resource_profiles"/>
    <page name="Appendices" key="appendices"/>
    <page name="Artifacts Summary" key="artifacts"/>
 </specification>

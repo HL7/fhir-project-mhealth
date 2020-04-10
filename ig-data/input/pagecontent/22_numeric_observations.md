@@ -30,7 +30,10 @@ THEN
 <span id='precision-and-units-are-appropriate'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: Precision And Units Are Appropriate
 
-The precision and units of a measurement **SHALL** be appropriate to the measurement.[**SHOULD** we just add this for each observation with more detail specificto the measurement? For example, say that heart rate **SHOULD** be measuredin beats per minute, precision is to the whole number of beats? -- KWB]
+ The precision and units of a measurement shall be appropriate to the measurement.
+ [Should we just add this for each observation with more detail specific
+  to the measurement? For example, say that heart rate should be measured
+  in beats per minute, precision is to the whole number of beats? -- KWB]
 
 GIVEN
 : A <i>&lt;System&gt;</i> (either a Device or an App)
@@ -51,15 +54,15 @@ THEN
 <span id='converted-results-are-not-over-precise'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Scenario: Converted Results Are Not Over-precise
 
-A converted result **SHOULD** not be reported with greater precision that the originally measured value.
+A converted result should not be reported with greater precision that the originally measured value.
 
 Unit conversion formulae exist to convert between different systems of units.  These values
 are very precisely know. Simple math used to convert from a measured value in one unit system
-often results in overprecise reported values in other unit system.  The converted value **SHOULD** be
+often results in overprecise reported values in other unit system.  The converted value should be
 limited to be no more precise than the original value.  For example, height is often measured
 in inches or centimeters, and the value when recorded in one unit system can often be reported
 in a different unit system depending on system configuration.  Thus, a value recorded in whole inches
-**SHOULD** not be reported in more than whole centimeters.
+should not be reported in more than whole centimeters.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> reported in a <i>&lt;Orginal Unit System&gt;</i> with <i>&lt;Original Precision&gt;</i>
@@ -120,7 +123,7 @@ THEN
 <span id='unit-values-use-ucum'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Scenario: Unit Values Use UCUM
 
-Result values in a measurement **SHOULD** use UCUM
+Result values in a measurement should use UCUM
 
 GIVEN
 : a <i>&lt;Quantitative Measurement&gt;</i>
@@ -153,7 +156,7 @@ THEN
 <span id='unit-values-use-ucum'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Scenario: Unit Values Use UCUM
 
-Result values in a measurement **SHOULD** use UCUM
+Result values in a measurement should use UCUM
 
 GIVEN
 : a <i>&lt;Quantitative Measurement&gt;</i>

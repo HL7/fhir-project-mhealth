@@ -16,7 +16,11 @@ is outside of the scope of this specification.
 <span id='user-requests-data-deletion.'/>
 #### Scenario: User Requests Data Deletion.
 
-Given: A <User>And: A <System> (an App or Infrastructure)And: <Data> has been recorded in/by <System>When: The <User> requests deletion of their data from <System>Then: The data is no longer available via <System>.
+Given: A <User>
+  And: A <System> (an App or Infrastructure)
+  And: <Data> has been recorded in/by <System>
+ When: The <User> requests deletion of their data from <System>
+ Then: The data is no longer available via <System>.
 
 
 <span id='the-user-can-request-their-data-not-be-sold.'/>
@@ -96,7 +100,7 @@ This feature enables users to share or not share data with others of their choos
 <span id='user-requests-sharing-with-another-user-or-third-party.'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: User Requests Sharing With Another User or Third Party.
 
-A user **SHALL** be able to share data with others of their choosing.
+A user shall be able to share data with others of their choosing.
 
 GIVEN
 : A <i>&lt;User&gt;</i>
@@ -120,8 +124,8 @@ THEN
 <span id='user-requests-that-sharing-stop-with-the-other-user-or-third-party.'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: User Requests That Sharing Stop With the Other User or Third Party.
 
-After a user requests that sharing stop, any data previously accessible **SHALL** no longer be
-accessible to the third party, and future data **SHALL** not be sent to that party.
+After a user requests that sharing stop, any data previously accessible shall no longer be
+accessible to the third party, and future data shall not be sent to that party.
 
 NOTE: This specification does not speak to the access a third party has to data that it
 has previously recieved and/or stored.  That is outside of the scope of this specification.

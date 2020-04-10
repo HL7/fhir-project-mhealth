@@ -18,9 +18,6 @@ This document is organized into three main sections:
 
 2. Using the Guide
 
-   This section explains:
-   * How implementers, users and assessors of solutions can facilitate integration of mobile health devices and applications into their health
-     information technology solutions; and
    * How [Conformance](conformance.html) claims can be communicated.
 
 3. Requirements
@@ -28,8 +25,6 @@ This document is organized into three main sections:
    This section provides:
    * [Functional Requirements](functional_requirements.html) to assess
      a device, system, or implementation specification, and
-   * FHIR [Resource Profiles](resource_profiles.html) against which
-     FHIR Resources, Profiles and Implementation Guides can be assessed for conformance.
 
    > NOTE: These profiles are provided to enable the automated computation of assessments
    > of these requirements against published specifications.  They are not generally intended

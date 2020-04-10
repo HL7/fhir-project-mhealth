@@ -36,7 +36,7 @@ THEN
 <span id='loinc-coded-respiration-rate-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Respiration Rate Measurement
 
-The system **SHOULD** provide codes along with measurements.
+The system should provide codes along with measurements.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of respiration rate
@@ -54,7 +54,7 @@ THEN
 <span id='loinc-coded-respiration-rate-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Respiration Rate Measurement
 
-The system **SHOULD** provide LOINC codes along with measurements.
+The system should provide LOINC codes along with measurements.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of respiration rate
@@ -72,7 +72,7 @@ THEN
 <span id='ucum-coded-respiration-rate-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Respiration Rate Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of respiration rate

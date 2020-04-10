@@ -17,7 +17,7 @@ and gender identity, which should be a user preference.
 <span id='user-height'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Height
 
-If User Height is essential to compute an observation the app/infra **SHALL** be
+    If User Height is essential to compute an observation the app/infra **SHALL** be
 able to capture/report the user's height as an attribute of the user .
 
 NOTE: Information is considered to be essential to compute an observation
@@ -29,7 +29,7 @@ activity (e.g., steps or stairs climbed)
 <span id='height-is-available'/>
 #### Scenario: Height is Available
 
-NOTE 1: Additional steps may be necessary to access the Height given that the User is known.
+    NOTE 1: Additional steps may be necessary to access the Height given that the User is known.
 This may include retrieving the height in some way as an attribute of the user
 
 NOTE 2: If the height is not essential for measurement, (i.e., the precondition is not met)
@@ -57,7 +57,8 @@ THEN
 <span id='user-weight'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Weight
 
-If the User's weight is essential to compute an observation the app/infra **SHALL**be able to capture/report the user's weight as an attribute of the user .
+    If the User's weight is essential to compute an observation the app/infra **SHALL**
+    be able to capture/report the user's weight as an attribute of the user .
 
 NOTE: Information is considered to be essential to compute an observation
 when the value of that observation would change if the information changes.
@@ -67,7 +68,7 @@ Examples for weight include calories used during an activity (e.g., steps or sta
 <span id='weight-is-available'/>
 #### Scenario: Weight is Available
 
-NOTE 1: Additional steps may be necessary to access the Weight given that the User is known.
+    NOTE 1: Additional steps may be necessary to access the Weight given that the User is known.
 This may include retrieving the height in some way as an attribute of the user
 
 NOTE 2: If the weight is not essential for measurement, (i.e., the precondition is not met)
@@ -95,7 +96,8 @@ THEN
 <span id='birth-sex'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Birth Sex
 
-If the user's birth sex is essential to compute a measurement, the App/Infrastructure**SHALL** be able to associate/report the birth sex of the user.
+    If the user's birth sex is essential to compute a measurement, the App/Infrastructure
+    **SHALL** be able to associate/report the birth sex of the user.
 
 
 <span id='birth-sex-exists'/>

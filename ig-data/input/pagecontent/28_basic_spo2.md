@@ -40,7 +40,7 @@ THEN
 <span id='loinc-coded-oxygen-saturation-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Oxygen Saturation Measurement
 
-The system **SHOULD** provide LOINC codes along with measurements.
+The system should provide LOINC codes along with measurements.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of blood pressure
@@ -58,7 +58,7 @@ THEN
 <span id='ucum-coded-oxygen-saturation-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Oxygen Saturation Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of oxygen saturation

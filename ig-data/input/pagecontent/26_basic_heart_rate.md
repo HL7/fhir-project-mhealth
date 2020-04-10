@@ -38,7 +38,7 @@ THEN
 <span id='loinc-coded-heart-rate-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Heart Rate Measurement
 
-The system **SHOULD** provide LOINC codes along with measurements.
+The system should provide LOINC codes along with measurements.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of blood pressure
@@ -56,7 +56,7 @@ THEN
 <span id='ucum-coded-heart-rate-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Heart Rate Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of Heart Rate

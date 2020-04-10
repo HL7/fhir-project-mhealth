@@ -8,7 +8,7 @@ information associated with the user. That information would appear in
 <span id='user-unique-identity'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Unique Identity
 
-An app/infrastructure **SHALL** be able to generate/report the unique identifer for a given user association with a measurement.
+    An app/infrastructure **SHALL** be able to generate/report the unique identifer for a given user association with a measurement.
 
 This scenario demonstrates the ability of an App to associate a user with an identifier, and in the
 process of storing the measurement has associated the measurement with the user's identity.
@@ -50,7 +50,7 @@ BUT
 <span id='user-name'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Name
 
-The App or Infrastructure **SHALL** be able to associate the user's name with the user.
+    The App or Infrastructure **SHALL** be able to associate the user's name with the user.
 
 
 <span id='name-exists'/>
@@ -73,7 +73,7 @@ THEN
 <span id='user-contact-information'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Contact Information
 
-The App or Infrastructure **SHALL** be able to associate the user's contact
+    The App or Infrastructure **SHALL** be able to associate the user's contact
 information (e.g., e-mail address, phone number) with the user.
 
 
@@ -109,7 +109,7 @@ BUT
 <span id='date-of-birth'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Date of Birth
 
-The App and Infrastructure **SHALL** be able to associate a birth date with the patient.
+    The App and Infrastructure **SHALL** be able to associate a birth date with the patient.
 
 
 <span id='birth-date-exists'/>
@@ -132,7 +132,7 @@ THEN
 <span id='gender-identity'/>
 ### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Feature: Gender Identity
 
-The App and Infrastructure **SHOULD** be able to associate a gender identity with the patient.
+    The App and Infrastructure **SHOULD** be able to associate a gender identity with the patient.
 
 
 <span id='gender-identity-exists'/>

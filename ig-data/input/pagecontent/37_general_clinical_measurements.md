@@ -6,7 +6,7 @@ be determined.
 <span id='mechanism-and-accuracy-of-measurement-is-documented'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Mechanism And Accuracy of Measurement is Documented
 
-The mechanism and accuracy of measurements by the device **SHALL** be documented for each vital sign it can measure.
+    The mechanism and accuracy of measurements by the device **SHALL** be documented for each vital sign it can measure.
 
 
 <span id='mechanism-and-accuracy-documented'/>

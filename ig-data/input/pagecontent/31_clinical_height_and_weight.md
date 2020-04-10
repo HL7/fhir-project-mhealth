@@ -5,13 +5,14 @@ settings for the interpretation of height and weight measures.
 <span id='capture-of-clinical-data-with-weight-measurement.'/>
 ### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Capture of Clinical Data With Weight Measurement.
 
-The system **SHALL** be able to capture and record other data to facilitate interpretation of height and weight measurements.
+    The system **SHALL** be able to capture and record other data to facilitate interpretation of 
+    height and weight measurements.
 
 
 <span id='compute-or-report-body-mass-index'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Compute or Report Body Mass Index
 
-This requirement allows BMI to be detected by a device, or computed based on the
+    This requirement allows BMI to be detected by a device, or computed based on the
 reported height and sensed weight.
 
 GIVEN
@@ -30,7 +31,7 @@ THEN
 <span id='clothing-worn-during-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: Clothing Worn During Measurement
 
-The system **SHALL** be able to capture a value describing the clothing worn during weight measurement.
+    The system shall be able to capture a value describing the clothing worn during weight measurement.
 
 GIVEN
 : a <i>&lt;User&gt;</i>
@@ -48,7 +49,7 @@ THEN
 <span id='loinc-coded-bmi-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded BMI Measurement
 
-The system **SHOULD** provide LOINC codes along with measurements.
+    The system should provide LOINC codes along with measurements.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of BMI
@@ -66,7 +67,7 @@ THEN
 <span id='ucum-coded-bmi-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded BMI Units
 
-The measurement **SHOULD** use units coded in UCUM.
+    The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of height

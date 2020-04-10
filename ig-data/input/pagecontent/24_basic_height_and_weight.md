@@ -8,7 +8,7 @@ The system **SHALL** be able to capture and report a height measurement from the
 <span id='capture-and-report-height-measurement'/>
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Capture And Report Height Measurement
 
-A system **SHALL** be able to record a user measurement of height.
+A system shall be able to record a user measurement of height.
 Unlike other vital signs observations, there is no expectation that height is measured
 by a device, rather, there is an expectation that such a measure would be manually entered.
 
@@ -37,7 +37,7 @@ THEN
 <span id='loinc-coded-height-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Height Measurement
 
-The measurement **SHOULD** be coded in LOINC.
+The measurement should be coded in LOINC.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of height
@@ -55,7 +55,7 @@ THEN
 <span id='ucum-coded-height-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Height Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of height
@@ -105,7 +105,7 @@ THEN
 <span id='loinc-coded-weight-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Weight Measurement
 
-The measurement **SHOULD** be coded in LOINC.
+The measurement should be coded in LOINC.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of height
@@ -123,7 +123,7 @@ THEN
 <span id='ucum-coded-weight-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Weight Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of weight

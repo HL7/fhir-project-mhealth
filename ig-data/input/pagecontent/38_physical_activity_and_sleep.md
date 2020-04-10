@@ -32,7 +32,7 @@ THEN
 <span id='snomed-ct-coded-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: SNOMED CT Coded Measurement
 
-The system **SHOULD** provide SNOMED CT or LOINC codes describing the physical activity or sleep and other quality measurements
+The system should provide SNOMED CT or LOINC codes describing the physical activity or sleep and other quality measurements
 along with the duration of the activity.
 
 GIVEN

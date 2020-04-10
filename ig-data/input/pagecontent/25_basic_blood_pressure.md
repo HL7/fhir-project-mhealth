@@ -45,7 +45,7 @@ THEN
 <span id='loinc-coded-blood-pressure-measurement'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Blood Pressure Measurement
 
-The measurement **SHOULD** be coded in LOINC.
+The measurement should be coded in LOINC.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of blood pressure
@@ -63,7 +63,7 @@ THEN
 <span id='ucum-coded-blood-pressure-units'/>
 #### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Blood Pressure Units
 
-The measurement **SHOULD** use units coded in UCUM.
+The measurement should use units coded in UCUM.
 
 GIVEN
 : a <i>&lt;Measurement&gt;</i> of blood pressure
