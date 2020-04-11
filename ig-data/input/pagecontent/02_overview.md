@@ -1,9 +1,15 @@
-This section should provide a more detailed discussion of the IG.  This should contain more detailed information from the PSS.
+The functional framework use by this guide is based upon current approaches used in
+industry to describe product features, execute on their development and verify the
+functionality of these product.
 
 ### Approach
-This guide describes the technical environment, establishes sets of requirements in categories,
-identifies conformance levels (SHALL vs. SHOULD) for requirements, associates requirements with the different [Actors](actors.html).
-Requirements are written in the [Gherkin](https://cucumber.io/docs/gherkin/reference/) Language and transformed into the guide content.
+This guide describes the technical environment for products, establishes sets of
+requirements in categories of interest to the product audience, identifies conformance
+levels (SHALL vs. SHOULD) for requirements, associates requirements with the
+different [Actors](actors.html).
+
+These requirements are written in the [Gherkin](https://cucumber.io/docs/gherkin/reference/) Language
+and transformed into the guide content.
 
 #### Technical Environment
 The technical environment for mobile health includes sensors embedded in wearables and

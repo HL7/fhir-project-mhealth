@@ -1,8 +1,16 @@
 
-Mobile apps and devices provide their own APIs and methods for collecting device data and communicating it to EHR, PHR and research endpoints. Much of this data can (and has been) readily converted to FHIR resources. However, some limits have been encountered which demonstrate that essential data needed to generate, interpret and use the FHIR resources is sometimes missing. The purpose of this implementation guide is to document the functional requirements that can be used to assess mobile health devices, apps, and FHIR profiles to ensure that the essential data needed for clinical, patient and research uses is present.
+Mobile apps and devices provide their own APIs and methods for collecting device data and
+communicating it to EHR, PHR and research endpoints. Much of this data can (and has been)
+readily converted to FHIR resources. However, some limits have been encountered which
+demonstrate that essential data needed to generate, interpret and use the FHIR resources
+is sometimes missing. The purpose of this implementation guide is to document the functional
+requirements that can be used to assess mobile health devices, apps, and FHIR profiles
+to ensure that the essential data needed for clinical, patient and research uses is present.
 
 ### Target Audience
-The target audience for this document includes executive leaders, senior managers, and development staff interested in integrating mobile health devices and apps into the health care eco-system.
+The target audience for this document includes executive leaders, senior managers, and
+development staff interested in integrating mobile health devices and apps into the health
+care eco-system.
 
 This includes:
 * Members of organizations developing standards and/or regulations supporting these capabilities
@@ -25,17 +33,21 @@ This includes:
 * Health Information Exchange (HIE) organizations facilitating such connections.
 
 ### Scope of Work
-The scope of this project is to develop the assessment framework and functional requirements for mobile health devices and apps to support the exchange of observations and other data in support of consumer health monitoring. This project will focus on functional requirements of mobile health devices, apps, and infrastructure regarding the observations and related communication on the following data:
+The scope of this project is to develop the assessment framework and functional requirements
+for mobile health devices and apps to support the exchange of observations and other data in
+support of consumer health monitoring. This project will focus on functional requirements of
+mobile health devices, apps, and infrastructure regarding the observations and related
+communication on the following data:
 
 * Vital signs, including
     + height,
     + weight,
     + blood pressure,
     + O2 saturation,
-    + respiration, 
+    + respiration,
     + heart rate,
-    + physical activity 
-    + sleep. 
+    + physical activity
+    + sleep.
 
 #### Out of Scope
 This guide is focused on _functional_ requirements.  As such, it specifically leaves
