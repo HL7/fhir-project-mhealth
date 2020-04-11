@@ -1,12 +1,27 @@
 This section should provide a more detailed discussion of the IG.  This should contain more detailed information from the PSS.
 
-### Technical Environment
-Describe the devices, systems, components, et cetera, in reader friendly terms that describes the eco-system which this guide is meant to serve.
-
 ### Approach
-This guide establishes sets of requirements in various categories
-and associates those requirements with the different [Actors](actors.html) and levels
-of conformance (SHALL vs. SHOULD). These requirements are written in the [Gherkin] Language and transformed into the guide content.
+This guide describes the technical environment, establishes sets of requirements in categories,
+identifies conformance levels (SHALL vs. SHOULD) for requirements, associates requirements with the different [Actors](actors.html).
+Requirements are written in the [Gherkin](https://cucumber.io/docs/gherkin/reference/) Language and transformed into the guide content.
+
+#### Technical Environment
+The technical environment for mobile health includes sensors embedded in wearables and
+devices, applications running on smart phones or wearable devices, or on a users personal
+computer, and infrastructure that supports it, often providing data repository services
+and APIs that enable additional data access to other third parties, and apps from those
+third parties.  This guide classifies these into four groups:
+
+1. Device - The device containing the sensor.
+2. App - The software running on a users personal computing device (including phone
+or tablet).
+3. Data Repository - The software and systems providing storage and APIs (usually cloud
+based) to access data generated.
+by either the sensor or the App.
+4. Data Consumer - Other (usually third party) applications which interact with the
+Data Repository.
+
+These are described in more detail in the section on [Actors](actors.html)
 
 #### Categories
 Categories provide a means to group requirements functionally while also allowing groups
@@ -31,3 +46,6 @@ the assessment steps in both human-readable language and machine-readable langua
 
 Finally, this guide establishes the data that must be included in an assessment report.
 This enables assessments from different performers to be compared against each other.
+
+Further details can be found on assessment and reporting can be found in the section
+on [Conformance](conformance.html).
