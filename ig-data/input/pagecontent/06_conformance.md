@@ -80,32 +80,25 @@ The results of conformance testing for a given SUT include:
 
 * A description of the SUT, including device identifiers, software versions, et cetera.
 * The collection of requirement categories that were tested.
-* The pass/fail/not-applicable/not-tested status for each requirement in those categories.
+* The pass/fail/not-tested status for each requirement in those categories.
 
 ##### Applicable Requirements
-A system is tested against all applicable requirements. 
+Applicable test requirements are those which provide a shall or should requirement
+for the type (device, application or infrastructure) of system under test.
 
-##### Not Applicable vs. Not Tested
-A given requirement may not be applicable to a given SUT, or the assessor may not have
-performed a specified test on the SUT (e.g., because test sponsor did not require those
-tests be performed).
+##### Untested Requirements
+There are requirements on devices to be able to report blood pressure, heart rate,
+and respiration rate. However, these three observations are not reported by all devices,
+and aren't always needed for every use case.  Thus, a clinic evaluating devices for use
+in blood pressure monitoring may elect to Not Test a device against the sub-category
+containing requirements on respiration rate.  The test need not be performed in these
+cases.
 
-For example, there is a requirement that the results of a blood pressure measurement
-be displayed to the user.  This is a requirement of an App, but it is NOT a requirement
-of a Device.  Thus, the results for this test would not be reported as they are 
-Not Applicable for the device.
+When reporting an assessment result, only categories that have been fully tested can be reported on.
+In these cases, and categories with untested subcategories and untested subcategories shall only be
+reported as not fully tested, and no star rating shall be provided for them. This is shown in the
+example [below](#untested).
 
-In another case, there are requirements on devices to be able to report blood
-pressure, heart rate, and respiration rate. However, these three observations are
-not reported by all devices, and aren't always needed for every use case.  Thus, a clinic
-evaluating devices for use in blood pressure monitoring may elect to Not Test a device
-against the sub-category containing requirements on respiration rate.  In this case,
-the test was not performed.
-
-For more clarity, the inability of a device to record respiration rate does not make
-the test "not applicable" when the category for basic device operations is chosen.
-This is a failure of the device to support that function. This does NOT indicate a flaw
-in the device.  It merely reports the device's inability to support that requirement.
 
 <span id='assessment'/>
 #### Conformance Testing Assessments
@@ -276,7 +269,7 @@ An example report is given below:
 </tr>
 </tbody></table>
 
-###### Reporting against a Specification,
+###### Reporting against a Specification
 Display the category name, followed by a number of stars filled in gold (or light-gray
 screen for B&W images) given by the minimal assessment ranking. Follow that by a number
 of open stars in gold (or light-gray screen in B&W images) necessary to bring the
@@ -336,6 +329,10 @@ An example report is given below:
 </tbody></table>
 
 NOTE: The colors of Gold and Black provide a color-blind safe palette.
+
+##### Reporting for Untested Requirements
+<span id='untested'> </span>
+[Provide example](#todo)
 
 #### Gherkin
 [Gherkin](https://cucumber.io/docs/gherkin/reference/) describes a language that is used for testing

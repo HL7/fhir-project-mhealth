@@ -1,5 +1,5 @@
 This section describes how the App Data Exchange Assessment Framework in this implementation guide enables
-the assessment of mobile health devices, apps, infrastructure and accompanying specifications. Additionally, it describes the various use cases the implementation guide is intended to support. 
+the assessment of mobile health devices, apps, infrastructure and accompanying specifications. Additionally, it describes the various use cases the implementation guide is intended to support.
 
 ### Assessment Framework Use Cases
 The use cases below describe how the framework described in this IG enables assessment
@@ -17,7 +17,7 @@ deploy these solutions.
   be important to the success of the project.
 
 **Steps**
-* For easy identified SUT, it is assessed against SHALL and SHOULD requirements of this guide.
+* For each identified SUT, it is assessed against SHALL and SHOULD requirements of this guide.
 * Assessments are reported to the organization.
 * The organization selects a specific system based on the criteria in this guide.
 
@@ -30,7 +30,7 @@ Extending from the use case above, different organizations will have different
 requirements that are important to them. To support this, the guide enables providers
 to base their assessments on their specific needs.
 
-Specific categories include both Simple and Enhanced Data Collection capabilities, the
+Specific categories include both Basic and Clinical Data Collection capabilities, the
 ability to include additional manual inputs from the user, specific kinds of measurements
 to be collected (e.g., weight, blood pressure, physical activity, et cetera).
 
@@ -90,7 +90,7 @@ Patients with Diabetes taking insulin routinely journal information about their 
 sugar levels and insulin dose.  Healthcare providers may periodically review these journals.
 A Healthcare provider wishing to capture this data automatically can assess devices regarding
 capabilities to support this data capture, and can also determine the degree to which it supports
-the providers insulin dosing recommendations based on blood sugar dose.
+the providers insulin dosing recommendations based on blood sugar concentration.
 
 This implementation guide will enable providers to assess additional manual data capture enabled
 by the mobile health device or app and understand how the these may be configured to support
@@ -100,7 +100,7 @@ the providers treatment recommendations.
 Blood pressure measurements can be captured for a number of different purposes.  The
 American Medical Association (AMA) has recommendations for self-measured blood pressure that require collection of
 additional data (e.g., patient position, recency and type of physical activity, location
-where the measurement was taken, type and manufacturer of device, etc.). 
+where the measurement was taken, type and manufacturer of device, etc.).
 
 #### Recording Physical Activity
 Monitoring of physical activity, including sleep, is an important component for monitoring
