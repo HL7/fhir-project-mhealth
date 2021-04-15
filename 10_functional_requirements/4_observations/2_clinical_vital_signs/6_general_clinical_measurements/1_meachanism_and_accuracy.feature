@@ -1,10 +1,12 @@
 @Device-Shall @App-Shall @Infra-Shall
 Feature: Mechanism and Accuracy of Measurement is Documented
-    The mechanism and accuracy of measurements by the device shall be documented for each vital sign it can measure.
+    The method used and accuracy of measurements shall be described for a device in the manufacturer's documentation for each vital sign it can measure.
 
 @Device-Shall
 Scenario: Mechanism and Accuracy Documented
+    The method used and accuracy of measurements shall be described in the manufacturer's documentation for a device.
+
     Given  A <Device> that measures a vital sign
-    And    <Documentation> for <Device>
-    When   <Documentation> for <Device> is reviewed
+    And    Manufacturer's <Documentation> for <Device>
+    When   Manufacturer's <Documentation> for <Device> is reviewed
     Then   the mechanism for measuring each vital sign is described and the range of accuracy of the measurement is reported.

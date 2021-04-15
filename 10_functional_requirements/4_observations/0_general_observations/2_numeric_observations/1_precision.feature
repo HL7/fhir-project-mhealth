@@ -13,9 +13,6 @@ Given a <Measurement>
 @App-Shall @Device-Shall
 Scenario: Precision and units are Appropriate
  The precision and units of a measurement shall be appropriate to the measurement.
- [Should we just add this for each observation with more detail specific
-  to the measurement? For example, say that heart rate should be measured
-  in beats per minute, precision is to the whole number of beats? -- KWB]
 
 Given A <System> (either a Device or an App)
   And a set of <Measurements> that can be produced by <System>
@@ -24,19 +21,19 @@ Given A <System> (either a Device or an App)
   And the unit of each <Measurement> in <Measurements> is appropriate
 
 @App-Should @Device-Should
-Scenario: Converted results are not over-precise
-A converted result should not be reported with greater precision that the originally measured value.
+Scenario: Converted results are not reported with more precision than is appropriate.
+A converted result should not be reported with more significant digits than the originally
+measured value.
 
-Unit conversion formulae exist to convert between different systems of units.  These values
-are very precisely know. Simple math used to convert from a measured value in one unit system
-often results in overprecise reported values in other unit system.  The converted value should be
-limited to be no more precise than the original value.  For example, height is often measured
-in inches or centimeters, and the value when recorded in one unit system can often be reported
-in a different unit system depending on system configuration.  Thus, a value recorded in whole inches
-should not be reported in more than whole centimeters.
+A height is reported as 72 inches (with 2 significant digits), when converted to
+centimeters the computation would result in a value of 182.88 cm.  However, reporting that value
+implies a precision of +/- 0.01 cm, when in fact, it is precise only to +/- 2.54 cm.  It should be reported as 180cm (again,
+having 2 significant digits).  In the other direction, a height of 182 cm might be computed as 71.6535 inches.
+However, that result has an implied precision of +/- 0.0001 inches, when in fact it is precise to no more than +/- 0.3937007874 inches.
+It should be repoorted as 71.7 inches, since 182 has three significant digits of precision.
 
-Given a <Measurement> reported in a <Orginal Unit System> with <Original Precision>
+Given a <Measurement> reported as in <Orginal Unit System> with <Original Precision>
   And a <Device> or <App>
- When the <Meausurement> is reported <Other Precision> in <Other Unit System>
-  And <Orignal Unit System> != <Other Unit System>
- Then The <Other Precision> = <Original Precision>
+ When the <Meausurement> is reported as <Converted Value> in <Converted Unit System> with <Converted Precision>
+  And <Orignal Unit System> != <Converted Unit System>
+ Then  <Converted Significant Digits> = <Original Significant Digits>

@@ -1,0 +1,175 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭─────────────────────ImplementationGuide-hl7.fhir.uv.mhealth-framework.json─────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.uv.mhealth-framework
+canonical: http://hl7.org/fhir/uv/mhealth-framework
+version: 0.1.0
+name: ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth
+title: Application Data Exchange Assessment Framework and Functional Requirements for
+  Mobile Health
+status: active
+publisher: HL7 International
+contact:
+  - name: HL7 Mobile Health Workgroup
+    telecom:
+      - system: url
+        value: http://hl7.org/Special/committees/mobile/index.cfm
+  - name: Keith W. Boone
+    telecom:
+      - system: email
+        value: kboone@ainq.com
+description: asdf
+license: CC0-1.0
+fhirVersion: 4.0.1
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: CI Build
+fhirspec: http://build.fhir.org/
+
+
+pages:
+  index.md:
+    title: Home
+    generation: markdown
+    01_introduction.md:
+      title: Introduction
+      generation: markdown
+    02_overview.md:
+      title: Overview
+      generation: markdown
+    03_use_cases.md:
+      title: Use Case
+      generation: markdown
+    04_actors.md:
+      title: Actors
+      generation: markdown
+    06_conformance.md:
+      title: Conformance
+      generation: markdown
+  functional_requirements.md:
+    title: Functional Requirements
+    generation: markdown
+    attribution.md:
+      title: Attribution
+      generation: markdown
+    user_data.md:
+      title: User Data
+      generation: markdown
+      user_demographics.md:
+        title: User Demographics
+        generation: markdown
+      user_attributes.md:
+        title: User Attributes
+        generation: markdown
+    system_data.md:
+      title: System Data
+      generation: markdown
+      system_configuration.md:
+        title: System Configuration
+        generation: markdown
+      system_capabilities.md:
+        title: System Capabilities
+        generation: markdown
+      system_attributes.md:
+        title: System Attributes
+        generation: markdown
+    observations.md:
+      title: Observations
+      generation: markdown
+      general_observations.md:
+        title: General Observations
+        generation: markdown
+        coded_observations.md:
+          title: Coded Observations
+          generation: markdown
+        numeric_observations.md:
+          title: Numeric Observations
+          generation: markdown
+        general_requirements.md:
+          title: General Requirements
+          generation: markdown
+      basic_vital_signs.md:
+        title: Basic Vital Signs
+        generation: markdown
+        basic_height_and_weight.md:
+          title: Basic Height And Weight
+          generation: markdown
+        basic_blood_pressure.md:
+          title: Basic Blood Pressure
+          generation: markdown
+        basic_heart_rate.md:
+          title: Basic Heart Rate
+          generation: markdown
+        basic_respiration.md:
+          title: Basic Respiration
+          generation: markdown
+        basic_spo2.md:
+          title: Basic Spo2
+          generation: markdown
+        basic_temperature.md:
+          title: Basic Temperature
+          generation: markdown
+      clinical_vital_signs.md:
+        title: Clinical Vital Signs
+        generation: markdown
+        clinical_height_and_weight.md:
+          title: Clinical Height And Weight
+          generation: markdown
+        clinical_blood_pressure.md:
+          title: Clinical Blood Pressure
+          generation: markdown
+        clinical_heart_rate.md:
+          title: Clinical Heart Rate
+          generation: markdown
+        clinical_respiration.md:
+          title: Clinical Respiration
+          generation: markdown
+        clinical_spo2.md:
+          title: Clinical Spo2
+          generation: markdown
+        clinical_temperature.md:
+          title: Clinical Temperature
+          generation: markdown
+        general_clinical_measurements.md:
+          title: General Clinical Measurements
+          generation: markdown
+      physical_activity_and_sleep.md:
+        title: Physical Activity And Sleep
+        generation: markdown
+    data_sharing.md:
+      title: Data Sharing
+      generation: markdown
+      user_choice.md:
+        title: User Choice
+        generation: markdown
+      sharing_mechanism.md:
+        title: Sharing Mechanism
+        generation: markdown
+  99_appendices.md:
+    title: Appendices
+    generation: markdown
+
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To control the ig.ini using this config, uncomment and set the "template" property.           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# template: "#ig-template"
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   IG Home: index.html
+#   Table of Contents: toc.html
+#   Artifact Index: artifacts.html
+#   Support:
+#     "FHIR Spec ": new-tab external {{site.data.fhir.path}}index.html

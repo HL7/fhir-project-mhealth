@@ -3,17 +3,10 @@ Feature: The range of numeric values is documented and appropriate for each meas
 
 
 @App-Shall @Device-Shall
-Scenario: Unit values should be mappable to UCUM
+Scenario: Range of values is documented
 
-Given a <Unit Value Set> used for a Device or App
- When the <Unit Value Set> is compared to UCUM
- Then the values of <Unit Value Set> can be readily mapped to UCUM.
-
-
-@App-Should @Device-Should
-Scenario: Unit Values use UCUM
-Result values in a measurement should use UCUM
-
-Given a <Quantitative Measurement>
- When the <Unit> describing it is reviewed
- Then the value of <Unit> is from UCUM
+Given a <Numeric Value> reported by a Device or App
+ And <Documentation> for it
+ When the <Documeentation> is examined
+ Then the range values for the <Numeric Value> is documented
+  And the <Numeric Value> falls within the documented range.

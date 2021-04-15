@@ -9,9 +9,21 @@
 *****************************************************************************************
 {% endcomment %} -->
 
-The purpose of this implementation guide (IG) is to document the functional requirements and provide a framework supporting App Data Exchange between mobile health devices, apps and other parts of the Health IT Infrastructure (e.g., EHR, PHR, research).  The framework can be used to assess mobile health devices, apps and FHIR profiles to ensure that essential data needed for clinical, patient and research uses is present.
+The purpose of this implementation guide (IG) is to document the functional requirements and provide
+a framework supporting App Data Exchange between mobile health devices, apps and other parts of the
+Health IT Infrastructure (e.g., EHR, PHR, research).  The framework can be used to assess mobile health
+devices, apps and FHIR profiles to ensure that essential data needed for clinical, patient and
+research uses is present.  The framework can be used to assess mobile health devices, apps and FHIR
+profiles to ensure that essential data needed for clinical, patient and research uses is present,
+while preserving privacy preferences of patients and facilitating compliance with privacy and security
+laws and policies.
 
-Mobile health devices and apps usually provide their own APIs and methods for collecting device data and communicating it to EHRs, Personal Health Record (PHRs) and research endpoints. Much of this data can (and has been) readily converted to FHIR resources. However, limits have been encountered which demonstrate that essential data needed to generate, interpret and use the FHIR resources is often missing. Hence the need to develop an implementation guide describing the functional requirements of such systems in the mobile health environment.
+Mobile health devices and apps usually provide their own APIs and methods for collecting device data and
+communicating it to EHRs, Personal Health Record (PHRs) and research endpoints. Much of this data can
+(and has been) readily converted to FHIR resources. However, limits have been encountered that
+demonstrate that essential data needed to generate, interpret and use the FHIR resources is often
+missing. Hence the need to develop an implementation guide describing the functional requirements
+of such systems in the mobile health environment.
 
 ### Document Organization
 This document is organized into three main sections:

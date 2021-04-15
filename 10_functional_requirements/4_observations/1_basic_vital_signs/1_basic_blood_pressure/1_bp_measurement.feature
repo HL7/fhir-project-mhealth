@@ -32,3 +32,12 @@ The measurement should use units coded in UCUM.
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>,
     And that <UCUM Unit Code> is 'mm[Hg]' (millimeters of mercury).
+
+@App-Shall @Device-Shall
+Scenario: Precision and units are appropriate for blood pressure
+ The precision and units of a blood pressure measurement shall be appropriate to the measurement.
+
+Given A <System> (either a Device or an App)
+  And a <Blood Pressure Measurement> that can be produced by <System>
+ When <Blood Pressure Measurement> are examined
+ Then The precision of <Blood Pressure Measurement> is in at least whole units and not more than tenths of a unit.

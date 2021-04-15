@@ -5,6 +5,7 @@ NOTE: If a device can be associated with a Universal Device Identifier (UDI), it
 requirement, because this information is included in device metadata accessible via UDI.
 
 Scenario: Type of Device
+   Information about the type of device is available through the device record.
 
    Given a <Device> that measures a vital sign
    Then the <Device> must be able to be associated with <Metadata> about it

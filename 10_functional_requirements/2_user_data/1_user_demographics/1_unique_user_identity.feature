@@ -8,6 +8,7 @@ process of storing the measurement has associated the measurement with the user'
 NOTE: Different kinds of Unique identifiers may be used
 
 Scenario: Identifier exists
+Each User is uniquely identified
 
     Given a <User> Record
     And an <Identifier>

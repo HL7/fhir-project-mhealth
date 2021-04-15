@@ -3,18 +3,19 @@ Feature: Measurement Device can be Identified
     The device that performs the measurement shall be uniquely identified and that identifier
     shall persist throughout that devices lifetime.
 
-Each type of device has attributes with regard to precision, accuracy and quality which
-can impact the interpretation of measurements taken by the device.  Knowledge of the
-device helps greatly in interpreting the results.
+Each type of device has attributes with regard to precision, accuracy and quality that can impact
+the interpretation of measurements taken by the device. Knowledge of the device helps greatly in
+interpreting the results.
 
 Scenario: Device is Identified
-
+A device is identified with a unique identifier and that can be determined from the measurement.
     Given <Device> performs a measurement
     And <Device> is uniquely identified with <Identifier>
     When <Measurement> has been obtained
     Then <Identifier> can be found from <Measurement>
 
 Scenario: Device Identifier Persists
+The unique identifier of the device is consistent across measurements.
 
     Given <Device> that can perform a measurement
     And <User1>

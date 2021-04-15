@@ -12,8 +12,8 @@ When this metadata is not available, operational procedures can be used to obtai
 measure of assurance about the source data, but do not provide nearly as strong
 assurance as when it is.
 
-Many mobile devices are small, readily lost or broken.  Anyone whose run their fitness
-tracker through the laundry can attest to the fact they may need to be replaced.  The
+Many mobile devices are small, readily lost or broken.  Anyone who has run their
+fitness tracker through the laundry can attest to the fact they may need to be replaced.  The
 ability to connect the measurement to the device allows receivers of measurement
 data to rule in or out a change in device as a reason for change in resulting
 measurements.  Apps, devices and infrastructure should enable such capabilities.

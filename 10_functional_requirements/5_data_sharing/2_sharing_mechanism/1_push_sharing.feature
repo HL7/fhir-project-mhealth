@@ -2,6 +2,8 @@
 Feature: The system should be able to push new data to another party that the user has shared with.
 
 Scenario: Push Sharing
+  The system can send (push) data to other parties in electronic form.
+
 Given a <System> supporting push sharing
   And a <User>
   And a <Party> the user has shared with

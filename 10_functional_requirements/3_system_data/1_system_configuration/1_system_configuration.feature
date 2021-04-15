@@ -4,6 +4,7 @@ The means by which a system is configured to report or use different units is do
 
 @App-Shall @Device-Shall
 Scenario: Unit configuration is Documented
+Device and application settings affecting reported units is documented.
 
 Given a <Device or App>
   And <Documentation> for it

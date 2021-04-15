@@ -23,15 +23,6 @@ The system should provide codes along with measurements.
     And that <LOINC Code> is 9279-1 Respiratory Rate
 
 @App-Should @Infra-Should
-Scenario: LOINC Coded Respiration Rate Measurement
-The system should provide LOINC codes along with measurements.
-
-  Given a <Measurement> of respiration rate
-   When the <Measurement> is retrieved
-   Then that <Measurement> is associated with a <LOINC Code> for Respiration Rate
-    And that <LOINC Code> is 8480-6 9279-1  Respiratory Rate
-
-@App-Should @Infra-Should
 Scenario: UCUM Coded Respiration Rate Units
 The measurement should use units coded in UCUM.
 
@@ -39,4 +30,13 @@ The measurement should use units coded in UCUM.
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>,
     And that <UCUM Unit Code> is '/min' (per minute)
-    And that <UCUM Unit Code> may include a UCUM comment (e.g. '{beat}/min' or '{beats}/min')
+    And that <UCUM Unit Code> may include a UCUM comment (e.g. '{breath}/min' or '{breaths}/min')
+
+@App-Shall @Device-Shall
+Scenario: Precision and units are appropriate for heart rate
+ The precision and units of a heart rate measurement shall be appropriate to the measurement.
+
+Given A <System> (either a Device or an App)
+  And a <Respiration Rate Measurement> that can be produced by <System>
+ When <Respiration Rate Measurement> are examined
+ Then The precision of <Respiration Rate Measurement> is in at least whole units and not more than tenths of a unit.

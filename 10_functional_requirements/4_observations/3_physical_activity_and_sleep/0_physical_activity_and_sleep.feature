@@ -2,7 +2,10 @@
 Feature: Physical Activities including Sleep is Measured
 The system shall record the duration and other qualities of physical activities that it can detect.
 
-Scenario: Activities are recorded
+Scenario: Physical Activity is recorded
+  Physical activity (e.g., sleeping, walking, running, or other measured activity) is recorded, including
+  essential attributes needed to evaluate the activity (e.g., depth of sleep, incline, level of effort, et cetera).
+
 Given a <User>
   And an <Activity>
  When the <User> performs that activity

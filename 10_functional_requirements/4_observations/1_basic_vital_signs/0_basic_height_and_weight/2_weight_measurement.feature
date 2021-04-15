@@ -30,3 +30,12 @@ The measurement should use units coded in UCUM.
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>,
     And that <UCUM Unit Code> is 'kg' (kilograms), 'g' (grams), or '[lb_av]' (pounds).
+
+@App-Shall @Device-Shall
+Scenario: Precision and units are appropriate for height
+ The precision and units of a weight measurement shall be appropriate to the measurement.
+
+Given A <System> (either a Device or an App)
+  And a <Weight Measurement> that can be produced by <System>
+ When <Weight Measurement> are examined
+ Then The precision of <Weight Measurement> is in at least whole units and not more than tenths of a unit

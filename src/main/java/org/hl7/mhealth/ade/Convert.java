@@ -43,7 +43,7 @@ public class Convert {
     private static Map<String, String> files = new TreeMap<>();
     private static int fileNumber = 10;
     public static void main(String args[]) throws IOException {
-        String output = "./ig-data/input/pagecontent";
+        String output = "./input/pagecontent";
         for (String arg : args) {
             if (arg.startsWith("-o")) {
                 output = arg.substring(2);
@@ -59,11 +59,39 @@ public class Convert {
                 error(f, "%s is not a folder.", arg);
                 continue;
             }
-            convert(f, new File(output));
+
+            Hierarchy<?> root = convert(f, new File(output));
+
+            printToc(root, 1);
             System.out.printf("Produced %d outputs from %d inputs with %d Errors and %d Warnings%n",
                 numOutputFiles, numInputFiles, errors, warnings);
             System.err.printf("Produced %d outputs from %d inputs with %d Errors and %d Warnings%n",
                 numOutputFiles, numInputFiles, errors, warnings);
+        }
+    }
+
+    /**
+     * Generate the content for pages in config.yaml
+     * @param node  The node of the page hierarchy to generatee
+     * @param indentLevel the indentation level
+     *
+     * Generates output in the form
+     *   pagename.md:
+     *     title: Page Title
+     *     generation: markdown
+     *     subpage1.md:
+     *       ...
+     */
+    private static void printToc(Hierarchy<?> node, int indentLevel) {
+        String indent = StringUtils.repeat("  ", indentLevel);
+        System.out.printf("%s%s.md:%n", indent, node.name);
+        System.out.printf("%s  title: %s%n", indent, node.title);
+        System.out.printf("%s  generation: markdown%n", indent);
+
+        for (Hierarchy<?> child: node.getChildren()) {
+            if (child.name != null) {
+                printToc(child, indentLevel + 1);
+            }
         }
     }
 
@@ -124,6 +152,9 @@ public class Convert {
          * @param description the description to set
          */
         public void setDescription(String description) {
+            if (description.contains("..")) {
+                System.err.println("Got here");
+            }
             this.description = description;
         }
 
@@ -182,7 +213,7 @@ public class Convert {
         }
     }
 
-    private static List<String> noiseWords = Arrays.asList("the", "for");
+    private static List<String> noiseWords = Arrays.asList("the", "for", "and");
 
     private static String titleCase(String title) {
         String words[] = title.split("\\s+");
@@ -199,6 +230,8 @@ public class Convert {
 
     private static Hierarchy<GeneratedMessageV3> convert(File inputFolder, File outputFolder) {
         Hierarchy<GeneratedMessageV3> root = new Hierarchy<>(null);
+        root.setTitle(makeTitle(inputFolder.getName()));
+        root.setName(makeLink(inputFolder, null));
         processDescription(root, inputFolder, outputFolder);
         processSubfolders(root, inputFolder, outputFolder);
         return root;
@@ -216,7 +249,7 @@ public class Convert {
         if (!input.exists()) {
             error(input, "Missing description.md");
             try (FileWriter fw = new FileWriter(input);
-                 PrintWriter pw = new PrintWriter(fw);) {
+                PrintWriter pw = new PrintWriter(fw);) {
                 pw.printf("The %s category supports [<span class='text-error'>...</span>](#error)", makeTitle(input.getName()));
             } catch (IOException e) {
                 warn(input, "Error creating '%s'", input);
@@ -232,7 +265,11 @@ public class Convert {
                 numInputFiles++;
             }
             String content2 = content.replaceAll("\\s+", " ").trim();
-            firstSentence = StringUtils.substringBefore(content2, ". ") + ".";
+            firstSentence = StringUtils.substringBefore(content2, ". ");
+            if (!firstSentence.endsWith(".")) {
+                // When there is only one sentence, we may already have a terminal .
+                firstSentence += ".";
+            }
             detail = StringUtils.substringAfter(content, ".\\s+");
             FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
             root.setTitle(makeTitle(input.getName()));
@@ -261,7 +298,7 @@ public class Convert {
         path = parts[parts.length - 1];
         String name = files.get(path);
         if (name == null) {
-            files.put(path, name = String.format("%d_%s.md", fileNumber++,
+            files.put(path, name = String.format("%s.md", // fileNumber++,
                 path.replaceAll("^_+", "").replaceAll("__+", "_")));
         }
         File f = new File(outputFolder, name);
@@ -273,16 +310,17 @@ public class Convert {
 
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-        String category = makeTitle("Category Content");
+        String category = makeTitle(inputFolder.getName());
         root.setTitle(category);
-        printHeading(pw, 3, root);
+        root.setName(makeLink(inputFolder, null));
+        //printHeading(pw, 3, root);
 
-        pw.printf("The %s Category includes all requirements for from the following subcategories:%n", category);
+        pw.printf("%n%nThe %s Category includes all requirements from the following subcategories:%n", category);
         for (File f : inputFolder.listFiles(f -> f.isDirectory())) {
             isCategory = true;
             Hierarchy<GeneratedMessageV3> part = root.add(null);
             String description = processDescription(part, f, outputFolder);
-            pw.printf(" * [%s](%s)%n", makeTitle(f.getName()), makeLink(f));
+            pw.printf(" * [%s](%s)%n", makeTitle(f.getName()), makeLink(f, ".html"));
             if (!StringUtils.isBlank(description)) {
                 pw.printf("   %s%n", description);
             }
@@ -317,12 +355,12 @@ public class Convert {
         return titleCase(StringUtils.join(titleParts, ' '));
     }
 
-    private static String makeLink(File f) {
+    private static String makeLink(File f, String ext) {
         String name = f.getName();
         if (StringUtils.isNumeric(StringUtils.substringBefore(name, "_"))) {
             name = StringUtils.substringAfter(name, "_");
         }
-        return name + ".html";
+        return ext != null ? name + ext : name ;
     }
 
     private static void handleFeatures(Hierarchy<GeneratedMessageV3> root, File inputFolder, File outputFolder) {

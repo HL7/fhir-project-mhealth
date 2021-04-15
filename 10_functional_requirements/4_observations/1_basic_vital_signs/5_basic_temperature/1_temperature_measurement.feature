@@ -1,15 +1,15 @@
 @Device @App @Infra
-Feature: Tempurature Measurement
-The system shall be able to capture and report a tempurature measurement from the user.
+Feature: Temperature Measurement
+The system shall be able to capture and report a Temperature measurement from the user.
 
 @Device-Shall @App-Shall @Infra-Shall
-Scenario: Capture and Report Tempurature Measurement
+Scenario: Capture and Report Temperature Measurement
 
 Given a <System> (App or Infrastructure) that can work with a <Device>
   And a <User> of that <System>
-  And the <Tempurature> of that <User>
+  And the <Temperature> of that <User>
  When the <System> is operational
- Then the device can capture a <Measurement> in the <System> associated with <User> that contains that user's <Tempurature>
+ Then the device can capture a <Measurement> in the <System> associated with <User> that contains that user's <Temperature>
   And that <Measurement> has units that are degrees Celsius or Fahrenheit
   And the precision of that <Measurement> is to the unit of at least whole unit.
 
@@ -32,3 +32,11 @@ The measurement should use units coded in UCUM.
     And that <UCUM Unit Code> is 'Cel' or '[degF]'
 
 
+@App-Shall @Device-Shall
+Scenario: Precision and units are appropriate for temperature
+ The precision and units of an temperature measurement shall be appropriate to the measurement.
+
+Given A <System> (either a Device or an App)
+  And a <Temperature Measurement> that can be produced by <System>
+ When <Temperature Measurement> are examined
+ Then The precision of <Temperature Measurement> is in at least whole units and not more than tenths of a unit.

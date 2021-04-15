@@ -28,9 +28,5 @@ a measurement is taken (e.g., comment fields).  These fields can often be used t
 for missing device or application features, but may require additional effort when interfacing
 with these systems.
 
-[^1]: Clark CE, Taylor RS, Shore AC, Ukoumunne OC, Campbell JL. [Association of a
-difference in systolic blood pressure between arms with vascular disease and
-mortality: a systematic review and meta-analysis](https://www.ncbi.nlm.nih.gov/pubmed/22293369/).
-Lancet. 2012 Mar 10;379(9819):905-914. doi: 10.1016/S0140-6736(11)61710-8. Epub 2012 Jan 30.
-Review. PubMed PMID: 22293369.
+[^1]: Clark CE, Taylor RS, Shore AC, Ukoumunne OC, Campbell JL. [Association of a difference in systolic blood pressure between arms with vascular disease and mortality: a systematic review and meta-analysis](https://www.ncbi.nlm.nih.gov/pubmed/22293369/). Lancet. 2012 Mar 10;379(9819):905-914. doi: 10.1016/S0140-6736(11)61710-8. Epub 2012 Jan 30. Review. PubMed PMID: 22293369.
 

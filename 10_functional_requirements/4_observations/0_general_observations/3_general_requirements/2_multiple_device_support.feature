@@ -5,8 +5,9 @@ from multiple (possibly identical) devices and identify the device from
 which they were collected.
 
 Background: Multiple Device Support
-The following sections describe further support requirements for similar
-and different devices.  The steps below apply to both cases.
+The following scenarios describe further support requirements for similar
+and different devices.  The requirements below apply to both of the scenarios
+that follow.
 
 Given An app <App> that supports a device <Device1> of a particular <Type>
   And <MeasureSet1> that were acquired through <Device1>
@@ -17,12 +18,13 @@ Given An app <App> that supports a device <Device1> of a particular <Type>
 Scenario: Replacement device
 
 Patients may replace a broken, failed, lost or otherwise non-functional
-device with a new device of a similar type, not lose their existing data maintained
-in the app, and yet also be able to distinguish which device took which measurement.
+device with a new device of the same type, not lose their existing data maintained
+in the app (e.g., all measures of a given kind may be treated as a single stream),
+and yet also be able to distinguish which device took which measurement.
 
 When  The user acquires <Device2> of the same type <Type>
 Then  <App> can acquire new measurements <MeasureSet2> from <Device2>
-  And Those measures in <MeasureSet2> can be distinguished as having come from <Device2>
+ And  Those measures in <MeasureSet2> can be distinguished as having come from <Device2>
 
 @App-Should @Device-Should
 Scenario: Alternative device

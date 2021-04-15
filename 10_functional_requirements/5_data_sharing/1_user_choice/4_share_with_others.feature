@@ -1,6 +1,10 @@
 @App-Shall @Infra-Shall
 Feature: The user can request that some or all their data be shared with another user or a third party.
-This feature enables users to share or not share data with others of their choosing.
+This feature enables users to share or not share data with others of their choosing.  The user can
+start or stop sharing at any time.
+
+NOTE: Systems may provide additional features to filter or refine the data that can be shared, but that
+is beyond the scope of this section.
 
 @App-Shall @Infra-Shall
 Scenario:  User requests sharing with another user or third party.
@@ -16,14 +20,14 @@ Given A <User>
 @App-Shall @Infra-Shall
 Scenario: User requests that sharing stop with the other user or third party.
 After a user requests that sharing stop, any data previously accessible shall no longer be
-accessible to the third party, and future data shall not be sent to that party.
+accessible to the third party, and future data shall not be accessible to that party.
 
 NOTE: This specification does not speak to the access a third party has to data that it
-has previously recieved and/or stored.  That is outside of the scope of this specification.
+has previously received and/or stored. That is outside of the scope of this specification.
 
 Given A <User>
   And Another <Party> (either user or third party) with whom the user has chose to share data with
   And A <System> (an App or Infrastructure)
   And <Data> has been recorded in/by <System>
- When The <User> requests sharing of their data stope from <System> to <Party>
+ When The <User> requests sharing of their data stop from <System> to <Party>
  Then <Party> can no longer access the user data (both current and historical).

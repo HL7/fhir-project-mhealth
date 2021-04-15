@@ -33,4 +33,11 @@ The measurement should use units coded in UCUM.
    Then that <Measurement> is associated with a <UCUM Unit Code>,
     And that <UCUM Unit Code> is cm (centimeters) or [in_i] (international inches).
 
+@App-Shall @Device-Shall
+Scenario: Precision and units are appropriate for height
+ The precision and units of a height (or length) measurement shall be appropriate to the measurement.
 
+Given A <System> (either a Device or an App)
+  And a <Height Measurement> that can be produced by <System>
+ When <Height Measurement> are examined
+ Then The precision of <Height Measurement> is in at least whole units and not more than tenths of a unit

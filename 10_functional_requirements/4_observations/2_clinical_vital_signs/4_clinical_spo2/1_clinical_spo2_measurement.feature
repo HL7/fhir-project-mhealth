@@ -7,6 +7,6 @@ Scenario: Report Measurement Site
 The measurement site shall be able to be reported with each heart rate measurement
 
 Given a <System> that can report oxygen saturation
-When a <Blood Pressure> measurement is performed
+When a <Oxygen Saturation> measurement is performed
 Then the <Measurement Site> can be associated with the <Measurement>
 

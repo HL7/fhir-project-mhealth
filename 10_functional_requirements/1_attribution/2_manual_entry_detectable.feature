@@ -6,7 +6,7 @@ measures as that have been manually entered by the user of the app, and the
 user shall be identified also.
 
 Scenario: Manually entered data can be detected
-    Manualy entered data shall be distinguishable from device recorded data.
+    Manually entered data shall be distinguishable from device recorded data.
 
     Given An app that enables user entry of data manually,
     And a <User>

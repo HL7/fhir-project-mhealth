@@ -1,5 +1,5 @@
 This category describes general requirements of all systems for which observations are
-assessed.  When an assessment is performed on any of the categories for Observations
+assessed. When an assessment is performed on any of the categories for Observations
 the requirements in this category **SHALL** also be assessed.
 
 Specifically, if an App, Device or Infrastructure supports reporting for a given measurement

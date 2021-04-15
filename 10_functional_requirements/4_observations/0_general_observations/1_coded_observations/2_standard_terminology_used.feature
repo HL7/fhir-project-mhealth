@@ -13,8 +13,8 @@ Scenario: Units are coded using the UCUM Unit terminology system
 Units should be coded using UCUM
 
 Given a <Measurement>
- When the <Code> describing it is reviewed
- Then it comes from SNOMED CT or LOINC
+ When the <Value> describing it is reviewed
+ Then the units are recorded using UCUM
 
 
 Scenario: Coded Values use SNOMED CT or ICD-10
