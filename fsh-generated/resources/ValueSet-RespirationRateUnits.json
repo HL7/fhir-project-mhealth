@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "RespirationRateUnits",
+  "id": "RespirationRateUnits",
+  "description": "Allowed values for heart rate",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/RespirationRateUnits",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.com",
+        "concept": [
+          {
+            "code": "/min"
+          },
+          {
+            "code": "{breath}/min"
+          },
+          {
+            "code": "{breaths}/min"
+          }
+        ]
+      }
+    ]
+  }
+}

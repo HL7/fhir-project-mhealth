@@ -1,0 +1,90 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UserHeightRequirements",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UserHeightRequirements",
+  "version": "0.1.0",
+  "name": "UserHeightRequirements",
+  "status": "active",
+  "description": "    If User Height is essential to compute an observation the app/infra shall be\nable to capture/report the user's height as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for height include distance traveled or calories used during an\nactivity (e.g., steps or stairs climbed)",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "requirements": "NOTE 1: Additional steps may be necessary to access the Height given that the User is known.\nThis may include retrieving the height in some way as an attribute of the user\n\nNOTE 2: If the height is not essential for measurement, (i.e., the precondition is not met)\nthen this test is not applicable and not reported during the assessment.\n\nSee [User Data: Height is Available](user_attributes_and_preferences.html#height-is-available)",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "8302-2",
+              "system": "http://loinc.org",
+              "display": "Height"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "requirements": "NOTE 1: Additional steps may be necessary to access the Height given that the User is known.\nThis may include retrieving the height in some way as an attribute of the user\n\nNOTE 2: If the height is not essential for measurement, (i.e., the precondition is not met)\nthen this test is not applicable and not reported during the assessment.\n\nSee [User Data: Height is Available](user_attributes_and_preferences.html#height-is-available)",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

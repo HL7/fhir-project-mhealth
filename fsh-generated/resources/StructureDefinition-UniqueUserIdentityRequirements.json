@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UniqueUserIdentityRequirements",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Individuals"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UniqueUserIdentityRequirements",
+  "version": "0.1.0",
+  "name": "UniqueUserIdentityRequirements",
+  "status": "active",
+  "description": "    An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "loinc",
+      "uri": "http://loinc.org",
+      "name": "LOINC code for the element"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "requirements": "Each User is uniquely identified\n\nSee [User Data: Identifier Exists](user_demographics.html#identifier-exists)",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

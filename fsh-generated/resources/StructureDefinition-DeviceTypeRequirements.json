@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DeviceTypeRequirements",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Entities"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "business"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/DeviceTypeRequirements",
+  "version": "0.1.0",
+  "name": "DeviceTypeRequirements",
+  "status": "active",
+  "description": "The type of device performing the measure shall be able to be determined from the <System>\nNOTE: If a device can be associated with a Universal Device Identifier (UDI), it meets the criteria for this\nrequirement, because this information is included in device metadata accessible via UDI.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "udi",
+      "uri": "http://fda.gov/UDI",
+      "name": "UDI Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Device.deviceName",
+        "path": "Device.deviceName",
+        "requirements": "Information about the type of device is available through the device record.\n\nSee [Clinical Vital Signs: Type of Device](general_clinical_measurements.html#type-of-device)",
+        "mustSupport": true
+      },
+      {
+        "id": "Device.modelNumber",
+        "path": "Device.modelNumber",
+        "requirements": "Information about the type of device is available through the device record.\n\nSee [Clinical Vital Signs: Type of Device](general_clinical_measurements.html#type-of-device)",
+        "mustSupport": true
+      }
+    ]
+  }
+}

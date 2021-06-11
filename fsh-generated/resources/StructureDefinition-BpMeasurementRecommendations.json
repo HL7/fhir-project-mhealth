@@ -1,0 +1,119 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BpMeasurementRecommendations",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/BpMeasurementRecommendations",
+  "version": "0.1.0",
+  "name": "BpMeasurementRecommendations",
+  "status": "active",
+  "description": "The system shall be able to capture and report a blood pressure measurement from the user.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "requirements": "The measurement **SHOULD** be coded in LOINC.\n\nSee [Basic Vital Signs: LOINC Coded Blood Pressure Measurement](basic_blood_pressure.html#loinc-coded-blood-pressure-measurement)",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BloodPressureMeasurements"
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Blood Pressure Units](basic_blood_pressure.html#ucum-coded-blood-pressure-units)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.system",
+        "path": "Observation.valueQuantity.system",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Blood Pressure Units](basic_blood_pressure.html#ucum-coded-blood-pressure-units)",
+        "patternUri": "http://unitsofmeasure.com"
+      },
+      {
+        "id": "Observation.valueQuantity.code",
+        "path": "Observation.valueQuantity.code",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Blood Pressure Units](basic_blood_pressure.html#ucum-coded-blood-pressure-units)",
+        "patternCode": "'mm[Hg]'"
+      },
+      {
+        "id": "Observation.component.code",
+        "path": "Observation.component.code",
+        "requirements": "The measurement **SHOULD** be coded in LOINC.\n\nSee [Basic Vital Signs: LOINC Coded Blood Pressure Measurement](basic_blood_pressure.html#loinc-coded-blood-pressure-measurement)",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BloodPressureMeasurements"
+        }
+      }
+    ]
+  }
+}

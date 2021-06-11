@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mhealth-ade-observation",
+  "id": "Spo2MeasurementRequirements",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,11 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/mhealth-ade-observation",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/Spo2MeasurementRequirements",
   "version": "0.1.0",
-  "name": "ADEObservation",
-  "title": "mHealth ADE Observation profile",
+  "name": "Spo2MeasurementRequirements",
   "status": "active",
-  "description": "Defines constraints and extensions on the Observation Resource for data communicated from devices",
+  "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -58,8 +57,25 @@
   "differential": {
     "element": [
       {
-        "id": "Observation",
-        "path": "Observation"
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "requirements": "The precision and units of an oxygen saturation measurement **SHALL** be appropriate to the measurement.\n\nSee [Basic Vital Signs: Precision and Units Are Appropriate for Oxygen Saturation](basic_spo2.html#precision-and-units-are-appropriate-for-oxygen-saturation)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "Spo2MeasurementPrecisionAndUnitsAreAppropriateForOxygenSatur-1",
+            "severity": "error",
+            "human": "The precision and units of an oxygen saturation measurement **SHALL** be appropriate to the measurement.",
+            "expression": "value.floor() = value or (value * 10).floor() = (value * 10)",
+            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/Spo2MeasurementRequirements"
+          }
+        ]
       }
     ]
   }

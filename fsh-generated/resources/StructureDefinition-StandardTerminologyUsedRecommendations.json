@@ -1,0 +1,98 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StandardTerminologyUsedRecommendations",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/StandardTerminologyUsedRecommendations",
+  "version": "0.1.0",
+  "name": "StandardTerminologyUsedRecommendations",
+  "status": "active",
+  "description": "If codes are present in measurements, standard terminology should be used for observation codes, values and units.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "constraint": [
+          {
+            "key": "StandardTerminologyUsedCodesDescribingObservationsUseLoincOr-1",
+            "severity": "warning",
+            "human": "Measurements **SHOULD** be described using LOINC and/or SNOMED CT",
+            "expression": "Observation.where(code.system = 'http://snomed.info/sct' or code.system = 'http://loinc.org')",
+            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/StandardTerminologyUsedRecommendations"
+          },
+          {
+            "key": "StandardTerminologyUsedCodedValuesUseSnomedCtOrIcd-10-1",
+            "severity": "warning",
+            "human": "Result values in a measurement **SHOULD** use SNOMED CT or ICD-10\nNOTE: ICD-10 may include national variants (e.g., ICD-10-CM in the US)",
+            "expression": "valueCodableConcept.where(code.system = 'http://snomed.info/sct' or code.system.startsWith('http://hl7.org/fhir/sid/icd-10'))",
+            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/StandardTerminologyUsedRecommendations"
+          }
+        ]
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.valueQuantity.system",
+        "path": "Observation.valueQuantity.system",
+        "requirements": "Units **SHOULD** be coded using UCUM\n\nSee [General Observations: Units Are Coded Using the UCUM Unit Terminology System](coded_observations.html#units-are-coded-using-the-ucum-unit-terminology-system)",
+        "patternUri": "http://unitsofmeasure.com"
+      }
+    ]
+  }
+}

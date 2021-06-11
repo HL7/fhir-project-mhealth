@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BodyHeight",
+  "id": "BodyHeight",
+  "description": "Allowed values for body height codes",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyHeight",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "8302-2"
+          },
+          {
+            "code": "8306-3"
+          }
+        ]
+      }
+    ]
+  }
+}

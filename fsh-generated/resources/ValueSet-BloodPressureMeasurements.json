@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BloodPressureMeasurements",
+  "id": "BloodPressureMeasurements",
+  "description": "Allowed codes for Blood Pressure Measurement",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BloodPressureMeasurements",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "8480-6"
+          },
+          {
+            "code": "8462-4"
+          }
+        ]
+      }
+    ]
+  }
+}

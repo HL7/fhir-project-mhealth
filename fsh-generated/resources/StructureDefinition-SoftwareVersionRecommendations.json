@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mhealth-ade-device",
+  "id": "SoftwareVersionRecommendations",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,11 @@
       "valueCode": "business"
     }
   ],
-  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/mhealth-ade-device",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/SoftwareVersionRecommendations",
   "version": "0.1.0",
-  "name": "ADEDevice",
-  "title": "mHealth ADE Device profile",
+  "name": "SoftwareVersionRecommendations",
   "status": "active",
-  "description": "Defines constraints on the Device Resource for data communicating about the source of device data.",
+  "description": "The Software Version associated with a system should be available.\n\nThe Software Version can be the physical network address (e.g., MAC address) or other identifier\nassigned to uniquely identify the device on a network (wired or unwired)",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -43,8 +42,11 @@
   "differential": {
     "element": [
       {
-        "id": "Device",
-        "path": "Device"
+        "id": "Device.version",
+        "path": "Device.version",
+        "requirements": "The Software Version can be access from the device or application.\n\nSee [System Data: Software Version Can be Accessed](system_attributes.html#software-version-can-be-accessed)",
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }
