@@ -5,13 +5,13 @@ category must also be evaluated.  This is because blood pressure and pulse are v
 closely related measurements, and it's nearly impossible for a system to measure blood
 pressure without having some awareness of heart rate.
 <span id='blood-pressure-measurement'/>
-### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> Feature: Blood Pressure Measurement
+###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='bp_measurement'>Feature: Blood Pressure Measurement</a>
 
 The system **SHALL** be able to capture and report a blood pressure measurement from the user.
 
 
 <span id='capture-and-report-blood-pressure-measurement'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Capture and Report Blood Pressure Measurement
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Blood Pressure Measurement</a>
 
 
 GIVEN
@@ -43,7 +43,7 @@ THEN
 
 
 <span id='loinc-coded-blood-pressure-measurement'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Blood Pressure Measurement
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Blood Pressure Measurement</a>
 
 The measurement **SHOULD** be coded in LOINC.
 
@@ -57,11 +57,11 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a component that is associated with a <i>&lt;LOINC Code&gt;</i> for Blood Pressure
 
    AND
-   : that <i>&lt;LOINC Code&gt;</i> is 8480-6 Systolic blood pressure or 8462-4 Diastolic blood pressure
+   : that <i>&lt;LOINC Code&gt;</i> is 8480-6 Systolic blood pressure or 8462-4 Diastolic blood pressure 
 
 
 <span id='ucum-coded-blood-pressure-units'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Blood Pressure Units
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Blood Pressure Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -72,14 +72,14 @@ WHEN
 : the <i>&lt;Measurement&gt;</i> is retrieved
 
 THEN
-: that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;UCUM Unit Code&gt;</i>,
+: that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;UCUM Unit Code&gt;</i>, 
 
    AND
-   : that <i>&lt;UCUM Unit Code&gt;</i> is 'mm[Hg]' (millimeters of mercury).
+   : that <i>&lt;UCUM Unit Code&gt;</i> is 'mm[Hg]' (millimeters of mercury). 
 
 
 <span id='precision-and-units-are-appropriate-for-blood-pressure'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: Precision and Units Are Appropriate for Blood Pressure
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Blood Pressure</a>
 
 The precision and units of a blood pressure measurement **SHALL** be appropriate to the measurement.
 
@@ -93,5 +93,5 @@ WHEN
 : <i>&lt;Blood Pressure Measurement&gt;</i> are examined
 
 THEN
-: The precision of <i>&lt;Blood Pressure Measurement&gt;</i> is in at least whole units and not more than tenths of a unit.
+: The precision of <i>&lt;Blood Pressure Measurement&gt;</i> is in at least whole units and not more than tenths of a unit. 
 

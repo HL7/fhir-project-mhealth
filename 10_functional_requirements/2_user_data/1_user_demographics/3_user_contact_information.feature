@@ -9,7 +9,7 @@ The user has contact information.
     Given a <User>Record
     And a <Contact> information item
     When <User> is retrieved
-    Then <User> contains one or more <Contact>
+    Then <User> contains one or more <Contact> [[ Patient#User: address MS, telecom MS, obeys address.exists() or telecom.where(system = 'phone' or system = 'email').exists() ]]
     And <Contact> is one of the following:
     * <Contact> is the user's postal address, or
     * <Contact> is the user's e-mail address, or

@@ -5,13 +5,13 @@ dynamically configured for either measurement system.
 
 
 <span id='temperature-measurement'/>
-### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> Feature: Temperature Measurement
+###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='temperature_measurement'>Feature: Temperature Measurement</a>
 
 The system **SHALL** be able to capture and report a Temperature measurement from the user.
 
 
 <span id='capture-and-report-temperature-measurement'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Capture and Report Temperature Measurement
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Temperature Measurement</a>
 
 
 GIVEN
@@ -37,7 +37,7 @@ THEN
 
 
 <span id='loinc-coded-temperature-measurement'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Temperature Measurement
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Temperature Measurement</a>
 
 The system **SHOULD** provide LOINC codes along with measurements.
 
@@ -51,11 +51,11 @@ THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;LOINC Code&gt;</i> for Temperature
 
    AND
-   : that <i>&lt;LOINC Code&gt;</i> is 8310-5 Body temperature
+   : that <i>&lt;LOINC Code&gt;</i> is 8310-5 Body temperature  
 
 
 <span id='ucum-coded-temperature-units'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Temperature Units
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Temperature Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -66,14 +66,14 @@ WHEN
 : the <i>&lt;Measurement&gt;</i> is retrieved
 
 THEN
-: that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;UCUM Unit Code&gt;</i>,
+: that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;UCUM Unit Code&gt;</i>, 
 
    AND
-   : that <i>&lt;UCUM Unit Code&gt;</i> is 'Cel' or '[degF]'
+   : that <i>&lt;UCUM Unit Code&gt;</i> is 'Cel' or '[degF]' 
 
 
 <span id='precision-and-units-are-appropriate-for-temperature'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: Precision and Units Are Appropriate for Temperature
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Temperature</a>
 
 The precision and units of an temperature measurement **SHALL** be appropriate to the measurement.
 
@@ -87,5 +87,5 @@ WHEN
 : <i>&lt;Temperature Measurement&gt;</i> are examined
 
 THEN
-: The precision of <i>&lt;Temperature Measurement&gt;</i> is in at least whole units and not more than tenths of a unit.
+: The precision of <i>&lt;Temperature Measurement&gt;</i> is in at least whole units and not more than tenths of a unit. 
 

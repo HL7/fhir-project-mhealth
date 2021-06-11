@@ -12,7 +12,8 @@ A device is identified with a unique identifier and that can be determined from 
     Given <Device> performs a measurement
     And <Device> is uniquely identified with <Identifier>
     When <Measurement> has been obtained
-    Then <Identifier> can be found from <Measurement>
+    Then <Device> can be found from <Measurement> [[Observation#Measurement: device MS, device 1..1, device only Reference(Device)]]
+    And <Identifier> can be found from <Device>   [[Device: identifier MS, identifier 1..*]]
 
 Scenario: Device Identifier Persists
 The unique identifier of the device is consistent across measurements.
@@ -27,20 +28,3 @@ The unique identifier of the device is consistent across measurements.
     Then there is an <Identifier1> in the <Device> record associated with <Measurement1>
      And there is an <Identifier2> in the <Device> record associated with <Measurement2>
      And <Identifier2> = <Identifier1>
-
-
-# @FHIR
-# Scenario: Device is recorded using FHIR
-#
-#     Given a <Device> record
-#     When the <Device> record is retrieved
-#     Then <Device> is a FHIR <Device Resource>
-#      And <Device Resource> * id 1..1
-#      And <Device Resource> * identifier 0..*
-#
-# @FHIR
-# Scenario: Measurement is recorded using FHIR
-#     Given a <Measurement>
-#     When <Measurement> is retrieved
-#     Then <Measurement> is a FHIR <Observation Resource>
-#     And  <Observation Resource> * device 1..1

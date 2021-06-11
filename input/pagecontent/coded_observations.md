@@ -2,13 +2,13 @@ This section describes requirements of observations which reflect coded values. 
 applies to observations from a device, app or infrastructure that provide coded
 results.
 <span id='value-sets-for-coded-measurements-are-documented-and-can-be-mapped-to-standards'/>
-### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> Feature: Value Sets for Coded Measurements Are Documented and Can be Mapped to Standards
+###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <a name='value_sets_documented'>Feature: Value Sets for Coded Measurements Are Documented and Can be Mapped to Standards</a>
 
 Fixed values in a list returned by the device or communicated by the App **SHALL** be documented.
 
 
 <span id='value-sets-are-documented'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: Value Sets Are Documented
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_1'>Scenario: Value Sets Are Documented</a>
 
 
 GIVEN
@@ -28,7 +28,7 @@ THEN
 
 
 <span id='value-sets-should-be-mappable-to-standard-terminologies'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> Scenario: Value Sets Should be Mappable to Standard Terminologies
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='scenario_2'>Scenario: Value Sets Should be Mappable to Standard Terminologies</a>
 
 
 GIVEN
@@ -42,13 +42,13 @@ THEN
 
 
 <span id='standards-terminology-is-used-for-measurements'/>
-### <span class='glyphicon text-info glyphicon-phone'/> Feature: Standards Terminology is Used for Measurements
+###<span class='glyphicon text-info glyphicon-phone'/> <a name='standard_terminology_used'>Feature: Standards Terminology is Used for Measurements</a>
 
 If codes are present in measurements, standard terminology **SHOULD** be used for observation codes, values and units.
 
 
-<span id='codes-describing-observations-use-loinc&reg;-or-snomed-ct&reg;'/>
-#### Scenario: Codes Describing Observations Use LOINC&reg; or SNOMED CT&reg;
+<span id='codes-describing-observations-use-loinc-or-snomed-ct'/>
+####<a name='scenario_1'>Scenario: Codes Describing Observations Use LOINC or SNOMED CT</a>
 
 Measurements **SHOULD** be described using LOINC and/or SNOMED CT
 
@@ -59,11 +59,11 @@ WHEN
 : the <i>&lt;Code&gt;</i> describing it is reviewed
 
 THEN
-: it comes from SNOMED CT or LOINC
+: it comes from SNOMED CT or LOINC 
 
 
 <span id='units-are-coded-using-the-ucum-unit-terminology-system'/>
-#### Scenario: Units Are Coded Using the UCUM Unit Terminology System
+####<a name='scenario_2'>Scenario: Units Are Coded Using the UCUM Unit Terminology System</a>
 
 Units **SHOULD** be coded using UCUM
 
@@ -74,11 +74,11 @@ WHEN
 : the <i>&lt;Value&gt;</i> describing it is reviewed
 
 THEN
-: the units are recorded using UCUM
+: the units are recorded using UCUM 
 
 
 <span id='coded-values-use-snomed-ct-or-icd-10'/>
-#### Scenario: Coded Values Use SNOMED CT or ICD-10
+####<a name='scenario_3'>Scenario: Coded Values Use SNOMED CT or ICD-10</a>
 
 Result values in a measurement **SHOULD** use SNOMED CT or ICD-10
 NOTE: ICD-10 may include national variants (e.g., ICD-10-CM in the US)
@@ -90,5 +90,5 @@ WHEN
 : the <i>&lt;Value&gt;</i> describing it is reviewed
 
 THEN
-: it comes from SNOMED CT or ICD-10
+: it comes from SNOMED CT or ICD-10 
 

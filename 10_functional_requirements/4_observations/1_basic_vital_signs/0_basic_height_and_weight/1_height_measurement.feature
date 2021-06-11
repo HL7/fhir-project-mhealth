@@ -23,7 +23,7 @@ The measurement should be coded in LOINC.
   Given a <Measurement> of height
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <LOINC Code> for Height,
-    And that <LOINC Code> is 8302-2 Body Height, or 8306-3 Body Height - Lying (for infant length)
+    And that <LOINC Code> is 8302-2 Body Height, or 8306-3 Body Height - Lying (for infant length) [[Observation#Measurement#Height: code from BodyHeight ]]
 
 @App-Should @Infra-Should
 Scenario: UCUM Coded Height Units
@@ -31,7 +31,7 @@ The measurement should use units coded in UCUM.
   Given a <Measurement> of height
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>,
-    And that <UCUM Unit Code> is cm (centimeters) or [in_i] (international inches).
+    And that <UCUM Unit Code> is cm (centimeters) or [in_i] (international inches). [[Observation#Measurement#Height: valueQuantity.code from BodyHeightUnits, valueQuantity.system = UCUM ]]
 
 @App-Shall @Device-Shall
 Scenario: Precision and units are appropriate for height
@@ -40,4 +40,4 @@ Scenario: Precision and units are appropriate for height
 Given A <System> (either a Device or an App)
   And a <Height Measurement> that can be produced by <System>
  When <Height Measurement> are examined
- Then The precision of <Height Measurement> is in at least whole units and not more than tenths of a unit
+ Then The precision of <Height Measurement> is in at least whole units and not more than tenths of a unit [[ Observation#Measurement#Height: valueQuantity obeys value.floor() = value or (value * 10).floor() = (value * 10) ]]

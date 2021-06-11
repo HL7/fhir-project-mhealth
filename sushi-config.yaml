@@ -26,7 +26,9 @@ contact:
     telecom:
       - system: email
         value: kboone@ainq.com
-description: asdf
+description: This IG provides an the assessment framework and functional requirements
+  for mobile health devices and apps to support the exchange of observations and other data in
+  support of consumer health monitoring.
 license: CC0-1.0
 fhirVersion: 4.0.1
 parameters:
@@ -34,25 +36,25 @@ parameters:
 copyrightYear: 2020+
 releaseLabel: CI Build
 fhirspec: http://build.fhir.org/
-
+FSHonly: false
 
 pages:
   index.md:
     title: Home
     generation: markdown
-    01_introduction.md:
+    introduction.md:
       title: Introduction
       generation: markdown
-    02_overview.md:
+    overview.md:
       title: Overview
       generation: markdown
-    03_use_cases.md:
+    use_cases.md:
       title: Use Case
       generation: markdown
-    04_actors.md:
+    actors.md:
       title: Actors
       generation: markdown
-    06_conformance.md:
+    conformance.md:
       title: Conformance
       generation: markdown
   functional_requirements.md:
@@ -67,17 +69,14 @@ pages:
       user_demographics.md:
         title: User Demographics
         generation: markdown
-      user_attributes.md:
-        title: User Attributes
+      user_attributes_and_preferences.md:
+        title: User Attributes and Preferences
         generation: markdown
     system_data.md:
       title: System Data
       generation: markdown
       system_configuration.md:
         title: System Configuration
-        generation: markdown
-      system_capabilities.md:
-        title: System Capabilities
         generation: markdown
       system_attributes.md:
         title: System Attributes
@@ -101,7 +100,7 @@ pages:
         title: Basic Vital Signs
         generation: markdown
         basic_height_and_weight.md:
-          title: Basic Height And Weight
+          title: Basic Height and Weight
           generation: markdown
         basic_blood_pressure.md:
           title: Basic Blood Pressure
@@ -122,7 +121,7 @@ pages:
         title: Clinical Vital Signs
         generation: markdown
         clinical_height_and_weight.md:
-          title: Clinical Height And Weight
+          title: Clinical Height and Weight
           generation: markdown
         clinical_blood_pressure.md:
           title: Clinical Blood Pressure
@@ -143,7 +142,7 @@ pages:
           title: General Clinical Measurements
           generation: markdown
       physical_activity_and_sleep.md:
-        title: Physical Activity And Sleep
+        title: Physical Activity and Sleep
         generation: markdown
     data_sharing.md:
       title: Data Sharing
@@ -154,7 +153,7 @@ pages:
       sharing_mechanism.md:
         title: Sharing Mechanism
         generation: markdown
-  99_appendices.md:
+  appendices.md:
     title: Appendices
     generation: markdown
 

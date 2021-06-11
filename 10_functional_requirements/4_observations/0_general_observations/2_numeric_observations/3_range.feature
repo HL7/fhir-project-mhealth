@@ -7,6 +7,6 @@ Scenario: Range of values is documented
 
 Given a <Numeric Value> reported by a Device or App
  And <Documentation> for it
- When the <Documeentation> is examined
+ When the <Documentation> is examined
  Then the range values for the <Numeric Value> is documented
   And the <Numeric Value> falls within the documented range.

@@ -21,5 +21,5 @@ then this test is not applicable and not reported during the assessment.
     And <Height> is essential for the operation of <App>
     And a <UserRecord> for <User>
     When the <UserRecord> is retrieved
-    Then the <Height> can be determined from the <UserRecord>
+    Then the <Height> can be determined from the <UserRecord> [[ Observation#Measurement#UserHeight: code = LOINC#8302-2 "Height", subject only Reference(Patient), subject MS, subject 1..1]]
 

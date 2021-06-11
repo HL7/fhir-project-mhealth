@@ -12,4 +12,4 @@ Scenario: Network Address can be Accessed
     And a <Network Address>
     And an <App> running on <App Runner>
     When The <Device> is connected to the <App> and <App Runner>
-    Then <Network Address> can be discovered
+    Then <Network Address> can be discovered [[ Device: url MS, url 1..1]]

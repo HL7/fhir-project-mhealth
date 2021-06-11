@@ -1,4 +1,3 @@
-@Device-Shall @App-Shall @Infra-Shall
 Feature: Device can be Identified
     The device that performs a measurement shall be uniquely identified.
 
@@ -6,6 +5,7 @@ Each type of device has attributes with regard to precision, accuracy and qualit
 can impact the interpretation of measurements taken by the device.  Knowledge of the
 device helps greatly in interpreting the results.
 
+@Device-Shall @App-Shall @Infra-Shall
 Scenario: Device identifier is Unique
 
     The device identifier shall be unique within the namespace defined by the system
@@ -21,10 +21,10 @@ address), or some other unique identifier that only applies to a single device.
     And <Infrastructure> that reports a measurement
     And An <Identifier> for that <Device>
     When The mechanism for assigning <Identifier> is examined
-    Then <Identifier> is uniquely assigned to <Device>
+    Then <Identifier> is uniquely assigned to <Device> [[Device: identifier MS, identifier 1..1]]
 
 @Device-Should @App-Should @Infra-Should
-Scenario: The device has a Unique Device Identifier (UDI)
+Scenario: The device has a Unique Device Identifier
 
     The device should have a UDI.
 
@@ -36,5 +36,4 @@ NOTE: The UDI should be the primary identifier for the device
 
     Given A <Device Record>
     When The <Device Record> is examined
-    Then The <Device Record> contains a UDI for the device
-     And The <UDI> is the primary (first) identifier provided for the device.
+    Then The <Device Record> contains a UDI for the device. [[ Device#ADEDevice#UDI: udiCarrier MS, udiCarrier 1..*, udiCarrier.deviceIdentifier MS, udiCarrier.deviceIdentifier 1..1]]

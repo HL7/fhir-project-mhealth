@@ -2,7 +2,7 @@
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                url="http://hl7.org/fhir/uv/mhealth-framework"
                ciUrl="http://hl7.org/fhir/uv/mhealth-framework"
-               defaultWorkgroup=""
+               defaultWorkgroup="mh"
                defaultVersion="current"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
                ballotUrl="http://hl7.org/fhir/uv/mhealth-framework">

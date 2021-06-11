@@ -8,5 +8,5 @@ The user has a name.
     Given a <User> Record
     And a user <Name>
     When <User> is retrieved
-    Then <User> contains <Name>
+    Then <User> contains <Name> [[Patient#User: name MS, name 1..1]]
 

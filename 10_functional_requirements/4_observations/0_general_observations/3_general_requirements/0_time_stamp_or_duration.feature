@@ -10,12 +10,12 @@ Feature: A Time Stamp or Time Period is Recorded for Each Measurement
 Scenario: Measurements have a time stamp or time period noting the time of measurement
 Given a <User>
  When a <Measurement> is performed for a <User>
- Then that <Measurement> has a time stamp or time period indicating when it was taken.
+ Then that <Measurement> has a time stamp or time period indicating when it was taken. [[ Observation#Measurement: obeys effectiveDateTime.exists() or effectivePeriod.exists() ]]
 
 @Device-Shall @App-Shall @Infra-Shall
 Scenario: Measurements have a time stamp or time period noting the time it was recorded/stored
 Given a <User>
   And <Infrastructuree>
  When a <Measurement> is recorded in <Infrastructure> for a <User>
- Then that <Measurement> has a time stamp or time period indicating when it was recorded.
+ Then that <Measurement> has a time stamp or time period indicating when it was recorded. [[ Observation#Measurement: issued MS, issued 1..1 ]]
 

@@ -29,7 +29,7 @@ Scenario: LOINC Coded BMI Measurement
     Given a <Measurement> of BMI
     When the <Measurement> is retrieved
     Then that <Measurement> is associated with a <LOINC Code> for BMI,
-    And that <LOINC Code> is 39156-5 Body mass index (BMI) [Ratio]
+    And that <LOINC Code> is 39156-5 Body mass index (BMI) [Ratio] [[ Observation#BMI: code = LOINC#39156-5 "Body mass index (BMI)" ]]
 
 @App-Should @Infra-Should
 Scenario: UCUM Coded BMI Units
@@ -37,4 +37,4 @@ Scenario: UCUM Coded BMI Units
     Given a <Measurement> of BMI
     When the <Measurement> is retrieved
     Then that <Measurement> is associated with a <UCUM Unit Code>,
-    And that <UCUM Unit Code> is 'kg/m2'.
+    And that <UCUM Unit Code> is 'kg/m2'. [[ Observation#BMI: valueQuantity.system = UCUM, valueQuantity.code = #'kg/m2', valueQuantity.unit = #'kg/m2']]

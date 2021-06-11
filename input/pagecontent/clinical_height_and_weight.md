@@ -3,13 +3,13 @@ settings for the interpretation of height and weight measures.
 
 
 <span id='capture-of-clinical-data-with-weight-measurement.'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Capture of Clinical Data With Weight Measurement.
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='clinical_height_and_weight_measurement'>Feature: Capture of Clinical Data With Weight Measurement.</a>
 
 The system **SHALL** be able to capture and record other data to facilitate interpretation ofheight and weight measurements.
 
 
 <span id='compute-or-report-body-mass-index'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Compute or Report Body Mass Index
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Compute or Report Body Mass Index</a>
 
 This requirement allows BMI to be detected by a device, or reported based on the
 reported height and sensed weight.  The method of computing the BMI value is not defined
@@ -29,7 +29,7 @@ THEN
 
 
 <span id='clothing-worn-during-measurement'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: Clothing Worn During Measurement
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: Clothing Worn During Measurement</a>
 
 The system **SHALL** be able to capture a coded value describing the clothing worn during weight measurement.
 
@@ -47,7 +47,7 @@ THEN
 
 
 <span id='loinc-coded-bmi-measurement'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded BMI Measurement
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: LOINC Coded BMI Measurement</a>
 
 The system **SHOULD** provide LOINC codes along with measurements.
 
@@ -61,11 +61,11 @@ THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;LOINC Code&gt;</i> for BMI,
 
    AND
-   : that <i>&lt;LOINC Code&gt;</i> is 39156-5 Body mass index (BMI) [Ratio]
+   : that <i>&lt;LOINC Code&gt;</i> is 39156-5 Body mass index (BMI) [Ratio] 
 
 
 <span id='ucum-coded-bmi-units'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded BMI Units
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_4'>Scenario: UCUM Coded BMI Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -79,5 +79,5 @@ THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;UCUM Unit Code&gt;</i>,
 
    AND
-   : that <i>&lt;UCUM Unit Code&gt;</i> is 'kg/m2'.
+   : that <i>&lt;UCUM Unit Code&gt;</i> is 'kg/m2'. 
 

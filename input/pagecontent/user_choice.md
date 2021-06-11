@@ -3,7 +3,7 @@ It includes features that enable the user to restrict commercial use of their da
 and to remove themselves from the system, as well as download their data to enable transfer
 to another system.
 <span id='the-user-can-request-deletion-of-all-of-their-data.'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: The User Can Request Deletion of All of Their Data.
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='forget_me'>Feature: The User Can Request Deletion of All of Their Data.</a>
 
 The system **SHALL** enable deletion of all of the user's data across the system's ecosystem
 at the user's request. This ability supports the patient's right to be forgotten in jurisdictions
@@ -15,7 +15,7 @@ outside of the scope of this specification.
 
 
 <span id='user-requests-data-deletion.'/>
-#### Scenario: User Requests Data Deletion.
+####<a name='scenario_1'>Scenario: User Requests Data Deletion.</a>
 
 A User's data can be deleted
 
@@ -36,7 +36,7 @@ THEN
 
 
 <span id='the-user-can-download-all-of-their-data.'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: The User Can Download All of Their Data.
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='download_all'>Feature: The User Can Download All of Their Data.</a>
 
 The system **SHALL** enable download of all of the user's data in a machine readable, integrity
 preserving form at the user's request.
@@ -52,7 +52,7 @@ API by which an appropriately developed App COULD perform this function.
 
 
 <span id='user-requests-all-of-their-data.'/>
-#### Scenario: User Requests All of Their Data.
+####<a name='scenario_1'>Scenario: User Requests All of Their Data.</a>
 
 A user can download all of their data.
 
@@ -76,7 +76,7 @@ THEN
 
 
 <span id='the-user-can-request-that-some-or-all-their-data-be-shared-with-another-user-or-a-third-party.'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: The User Can Request That Some or All Their Data be Shared With Another User or a Third Party.
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='share_with_others'>Feature: The User Can Request That Some or All Their Data be Shared With Another User or a Third Party.</a>
 
 This feature enables users to share or not share data with others of their choosing.  The user can
 start or stop sharing at any time.
@@ -86,7 +86,7 @@ is beyond the scope of this section.
 
 
 <span id='user-requests-sharing-with-another-user-or-third-party.'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: User Requests Sharing With Another User or Third Party.
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: User Requests Sharing With Another User or Third Party.</a>
 
 A user **SHALL** be able to share data with others of their choosing.
 
@@ -110,7 +110,7 @@ THEN
 
 
 <span id='user-requests-that-sharing-stop-with-the-other-user-or-third-party.'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: User Requests That Sharing Stop With the Other User or Third Party.
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_2'>Scenario: User Requests That Sharing Stop With the Other User or Third Party.</a>
 
 After a user requests that sharing stop, any data previously accessible **SHALL** no longer be
 accessible to the third party, and future data **SHALL** not be accessible to that party.

@@ -19,5 +19,5 @@ along with the duration of the activity.
 
   Given a <Measurement> of a physical activity, sleep or quality descriptor of such activity
    When the <Measurement> is retrieved
-   Then that <Measurement> is associated with a <SNOMED CT Code> or a <LOINC Code> describing the activity or quality descriptor
+   Then that <Measurement> is associated with a <SNOMED CT Code> or a <LOINC Code> describing the activity or quality descriptor [[ Observation#Measurement#PhysicalActivity: code obeys system = 'http://snomed.info/sct' or system = 'http://loinc.org' ]]
 

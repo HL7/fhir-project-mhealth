@@ -9,5 +9,5 @@ Scenario: Birth Sex exists
     And a <User> Record
     And a <Birth Sex>
     When <User> is retrieved
-    Then <User> contains <Birth Sex>
+    Then <User> contains <Birth Sex> [[ Patient#User: gender MS, gender 1..1 ]]
 

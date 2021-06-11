@@ -20,7 +20,7 @@ The system should provide LOINC codes along with measurements.
   Given a <Measurement> of temperature
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <LOINC Code> for Temperature
-    And that <LOINC Code> is 8310-5 Body temperature
+    And that <LOINC Code> is 8310-5 Body temperature  [[ Observation#Measurement#BodyTemperature: code = LOINC#8310-5 "Body temperature" ]]
 
 @App-Should @Infra-Should
 Scenario: UCUM Coded Temperature Units
@@ -28,8 +28,8 @@ The measurement should use units coded in UCUM.
 
   Given a <Measurement> of temperature
    When the <Measurement> is retrieved
-   Then that <Measurement> is associated with a <UCUM Unit Code>,
-    And that <UCUM Unit Code> is 'Cel' or '[degF]'
+   Then that <Measurement> is associated with a <UCUM Unit Code>, [[ Observation#Measurement#BodyTemperature: valueQuantity.system = UCUM ]]
+    And that <UCUM Unit Code> is 'Cel' or '[degF]' [[ Observation#Measurement#BodyTemperature: valueQuantity.code from BodyTempuratureUnits ]]
 
 
 @App-Shall @Device-Shall
@@ -39,4 +39,4 @@ Scenario: Precision and units are appropriate for temperature
 Given A <System> (either a Device or an App)
   And a <Temperature Measurement> that can be produced by <System>
  When <Temperature Measurement> are examined
- Then The precision of <Temperature Measurement> is in at least whole units and not more than tenths of a unit.
+ Then The precision of <Temperature Measurement> is in at least whole units and not more than tenths of a unit. [[ Observation#Measurement#BodyTemperature: valueQuantity obeys value.floor() = value or (value * 10).floor() = (value * 10) ]]

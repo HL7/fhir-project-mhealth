@@ -11,7 +11,7 @@ The system should be able to report mean arterial blood pressure as computed fro
 or through other means.
 Given a <System> that can report blood pressure
 When a <Blood Pressure> measurement is performed
-Then the <Mean Arterial Blood Pressure> is also reported
+Then the <Mean Arterial Blood Pressure> is also reported [[Observation#BloodPressure#MeanBP: obeys component.where(code = LOINC#8478-0).exists() ]]
 
 @Device-Shall @App-Shall @Infra-Shall
 Scenario: Report Measurement Site
@@ -27,4 +27,10 @@ If a cuff is used to measure blood pressure, the cuff size shall be able to be r
 Given a <System> that can report blood pressure
   And a cuff is used to take the measurement
 When a <Blood Pressure> measurement is performed
-Then the <Cuff Size> can be associated with the <Measurement>
+Then the <Cuff Size> can be associated with the <Blood Pressure> [[Observation#BloodPressure#CuffSize: obeys component.where(code = LOINC#8358-4).exists()]]
+
+@Device-Shall @App-Shall @Infra-Shall
+Scenario: Report Measurement Site
+Given a <System> that can report blood pressure
+When a <Blood Pressure> Measurement is performed
+Then the <Measurement Site> can be associated with the <Blood Pressure>  [[Observation#BloodPressure#BPMeasurementSite: obeys component.where(code = LOINC#8359-2 or code = LOINC#41904-4).exists()]]

@@ -45,27 +45,27 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "01_introduction.html",
+              "nameUrl": "introduction.html",
               "title": "Introduction",
               "generation": "markdown"
             },
             {
-              "nameUrl": "02_overview.html",
+              "nameUrl": "overview.html",
               "title": "Overview",
               "generation": "markdown"
             },
             {
-              "nameUrl": "03_use_cases.html",
+              "nameUrl": "use_cases.html",
               "title": "Use Case",
               "generation": "markdown"
             },
             {
-              "nameUrl": "04_actors.html",
+              "nameUrl": "actors.html",
               "title": "Actors",
               "generation": "markdown"
             },
             {
-              "nameUrl": "06_conformance.html",
+              "nameUrl": "conformance.html",
               "title": "Conformance",
               "generation": "markdown"
             }
@@ -253,7 +253,7 @@
           ]
         },
         {
-          "nameUrl": "99_appendices.html",
+          "nameUrl": "appendices.html",
           "title": "Appendices",
           "generation": "markdown"
         }

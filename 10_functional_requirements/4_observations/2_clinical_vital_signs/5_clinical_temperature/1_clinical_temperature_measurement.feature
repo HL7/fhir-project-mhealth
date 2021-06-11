@@ -8,7 +8,7 @@ The measurement site shall be able to be reported with each heart rate measureme
 
 Given a <System> that can report temperature
 When a <Temperature> measurement is performed
-Then the <Measurement Site> can be associated with the <Measurement>
+Then the <Measurement Site> can be associated with the <Measurement> [[Observation#TemperatureMeasurementSite: obeys component.where(code = LOINC#11290-4).exists()]]
 
 
 

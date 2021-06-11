@@ -4,10 +4,10 @@ Feature: Gender Identity
 with the patient.
 
 Scenario: Gender Identity exists
-	Thee user has a gender identity.
+	The user has a gender identity.
 
     Given a <User> Record
     And a <Gender Identity>
     When <User> is retrieved
-    Then <User> contains <Gender Identity>
+    Then <User> contains <Gender Identity> [[ Observation#UserGenderIdentity: code = LOINC#76691-5 "Gender identity", subject only Reference(Patient), subject MS, subject 1..1]]
 

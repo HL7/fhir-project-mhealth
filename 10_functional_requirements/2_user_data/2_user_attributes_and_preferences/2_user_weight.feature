@@ -20,5 +20,5 @@ then this test is not applicable and not reported during the assessment.
     And <Weight> is essential for the operation of <App>
     And a <UserRecord> for <User>
     When the <UserRecord> is retrieved
-    Then the <Weight> can be determined from the <UserRecord>
+    Then the <Weight> can be determined from the <UserRecord> [[ Observation#Measurement#UserWeight: code = LOINC#29463-7 "Body Weight", subject only Reference(Patient), subject MS, subject 1..1]]
 

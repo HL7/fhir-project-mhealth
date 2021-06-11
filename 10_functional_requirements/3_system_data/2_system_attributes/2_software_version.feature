@@ -12,4 +12,4 @@ Scenario: Software Version can be Accessed
     And a <Software Version>
     And an <App> running on <App Runner>
     When The <Device> is connected to the <App> and <App Runner>
-    Then the <Software Version> can be discovered
+    Then the <Software Version> can be discovered [[ Device: version MS, version 1..*]]

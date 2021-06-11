@@ -20,7 +20,8 @@ The system should provide codes along with measurements.
   Given a <Measurement> of respiration rate
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <LOINC Code> for Respiration Rate
-    And that <LOINC Code> is 9279-1 Respiratory Rate
+    And that <LOINC Code> is 9279-1 Respiratory Rate [[ Observation#Measurement#RespirationRate: code = LOINC#9279-1 "Respiratory Rate"]]
+
 
 @App-Should @Infra-Should
 Scenario: UCUM Coded Respiration Rate Units
@@ -30,7 +31,7 @@ The measurement should use units coded in UCUM.
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>,
     And that <UCUM Unit Code> is '/min' (per minute)
-    And that <UCUM Unit Code> may include a UCUM comment (e.g. '{breath}/min' or '{breaths}/min')
+    And that <UCUM Unit Code> may include a UCUM comment (e.g. '{breath}/min' or '{breaths}/min') [[ Observation#Measurement#RespirationRate: valueQuantity.code from RespirationRateUnits ]]
 
 @App-Shall @Device-Shall
 Scenario: Precision and units are appropriate for heart rate
@@ -39,4 +40,4 @@ Scenario: Precision and units are appropriate for heart rate
 Given A <System> (either a Device or an App)
   And a <Respiration Rate Measurement> that can be produced by <System>
  When <Respiration Rate Measurement> are examined
- Then The precision of <Respiration Rate Measurement> is in at least whole units and not more than tenths of a unit.
+ Then The precision of <Respiration Rate Measurement> is in at least whole units and not more than tenths of a unit. [[ Observation#Measurement#RespirationRate: valueQuantity obeys value.floor() = value or (value * 10).floor() = (value * 10) ]]

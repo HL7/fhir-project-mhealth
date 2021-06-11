@@ -6,13 +6,13 @@ closely related measurements, and it's nearly impossible for a system to measure
 saturation without having some awareness of heart rate.
 
 <span id='oxygen-saturation-measurement'/>
-### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> Feature: Oxygen Saturation Measurement
+###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='spo2_measurement'>Feature: Oxygen Saturation Measurement</a>
 
 The system **SHALL** be able to capture and report a Oxygen Saturation measurement from the user.
 
 
 <span id='capture-and-report-oxygen-saturation-measurement'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Capture and Report Oxygen Saturation Measurement
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Oxygen Saturation Measurement</a>
 
 
 GIVEN
@@ -38,7 +38,7 @@ THEN
 
 
 <span id='loinc-coded-oxygen-saturation-measurement'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Oxygen Saturation Measurement
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Oxygen Saturation Measurement</a>
 
 The system **SHOULD** provide LOINC codes along with measurements.
 
@@ -52,11 +52,11 @@ THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;LOINC Code&gt;</i> for Oxygen Saturation
 
    AND
-   : that <i>&lt;LOINC Code&gt;</i> is 2710-2 Oxygen Saturation
+   : that <i>&lt;LOINC Code&gt;</i> is 2710-2 Oxygen Saturation 
 
 
 <span id='ucum-coded-oxygen-saturation-units'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Oxygen Saturation Units
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Oxygen Saturation Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -70,11 +70,11 @@ THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;UCUM Unit Code&gt;</i>,
 
    AND
-   : that <i>&lt;UCUM Unit Code&gt;</i> is '%'
+   : that <i>&lt;UCUM Unit Code&gt;</i> is '%' 
 
 
 <span id='precision-and-units-are-appropriate-for-oxygen-saturation'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: Precision and Units Are Appropriate for Oxygen Saturation
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Oxygen Saturation</a>
 
 The precision and units of an oxygen saturation measurement **SHALL** be appropriate to the measurement.
 
@@ -88,5 +88,5 @@ WHEN
 : <i>&lt;Oxygen Saturation Measurement&gt;</i> are examined
 
 THEN
-: The precision of <i>&lt;Oxygen Saturation Measurement&gt;</i> is in at least whole units and not more than tenths of a unit.
+: The precision of <i>&lt;Oxygen Saturation Measurement&gt;</i> is in at least whole units and not more than tenths of a unit.  
 

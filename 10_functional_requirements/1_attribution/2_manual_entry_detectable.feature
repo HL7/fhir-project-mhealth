@@ -12,7 +12,7 @@ Scenario: Manually entered data can be detected
     And a <User>
     And a manually entered <Measurement>
     When <Measurement> is accessed by another system or transmitted to infrastructure
-    Then The <Measurement> can be identified as having been manually entered.
+    Then The <Measurement> can be identified as having been manually entered. [[Observation#Measurement#ManualMeasurement: method MS, method 1..1, method = SCT#362943005 "Manual Method"]]
 
 Scenario: The user who entered the data can be identified.
     The user manually entering data shall be recorded.
@@ -21,5 +21,5 @@ Scenario: The user who entered the data can be identified.
     And a <User>
     And a manually entered <Measurement>
     When <Measurement> is accessed by another system or transmitted to infrastructure
-    Then The <Measurement> can be identified as having been manually entered by <User>.
+    Then The <Measurement> can be identified as having been manually entered by <User>. [[Observation#Measurement#ManualMeasurement: performer MS, performer 1..1]]
 

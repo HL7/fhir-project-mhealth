@@ -9,4 +9,4 @@ Scenario: Type of Device
 
    Given a <Device> that measures a vital sign
    Then the <Device> must be able to be associated with <Metadata> about it
-   And that <Metadata> must describe the <Type> of device
+   And that <Metadata> must describe the <Type> of device [[ Device: deviceName MS, modelNumber MS ]]

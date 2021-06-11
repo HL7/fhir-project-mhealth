@@ -2,13 +2,13 @@ The Basic Respiration Rate category supports the measurement of the user's respi
 rate.
 
 <span id='respiration-rate-measurement'/>
-### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> Feature: Respiration Rate Measurement
+###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='respiration_rate'>Feature: Respiration Rate Measurement</a>
 
 The system **SHALL** be able to capture and report a respiration rate measurement from the user.
 
 
 <span id='capture-and-report-respiration-rate-measurement'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> Scenario: Capture and Report Respiration Rate Measurement
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Respiration Rate Measurement</a>
 
 
 GIVEN
@@ -34,7 +34,7 @@ THEN
 
 
 <span id='loinc-coded-respiration-rate-measurement'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: LOINC Coded Respiration Rate Measurement
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Respiration Rate Measurement</a>
 
 The system **SHOULD** provide codes along with measurements.
 
@@ -48,11 +48,11 @@ THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;LOINC Code&gt;</i> for Respiration Rate
 
    AND
-   : that <i>&lt;LOINC Code&gt;</i> is 9279-1 Respiratory Rate
+   : that <i>&lt;LOINC Code&gt;</i> is 9279-1 Respiratory Rate 
 
 
 <span id='ucum-coded-respiration-rate-units'/>
-#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> Scenario: UCUM Coded Respiration Rate Units
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Respiration Rate Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -69,11 +69,11 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> is '/min' (per minute)
 
    AND
-   : that <i>&lt;UCUM Unit Code&gt;</i> may include a UCUM comment (e.g. '{breath}/min' or '{breaths}/min')
+   : that <i>&lt;UCUM Unit Code&gt;</i> may include a UCUM comment (e.g. '{breath}/min' or '{breaths}/min') 
 
 
 <span id='precision-and-units-are-appropriate-for-heart-rate'/>
-#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> Scenario: Precision and Units Are Appropriate for Heart Rate
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Heart Rate</a>
 
 The precision and units of a heart rate measurement **SHALL** be appropriate to the measurement.
 
@@ -87,5 +87,5 @@ WHEN
 : <i>&lt;Respiration Rate Measurement&gt;</i> are examined
 
 THEN
-: The precision of <i>&lt;Respiration Rate Measurement&gt;</i> is in at least whole units and not more than tenths of a unit.
+: The precision of <i>&lt;Respiration Rate Measurement&gt;</i> is in at least whole units and not more than tenths of a unit. 
 

@@ -8,4 +8,4 @@ Scenario: Birth date exists
     Given a <User> Record
     And a <Birthdate>
     When <User> is retrieved
-    Then <User> contains <Birthdate>
+    Then <User> contains <Birthdate> [[ Patient#User: birthDate MS, birthDate 1..1 ]]

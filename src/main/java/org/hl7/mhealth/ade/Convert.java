@@ -19,10 +19,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.WordUtils;
+
 import io.cucumber.gherkin.GherkinDocumentBuilder;
 import io.cucumber.gherkin.Parser;
 import io.cucumber.gherkin.ParserException;
@@ -41,7 +44,6 @@ public class Convert {
     private static IdGenerator gen = new IdGenerator.Incrementing();
     private static int errors, warnings, numInputFiles, numOutputFiles;
     private static Map<String, String> files = new TreeMap<>();
-    private static int fileNumber = 10;
     public static void main(String args[]) throws IOException {
         String output = "./input/pagecontent";
         for (String arg : args) {
@@ -59,10 +61,11 @@ public class Convert {
                 error(f, "%s is not a folder.", arg);
                 continue;
             }
-
-            Hierarchy<?> root = convert(f, new File(output));
-
+            File outputFolder = new File(output);
+            Hierarchy<?> root = convert(f, outputFolder);
+            root.updateParents(null);
             printToc(root, 1);
+            generateProfiles2(root, null, true);
             System.out.printf("Produced %d outputs from %d inputs with %d Errors and %d Warnings%n",
                 numOutputFiles, numInputFiles, errors, warnings);
             System.err.printf("Produced %d outputs from %d inputs with %d Errors and %d Warnings%n",
@@ -89,11 +92,173 @@ public class Convert {
         System.out.printf("%s  generation: markdown%n", indent);
 
         for (Hierarchy<?> child: node.getChildren()) {
-            if (child.name != null) {
+            if (child.name != null &&
+                (child.type == Hierarchy.GROUP_TYPE || child.type == Hierarchy.OTHER_TYPE)
+            ) {
                 printToc(child, indentLevel + 1);
             }
         }
     }
+
+    private static void generateProfiles2(Hierarchy<?> root, Hierarchy<?> p, boolean first) {
+        // For each Feature
+        if (root.getType() == Hierarchy.FEATURE_TYPE) {
+            if (hasCriteriaOfType(root, "Should")) {
+                //   if it has a set of should criteria, create the Recommendations profile
+                createProfile(root, "Should", "Recommendations");
+            }
+            if (hasCriteriaOfType(root, "Shall")) {
+                //   if it has a set of shall criteria, create the Requirements profile
+                createProfile(root, "Shall", "Requirements");
+            }
+        } else if (root.getType() == Hierarchy.GROUP_TYPE) {
+            for (Hierarchy<?> child: root.getChildren()) {
+                generateProfiles2(child, null, false);
+            }
+        }
+
+    }
+
+    private static void createProfile(Hierarchy<?> root, String type, String lastNamePart) {
+        String outputLocation = "./input/fsh";
+        File f = new File(outputLocation, String.format("Profile%s%s.fsh", makeProfileName(root), lastNamePart));
+        try (PrintWriter pw = new PrintWriter(new FileWriter(f, StandardCharsets.UTF_8));) {
+            pw.printf("Profile: %s%s%n", makeProfileName(root), lastNamePart);
+            pw.printf("Parent: %s%n", getProfiledResource(root));
+            pw.printf("Description: \"\"\"%s\"\"\"%n", root.getDescription());
+            for (Hierarchy<?> child: root.getChildren()) {
+                if (child.getType() == Hierarchy.SCENARIO_TYPE &&
+                    ( root.getTags().stream().anyMatch(s -> s.contains(type)) ||
+                      hasCriteriaOfType(child, type)
+                    )
+                ) {
+                    if (hasRules(child)) {
+                        pw.printf("* insert %s%s%n", makeProfileName(root), makeRuleName(child));
+                    }
+                }
+            }
+            for (Hierarchy<?> child: root.getChildren()) {
+                if (child.getType() == Hierarchy.SCENARIO_TYPE &&
+                    ( root.getTags().stream().anyMatch(s -> s.contains(type)) ||
+                      hasCriteriaOfType(child, type)
+                    )
+                ) {
+                    if (!hasRules(child)) {
+                        continue;
+                    }
+                    pw.println();
+                    pw.printf("RuleSet: %s%s%n", makeProfileName(root), makeRuleName(child));
+
+                    printRules(root, type, pw, child);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to " + f);
+        }
+    }
+
+    private static boolean hasRules(Hierarchy<?> child) {
+        return !child.getProfileContent().isEmpty();
+    }
+
+
+    private static void printRules(Hierarchy<?> root, String type, PrintWriter pw, Hierarchy<?> child) {
+        List<String> content = child.getProfileContent();
+
+        StringWriter sw = new StringWriter();
+        PrintWriter inv = new PrintWriter(sw);
+        Set<String> fields = new TreeSet<>();
+        int invariantCount = 0;
+
+        for (String line: content) {
+            line = StringUtils.substringAfter(line, ":").trim();
+            for (String part: line.split(",")) {
+                part = part.trim();
+                if (part.contains("obeys ")) {
+                    // Need to create a constraint
+                    String invariant = StringUtils.substringAfter(part, "obeys ");
+                    String text = StringUtils.substringBefore(part, "obeys ").trim();
+                    String invariantName = StringUtils.truncate(makeProfileName(root) + makeRuleName(child), 60) + "-" + Integer.toString(++invariantCount);
+                    inv.printf("%nInvariant: %s%n", invariantName);
+                    inv.printf("Description: \"\"\"%s\"\"\"%n", child.getDescription());
+                    inv.printf("Expression: \"%s\"%n", invariant);
+                    inv.printf("Severity: %s%n", "Should".equals(type) ? "#warning" : "#error");
+                    if (!StringUtils.isEmpty(text) && fields.add(text)) {
+                        pw.printf("* %s ^requirements = \"\"\"%s%n%s\"\"\"%n", text, child.getDescription(), getLink(child));
+                    }
+                    pw.printf("* %s obeys %s%n", text, invariantName);
+                } else {
+                    String field = StringUtils.substringBefore(part, " ").trim();
+                    if (!StringUtils.isEmpty(field) && fields.add(field)) {
+                        pw.printf("* %s ^requirements = \"\"\"%s%n%s\"\"\"%n", field, child.getDescription(), getLink(child));
+                    }
+                    pw.printf("* %s%n", part);
+                }
+            }
+        }
+
+        pw.print(sw.toString());
+    }
+
+    private static String getLink(Hierarchy<?> node) {
+        String filename = null;
+        Hierarchy<?> n = node;
+        while (filename == null) {
+            if (n.getType() == Hierarchy.GROUP_TYPE) {
+                filename = n.getName() + ".html";
+            }
+            n = n.getParent();
+        }
+        String target = StringUtils.substringAfter(node.getTitle(), ":").trim();
+        return String.format("%nSee [%s: %s](%s#%s)",
+            n.getTitle(),
+            target,
+            filename,
+            target.toLowerCase().replace(" ","-"));
+    }
+
+    private static String getProfiledResource(Hierarchy<?> root) {
+        if (!root.getProfileContent().isEmpty()) {
+            return StringUtils.substringBefore(StringUtils.substringBefore(root.getProfileContent().get(0),":"), "#");
+        }
+        for (Hierarchy<?> child: root.getChildren()) {
+            String s = getProfiledResource(child);
+            if (s != null) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    private static String makeProfileName(Hierarchy<?> root) {
+        return WordUtils.capitalizeFully(root.getName().replace("_"," ")).replace(" ", "");
+    }
+
+    private static String makeRuleName(Hierarchy<?> root) {
+        return WordUtils.capitalizeFully(StringUtils.substringAfter(root.getTitle(), ":")).replace(" ", "");
+    }
+
+    private static boolean hasCriteriaOfType(Hierarchy<?> root, String type) {
+
+        Predicate<Hierarchy<?>> test = h -> h.getTags().stream().anyMatch(s -> s.contains(type));
+        Predicate<Hierarchy<?>> outerTest = h -> test.test(root) || test.test(h);
+        return hasCriteriaOfType(root, outerTest);
+    }
+
+    private static boolean hasCriteriaOfType(Hierarchy<?> node, Predicate<Hierarchy<?>> test) {
+        if (test.test(node) && !node.getProfileContent().isEmpty()) {
+            return true;
+        } else if (!node.getChildren().isEmpty()) {
+            for (Hierarchy<?> child: node.getChildren()) {
+                if (hasCriteriaOfType(child, test)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
 
     public static class Hierarchy<Type extends Object> {
         private Type entry;
@@ -103,10 +268,28 @@ public class Convert {
         private String detail;
         private List<String> tags = new ArrayList<>();
         private List<String> variables = new ArrayList<>();
+        private List<String> profileContent = new ArrayList<>();
         private List<Hierarchy<Type>> children = new ArrayList<>();
+        private int type = OTHER_TYPE;
+        private Hierarchy<Type> parent = null;
+        public static final int OTHER_TYPE = 0;
+        public static final int FEATURE_TYPE = 1;
+        public static final int SCENARIO_TYPE = 2;
+        public static final int GROUP_TYPE = 3;
 
         Hierarchy(Type entry) {
             this.entry = entry;
+        }
+
+        public void updateParents(Hierarchy<Type> parent) {
+            this.parent = parent;
+            for (Hierarchy<Type> child: children) {
+                child.updateParents(this);
+            }
+        }
+
+        public Hierarchy<Type> getParent() {
+            return parent;
         }
 
         /**
@@ -189,6 +372,14 @@ public class Convert {
             variables.add(variable);
         }
 
+        public List<String> getProfileContent() {
+            return profileContent;
+        }
+
+        public void addProfileContent(String content) {
+            profileContent.add(content);
+        }
+
         Hierarchy<Type> add(Type child) {
             Hierarchy<Type> result = new Hierarchy<Type>(child);
             children.add(result);
@@ -211,6 +402,20 @@ public class Convert {
             }
             return null;
         }
+
+        /**
+         * @return the type
+         */
+        public int getType() {
+            return type;
+        }
+
+        /**
+         * @param type the type to set
+         */
+        public void setType(int type) {
+            this.type = type;
+        }
     }
 
     private static List<String> noiseWords = Arrays.asList("the", "for", "and");
@@ -232,6 +437,7 @@ public class Convert {
         Hierarchy<GeneratedMessageV3> root = new Hierarchy<>(null);
         root.setTitle(makeTitle(inputFolder.getName()));
         root.setName(makeLink(inputFolder, null));
+        root.setType(Hierarchy.GROUP_TYPE);
         processDescription(root, inputFolder, outputFolder);
         processSubfolders(root, inputFolder, outputFolder);
         return root;
@@ -286,11 +492,9 @@ public class Convert {
     private static File computeOutputFile(File inputFolder, File outputFolder) {
         String path = inputFolder.getPath();
         String parts[] = path.split(Pattern.quote(File.separator));
-        String number = "";
         for (int i = 0; i < parts.length; i++) {
             String subparts[] = parts[i].split("_");
             if (StringUtils.isNumeric(subparts[0])) {
-                number += subparts[0];
                 subparts[0] = "";
             }
             parts[i] = StringUtils.join(subparts, '_');
@@ -313,6 +517,7 @@ public class Convert {
         String category = makeTitle(inputFolder.getName());
         root.setTitle(category);
         root.setName(makeLink(inputFolder, null));
+        root.setType(Hierarchy.GROUP_TYPE);
         //printHeading(pw, 3, root);
 
         pw.printf("%n%nThe %s Category includes all requirements from the following subcategories:%n", category);
@@ -357,6 +562,10 @@ public class Convert {
 
     private static String makeLink(File f, String ext) {
         String name = f.getName();
+        return makeLink(name, ext);
+    }
+
+    private static String makeLink(String name, String ext) {
         if (StringUtils.isNumeric(StringUtils.substringBefore(name, "_"))) {
             name = StringUtils.substringAfter(name, "_");
         }
@@ -373,7 +582,6 @@ public class Convert {
 
         File outputFile = computeOutputFile(inputFolder, outputFolder);
         numOutputFiles++;
-
 
         for (File input : collection) {
             GherkinDocument doc = null;
@@ -399,6 +607,9 @@ public class Convert {
                 feat.setTitle(feature.getKeyword() + ": " + makeTitle(feature.getName()));
                 feat.setDescription(feature.getDescription());
                 feature.getTagsList().forEach(t -> feat.addTag(t.getName()));
+                String fileName = StringUtils.substringBefore(StringUtils.substringAfter(input.getName(),"_"),".");
+                feat.setName(fileName);
+                feat.setType(Hierarchy.FEATURE_TYPE);
 
                 printHeading(pw, 3, feat);
 
@@ -415,20 +626,59 @@ public class Convert {
         }
     }
 
+    /**
+     * Print the heading for the content in the Markdown file
+     * @param pw    The stream to write the heading to
+     * @param i     The heading level
+     * @param hier  The hierarchical item to generate a heading for.
+     */
     private static void printHeading(PrintWriter pw, int i, Hierarchy<GeneratedMessageV3> hier) {
-        pw.printf("%n%s%n%s %s%s%n%n", makeId(hier.getTitle()), "######".substring(0, i), getTagIcons(hier.getTags()), hier.getTitle());
+        pw.printf("%n%s%n%s%s<a name='%s'>%s</a>%n%n",
+            makeId(hier.getTitle()),
+            "######".substring(0, i),
+            getTagIcons(hier.getTags()),
+            getLinkId(hier),
+            hier.getTitle());
     }
 
+    /**
+     * Return a link id associated with this hierarchical item
+     * @param hier  The hierarchical item
+     * @return  A string suitable for use as a link identifier for a heading in markdown or html
+     */
+    private static String getLinkId(Hierarchy<GeneratedMessageV3> hier) {
+        if (hier.getName() == null) {
+            return String.format("_%d", hier.hashCode());
+        }
+        if (hier.getType() ==  Hierarchy.SCENARIO_TYPE) {
+            return String.format("scenario_%s", hier.getName());
+        }
+        return hier.getName();
+    }
+
+    /** Pattern to match terms associated with requirements */
     private static Pattern REQ_TERMS = Pattern.compile("(?i)\\b(SHALL|SHALL NOT|SHOULD|SHOULD NOT)\\b");
+    /** Highligh (mark in bold) specific terms found in text
+     *
+     * @param text  The text to adjust
+     * @return  Marked down text
+     */
     private static String highlightRequirements(String text) {
         Matcher matcher = REQ_TERMS.matcher(text);
         return matcher.replaceAll(m -> "**" + m.group().toUpperCase() + "**").replaceAll("\\n[ \\t]+", "").trim();
     }
 
+    /**
+     * Process the child components of a feature file
+     * @param pw    The markdown output stream
+     * @param l     The heading level in the output
+     * @param root  The current hierarchical item being processed
+     * @param childrenList  The list of Feature children (backgrounds and scenarios) to proocess.
+     */
     private static void handleFeatureChildren(PrintWriter pw, int l, Hierarchy<GeneratedMessageV3> root, List<FeatureChild> childrenList) {
 
         Hierarchy<GeneratedMessageV3> node;
-
+        int count = 0;
         for (FeatureChild child : childrenList) {
             node = root.add(child);
             List<Step> steps = Collections.emptyList();
@@ -437,9 +687,9 @@ public class Convert {
             } else if (child.hasRule()) {
                 handleRule(pw, l, node, child.getRule());
             } else if (child.hasScenario()) {
-                steps = handleScenario(node, child.getScenario());
+                steps = handleScenario(++count, node, child.getScenario());
             }
-            handleSteps(pw, l, node, steps);
+            handleSteps(pw, l, root, node, steps);
             if (child.hasBackground()) {
                 l++;
             }
@@ -451,31 +701,41 @@ public class Convert {
 
     private static void handleRuleChildren(PrintWriter pw, int l, Hierarchy<GeneratedMessageV3> root, List<RuleChild> childrenList) {
         Hierarchy<GeneratedMessageV3> node;
-
+        int count = 0;
         for (RuleChild child : childrenList) {
             node = root.add(child);
             List<Step> steps = Collections.emptyList();
             if (child.hasBackground()) {
                 steps = handleBackground(node, child.getBackground());
             } else if (child.hasScenario()) {
-                steps = handleScenario(node, child.getScenario());
+                steps = handleScenario(++count, node, child.getScenario());
             }
-            handleSteps(pw, l + 1, node, steps);
+            handleSteps(pw, l + 1, root, node, steps);
             if (child.hasBackground()) {
                 l++;
             }
         }
     }
 
-    private static void handleSteps(PrintWriter pw, int l, Hierarchy<GeneratedMessageV3> node, List<Step> steps) {
+    /**
+     * Handle the Given/When/Then steps of a background or scenario
+     * @param pw    The markdown stream to generate
+     * @param l     The current heading level
+     * @param root  The parent of node
+     * @param node  The node having the steps
+     * @param steps Steps in the node to process
+     */
+    private static void handleSteps(PrintWriter pw, int l, Hierarchy<GeneratedMessageV3> root, Hierarchy<GeneratedMessageV3> node, List<Step> steps) {
         printHeading(pw, l, node);
         String description = node.getDescription();
         if (!StringUtils.isBlank(description)) {
             pw.printf("%s%n", description);
         }
         pw.println();
+        boolean thenSeen = false;
         for (Step step: steps) {
             String keyword = null, delim = "";
+            boolean hasProfile = false;
             switch (step.getKeyword()) {
             case "Given ":
                 keyword = "GIVEN";
@@ -484,11 +744,14 @@ public class Convert {
                 keyword = "WHEN";
                 break;
             case "Then ":
+                thenSeen = true;
                 keyword = "THEN";
+                hasProfile = step.getText().contains("[[");
                 break;
             case "And ":
                 keyword = "AND";
                 delim = "   ";
+                hasProfile = thenSeen && step.getText().contains("[[");
                 break;
             case "But ":
                 keyword = "BUT";
@@ -501,15 +764,27 @@ public class Convert {
                 continue;
             }
             pw.printf("%s%s%n%s: %s%n%n", delim, keyword, delim, escapeVariables(step.getText()));
+            if (hasProfile) {
+                getProfileContent(root, node, step.getText());
+            }
         }
     }
 
-    private static String escapeVariables(String text) {
-        return text.replaceAll("<([^>]+)>", "<i>&lt;$1&gt;</i>");
+    private static void getProfileContent(Hierarchy<GeneratedMessageV3> root, Hierarchy<GeneratedMessageV3> node, String text) {
+        String profileContent = StringUtils.substringBefore(StringUtils.substringAfter(text, "[["), "]]");
+        String s = profileContent;
+        node.addProfileContent(s);
+        System.out.println(s);
     }
 
-    private static List<Step> handleScenario(Hierarchy<GeneratedMessageV3> node, Scenario scenario) {
+    private static String escapeVariables(String text) {
+        return text.replaceAll("<([^>]+)>", "<i>&lt;$1&gt;</i>").replaceAll("\\[\\[.*\\]\\]", "");
+    }
+
+    private static List<Step> handleScenario(int count, Hierarchy<GeneratedMessageV3> node, Scenario scenario) {
         node.setTitle(scenario.getKeyword() + ": " + makeTitle(scenario.getName()));
+        node.setName(Integer.toString(count));
+        node.setType(Hierarchy.SCENARIO_TYPE);
         node.setDescription(highlightRequirements(scenario.getDescription()));
         scenario.getTagsList().forEach(t -> node.addTag(t.getName()));
         return scenario.getStepsList();

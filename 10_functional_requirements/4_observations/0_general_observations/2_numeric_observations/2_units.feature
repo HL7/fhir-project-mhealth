@@ -26,4 +26,4 @@ Result values in a measurement should use UCUM
 
 Given a <Quantitative Measurement>
  When the <Unit> describing it is reviewed
- Then the value of <Unit> is from UCUM
+ Then the value of <Unit> is from UCUM [[Observation#Measurement#QuantitativeMeasurement: valueQuantity MS, valueQuantity 1..1, valueQuantity.system = UCUM]]

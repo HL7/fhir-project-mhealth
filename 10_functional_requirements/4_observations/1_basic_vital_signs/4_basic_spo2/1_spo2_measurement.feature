@@ -20,7 +20,7 @@ The system should provide LOINC codes along with measurements.
   Given a <Measurement> of Oxygen Saturation
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <LOINC Code> for Oxygen Saturation
-    And that <LOINC Code> is 2710-2 Oxygen Saturation
+    And that <LOINC Code> is 2710-2 Oxygen Saturation [[ Observation#Measurement#SPO2: code = LOINC#2710-2 "Oxygen Saturation" ]]
 
 @App-Should @Infra-Should
 Scenario: UCUM Coded Oxygen Saturation Units
@@ -29,7 +29,7 @@ The measurement should use units coded in UCUM.
   Given a <Measurement> of oxygen saturation
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>,
-    And that <UCUM Unit Code> is '%'
+    And that <UCUM Unit Code> is '%' [[ Observation#Measurement#SPO2: valueQuantity.code = #'%', valueQuantity.system = UCUM, valueQuantity.unit = "%"]]
 
 @App-Shall @Device-Shall
 Scenario: Precision and units are appropriate for oxygen saturation
@@ -38,4 +38,4 @@ Scenario: Precision and units are appropriate for oxygen saturation
 Given A <System> (either a Device or an App)
   And a <Oxygen Saturation Measurement> that can be produced by <System>
  When <Oxygen Saturation Measurement> are examined
- Then The precision of <Oxygen Saturation Measurement> is in at least whole units and not more than tenths of a unit.
+ Then The precision of <Oxygen Saturation Measurement> is in at least whole units and not more than tenths of a unit.  [[ Observation#Measurement#SPO2: valueQuantity obeys value.floor() = value or (value * 10).floor() = (value * 10) ]]

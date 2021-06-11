@@ -6,9 +6,9 @@ to be static data associated with user identity, rather than other clinical or a
 information associated with the user. That information would appear in
 [User Attributes](user_attributes.html).
 <span id='user-unique-identity'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Unique Identity
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='unique_user_identity'>Feature: User Unique Identity</a>
 
-An app/infrastructure **SHALL** be able to generate/report the unique identifer for a given user association with a measurement.
+An app/infrastructure **SHALL** be able to generate/report the unique identifier for a given user association with a measurement.
 
 This scenario demonstrates the ability of an App to associate a user with an identifier, and in the
 process of storing the measurement has associated the measurement with the user's identity.
@@ -17,7 +17,7 @@ NOTE: Different kinds of Unique identifiers may be used
 
 
 <span id='identifier-exists'/>
-#### Scenario: Identifier Exists
+####<a name='scenario_1'>Scenario: Identifier Exists</a>
 
 Each User is uniquely identified
 
@@ -31,7 +31,7 @@ WHEN
 : <i>&lt;User&gt;</i> is retrieved
 
 THEN
-: <i>&lt;User&gt;</i> contains <i>&lt;Identifier&gt;</i>
+: <i>&lt;User&gt;</i> contains <i>&lt;Identifier&gt;</i> 
 
    AND
    : <i>&lt;Identifier&gt;</i> is one of the following:
@@ -49,13 +49,13 @@ BUT
 
 
 <span id='user-name'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Name
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_name'>Feature: User Name</a>
 
 The App or Infrastructure **SHALL** be able to associate the user's name with the user.
 
 
 <span id='name-exists'/>
-#### Scenario: Name Exists
+####<a name='scenario_1'>Scenario: Name Exists</a>
 
 The user has a name.
 
@@ -69,18 +69,18 @@ WHEN
 : <i>&lt;User&gt;</i> is retrieved
 
 THEN
-: <i>&lt;User&gt;</i> contains <i>&lt;Name&gt;</i>
+: <i>&lt;User&gt;</i> contains <i>&lt;Name&gt;</i> 
 
 
 <span id='user-contact-information'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: User Contact Information
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_contact_information'>Feature: User Contact Information</a>
 
 The App or Infrastructure **SHALL** be able to associate the user's contact
 information (e.g., e-mail, address, phone number) with the user.
 
 
 <span id='contact-information-exists'/>
-#### Scenario: Contact Information Exists
+####<a name='scenario_1'>Scenario: Contact Information Exists</a>
 
 The user has contact information.
 
@@ -94,7 +94,7 @@ WHEN
 : <i>&lt;User&gt;</i> is retrieved
 
 THEN
-: <i>&lt;User&gt;</i> contains one or more <i>&lt;Contact&gt;</i>
+: <i>&lt;User&gt;</i> contains one or more <i>&lt;Contact&gt;</i> 
 
    AND
    : <i>&lt;Contact&gt;</i> is one of the following:
@@ -110,13 +110,13 @@ BUT
 
 
 <span id='date-of-birth'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Date of Birth
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_date_of_birth'>Feature: Date of Birth</a>
 
 The App and Infrastructure **SHALL** be able to associate a birth date with the patient.
 
 
 <span id='birth-date-exists'/>
-#### Scenario: Birth Date Exists
+####<a name='scenario_1'>Scenario: Birth Date Exists</a>
 
 The user has a date of birth.
 
@@ -130,17 +130,17 @@ WHEN
 : <i>&lt;User&gt;</i> is retrieved
 
 THEN
-: <i>&lt;User&gt;</i> contains <i>&lt;Birthdate&gt;</i>
+: <i>&lt;User&gt;</i> contains <i>&lt;Birthdate&gt;</i> 
 
 
 <span id='birth-sex'/>
-### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> Feature: Birth Sex
+###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_birth_sex'>Feature: Birth Sex</a>
 
 If the user's birth sex is essential to compute a measurement, the App/Infrastructure **SHALL** be able to associate/report the birth sex of the user.
 
 
 <span id='birth-sex-exists'/>
-#### Scenario: Birth Sex Exists
+####<a name='scenario_1'>Scenario: Birth Sex Exists</a>
 
 The user has a birth sex.
 
@@ -157,5 +157,5 @@ WHEN
 : <i>&lt;User&gt;</i> is retrieved
 
 THEN
-: <i>&lt;User&gt;</i> contains <i>&lt;Birth Sex&gt;</i>
+: <i>&lt;User&gt;</i> contains <i>&lt;Birth Sex&gt;</i> 
 

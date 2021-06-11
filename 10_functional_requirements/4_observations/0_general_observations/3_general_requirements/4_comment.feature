@@ -7,6 +7,7 @@ Feature: Comments and Additional Data
   or type of blood glucose reading with respect to time of most recent meal, or site used for a blood pressure reading.
 
   Scenario: User Supplied Data
+  A User can add a comment to a measurement to provide additional data.
 
   Given an <App>
   And <Device>
@@ -15,4 +16,4 @@ Feature: Comments and Additional Data
   When an <Measurement> is captured by the <Device>
   Then the <User> can record <Additional Data> in the <App>
    And the <App> can associate that <Additional Data> with the <Measurement>
-   And the <Infrastructure> can report that associated <Additional Data>
+   And the <Infrastructure> can report that associated <Additional Data> [[ Observation#MeasurementComment: note MS, note 1..1 ]]
