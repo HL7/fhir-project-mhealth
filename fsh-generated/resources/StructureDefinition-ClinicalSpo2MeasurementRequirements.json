@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalSpo2MeasurementRequirements",
   "version": "0.1.0",
   "name": "ClinicalSpo2MeasurementRequirements",
+  "title": "Clinical Spo2 Measurement Requirements",
   "status": "active",
   "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,24 +62,21 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Observation",
-        "path": "Observation",
-        "constraint": [
-          {
-            "key": "ClinicalSpo2MeasurementReportMeasurementSite-1",
-            "severity": "error",
-            "human": "The measurement site **SHALL** be able to be reported with each Oxygen Saturation measurement",
-            "expression": "component.where(code = LOINC#8856-7).exists()",
-            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalSpo2MeasurementRequirements"
-          }
-        ]
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "requirements": "The measurement site **SHALL** be able to be reported with each Oxygen Saturation measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_spo2.html#report-measurement-site)",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
       }
     ]
   }

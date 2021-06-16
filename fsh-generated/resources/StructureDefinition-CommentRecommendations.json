@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/CommentRecommendations",
   "version": "0.1.0",
   "name": "CommentRecommendations",
+  "title": "Comment Recommendations",
   "status": "active",
-  "description": "An App should allow for recording of additional user supplied data.\n\nUsers of a device or app for tracking a particular type of measurement may also want to keep track of additional data\nfor a measure that is not captured by the device, such as recent physical activity that might affect vital signs readings,\nor type of blood glucose reading with respect to time of most recent meal, or site used for a blood pressure reading.",
+  "description": "An App should allow for recording of additional user supplied data.\n\n  Users of a device or app for tracking a particular type of measurement may also want to keep track of additional data\n  for a measure that is not captured by the device, such as recent physical activity that might affect vital signs readings,\n  or type of blood glucose reading with respect to time of most recent meal, or site used for a blood pressure reading.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",

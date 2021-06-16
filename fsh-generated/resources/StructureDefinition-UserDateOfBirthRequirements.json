@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UserDateOfBirthRequirements",
   "version": "0.1.0",
   "name": "UserDateOfBirthRequirements",
+  "title": "User Date Of Birth Requirements",
   "status": "active",
   "description": "The App and Infrastructure shall be able to associate a birth date with the patient.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -45,7 +57,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Patient",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation": "constraint",

@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalTemperatureMeasurementRequirements",
   "version": "0.1.0",
   "name": "ClinicalTemperatureMeasurementRequirements",
+  "title": "Clinical Temperature Measurement Requirements",
   "status": "active",
   "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,24 +62,21 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Observation",
-        "path": "Observation",
-        "constraint": [
-          {
-            "key": "ClinicalTemperatureMeasurementReportMeasurementSite-1",
-            "severity": "error",
-            "human": "The measurement site **SHALL** be able to be reported with each heart rate measurement",
-            "expression": "component.where(code = LOINC#11290-4).exists()",
-            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalTemperatureMeasurementRequirements"
-          }
-        ]
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "requirements": "The measurement site **SHALL** be able to be reported with each heart rate measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_temperature.html#report-measurement-site)",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
       }
     ]
   }

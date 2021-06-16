@@ -3,6 +3,7 @@
   "status": "active",
   "name": "BodyHeight",
   "id": "BodyHeight",
+  "title": "Body Height",
   "description": "Allowed values for body height codes",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyHeight",

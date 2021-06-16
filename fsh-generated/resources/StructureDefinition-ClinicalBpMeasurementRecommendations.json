@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalBpMeasurementRecommendations",
   "version": "0.1.0",
   "name": "ClinicalBpMeasurementRecommendations",
+  "title": "Clinical Bp Measurement Recommendations",
   "status": "active",
   "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",

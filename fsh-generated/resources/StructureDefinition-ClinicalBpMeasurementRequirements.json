@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalBpMeasurementRequirements",
   "version": "0.1.0",
   "name": "ClinicalBpMeasurementRequirements",
+  "title": "Clinical Bp Measurement Requirements",
   "status": "active",
   "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
@@ -66,14 +78,18 @@
             "human": "If a cuff is used to measure blood pressure, the cuff size **SHALL** be able to be reported with each blood pressure measurement.",
             "expression": "component.where(code = LOINC#8358-4).exists()",
             "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalBpMeasurementRequirements"
-          },
-          {
-            "key": "ClinicalBpMeasurementReportMeasurementSite-1",
-            "severity": "error",
-            "expression": "component.where(code = LOINC#8359-2 or code = LOINC#41904-4).exists()",
-            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalBpMeasurementRequirements"
           }
         ]
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "requirements": "The measurement site **SHALL** be able to be reported with each blood pressure measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_blood_pressure.html#report-measurement-site)",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
       }
     ]
   }

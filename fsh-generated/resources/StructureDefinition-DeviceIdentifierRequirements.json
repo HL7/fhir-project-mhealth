@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/DeviceIdentifierRequirements",
   "version": "0.1.0",
   "name": "DeviceIdentifierRequirements",
+  "title": "Device Identifier Requirements",
   "status": "active",
-  "description": "    The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.",
+  "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -35,7 +47,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Device",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
   "derivation": "constraint",

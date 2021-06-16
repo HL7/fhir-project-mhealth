@@ -3,14 +3,12 @@ Any assessment performed for other categories in clinical vital signs **SHALL** 
 The requirements of this category ensure that documentation of the method of measure
 and range of accuracy is documented for the device, and that the type of device can
 be determined.
-<span id='mechanism-and-accuracy-of-measurement-is-documented'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='mechanism_and_accuracy'>Feature: Mechanism and Accuracy of Measurement is Documented</a>
 
 The method used and accuracy of measurements **SHALL** be described for a device in the manufacturer's documentation for each vital sign it can measure.
 
 
-<span id='mechanism-and-accuracy-documented'/>
-####<span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_1'>Scenario: Mechanism and Accuracy Documented</a>
+####<span class='glyphicon text-success glyphicon-dashboard'/> <a name='mechanism-and-accuracy-documented'>Scenario: Mechanism and Accuracy Documented</a>
 
 The method used and accuracy of measurements **SHALL** be described in the manufacturer's documentation for a device.
 
@@ -27,7 +25,6 @@ THEN
 : the mechanism for measuring each vital sign is described and the range of accuracy of the measurement is reported.
 
 
-<span id='type-of-device-is-available'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device_type'>Feature: Type of Device is Available</a>
 
 The type of device performing the measure **SHALL** be able to be determined from the <System>
@@ -35,8 +32,7 @@ NOTE: If a device can be associated with a Universal Device Identifier (UDI), it
 requirement, because this information is included in device metadata accessible via UDI.
 
 
-<span id='type-of-device'/>
-####<a name='scenario_1'>Scenario: Type of Device</a>
+####<a name='type-of-device'>Scenario: Type of Device</a>
 
 Information about the type of device is available through the device record.
 

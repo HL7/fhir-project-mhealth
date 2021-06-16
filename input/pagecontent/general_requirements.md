@@ -1,15 +1,14 @@
 The Clinical Vital Signs Category describes requirements supporting additional data needed for
 accurate interpretation of device measurements in a clinical setting.
-<span id='a-time-stamp-or-time-period-is-recorded-for-each-measurement'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='time_stamp_or_duration'>Feature: A Time Stamp or Time Period is Recorded for Each Measurement</a>
 
 The time stamp or time period associated with a measurement **SHALL** be recorded and reported for each measurement taken,and the time when the measure was recorded is also tracked.
 Note: These requirements are checked for each measurement for which the system isbeing assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.
 
 
-<span id='measurements-have-a-time-stamp-or-time-period-noting-the-time-of-measurement'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Measurements Have a Time Stamp or Time Period Noting the Time of Measurement</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='time-of-measurement-recorded'>Scenario: Time of Measurement Recorded</a>
 
+Measurements **SHALL** have a time stamp or time period noting the time of measurement
 
 GIVEN
 : a <i>&lt;User&gt;</i>
@@ -21,15 +20,15 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was taken. 
 
 
-<span id='measurements-have-a-time-stamp-or-time-period-noting-the-time-it-was-recorded/stored'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_2'>Scenario: Measurements Have a Time Stamp or Time Period Noting the Time it Was Recorded/stored</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='time-of-recording-stored'>Scenario: Time of Recording Stored</a>
 
+Measurements **SHALL** have a time stamp or time period noting the time the data was recorded
 
 GIVEN
 : a <i>&lt;User&gt;</i>
 
    AND
-   : <i>&lt;Infrastructuree&gt;</i>
+   : <i>&lt;Infrastructure&gt;</i>
 
 WHEN
 : a <i>&lt;Measurement&gt;</i> is recorded in <i>&lt;Infrastructure&gt;</i> for a <i>&lt;User&gt;</i>
@@ -38,7 +37,6 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was recorded. 
 
 
-<span id='multiple-user-support'/>
 ###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <a name='multi_user_support'>Feature: Multiple User Support</a>
 
 A given device **SHALL** be able to be used by more than one user.
@@ -47,7 +45,6 @@ Users from the same family may share a device to take similar measurements (e.g.
 an App on their personal device.
 
 
-<span id=''/>
 ####<a name='_1502635287'>Background: </a>
 
 The following scenarios describe further support requirements for similar
@@ -76,8 +73,7 @@ WHEN
    : <i>&lt;Device&gt;</i> has been recognized by <i>&lt;App&gt;</i> on <i>&lt;MobileDevice2&gt;</i>
 
 
-<span id='record-a-measurement-for-multiple-users-w/-re-pairing'/>
-#####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_1'>Scenario: Record a Measurement for Multiple Users w/ Re-pairing</a>
+#####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='record-a-measurement-for-multiple-users-w/-re-pairing'>Scenario: Record a Measurement for Multiple Users w/ Re-pairing</a>
 
 It's expected that devices will be able to be shared across users and apps
 but that some setup or configuration may be needed when transferred between
@@ -94,8 +90,7 @@ BUT
 : The <i>&lt;Device&gt;</i> may need to be configured (e.g., paired with) <i>&lt;MobileDevice1&gt;</i> or <i>&lt;MobileDevice2&gt;</i> before taking the measurement.
 
 
-<span id='record-a-measurement-for-multiple-users-w/o-re-pairing'/>
-#####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='scenario_2'>Scenario: Record a Measurement for Multiple Users W/o Re-pairing</a>
+#####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='record-a-measurement-for-multiple-users-w/o-re-pairing'>Scenario: Record a Measurement for Multiple Users W/o Re-pairing</a>
 
 Ideally, a device **SHOULD** be able to be paired with a small number
 of other systems to enable it to be used by different people or
@@ -113,7 +108,6 @@ BUT
 : The <i>&lt;Device&gt;</i> does not need to be reconfigured (e.g., paired with) <i>&lt;MobileDevice1&gt;</i> or <i>&lt;MobileDevice2&gt;</i> before taking the measurement.
 
 
-<span id='multiple-device-support'/>
 ###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <a name='multiple_device_support'>Feature: Multiple Device Support</a>
 
 An app **SHALL** be able to collect data for a given patient
@@ -121,7 +115,6 @@ from multiple (possibly identical) devices and identify the device from
 which they were collected.
 
 
-<span id='multiple-device-support'/>
 ####<a name='_1543237999'>Background: Multiple Device Support</a>
 
 The following scenarios describe further support requirements for similar
@@ -141,8 +134,7 @@ THEN
    : can be distinguished as having come from <i>&lt;Device1&gt;</i>
 
 
-<span id='replacement-device'/>
-#####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_1'>Scenario: Replacement Device</a>
+#####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='replacement-device'>Scenario: Replacement Device</a>
 
 Patients may replace a broken, failed, lost or otherwise non-functional
 device with a new device of the same type, not lose their existing data maintained
@@ -159,8 +151,7 @@ THEN
    : Those measures in <i>&lt;MeasureSet2&gt;</i> can be distinguished as having come from <i>&lt;Device2&gt;</i>
 
 
-<span id='alternative-device'/>
-#####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='scenario_2'>Scenario: Alternative Device</a>
+#####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='alternative-device'>Scenario: Alternative Device</a>
 
 A user **SHOULD** be able to acquire and use a similar or different kind
 of device to work with an application to enable data collection
@@ -189,15 +180,13 @@ THEN
    : Measures in <i>&lt;MeasureSet2&gt;</i> can be distinguished as having come from <i>&lt;Device2&gt;</i>
 
 
-<span id='user-manual-entry'/>
 ###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='manual_entry'>Feature: User Manual Entry</a>
 
 An App **SHOULD** allow for manual recording of data from external sources.
 Users of a device or app for tracking a particular type of measurement may also want to keep track of externally generatedmeasurements for the purposes of verifying device calibration, keeping general track of what the device helps them monitor,or for other reasons.
 
 
-<span id='manual-entry-of-a-measurement'/>
-####<a name='scenario_1'>Scenario: Manual Entry of a Measurement</a>
+####<a name='manual-entry-of-a-measurement'>Scenario: Manual Entry of a Measurement</a>
 
 
 GIVEN
@@ -219,15 +208,13 @@ THEN
    : the <i>&lt;Infrastructure&gt;</i> can report that <i>&lt;Measurement&gt;</i>
 
 
-<span id='comments-and-additional-data'/>
 ###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='comment'>Feature: Comments and Additional Data</a>
 
 An App **SHOULD** allow for recording of additional user supplied data.
 Users of a device or app for tracking a particular type of measurement may also want to keep track of additional datafor a measure that is not captured by the device, such as recent physical activity that might affect vital signs readings,or type of blood glucose reading with respect to time of most recent meal, or site used for a blood pressure reading.
 
 
-<span id='user-supplied-data'/>
-####<a name='scenario_1'>Scenario: User Supplied Data</a>
+####<a name='user-supplied-data'>Scenario: User Supplied Data</a>
 
 A User can add a comment to a measurement to provide additional data.
 
@@ -256,15 +243,13 @@ THEN
    : the <i>&lt;Infrastructure&gt;</i> can report that associated <i>&lt;Additional Data&gt;</i> 
 
 
-<span id='corrections-and-deletions'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='corrections'>Feature: Corrections and Deletions</a>
 
 An App **SHOULD** allow for the user to correct or "delete" incorrect data.
 Users of a device or app for **SHALL** have the ability to correct or remove incorrect data.
 
 
-<span id='correction'/>
-####<a name='scenario_1'>Scenario: Correction</a>
+####<a name='correction'>Scenario: Correction</a>
 
 Users can correct a measurement.
 
@@ -290,8 +275,7 @@ THEN
    : the <i>&lt;Infrastructure&gt;</i> can report that <i>&lt;Corrected Measurement&gt;</i> 
 
 
-<span id='deletion'/>
-####<a name='scenario_2'>Scenario: Deletion</a>
+####<a name='deletion'>Scenario: Deletion</a>
 
 Users can delete a measurement.
 

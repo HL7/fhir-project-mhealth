@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/WeightMeasurementRecommendations",
   "version": "0.1.0",
   "name": "WeightMeasurementRecommendations",
+  "title": "Weight Measurement Recommendations",
   "status": "active",
   "description": "The system shall be able to capture and report a weight measurement from the user.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
@@ -84,7 +96,7 @@
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
         "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Weight Units](basic_height_and_weight.html#ucum-coded-weight-units)",
-        "patternUri": "http://unitsofmeasure.com"
+        "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Observation.valueQuantity.code",

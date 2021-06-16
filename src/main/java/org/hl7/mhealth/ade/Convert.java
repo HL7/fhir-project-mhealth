@@ -124,14 +124,19 @@ public class Convert {
         File f = new File(outputLocation, String.format("Profile%s%s.fsh", makeProfileName(root), lastNamePart));
         try (PrintWriter pw = new PrintWriter(new FileWriter(f, StandardCharsets.UTF_8));) {
             pw.printf("Profile: %s%s%n", makeProfileName(root), lastNamePart);
+            pw.printf("Title: \"%s\"%n", WordUtils.capitalizeFully(root.getName().replace("_"," ") + " " + lastNamePart));
             pw.printf("Parent: %s%n", getProfiledResource(root));
-            pw.printf("Description: \"\"\"%s\"\"\"%n", root.getDescription());
+            String desc = root.getDescription().trim();
+            pw.printf("Description: \"\"\"%s\"\"\"%n", desc);
+            pw.printf("* ^abstract = true\n");
             for (Hierarchy<?> child: root.getChildren()) {
                 if (child.getType() == Hierarchy.SCENARIO_TYPE &&
                     ( root.getTags().stream().anyMatch(s -> s.contains(type)) ||
                       hasCriteriaOfType(child, type)
                     )
                 ) {
+                    // TODO: Figure out how to make this configurable
+                    pw.printf("* ^jurisdiction = %s#%s \"%s\"%n", "http://unstats.un.org/unsd/methods/m49/m49.htm", "001", "World");
                     if (hasRules(child)) {
                         pw.printf("* insert %s%s%n", makeProfileName(root), makeRuleName(child));
                     }
@@ -176,21 +181,25 @@ public class Convert {
                 part = part.trim();
                 if (part.contains("obeys ")) {
                     // Need to create a constraint
-                    String invariant = StringUtils.substringAfter(part, "obeys ");
+                    String invariant = StringUtils.substringAfter(part, "obeys ").trim();
                     String text = StringUtils.substringBefore(part, "obeys ").trim();
                     String invariantName = StringUtils.truncate(makeProfileName(root) + makeRuleName(child), 60) + "-" + Integer.toString(++invariantCount);
                     inv.printf("%nInvariant: %s%n", invariantName);
-                    inv.printf("Description: \"\"\"%s\"\"\"%n", child.getDescription());
+                    String desc = child.getDescription().trim();
+                    if (StringUtils.isEmpty(desc)) {
+                        System.err.println("Got here");
+                    }
+                    inv.printf("Description: \"\"\"%s\"\"\"%n", desc);
                     inv.printf("Expression: \"%s\"%n", invariant);
                     inv.printf("Severity: %s%n", "Should".equals(type) ? "#warning" : "#error");
                     if (!StringUtils.isEmpty(text) && fields.add(text)) {
-                        pw.printf("* %s ^requirements = \"\"\"%s%n%s\"\"\"%n", text, child.getDescription(), getLink(child));
+                        pw.printf("* %s ^requirements = \"\"\"%s%n%s\"\"\"%n", text, child.getDescription().trim(), getLink(child));
                     }
                     pw.printf("* %s obeys %s%n", text, invariantName);
                 } else {
                     String field = StringUtils.substringBefore(part, " ").trim();
                     if (!StringUtils.isEmpty(field) && fields.add(field)) {
-                        pw.printf("* %s ^requirements = \"\"\"%s%n%s\"\"\"%n", field, child.getDescription(), getLink(child));
+                        pw.printf("* %s ^requirements = \"\"\"%s%n%s\"\"\"%n", field, child.getDescription().trim(), getLink(child));
                     }
                     pw.printf("* %s%n", part);
                 }
@@ -544,14 +553,6 @@ public class Convert {
         }
     }
 
-    private static Object makeId(String category) {
-
-        return String.format("<span id='%s'/>",
-            (category.contains(":") ?
-                StringUtils.substringAfter(category, ":") : category)
-            .trim().toLowerCase().replace(" ", "-"));
-    }
-
     private static String makeTitle(String name) {
         String titleParts[] = name.split("_");
         if (StringUtils.isNumeric(titleParts[0])) {
@@ -633,8 +634,7 @@ public class Convert {
      * @param hier  The hierarchical item to generate a heading for.
      */
     private static void printHeading(PrintWriter pw, int i, Hierarchy<GeneratedMessageV3> hier) {
-        pw.printf("%n%s%n%s%s<a name='%s'>%s</a>%n%n",
-            makeId(hier.getTitle()),
+        pw.printf("%n%s%s<a name='%s'>%s</a>%n%n",
             "######".substring(0, i),
             getTagIcons(hier.getTags()),
             getLinkId(hier),
@@ -651,7 +651,9 @@ public class Convert {
             return String.format("_%d", hier.hashCode());
         }
         if (hier.getType() ==  Hierarchy.SCENARIO_TYPE) {
-            return String.format("scenario_%s", hier.getName());
+            String category = hier.getTitle();
+            return (category.contains(":") ? StringUtils.substringAfter(category, ":") : category)
+                .trim().toLowerCase().replace(" ", "-");
         }
         return hier.getName();
     }

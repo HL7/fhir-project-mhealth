@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UnitsRecommendations",
   "version": "0.1.0",
   "name": "UnitsRecommendations",
+  "title": "Units Recommendations",
   "status": "active",
   "description": "Fixed values used for units returned by the device or communicated by the App shall be documented.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
@@ -88,7 +100,7 @@
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
         "requirements": "Result values in a measurement **SHOULD** use UCUM\n\nSee [General Observations: Unit Values Use UCUM](numeric_observations.html#unit-values-use-ucum)",
-        "patternUri": "http://unitsofmeasure.com"
+        "patternUri": "http://unitsofmeasure.org"
       }
     ]
   }

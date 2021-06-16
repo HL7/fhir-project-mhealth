@@ -8,5 +8,5 @@ The measurement site shall be able to be reported with each Oxygen Saturation me
 
 Given a <System> that can report oxygen saturation
 When a <Oxygen Saturation> measurement is performed
-Then the <Measurement Site> can be associated with the <Measurement> [[Observation#SPO2#SPO2MeasurementSite: obeys component.where(code = LOINC#8856-7).exists()]]
+Then the <Measurement Site> can be associated with the <Measurement> [[Observation#SPO2#SPO2MeasurementSite: bodySite 1..1, bodySite from http://hl7.org/fhir/ValueSet/body-site  ]]
 

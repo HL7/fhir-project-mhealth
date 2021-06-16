@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalHeightAndWeightMeasurementRecommendations",
   "version": "0.1.0",
   "name": "ClinicalHeightAndWeightMeasurementRecommendations",
+  "title": "Clinical Height And Weight Measurement Recommendations",
   "status": "active",
-  "description": "The system shall be able to capture and record other data to facilitate interpretation of\nheight and weight measurements.",
+  "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
@@ -65,7 +77,7 @@
             {
               "code": "39156-5",
               "system": "http://loinc.org",
-              "display": "Body mass index (BMI)"
+              "display": "Body mass index (BMI) [RATIO]"
             }
           ]
         }
@@ -91,7 +103,7 @@
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
         "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#ucum-coded-bmi-units)",
-        "patternUri": "http://unitsofmeasure.com"
+        "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Observation.valueQuantity.code",

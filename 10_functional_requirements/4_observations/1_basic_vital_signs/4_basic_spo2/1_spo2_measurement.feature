@@ -20,7 +20,7 @@ The system should provide LOINC codes along with measurements.
   Given a <Measurement> of Oxygen Saturation
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <LOINC Code> for Oxygen Saturation
-    And that <LOINC Code> is 2710-2 Oxygen Saturation [[ Observation#Measurement#SPO2: code = LOINC#2710-2 "Oxygen Saturation" ]]
+    And that <LOINC Code> is 59408-5 Oxygen saturation in Arterial blood by Pulse oximetry [[ Observation#Measurement#SPO2: code = LOINC#59408-5 "Oxygen saturation in Arterial blood by Pulse oximetry" ]]
 
 @App-Should @Infra-Should
 Scenario: UCUM Coded Oxygen Saturation Units

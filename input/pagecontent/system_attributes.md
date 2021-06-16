@@ -26,7 +26,6 @@ can be easily changed, and "firm" if it requires a special mode of operation to 
 it.  But it's all stored in some form of memory that is very likely rewritable.
 
 
-<span id='the-mechanism-to-obtain-the-system-configuration-is-documented.'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='current_configuration'>Feature: The Mechanism to Obtain the System Configuration is Documented.</a>
 
 The means by which a system configuration can be inspected is documented.
@@ -35,8 +34,7 @@ Configuration includes the system identifier, software version, and other
 configurable system attributes (e.g., units).
 
 
-<span id='the-means-to-access-system-configuration-shall-be-documented'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_1'>Scenario: The Means to Access System Configuration Shall be Documented</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
 
 The means by which a user can access system configuration information is described in the documentation.
 
@@ -53,7 +51,6 @@ THEN
 : the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
 
 
-<span id='device-can-be-identified'/>
 ###<a name='device_identifier'>Feature: Device Can be Identified</a>
 
 The device that performs a measurement **SHALL** be uniquely identified.
@@ -63,8 +60,7 @@ can impact the interpretation of measurements taken by the device.  Knowledge of
 device helps greatly in interpreting the results.
 
 
-<span id='device-identifier-is-unique'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Device Identifier is Unique</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device-identifier-is-unique'>Scenario: Device Identifier is Unique</a>
 
 The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).
 The point of this assessment is that the mechanism by which devices are identified
@@ -91,8 +87,7 @@ THEN
 : <i>&lt;Identifier&gt;</i> is uniquely assigned to <i>&lt;Device&gt;</i> 
 
 
-<span id='the-device-has-a-unique-device-identifier'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: The Device Has a Unique Device Identifier</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='the-device-has-a-unique-device-identifier'>Scenario: The Device Has a Unique Device Identifier</a>
 
 The device **SHOULD** have a UDI.
 The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
@@ -111,15 +106,13 @@ THEN
 : The <i>&lt;Device Record&gt;</i> contains a UDI for the device. 
 
 
-<span id='software-version'/>
 ###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='software_version'>Feature: Software Version</a>
 
 The Software Version associated with a system **SHOULD** be available.
 The Software Version can be the physical network address (e.g., MAC address) or other identifierassigned to uniquely identify the device on a network (wired or unwired)
 
 
-<span id='software-version-can-be-accessed'/>
-####<a name='scenario_1'>Scenario: Software Version Can be Accessed</a>
+####<a name='software-version-can-be-accessed'>Scenario: Software Version Can be Accessed</a>
 
 The Software Version can be access from the device or application.
 
@@ -139,15 +132,13 @@ THEN
 : the <i>&lt;Software Version&gt;</i> can be discovered 
 
 
-<span id='network-address'/>
 ###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='network_address'>Feature: Network Address</a>
 
 The network address of a device **SHOULD** be reported.
 The network address can be the physical network address (e.g., MAC address) or other identifierassigned to uniquely identify the device on a network (wired or unwired)
 
 
-<span id='network-address-can-be-accessed'/>
-####<a name='scenario_1'>Scenario: Network Address Can be Accessed</a>
+####<a name='network-address-can-be-accessed'>Scenario: Network Address Can be Accessed</a>
 
 The network address (e.g., MAC, TCP IP or other identifier) can be access from the device or application.
 
@@ -167,16 +158,14 @@ THEN
 : <i>&lt;Network Address&gt;</i> can be discovered 
 
 
-<span id='battery-charge'/>
-###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='battery_charge'>Feature: Battery Charge</a>
+###<span class='glyphicon text-info glyphicon-dashboard'/> <a name='battery_charge'>Feature: Battery Charge</a>
 
 The level of battery charge for a device **SHOULD** be reported.
 Reporting the battery charge level for a device enables an App to alerta user that the device needs recharging.
 NOTE: Some devices which may be assessed using this guide may have tomeet more stringent requirements to ensure patient safety. That is outsideof the scope of this guide.
 
 
-<span id='battery-charge-can-be-accessed'/>
-####<a name='scenario_1'>Scenario: Battery Charge Can be Accessed</a>
+####<a name='battery-charge-can-be-accessed'>Scenario: Battery Charge Can be Accessed</a>
 
 Battery charge status can be accessed on devices which have a battery.
 

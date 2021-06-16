@@ -3,13 +3,14 @@
   "status": "active",
   "name": "BodyTempuratureUnits",
   "id": "BodyTempuratureUnits",
+  "title": "Body Tempurature Units",
   "description": "Allowed values for body tempurature",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyTempuratureUnits",
   "compose": {
     "include": [
       {
-        "system": "http://unitsofmeasure.com",
+        "system": "http://unitsofmeasure.org",
         "concept": [
           {
             "code": "[degF]"

@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/DeviceTypeRequirements",
   "version": "0.1.0",
   "name": "DeviceTypeRequirements",
+  "title": "Device Type Requirements",
   "status": "active",
   "description": "The type of device performing the measure shall be able to be determined from the <System>\nNOTE: If a device can be associated with a Universal Device Identifier (UDI), it meets the criteria for this\nrequirement, because this information is included in device metadata accessible via UDI.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -35,7 +47,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Device",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
   "derivation": "constraint",

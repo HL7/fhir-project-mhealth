@@ -4,14 +4,12 @@ selected configuration details (e.g., MAC address).
 
 These values are generally considered to be dynamic, but change infrequently,
 and might be configured at the time of system setup.
-<span id='the-mechanism-to-configure-a-system-to-use-different-units-is-documented.'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='system_configuration'>Feature: The Mechanism to Configure a System to Use Different Units is Documented.</a>
 
 The means by which a system is configured to report or use different units is documented.
 
 
-<span id='unit-configuration-is-documented'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_1'>Scenario: Unit Configuration is Documented</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='unit-configuration-is-documented'>Scenario: Unit Configuration is Documented</a>
 
 Device and application settings affecting reported units is documented.
 

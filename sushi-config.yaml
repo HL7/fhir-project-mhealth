@@ -29,12 +29,18 @@ contact:
 description: This IG provides an the assessment framework and functional requirements
   for mobile health devices and apps to support the exchange of observations and other data in
   support of consumer health monitoring.
+jurisdiction: "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
 license: CC0-1.0
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
 releaseLabel: CI Build
+
+excludexml: false
+excludejson: false
+excludettl: true
+
 fhirspec: http://build.fhir.org/
 FSHonly: false
 
@@ -57,6 +63,7 @@ pages:
     conformance.md:
       title: Conformance
       generation: markdown
+### Insert TOC Content
   functional_requirements.md:
     title: Functional Requirements
     generation: markdown
@@ -153,6 +160,7 @@ pages:
       sharing_mechanism.md:
         title: Sharing Mechanism
         generation: markdown
+### End Inserted TOC Content
   appendices.md:
     title: Appendices
     generation: markdown
@@ -161,7 +169,7 @@ pages:
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To control the ig.ini using this config, uncomment and set the "template" property.           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# template: "#ig-template"
+#template: "#ig-template"
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │

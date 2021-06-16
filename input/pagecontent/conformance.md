@@ -107,20 +107,91 @@ Applicable test requirements are those which provide a **SHALL** or **SHOULD** r
 for the type (device, application or infrastructure) of system under test.
 
 ##### Untested Requirements
-There are requirements on devices to be able to report blood pressure, heart rate,
-and respiration rate. However, these three observations are not reported by all devices,
-and aren't always needed for every use case.  Thus, a clinic evaluating devices for use
-in blood pressure monitoring may elect to Not Test a device against the sub-category
-containing requirements on respiration rate.  The test need not be performed in these
+In some cases, a category may not be fully tested.  In this case, the category itself, and any parent category should
+indicate the testing status as shown below.  This example considers a scenario in which multiple start
+watches are tested.  These devices can support Physical Activity and Sleep, and almost all categories in Basic Vital Signs,
+but will likely NOT be able to support basic height and weight, so this category is not tested.
+
+Thus, a clinic evaluating devices for use in activity monitoring may elect to Not Test a device against the
+sub-category containing requirements on height and weight.  The test need not be performed in these
 cases.
 
-When reporting an assessment result, only categories that have been fully tested can be reported on.
-In these cases, and categories with untested subcategories and untested subcategories **SHALL** only be
-reported as not fully tested, and no star rating **SHALL** be provided for them. This is shown in the
-example [below](#untested).
-
+When reporting an assessment result for such a test, only categories that have been fully tested can be
+reported on. In these cases, and categories with untested subcategories **SHALL** only be
+reported as not fully tested, and categories that have had not testing at all shall be reported as Not Test.
+No star rating **SHALL** be provided for categories that are not tested or not fully tested. This is shown in the
+example below.
 
 <span id='assessment'/>
+##### <span id='untested'>Reporting for Untested Requirements</span>
+
+* If a category is not tested at all, the report shall not contain a stars rating, reporting instead "Not Tested" where the stars would be reported.
+  After this text, include two numbers reported in the following form:
+
+  ?/{SHALL-total}+?/{SHOULD-total}
+
+  The question marks indicate an unknown value, since this category was not tested.
+
+* If some, but not all of the category requirements are tested (e.g., as in Basic Vital Signs), the report shall again not contain a stars raiting,
+  reporting instead "Not Fully Tested" where the stars rating would be provided.  After this text, report four numbers, counting any untested
+  values as 0.
+
+An example report illustrating this incomplete testing is given below:
+
+<table class='grid' id='untested'>
+  <tbody><tr>
+<td class='invert'>
+<dl>
+  <dt>DEVICE</dt>
+  <dd>Sample Device
+  <dl class='default'><dt>Model</dt><dd>Prototype</dd>
+      <dt>Software Version</dt><dd>0.9.0</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+<td class='invert'>
+<dl>
+  <dt>APP</dt>
+  <dd>Sample App
+  <dl class='default'><dt>Model</dt><dd>Demo</dd>
+      <dt>Software Version</dt><dd>0.0.7</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+<td class='invert'>
+<dl>
+  <dt>INFRA</dt>
+  <dd>Sample API Server
+  <dl class='default'><dt>Model</dt><dd>Flint API Server</dd>
+      <dt>Software Version</dt><dd>Steel 0.80</dd>
+  </dl>
+  </dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td colspan='3'>
+<blockquote class="report">
+  Physical Activity and Sleep <span class="glyphicon stars0" aria-hidden="true"></span> <b>Not Fully Tested</b><br/>
+  <blockquote class="report">
+    Physical Activity <span class="glyphicon stars0" aria-hidden="true"></span> <b>Not Tested</b><br/>
+    Sleep <span class="glyphicon stars1" aria-hidden="true"></span> <b>(1 star)</b> 1/3+1/3<br/>
+  </blockquote>
+    Basic Vital Signs <b title='This category included some but not all testing for subcategories'>Not Fully Tested</b>
+    	<span title='The totals for criteria met in this item count ? values in subcategories as 0'>8/11+2/11</span><br/>
+  <blockquote class="report">
+    Basic SPO2 <span class="glyphicon stars3" aria-hidden="true"></span> <b>(3 stars)</b> 2/3+1/3<br/>
+    Basic Respiration and Pulse <span class="glyphicon stars3" aria-hidden="true"></span> <b>(3 stars)</b> 3/3+0/3<br/>
+    Basic Blood Pressure <span class="glyphicon stars4" aria-hidden="true"></span> <b>(4 stars)</b> 3/3+1/3<br/>
+    Basic Height and Weight</span> <b title='This item was not tested'>Not Tested</b> <span title='The question marks indicate unknown since this feature was not tested'>?/2+?/2</span><br/>
+  </blockquote>
+</blockquote>
+</td>
+</tr>
+</tbody></table>
+
 #### Conformance Testing Assessments
 The purpose of this guide is to provide a list of core functionalities for clinical utility for
 which the presence of the function can be tested, and a means by which this can be assessed
@@ -240,7 +311,7 @@ outlined in black necessary to ensure that there are always 5 stars displayed.
 After the stars, include four numbers reported in the following form:
 {SHALL-passed}/{SHALL-total}+{SHOULD-passed}/{SHOULD-total}
 
-Indent categories under subcategories if they are displayed in the same area.
+Indent subcategories under categories if they are displayed in the same area.
 
 An example report is given below:
 
@@ -310,7 +381,7 @@ reported in the form:
 When min-passed and max-passed are the same value, they **SHOULD** be reported as a single
 number.
 
-Indent categories under subcategories if they are displayed in the same area.
+Indent subcategories under categories if they are displayed in the same area.
 
 An example report is given below:
 
@@ -357,10 +428,6 @@ An example report is given below:
 </tbody></table>
 
 NOTE: The colors of Gold and Black provide a color-blind safe palette.
-
-##### Reporting for Untested Requirements
-<span id='untested'> </span>
-[Provide example](#todo)
 
 #### Gherkin
 [Gherkin](https://cucumber.io/docs/gherkin/reference/) describes a language that is used for testing

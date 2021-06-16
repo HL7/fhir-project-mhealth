@@ -4,10 +4,11 @@
   "canonical": "http://hl7.org/fhir/uv/mhealth-framework",
   "url": "http://hl7.org/fhir/uv/mhealth-framework",
   "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
-  "description": "asdf",
+  "description": "This IG provides an the assessment framework and functional requirements for mobile health devices and apps to support the exchange of observations and other data in support of consumer health monitoring.",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1"
   },
+  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#001",
   "keywords": [
     "Mobile",
     "mHealth",

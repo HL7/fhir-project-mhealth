@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UserNameRequirements",
   "version": "0.1.0",
   "name": "UserNameRequirements",
+  "title": "User Name Requirements",
   "status": "active",
   "description": "The App or Infrastructure shall be able to associate the user's name with the user.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -45,7 +57,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Patient",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation": "constraint",

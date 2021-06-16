@@ -3,13 +3,14 @@
   "status": "active",
   "name": "BodyWeightUnits",
   "id": "BodyWeightUnits",
+  "title": "Body Weight Units",
   "description": "Allowed values for body height",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyWeightUnits",
   "compose": {
     "include": [
       {
-        "system": "http://unitsofmeasure.com",
+        "system": "http://unitsofmeasure.org",
         "concept": [
           {
             "code": "cm"

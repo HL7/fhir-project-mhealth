@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UserWeightRequirements",
   "version": "0.1.0",
   "name": "UserWeightRequirements",
+  "title": "User Weight Requirements",
   "status": "active",
-  "description": "    If the User's weight is essential to compute an observation the app/infra shall\n    be able to capture/report the user's weight as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for weight include calories used during an activity (e.g., steps or stairs climbed)",
+  "description": "If the User's weight is essential to compute an observation the app/infra shall\n    be able to capture/report the user's weight as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for weight include calories used during an activity (e.g., steps or stairs climbed)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",

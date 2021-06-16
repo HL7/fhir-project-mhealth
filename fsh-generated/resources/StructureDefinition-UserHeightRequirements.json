@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UserHeightRequirements",
   "version": "0.1.0",
   "name": "UserHeightRequirements",
+  "title": "User Height Requirements",
   "status": "active",
-  "description": "    If User Height is essential to compute an observation the app/infra shall be\nable to capture/report the user's height as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for height include distance traveled or calories used during an\nactivity (e.g., steps or stairs climbed)",
+  "description": "If User Height is essential to compute an observation the app/infra shall be\nable to capture/report the user's height as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for height include distance traveled or calories used during an\nactivity (e.g., steps or stairs climbed)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
@@ -65,7 +77,7 @@
             {
               "code": "8302-2",
               "system": "http://loinc.org",
-              "display": "Height"
+              "display": "Body height"
             }
           ]
         }

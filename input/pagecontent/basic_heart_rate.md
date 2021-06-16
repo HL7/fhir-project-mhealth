@@ -3,14 +3,12 @@ Technically, pulse is an effect measured in blood vessels as a result of contrac
 (heart rate).  Some devices measure pulse (e.g., smart watches using optical sensors), others
 measure heart rate using electrical sensors on the chest.  For the purposes of this specification,
 these will all be considered to be measures of the heart rate.
-<span id='heart-rate-measurement'/>
 ###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='heart_rate_measurement'>Feature: Heart Rate Measurement</a>
 
 The system **SHALL** be able to capture and report a heart rate measurement from the user.
 
 
-<span id='capture-and-report-heart-rate-measurement'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Heart Rate Measurement</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-heart-rate-measurement'>Scenario: Capture and Report Heart Rate Measurement</a>
 
 The system can capture the heart rate of the user.
 
@@ -36,8 +34,7 @@ THEN
    : the precision of that <i>&lt;Measurement&gt;</i> is to the unit of at least whole beats.
 
 
-<span id='loinc-coded-heart-rate-measurement'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Heart Rate Measurement</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-heart-rate-measurement'>Scenario: LOINC Coded Heart Rate Measurement</a>
 
 The system **SHOULD** provide LOINC codes along with measurements.
 
@@ -54,8 +51,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 8867-4 Heart Rate  
 
 
-<span id='ucum-coded-heart-rate-units'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Heart Rate Units</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-heart-rate-units'>Scenario: UCUM Coded Heart Rate Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -75,8 +71,7 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> may include a UCUM comment (e.g. '{beat}/min' or '{beats}/min') 
 
 
-<span id='precision-and-units-are-appropriate-for-heart-rate'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Heart Rate</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-heart-rate'>Scenario: Precision and Units Are Appropriate for Heart Rate</a>
 
 The precision and units of a heart rate measurement **SHALL** be appropriate to the measurement.
 

@@ -8,5 +8,5 @@ The measurement site shall be able to be reported with each heart rate measureme
 
 Given a <System> that can report heart rate
 When a <Heart Rate> measurement is performed
-Then the <Measurement Site> can be associated with the <Heart Rate>  [[Observation#HeartRate#HeartRateMeasurementSite: obeys component.where(code = LOINC#8885-6).exists()]]
+Then the <Measurement Site> can be associated with the <Heart Rate>  [[Observation#HeartRate#HeartRateMeasurementSite: bodySite 1..1, bodySite from http://hl7.org/fhir/ValueSet/body-site ]]
 

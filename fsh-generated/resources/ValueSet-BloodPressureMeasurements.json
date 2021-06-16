@@ -3,6 +3,7 @@
   "status": "active",
   "name": "BloodPressureMeasurements",
   "id": "BloodPressureMeasurements",
+  "title": "Blood Pressure Measurements",
   "description": "Allowed codes for Blood Pressure Measurement",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BloodPressureMeasurements",

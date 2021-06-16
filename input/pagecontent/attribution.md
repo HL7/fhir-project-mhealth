@@ -26,7 +26,6 @@ might be shared as one person "tries it out" for a bit to see if it's something 
 want to acquire for themselves.  Devices can also be handed down or off to others as
 users upgrade and acquire new technology.
 
-<span id='measurement-device-can-be-identified'/>
 ###<span class='glyphicon text-success glyphicon-dashboard'/> <a name='measurement_device_identified'>Feature: Measurement Device Can be Identified</a>
 
 The device that performs the measurement **SHALL** be uniquely identified and that identifier**SHALL** persist throughout that devices lifetime.
@@ -36,8 +35,7 @@ the interpretation of measurements taken by the device. Knowledge of the device 
 interpreting the results.
 
 
-<span id='device-is-identified'/>
-####<a name='scenario_1'>Scenario: Device is Identified</a>
+####<a name='device-is-identified'>Scenario: Device is Identified</a>
 
 A device is identified with a unique identifier and that can be determined from the measurement.
 
@@ -57,8 +55,7 @@ THEN
    : <i>&lt;Identifier&gt;</i> can be found from <i>&lt;Device&gt;</i>   
 
 
-<span id='device-identifier-persists'/>
-####<a name='scenario_2'>Scenario: Device Identifier Persists</a>
+####<a name='device-identifier-persists'>Scenario: Device Identifier Persists</a>
 
 The unique identifier of the device is consistent across measurements.
 
@@ -93,7 +90,6 @@ THEN
    : <i>&lt;Identifier2&gt;</i> = <i>&lt;Identifier1&gt;</i>
 
 
-<span id='identify-manually-entered-data-and-the-author-of-it'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='manual_entry_detectable'>Feature: Identify Manually Entered Data and the Author of it</a>
 
 If an app enables recording of outside measurements that app **SHALL** identify
@@ -101,8 +97,7 @@ measures as that have been manually entered by the user of the app, and the
 user **SHALL** be identified also.
 
 
-<span id='manually-entered-data-can-be-detected'/>
-####<a name='scenario_1'>Scenario: Manually Entered Data Can be Detected</a>
+####<a name='manually-entered-data-can-be-detected'>Scenario: Manually Entered Data Can be Detected</a>
 
 Manually entered data **SHALL** be distinguishable from device recorded data.
 
@@ -122,8 +117,7 @@ THEN
 : The <i>&lt;Measurement&gt;</i> can be identified as having been manually entered. 
 
 
-<span id='the-user-who-entered-the-data-can-be-identified.'/>
-####<a name='scenario_2'>Scenario: The User Who Entered the Data Can be Identified.</a>
+####<a name='the-user-who-entered-the-data-can-be-identified.'>Scenario: The User Who Entered the Data Can be Identified.</a>
 
 The user manually entering data **SHALL** be recorded.
 

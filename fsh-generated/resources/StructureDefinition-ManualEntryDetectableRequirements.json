@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ManualEntryDetectableRequirements",
   "version": "0.1.0",
   "name": "ManualEntryDetectableRequirements",
+  "title": "Manual Entry Detectable Requirements",
   "status": "active",
-  "description": "    If an app enables recording of outside measurements that app shall identify\nmeasures as that have been manually entered by the user of the app, and the\nuser shall be identified also.",
+  "description": "If an app enables recording of outside measurements that app shall identify\nmeasures as that have been manually entered by the user of the app, and the\nuser shall be identified also.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",

@@ -4,20 +4,47 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Base.Entities"
+      "valueString": "Clinical.Diagnostics"
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "business"
+      "valueCode": "patient"
     }
   ],
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/BatteryChargeRecommendations",
   "version": "0.1.0",
   "name": "BatteryChargeRecommendations",
+  "title": "Battery Charge Recommendations",
   "status": "active",
-  "description": "The level of battery charge for a device should be reported.\n\nReporting the battery charge level for a device enables an App to alert\na user that the device needs recharging.\n\nNOTE: Some devices which may be assessed using this guide may have to\nmeet more stringent requirements to ensure patient safety. That is outside\nof the scope of this guide.",
+  "description": "The level of battery charge for a device should be reported.\n\n    Reporting the battery charge level for a device enables an App to alert\n    a user that the device needs recharging.\n\n    NOTE: Some devices which may be assessed using this guide may have to\n    meet more stringent requirements to ensure patient safety. That is outside\n    of the scope of this guide.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
     {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
@@ -29,23 +56,79 @@
       "name": "FiveWs Pattern Mapping"
     },
     {
-      "identity": "udi",
-      "uri": "http://fda.gov/UDI",
-      "name": "UDI Mapping"
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
     }
   ],
   "kind": "resource",
-  "abstract": false,
-  "type": "Device",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "abstract": true,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Device.property.valueQuantity",
-        "path": "Device.property.valueQuantity",
+        "id": "Observation.code",
+        "path": "Observation.code",
         "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "mustSupport": true
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "67996",
+              "system": "urn:iso:std:iso:11073:10101",
+              "display": "MDC_ATTR_VAL_BATT_CHARGE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.valueQuantity.value",
+        "path": "Observation.valueQuantity.value",
+        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
+        "min": 1
+      },
+      {
+        "id": "Observation.valueQuantity.unit",
+        "path": "Observation.valueQuantity.unit",
+        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
+        "patternString": "%"
+      },
+      {
+        "id": "Observation.valueQuantity.system",
+        "path": "Observation.valueQuantity.system",
+        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
+        "patternUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.valueQuantity.code",
+        "path": "Observation.valueQuantity.code",
+        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
+        "patternCode": "'%'"
       }
     ]
   }

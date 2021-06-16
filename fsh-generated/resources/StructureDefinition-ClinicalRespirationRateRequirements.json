@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ClinicalHeartRateMeasurementRequirements",
+  "id": "ClinicalRespirationRateRequirements",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalHeartRateMeasurementRequirements",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/ClinicalRespirationRateRequirements",
   "version": "0.1.0",
-  "name": "ClinicalHeartRateMeasurementRequirements",
-  "title": "Clinical Heart Rate Measurement Requirements",
+  "name": "ClinicalRespirationRateRequirements",
+  "title": "Clinical Respiration Rate Requirements",
   "status": "active",
   "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
   "jurisdiction": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each heart rate measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_heart_rate.html#report-measurement-site)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each respiration rate measurement.\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_respiration.html#report-measurement-site)",
         "min": 1,
         "binding": {
           "strength": "required",

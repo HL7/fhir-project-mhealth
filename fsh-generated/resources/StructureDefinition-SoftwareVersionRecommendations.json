@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/SoftwareVersionRecommendations",
   "version": "0.1.0",
   "name": "SoftwareVersionRecommendations",
+  "title": "Software Version Recommendations",
   "status": "active",
-  "description": "The Software Version associated with a system should be available.\n\nThe Software Version can be the physical network address (e.g., MAC address) or other identifier\nassigned to uniquely identify the device on a network (wired or unwired)",
+  "description": "The Software Version associated with a system should be available.\n\n    The Software Version can be the physical network address (e.g., MAC address) or other identifier\n    assigned to uniquely identify the device on a network (wired or unwired)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -35,7 +47,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Device",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
   "derivation": "constraint",

@@ -1,11 +1,7 @@
 User demographics identifies the user of a device (i.e., the subject of the the measurements made by
 the device). It includes critical information that can be used for matching a device user to patient
 records in an EHR, such as name, address, birthdate, user identifiers, and user contact information
-(which can also be used to improve user matching to patient records.  This is generally considered
-to be static data associated with user identity, rather than other clinical or administrative
-information associated with the user. That information would appear in
-[User Attributes](user_attributes.html).
-<span id='user-unique-identity'/>
+(which can also be used to improve user matching to patient records.
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='unique_user_identity'>Feature: User Unique Identity</a>
 
 An app/infrastructure **SHALL** be able to generate/report the unique identifier for a given user association with a measurement.
@@ -16,8 +12,7 @@ process of storing the measurement has associated the measurement with the user'
 NOTE: Different kinds of Unique identifiers may be used
 
 
-<span id='identifier-exists'/>
-####<a name='scenario_1'>Scenario: Identifier Exists</a>
+####<a name='identifier-exists'>Scenario: Identifier Exists</a>
 
 Each User is uniquely identified
 
@@ -48,14 +43,12 @@ BUT
 : <i>&lt;Identifier&gt;</i> is not something else
 
 
-<span id='user-name'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_name'>Feature: User Name</a>
 
 The App or Infrastructure **SHALL** be able to associate the user's name with the user.
 
 
-<span id='name-exists'/>
-####<a name='scenario_1'>Scenario: Name Exists</a>
+####<a name='name-exists'>Scenario: Name Exists</a>
 
 The user has a name.
 
@@ -72,15 +65,13 @@ THEN
 : <i>&lt;User&gt;</i> contains <i>&lt;Name&gt;</i> 
 
 
-<span id='user-contact-information'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_contact_information'>Feature: User Contact Information</a>
 
 The App or Infrastructure **SHALL** be able to associate the user's contact
 information (e.g., e-mail, address, phone number) with the user.
 
 
-<span id='contact-information-exists'/>
-####<a name='scenario_1'>Scenario: Contact Information Exists</a>
+####<a name='contact-information-exists'>Scenario: Contact Information Exists</a>
 
 The user has contact information.
 
@@ -109,14 +100,12 @@ BUT
 : <i>&lt;Contact&gt;</i> is not something else
 
 
-<span id='date-of-birth'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_date_of_birth'>Feature: Date of Birth</a>
 
 The App and Infrastructure **SHALL** be able to associate a birth date with the patient.
 
 
-<span id='birth-date-exists'/>
-####<a name='scenario_1'>Scenario: Birth Date Exists</a>
+####<a name='birth-date-exists'>Scenario: Birth Date Exists</a>
 
 The user has a date of birth.
 
@@ -133,14 +122,12 @@ THEN
 : <i>&lt;User&gt;</i> contains <i>&lt;Birthdate&gt;</i> 
 
 
-<span id='birth-sex'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user_birth_sex'>Feature: Birth Sex</a>
 
 If the user's birth sex is essential to compute a measurement, the App/Infrastructure **SHALL** be able to associate/report the birth sex of the user.
 
 
-<span id='birth-sex-exists'/>
-####<a name='scenario_1'>Scenario: Birth Sex Exists</a>
+####<a name='birth-sex-exists'>Scenario: Birth Sex Exists</a>
 
 The user has a birth sex.
 

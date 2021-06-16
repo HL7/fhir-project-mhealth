@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UniqueUserIdentityRequirements",
   "version": "0.1.0",
   "name": "UniqueUserIdentityRequirements",
+  "title": "Unique User Identity Requirements",
   "status": "active",
-  "description": "    An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used",
+  "description": "An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -45,7 +57,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Patient",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation": "constraint",

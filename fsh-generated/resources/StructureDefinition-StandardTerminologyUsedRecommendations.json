@@ -14,8 +14,20 @@
   "url": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/StandardTerminologyUsedRecommendations",
   "version": "0.1.0",
   "name": "StandardTerminologyUsedRecommendations",
+  "title": "Standard Terminology Used Recommendations",
   "status": "active",
   "description": "If codes are present in measurements, standard terminology should be used for observation codes, values and units.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -50,7 +62,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
@@ -91,7 +103,7 @@
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
         "requirements": "Units **SHOULD** be coded using UCUM\n\nSee [General Observations: Units Are Coded Using the UCUM Unit Terminology System](coded_observations.html#units-are-coded-using-the-ucum-unit-terminology-system)",
-        "patternUri": "http://unitsofmeasure.com"
+        "patternUri": "http://unitsofmeasure.org"
       }
     ]
   }

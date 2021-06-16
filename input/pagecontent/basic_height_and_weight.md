@@ -1,12 +1,10 @@
 The Basic Height and Weight category supports capturing measures of the user's height and weight.
-<span id='height-measurement'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='height_measurement'>Feature: Height Measurement</a>
 
 The system **SHALL** be able to capture and report a height measurement from the user.
 
 
-<span id='capture-and-report-height-measurement'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Height Measurement</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-height-measurement'>Scenario: Capture and Report Height Measurement</a>
 
 A system **SHALL** be able to record a user measurement of height.
 Unlike other vital signs observations, there is no expectation that height is measured
@@ -34,8 +32,7 @@ THEN
    : the precision of that <i>&lt;Measurement&gt;</i> is to the unit of at least whole centimeters or inches.
 
 
-<span id='loinc-coded-height-measurement'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Height Measurement</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-height-measurement'>Scenario: LOINC Coded Height Measurement</a>
 
 The measurement **SHOULD** be coded in LOINC.
 
@@ -52,8 +49,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 8302-2 Body Height, or 8306-3 Body Height - Lying (for infant length) 
 
 
-<span id='ucum-coded-height-units'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Height Units</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-height-units'>Scenario: UCUM Coded Height Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -70,8 +66,7 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> is cm (centimeters) or [in_i] (international inches). 
 
 
-<span id='precision-and-units-are-appropriate-for-height'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Height</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-height'>Scenario: Precision and Units Are Appropriate for Height</a>
 
 The precision and units of a height (or length) measurement **SHALL** be appropriate to the measurement.
 
@@ -88,14 +83,12 @@ THEN
 : The precision of <i>&lt;Height Measurement&gt;</i> is in at least whole units and not more than tenths of a unit 
 
 
-<span id='weight-measurement'/>
 ###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='weight_measurement'>Feature: Weight Measurement</a>
 
 The system **SHALL** be able to capture and report a weight measurement from the user.
 
 
-<span id='capture-and-report-weight-measurement'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='scenario_1'>Scenario: Capture and Report Weight Measurement</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-weight-measurement'>Scenario: Capture and Report Weight Measurement</a>
 
 
 GIVEN
@@ -120,8 +113,7 @@ THEN
    : the precision of that <i>&lt;Measurement&gt;</i> is in at least whole units and not more than tenths of a unit.
 
 
-<span id='loinc-coded-weight-measurement'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_2'>Scenario: LOINC Coded Weight Measurement</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-weight-measurement'>Scenario: LOINC Coded Weight Measurement</a>
 
 The measurement **SHOULD** be coded in LOINC.
 
@@ -138,8 +130,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 29463-7 Body Weight 
 
 
-<span id='ucum-coded-weight-units'/>
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='scenario_3'>Scenario: UCUM Coded Weight Units</a>
+####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-weight-units'>Scenario: UCUM Coded Weight Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -156,8 +147,7 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> is 'kg' (kilograms), 'g' (grams), or '[lb_av]' (pounds). 
 
 
-<span id='precision-and-units-are-appropriate-for-weight'/>
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='scenario_4'>Scenario: Precision and Units Are Appropriate for Weight</a>
+####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-weight'>Scenario: Precision and Units Are Appropriate for Weight</a>
 
 The precision and units of a weight measurement **SHALL** be appropriate to the measurement.
 

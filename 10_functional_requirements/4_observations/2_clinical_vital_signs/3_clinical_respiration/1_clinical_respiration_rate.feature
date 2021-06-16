@@ -8,4 +8,5 @@ The measurement site shall be able to be reported with each respiration rate mea
 
 Given a <System> that can report respiration rate
 When a <Respiration Rate> measurement is performed
-Then the <Measurement Site> can be associated with the <Respiration Rate>
+Then the <Measurement Site> can be associated with the <Respiration Rate> [[Observation#RespirationRate#RespirationRateMeasurementSite: bodySite 1..1, bodySite from http://hl7.org/fhir/ValueSet/body-site  ]]
+
