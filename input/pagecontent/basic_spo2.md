@@ -5,12 +5,16 @@ category must also be evaluated.  This is because oxygen saturation and pulse ar
 closely related measurements, and it's nearly impossible for a system to measure oxygen
 saturation without having some awareness of heart rate.
 
-###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='spo2_measurement'>Feature: Oxygen Saturation Measurement</a>
+### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='spo2_measurement'>Feature: Oxygen Saturation Measurement</a>
 
 The system **SHALL** be able to capture and report a Oxygen Saturation measurement from the user.
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-oxygen-saturation-measurement'>Scenario: Capture and Report Oxygen Saturation Measurement</a>
+The requirements for this feature when implemented with FHIR can be found in the [Spo2MeasurementRequirements](StructureDefinition-Spo2MeasurementRequirements.html) Profile.
+
+The recommendations for this feature when implemented with FHIR can be found in the [Spo2MeasurementRecommendations](StructureDefinition-Spo2MeasurementRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-oxygen-saturation-measurement'>Scenario: Capture and Report Oxygen Saturation Measurement</a>
 
 
 GIVEN
@@ -35,7 +39,7 @@ THEN
    : the precision of that <i>&lt;Measurement&gt;</i> is to the unit of at least whole unit.
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-oxygen-saturation-measurement'>Scenario: LOINC Coded Oxygen Saturation Measurement</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-oxygen-saturation-measurement'>Scenario: LOINC Coded Oxygen Saturation Measurement</a>
 
 The system **SHOULD** provide LOINC codes along with measurements.
 
@@ -52,7 +56,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 59408-5 Oxygen saturation in Arterial blood by Pulse oximetry 
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-oxygen-saturation-units'>Scenario: UCUM Coded Oxygen Saturation Units</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-oxygen-saturation-units'>Scenario: UCUM Coded Oxygen Saturation Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -69,7 +73,7 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> is '%' 
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-oxygen-saturation'>Scenario: Precision and Units Are Appropriate for Oxygen Saturation</a>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-oxygen-saturation'>Scenario: Precision and Units Are Appropriate for Oxygen Saturation</a>
 
 The precision and units of an oxygen saturation measurement **SHALL** be appropriate to the measurement.
 

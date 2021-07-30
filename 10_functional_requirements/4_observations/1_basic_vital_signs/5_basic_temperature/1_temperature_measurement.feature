@@ -29,7 +29,7 @@ The measurement should use units coded in UCUM.
   Given a <Measurement> of temperature
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <UCUM Unit Code>, [[ Observation#Measurement#BodyTemperature: valueQuantity.system = UCUM ]]
-    And that <UCUM Unit Code> is 'Cel' or '[degF]' [[ Observation#Measurement#BodyTemperature: valueQuantity.code from BodyTempuratureUnits ]]
+    And that <UCUM Unit Code> is 'Cel' or '[degF]' [[ Observation#Measurement#BodyTemperature: valueQuantity.code from BodyTemperatureUnits ]]
 
 
 @App-Shall @Device-Shall

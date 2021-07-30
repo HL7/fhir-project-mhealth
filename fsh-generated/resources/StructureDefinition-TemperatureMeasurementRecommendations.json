@@ -16,7 +16,7 @@
   "name": "TemperatureMeasurementRecommendations",
   "title": "Temperature Measurement Recommendations",
   "status": "active",
-  "description": "The system shall be able to capture and report a Temperature measurement from the user.",
+  "description": "The system shall be able to capture and report a Temperature measurement from the user.\n\nSee [Basic Vital Signs: Temperature Measurement](basic_temperature.html#temperature_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "requirements": "The system **SHOULD** provide LOINC codes along with measurements.\n\nSee [Basic Vital Signs: LOINC Coded Temperature Measurement](basic_temperature.html#loinc-coded-temperature-measurement)",
+        "requirements": "The system **SHOULD** provide LOINC codes along with measurements.\n\nSee [Basic Vital Signs: LOINC Coded Temperature Measurement](basic_temperature.html#temperature_measurement)",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -96,16 +96,16 @@
       {
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Temperature Units](basic_temperature.html#ucum-coded-temperature-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Temperature Units](basic_temperature.html#temperature_measurement)",
         "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Observation.valueQuantity.code",
         "path": "Observation.valueQuantity.code",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Temperature Units](basic_temperature.html#ucum-coded-temperature-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Temperature Units](basic_temperature.html#temperature_measurement)",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyTempuratureUnits"
+          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyTemperatureUnits"
         }
       }
     ]

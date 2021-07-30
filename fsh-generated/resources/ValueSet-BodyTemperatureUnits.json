@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "BodyTempuratureUnits",
-  "id": "BodyTempuratureUnits",
-  "title": "Body Tempurature Units",
-  "description": "Allowed values for body tempurature",
+  "name": "BodyTemperatureUnits",
+  "id": "BodyTemperatureUnits",
+  "title": "Body Temperature Units",
+  "description": "Allowed values for body temperature",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyTempuratureUnits",
+  "url": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyTemperatureUnits",
   "compose": {
     "include": [
       {

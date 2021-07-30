@@ -16,7 +16,7 @@
   "name": "BatteryChargeRecommendations",
   "title": "Battery Charge Recommendations",
   "status": "active",
-  "description": "The level of battery charge for a device should be reported.\n\n    Reporting the battery charge level for a device enables an App to alert\n    a user that the device needs recharging.\n\n    NOTE: Some devices which may be assessed using this guide may have to\n    meet more stringent requirements to ensure patient safety. That is outside\n    of the scope of this guide.",
+  "description": "The level of battery charge for a device should be reported.\n\n    Reporting the battery charge level for a device enables an App to alert\n    a user that the device needs recharging.\n\n    NOTE: Some devices which may be assessed using this guide may have to\n    meet more stringent requirements to ensure patient safety. That is outside\n    of the scope of this guide.\n\nSee [System Data: Battery Charge](system_attributes.html#battery_charge)",
   "jurisdiction": [
     {
       "coding": [
@@ -69,66 +69,8 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "67996",
-              "system": "urn:iso:std:iso:11073:10101",
-              "display": "MDC_ATTR_VAL_BATT_CHARGE"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.valueQuantity",
-        "path": "Observation.valueQuantity",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ]
-      },
-      {
-        "id": "Observation.valueQuantity.value",
-        "path": "Observation.valueQuantity.value",
-        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "min": 1
-      },
-      {
-        "id": "Observation.valueQuantity.unit",
-        "path": "Observation.valueQuantity.unit",
-        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "patternString": "%"
-      },
-      {
-        "id": "Observation.valueQuantity.system",
-        "path": "Observation.valueQuantity.system",
-        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "patternUri": "http://unitsofmeasure.org"
-      },
-      {
-        "id": "Observation.valueQuantity.code",
-        "path": "Observation.valueQuantity.code",
-        "requirements": "Battery charge status can be accessed on devices which have a battery.\n\nSee [System Data: Battery Charge Can be Accessed](system_attributes.html#battery-charge-can-be-accessed)",
-        "patternCode": "'%'"
+        "id": "Observation",
+        "path": "Observation"
       }
     ]
   }

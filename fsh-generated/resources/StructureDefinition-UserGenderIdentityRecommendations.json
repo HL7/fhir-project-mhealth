@@ -16,7 +16,7 @@
   "name": "UserGenderIdentityRecommendations",
   "title": "User Gender Identity Recommendations",
   "status": "active",
-  "description": "The App and Infrastructure should be able to associate a gender identity (e.g., male, female, trans, non-binary)\nwith the patient.",
+  "description": "The App and Infrastructure should be able to associate a gender identity (e.g., male, female, trans, non-binary)\nwith the patient.\n\nSee [User Data: Gender Identity](user_attributes_and_preferences.html#user_gender_identity)",
   "jurisdiction": [
     {
       "coding": [
@@ -69,33 +69,8 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "requirements": "The user has a gender identity.\n\nSee [User Data: Gender Identity Exists](user_attributes_and_preferences.html#gender-identity-exists)",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "76691-5",
-              "system": "http://loinc.org",
-              "display": "Gender identity"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "requirements": "The user has a gender identity.\n\nSee [User Data: Gender Identity Exists](user_attributes_and_preferences.html#gender-identity-exists)",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
-            ]
-          }
-        ],
-        "mustSupport": true
+        "id": "Observation",
+        "path": "Observation"
       }
     ]
   }

@@ -16,7 +16,7 @@
   "name": "ClinicalHeartRateMeasurementRequirements",
   "title": "Clinical Heart Rate Measurement Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+  "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Heart Rate Measurement](clinical_heart_rate.html#clinical_heart_rate_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each heart rate measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_heart_rate.html#report-measurement-site)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each heart rate measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_heart_rate.html#clinical_heart_rate_measurement)",
         "min": 1,
         "binding": {
           "strength": "required",

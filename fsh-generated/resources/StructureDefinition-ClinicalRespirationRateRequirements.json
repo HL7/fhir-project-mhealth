@@ -16,7 +16,7 @@
   "name": "ClinicalRespirationRateRequirements",
   "title": "Clinical Respiration Rate Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+  "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Clinical Respiration Rate Measurement](clinical_respiration.html#clinical_respiration_rate)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each respiration rate measurement.\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_respiration.html#report-measurement-site)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each respiration rate measurement.\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_respiration.html#clinical_respiration_rate)",
         "min": 1,
         "binding": {
           "strength": "required",

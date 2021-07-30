@@ -2,7 +2,7 @@ The Clinical Blood Pressure category supports the reporting of additional measur
 supporting clinical interpretation of results.
 
 For device type and characteristics data, see [general_clinical_measurements.html]
-###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='clinical_bp_measurement'>Feature: Clinical Blood Pressure Measurement</a>
+### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='clinical_bp_measurement'>Feature: Clinical Blood Pressure Measurement</a>
 
 The system **SHALL** be able to capture and report additional data used for clinical interpretation.
 
@@ -10,7 +10,11 @@ To supplement this blood pressure observation, the mean arterial blood pressure 
 cuff size (where applicable) **SHALL** be reported.
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='report-mean-arterial-blood-pressure'>Scenario: Report Mean Arterial Blood Pressure</a>
+The requirements for this feature when implemented with FHIR can be found in the [ClinicalBpMeasurementRequirements](StructureDefinition-ClinicalBpMeasurementRequirements.html) Profile.
+
+The recommendations for this feature when implemented with FHIR can be found in the [ClinicalBpMeasurementRecommendations](StructureDefinition-ClinicalBpMeasurementRecommendations.html) Profile.
+
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='report-mean-arterial-blood-pressure'>Scenario: Report Mean Arterial Blood Pressure</a>
 
 The system **SHOULD** be able to report mean arterial blood pressure as computed from systolic and diastolic measures
 or through other means.
@@ -25,7 +29,7 @@ THEN
 : the <i>&lt;Mean Arterial Blood Pressure&gt;</i> is also reported 
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='report-measurement-site'>Scenario: Report Measurement Site</a>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='report-measurement-site'>Scenario: Report Measurement Site</a>
 
 The measurement site **SHALL** be able to be reported with each blood pressure measurement
 
@@ -39,7 +43,7 @@ THEN
 : the <i>&lt;Measurement Site&gt;</i> can be associated with the <i>&lt;Measurement&gt;</i> 
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='report-cuff-size'>Scenario: Report Cuff Size</a>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='report-cuff-size'>Scenario: Report Cuff Size</a>
 
 If a cuff is used to measure blood pressure, the cuff size **SHALL** be able to be reported with each blood pressure measurement.
 

@@ -16,7 +16,7 @@
   "name": "ManualEntryDetectableRequirements",
   "title": "Manual Entry Detectable Requirements",
   "status": "active",
-  "description": "If an app enables recording of outside measurements that app shall identify\nmeasures as that have been manually entered by the user of the app, and the\nuser shall be identified also.",
+  "description": "If an app enables recording of outside measurements that app shall identify\nmeasures as that have been manually entered by the user of the app, and the\nuser shall be identified also.\n\nSee [Functional Requirements: Identify Manually Entered Data and the Author of it](attribution.html#manual_entry_detectable)",
   "jurisdiction": [
     {
       "coding": [
@@ -69,28 +69,8 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.performer",
-        "path": "Observation.performer",
-        "requirements": "The user manually entering data **SHALL** be recorded.\n\nSee [Functional Requirements: The User Who Entered the Data Can be Identified.](attribution.html#the-user-who-entered-the-data-can-be-identified.)",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.method",
-        "path": "Observation.method",
-        "requirements": "Manually entered data **SHALL** be distinguishable from device recorded data.\n\nSee [Functional Requirements: Manually Entered Data Can be Detected](attribution.html#manually-entered-data-can-be-detected)",
-        "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "362943005",
-              "system": "http://snomed.info/sct",
-              "display": "Manual Method"
-            }
-          ]
-        },
-        "mustSupport": true
+        "id": "Observation",
+        "path": "Observation"
       }
     ]
   }

@@ -16,7 +16,7 @@
   "name": "RespirationRateRecommendations",
   "title": "Respiration Rate Recommendations",
   "status": "active",
-  "description": "The system shall be able to capture and report a respiration rate measurement from the user.",
+  "description": "The system shall be able to capture and report a respiration rate measurement from the user.\n\nSee [Basic Vital Signs: Respiration Rate Measurement](basic_respiration.html#respiration_rate)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "requirements": "The system **SHOULD** provide codes along with measurements.\n\nSee [Basic Vital Signs: LOINC Coded Respiration Rate Measurement](basic_respiration.html#loinc-coded-respiration-rate-measurement)",
+        "requirements": "The system **SHOULD** provide codes along with measurements.\n\nSee [Basic Vital Signs: LOINC Coded Respiration Rate Measurement](basic_respiration.html#respiration_rate)",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -96,7 +96,7 @@
       {
         "id": "Observation.valueQuantity.code",
         "path": "Observation.valueQuantity.code",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Respiration Rate Units](basic_respiration.html#ucum-coded-respiration-rate-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Respiration Rate Units](basic_respiration.html#respiration_rate)",
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/RespirationRateUnits"

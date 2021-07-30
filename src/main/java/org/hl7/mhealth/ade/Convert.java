@@ -119,24 +119,31 @@ public class Convert {
 
     }
 
+    private static void createProfileLink(Hierarchy<?> root, String type, String lastNamePart, PrintWriter pw) {
+        String profileName = makeProfileName(root) + lastNamePart;
+
+        pw.printf("\nThe %s for this feature when implemented with FHIR can be found in the [%s](StructureDefinition-%s.html) Profile.\n",
+            StringUtils.lowerCase(lastNamePart), profileName, profileName);
+    }
     private static void createProfile(Hierarchy<?> root, String type, String lastNamePart) {
         String outputLocation = "./input/fsh";
         File f = new File(outputLocation, String.format("Profile%s%s.fsh", makeProfileName(root), lastNamePart));
+
         try (PrintWriter pw = new PrintWriter(new FileWriter(f, StandardCharsets.UTF_8));) {
             pw.printf("Profile: %s%s%n", makeProfileName(root), lastNamePart);
             pw.printf("Title: \"%s\"%n", WordUtils.capitalizeFully(root.getName().replace("_"," ") + " " + lastNamePart));
             pw.printf("Parent: %s%n", getProfiledResource(root));
             String desc = root.getDescription().trim();
-            pw.printf("Description: \"\"\"%s\"\"\"%n", desc);
+            pw.printf("Description: \"\"\"%s\n%s\"\"\"%n", desc, getLink(root));
             pw.printf("* ^abstract = true\n");
+            pw.printf("* ^jurisdiction = %s#%s \"%s\"%n", "http://unstats.un.org/unsd/methods/m49/m49.htm", "001", "World");
             for (Hierarchy<?> child: root.getChildren()) {
                 if (child.getType() == Hierarchy.SCENARIO_TYPE &&
-                    ( root.getTags().stream().anyMatch(s -> s.contains(type)) ||
+                    ( // root.getTags().stream().anyMatch(s -> s.contains(type)) ||
                       hasCriteriaOfType(child, type)
                     )
                 ) {
                     // TODO: Figure out how to make this configurable
-                    pw.printf("* ^jurisdiction = %s#%s \"%s\"%n", "http://unstats.un.org/unsd/methods/m49/m49.htm", "001", "World");
                     if (hasRules(child)) {
                         pw.printf("* insert %s%s%n", makeProfileName(root), makeRuleName(child));
                     }
@@ -144,7 +151,7 @@ public class Convert {
             }
             for (Hierarchy<?> child: root.getChildren()) {
                 if (child.getType() == Hierarchy.SCENARIO_TYPE &&
-                    ( root.getTags().stream().anyMatch(s -> s.contains(type)) ||
+                    ( // root.getTags().stream().anyMatch(s -> s.contains(type)) ||
                       hasCriteriaOfType(child, type)
                     )
                 ) {
@@ -223,7 +230,7 @@ public class Convert {
             n.getTitle(),
             target,
             filename,
-            target.toLowerCase().replace(" ","-"));
+            node.getType() == Hierarchy.SCENARIO_TYPE ? node.getParent().getName() : node.getName());
     }
 
     private static String getProfiledResource(Hierarchy<?> root) {
@@ -584,9 +591,12 @@ public class Convert {
         File outputFile = computeOutputFile(inputFolder, outputFolder);
         numOutputFiles++;
 
-        for (File input : collection) {
-            GherkinDocument doc = null;
-            try (PrintWriter pw = new PrintWriter(new FileWriter(outputFile, StandardCharsets.UTF_8, true))) {
+        StringWriter sw = new StringWriter();
+
+        try (PrintWriter dw = new PrintWriter(sw);
+            PrintWriter pw = new PrintWriter(new FileWriter(outputFile, StandardCharsets.UTF_8, true))) {
+            for (File input : collection) {
+                GherkinDocument doc = null;
                 try (BufferedReader r = new BufferedReader(new FileReader(input));) {
                     Parser<GherkinDocument.Builder> parser = new Parser<>(new GherkinDocumentBuilder(gen));
                     doc = parser.parse(r).build();
@@ -619,11 +629,23 @@ public class Convert {
                     pw.printf("%s%n%n", highlightRequirements(desc));
                 }
 
-                handleFeatureChildren(pw, 4, feat, feature.getChildrenList());
-            } catch (IOException e1) {
-                error(outputFile, "Error writing file");
-                e1.printStackTrace();
+                handleFeatureChildren(dw, 4, feat, feature.getChildrenList());
+
+                if (hasCriteriaOfType(feat, "Shall")) {
+                    //   if it has a set of shall criteria, create the Requirements profile
+                    createProfileLink(feat, "Shall", "Requirements", pw);
+                }
+                if (hasCriteriaOfType(feat, "Should")) {
+                    //   if it has a set of should criteria, create the Recommendations profile
+                    createProfileLink(feat, "Should", "Recommendations", pw);
+                }
+                dw.flush();
+                pw.print(sw.toString());
             }
+
+        } catch (IOException e1) {
+            error(outputFile, "Error writing file");
+            e1.printStackTrace();
         }
     }
 
@@ -634,7 +656,7 @@ public class Convert {
      * @param hier  The hierarchical item to generate a heading for.
      */
     private static void printHeading(PrintWriter pw, int i, Hierarchy<GeneratedMessageV3> hier) {
-        pw.printf("%n%s%s<a name='%s'>%s</a>%n%n",
+        pw.printf("%n%s %s<a name='%s'>%s</a>%n%n",
             "######".substring(0, i),
             getTagIcons(hier.getTags()),
             getLinkId(hier),

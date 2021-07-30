@@ -16,7 +16,7 @@
   "name": "UnitsRecommendations",
   "title": "Units Recommendations",
   "status": "active",
-  "description": "Fixed values used for units returned by the device or communicated by the App shall be documented.",
+  "description": "Fixed values used for units returned by the device or communicated by the App shall be documented.\n\nSee [General Observations: Value Sets for Units Used in Measurements Are Documented and Can be Mapped to Standards](numeric_observations.html#units)",
   "jurisdiction": [
     {
       "coding": [
@@ -86,7 +86,7 @@
       {
         "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
-        "requirements": "Result values in a measurement **SHOULD** use UCUM\n\nSee [General Observations: Unit Values Use UCUM](numeric_observations.html#unit-values-use-ucum)",
+        "requirements": "Result values in a measurement **SHOULD** use UCUM\n\nSee [General Observations: Unit Values Use UCUM](numeric_observations.html#units)",
         "min": 1,
         "max": "1",
         "type": [
@@ -99,7 +99,7 @@
       {
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
-        "requirements": "Result values in a measurement **SHOULD** use UCUM\n\nSee [General Observations: Unit Values Use UCUM](numeric_observations.html#unit-values-use-ucum)",
+        "requirements": "Result values in a measurement **SHOULD** use UCUM\n\nSee [General Observations: Unit Values Use UCUM](numeric_observations.html#units)",
         "patternUri": "http://unitsofmeasure.org"
       }
     ]

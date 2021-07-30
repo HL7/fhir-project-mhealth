@@ -1,12 +1,16 @@
 The Basic Respiration Rate category supports the measurement of the user's respiration
 rate.
 
-###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='respiration_rate'>Feature: Respiration Rate Measurement</a>
+### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='respiration_rate'>Feature: Respiration Rate Measurement</a>
 
 The system **SHALL** be able to capture and report a respiration rate measurement from the user.
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-respiration-rate-measurement'>Scenario: Capture and Report Respiration Rate Measurement</a>
+The requirements for this feature when implemented with FHIR can be found in the [RespirationRateRequirements](StructureDefinition-RespirationRateRequirements.html) Profile.
+
+The recommendations for this feature when implemented with FHIR can be found in the [RespirationRateRecommendations](StructureDefinition-RespirationRateRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-respiration-rate-measurement'>Scenario: Capture and Report Respiration Rate Measurement</a>
 
 
 GIVEN
@@ -31,7 +35,7 @@ THEN
    : the precision of that <i>&lt;Measurement&gt;</i> is to the unit of at least whole breaths.
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-respiration-rate-measurement'>Scenario: LOINC Coded Respiration Rate Measurement</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-respiration-rate-measurement'>Scenario: LOINC Coded Respiration Rate Measurement</a>
 
 The system **SHOULD** provide codes along with measurements.
 
@@ -48,7 +52,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 9279-1 Respiratory Rate 
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-respiration-rate-units'>Scenario: UCUM Coded Respiration Rate Units</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-respiration-rate-units'>Scenario: UCUM Coded Respiration Rate Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -68,7 +72,7 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> may include a UCUM comment (e.g. '{breath}/min' or '{breaths}/min') 
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-heart-rate'>Scenario: Precision and Units Are Appropriate for Heart Rate</a>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-heart-rate'>Scenario: Precision and Units Are Appropriate for Heart Rate</a>
 
 The precision and units of a heart rate measurement **SHALL** be appropriate to the measurement.
 

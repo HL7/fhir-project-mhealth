@@ -16,7 +16,7 @@
   "name": "ClinicalHeightAndWeightMeasurementRecommendations",
   "title": "Clinical Height And Weight Measurement Recommendations",
   "status": "active",
-  "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.",
+  "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.\n\nSee [Clinical Vital Signs: Capture of Clinical Data With Weight Measurement.](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "requirements": "The system **SHOULD** provide LOINC codes along with measurements.\n\nSee [Clinical Vital Signs: LOINC Coded BMI Measurement](clinical_height_and_weight.html#loinc-coded-bmi-measurement)",
+        "requirements": "The system **SHOULD** provide LOINC codes along with measurements.\n\nSee [Clinical Vital Signs: LOINC Coded BMI Measurement](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -96,19 +96,19 @@
       {
         "id": "Observation.valueQuantity.unit",
         "path": "Observation.valueQuantity.unit",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#ucum-coded-bmi-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
         "patternString": "'kg/m2'"
       },
       {
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#ucum-coded-bmi-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
         "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Observation.valueQuantity.code",
         "path": "Observation.valueQuantity.code",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#ucum-coded-bmi-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Clinical Vital Signs: UCUM Coded BMI Units](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
         "patternCode": "'kg/m2'"
       }
     ]

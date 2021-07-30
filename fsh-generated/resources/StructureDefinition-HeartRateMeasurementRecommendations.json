@@ -16,7 +16,7 @@
   "name": "HeartRateMeasurementRecommendations",
   "title": "Heart Rate Measurement Recommendations",
   "status": "active",
-  "description": "The system shall be able to capture and report a heart rate measurement from the user.",
+  "description": "The system shall be able to capture and report a heart rate measurement from the user.\n\nSee [Basic Vital Signs: Heart Rate Measurement](basic_heart_rate.html#heart_rate_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "requirements": "The system **SHOULD** provide LOINC codes along with measurements.\n\nSee [Basic Vital Signs: LOINC Coded Heart Rate Measurement](basic_heart_rate.html#loinc-coded-heart-rate-measurement)",
+        "requirements": "The system **SHOULD** provide LOINC codes along with measurements.\n\nSee [Basic Vital Signs: LOINC Coded Heart Rate Measurement](basic_heart_rate.html#heart_rate_measurement)",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -96,7 +96,7 @@
       {
         "id": "Observation.valueQuantity.code",
         "path": "Observation.valueQuantity.code",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Heart Rate Units](basic_heart_rate.html#ucum-coded-heart-rate-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Heart Rate Units](basic_heart_rate.html#heart_rate_measurement)",
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/HeartRateUnits"

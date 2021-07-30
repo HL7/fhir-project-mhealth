@@ -26,7 +26,7 @@ can be easily changed, and "firm" if it requires a special mode of operation to 
 it.  But it's all stored in some form of memory that is very likely rewritable.
 
 
-###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='current_configuration'>Feature: The Mechanism to Obtain the System Configuration is Documented.</a>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='current_configuration'>Feature: The Mechanism to Obtain the System Configuration is Documented.</a>
 
 The means by which a system configuration can be inspected is documented.
 
@@ -34,7 +34,7 @@ Configuration includes the system identifier, software version, and other
 configurable system attributes (e.g., units).
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
 
 The means by which a user can access system configuration information is described in the documentation.
 
@@ -51,7 +51,7 @@ THEN
 : the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
 
 
-###<a name='device_identifier'>Feature: Device Can be Identified</a>
+### <a name='device_identifier'>Feature: Device Can be Identified</a>
 
 The device that performs a measurement **SHALL** be uniquely identified.
 
@@ -60,7 +60,28 @@ can impact the interpretation of measurements taken by the device.  Knowledge of
 device helps greatly in interpreting the results.
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device-identifier-is-unique'>Scenario: Device Identifier is Unique</a>
+The requirements for this feature when implemented with FHIR can be found in the [DeviceIdentifierRequirements](StructureDefinition-DeviceIdentifierRequirements.html) Profile.
+
+The recommendations for this feature when implemented with FHIR can be found in the [DeviceIdentifierRecommendations](StructureDefinition-DeviceIdentifierRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
+
+The means by which a user can access system configuration information is described in the documentation.
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+   AND
+   : <i>&lt;Documentation&gt;</i> for it
+
+WHEN
+: the <i>&lt;Documentation&gt;</i> is examined
+
+THEN
+: the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
+
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device-identifier-is-unique'>Scenario: Device Identifier is Unique</a>
 
 The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).
 The point of this assessment is that the mechanism by which devices are identified
@@ -87,7 +108,7 @@ THEN
 : <i>&lt;Identifier&gt;</i> is uniquely assigned to <i>&lt;Device&gt;</i> 
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='the-device-has-a-unique-device-identifier'>Scenario: The Device Has a Unique Device Identifier</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='the-device-has-a-unique-device-identifier'>Scenario: The Device Has a Unique Device Identifier</a>
 
 The device **SHOULD** have a UDI.
 The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
@@ -106,13 +127,78 @@ THEN
 : The <i>&lt;Device Record&gt;</i> contains a UDI for the device. 
 
 
-###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='software_version'>Feature: Software Version</a>
+### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='software_version'>Feature: Software Version</a>
 
 The Software Version associated with a system **SHOULD** be available.
 The Software Version can be the physical network address (e.g., MAC address) or other identifierassigned to uniquely identify the device on a network (wired or unwired)
 
 
-####<a name='software-version-can-be-accessed'>Scenario: Software Version Can be Accessed</a>
+The recommendations for this feature when implemented with FHIR can be found in the [SoftwareVersionRecommendations](StructureDefinition-SoftwareVersionRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
+
+The means by which a user can access system configuration information is described in the documentation.
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+   AND
+   : <i>&lt;Documentation&gt;</i> for it
+
+WHEN
+: the <i>&lt;Documentation&gt;</i> is examined
+
+THEN
+: the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
+
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device-identifier-is-unique'>Scenario: Device Identifier is Unique</a>
+
+The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).
+The point of this assessment is that the mechanism by which devices are identified
+be sufficient to demonstrate that identifiers are unique.  The device identifier can be
+a unique device identifier (UDI), a MAC or physical network address (e.g., the BlueTooth device
+address), or some other unique identifier that only applies to a single device.
+
+GIVEN
+: A <i>&lt;Device&gt;</i> that performs a measurement
+
+   AND
+   : an <i>&lt;App&gt;</i> that records a measurement
+
+   AND
+   : <i>&lt;Infrastructure&gt;</i> that reports a measurement
+
+   AND
+   : An <i>&lt;Identifier&gt;</i> for that <i>&lt;Device&gt;</i>
+
+WHEN
+: The mechanism for assigning <i>&lt;Identifier&gt;</i> is examined
+
+THEN
+: <i>&lt;Identifier&gt;</i> is uniquely assigned to <i>&lt;Device&gt;</i> 
+
+
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='the-device-has-a-unique-device-identifier'>Scenario: The Device Has a Unique Device Identifier</a>
+
+The device **SHOULD** have a UDI.
+The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
+(UDI System) enables users of device related data to identify the devices providing measurements
+and enables analysis of device data with regard to issues, errors, accuracy, et cetera.
+
+NOTE: The UDI **SHOULD** be the primary identifier for the device
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+WHEN
+: The <i>&lt;Device Record&gt;</i> is examined
+
+THEN
+: The <i>&lt;Device Record&gt;</i> contains a UDI for the device. 
+
+
+#### <a name='software-version-can-be-accessed'>Scenario: Software Version Can be Accessed</a>
 
 The Software Version can be access from the device or application.
 
@@ -132,13 +218,98 @@ THEN
 : the <i>&lt;Software Version&gt;</i> can be discovered 
 
 
-###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='network_address'>Feature: Network Address</a>
+### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <a name='network_address'>Feature: Network Address</a>
 
 The network address of a device **SHOULD** be reported.
 The network address can be the physical network address (e.g., MAC address) or other identifierassigned to uniquely identify the device on a network (wired or unwired)
 
 
-####<a name='network-address-can-be-accessed'>Scenario: Network Address Can be Accessed</a>
+The recommendations for this feature when implemented with FHIR can be found in the [NetworkAddressRecommendations](StructureDefinition-NetworkAddressRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
+
+The means by which a user can access system configuration information is described in the documentation.
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+   AND
+   : <i>&lt;Documentation&gt;</i> for it
+
+WHEN
+: the <i>&lt;Documentation&gt;</i> is examined
+
+THEN
+: the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
+
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device-identifier-is-unique'>Scenario: Device Identifier is Unique</a>
+
+The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).
+The point of this assessment is that the mechanism by which devices are identified
+be sufficient to demonstrate that identifiers are unique.  The device identifier can be
+a unique device identifier (UDI), a MAC or physical network address (e.g., the BlueTooth device
+address), or some other unique identifier that only applies to a single device.
+
+GIVEN
+: A <i>&lt;Device&gt;</i> that performs a measurement
+
+   AND
+   : an <i>&lt;App&gt;</i> that records a measurement
+
+   AND
+   : <i>&lt;Infrastructure&gt;</i> that reports a measurement
+
+   AND
+   : An <i>&lt;Identifier&gt;</i> for that <i>&lt;Device&gt;</i>
+
+WHEN
+: The mechanism for assigning <i>&lt;Identifier&gt;</i> is examined
+
+THEN
+: <i>&lt;Identifier&gt;</i> is uniquely assigned to <i>&lt;Device&gt;</i> 
+
+
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='the-device-has-a-unique-device-identifier'>Scenario: The Device Has a Unique Device Identifier</a>
+
+The device **SHOULD** have a UDI.
+The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
+(UDI System) enables users of device related data to identify the devices providing measurements
+and enables analysis of device data with regard to issues, errors, accuracy, et cetera.
+
+NOTE: The UDI **SHOULD** be the primary identifier for the device
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+WHEN
+: The <i>&lt;Device Record&gt;</i> is examined
+
+THEN
+: The <i>&lt;Device Record&gt;</i> contains a UDI for the device. 
+
+
+#### <a name='software-version-can-be-accessed'>Scenario: Software Version Can be Accessed</a>
+
+The Software Version can be access from the device or application.
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+   AND
+   : a <i>&lt;Software Version&gt;</i>
+
+   AND
+   : an <i>&lt;App&gt;</i> running on <i>&lt;App Runner&gt;</i>
+
+WHEN
+: The <i>&lt;Device&gt;</i> is connected to the <i>&lt;App&gt;</i> and <i>&lt;App Runner&gt;</i>
+
+THEN
+: the <i>&lt;Software Version&gt;</i> can be discovered 
+
+
+#### <a name='network-address-can-be-accessed'>Scenario: Network Address Can be Accessed</a>
 
 The network address (e.g., MAC, TCP IP or other identifier) can be access from the device or application.
 
@@ -158,14 +329,119 @@ THEN
 : <i>&lt;Network Address&gt;</i> can be discovered 
 
 
-###<span class='glyphicon text-info glyphicon-dashboard'/> <a name='battery_charge'>Feature: Battery Charge</a>
+### <span class='glyphicon text-info glyphicon-dashboard'/> <a name='battery_charge'>Feature: Battery Charge</a>
 
 The level of battery charge for a device **SHOULD** be reported.
 Reporting the battery charge level for a device enables an App to alerta user that the device needs recharging.
 NOTE: Some devices which may be assessed using this guide may have tomeet more stringent requirements to ensure patient safety. That is outsideof the scope of this guide.
 
 
-####<a name='battery-charge-can-be-accessed'>Scenario: Battery Charge Can be Accessed</a>
+The recommendations for this feature when implemented with FHIR can be found in the [BatteryChargeRecommendations](StructureDefinition-BatteryChargeRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='the-means-to-access-system-configuration-shall-be-documented'>Scenario: The Means to Access System Configuration Shall be Documented</a>
+
+The means by which a user can access system configuration information is described in the documentation.
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+   AND
+   : <i>&lt;Documentation&gt;</i> for it
+
+WHEN
+: the <i>&lt;Documentation&gt;</i> is examined
+
+THEN
+: the means by which the <i>&lt;Configuration&gt;</i> can be examined for <i>&lt;System&gt;</i> is documented.
+
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='device-identifier-is-unique'>Scenario: Device Identifier is Unique</a>
+
+The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).
+The point of this assessment is that the mechanism by which devices are identified
+be sufficient to demonstrate that identifiers are unique.  The device identifier can be
+a unique device identifier (UDI), a MAC or physical network address (e.g., the BlueTooth device
+address), or some other unique identifier that only applies to a single device.
+
+GIVEN
+: A <i>&lt;Device&gt;</i> that performs a measurement
+
+   AND
+   : an <i>&lt;App&gt;</i> that records a measurement
+
+   AND
+   : <i>&lt;Infrastructure&gt;</i> that reports a measurement
+
+   AND
+   : An <i>&lt;Identifier&gt;</i> for that <i>&lt;Device&gt;</i>
+
+WHEN
+: The mechanism for assigning <i>&lt;Identifier&gt;</i> is examined
+
+THEN
+: <i>&lt;Identifier&gt;</i> is uniquely assigned to <i>&lt;Device&gt;</i> 
+
+
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-dashboard'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='the-device-has-a-unique-device-identifier'>Scenario: The Device Has a Unique Device Identifier</a>
+
+The device **SHOULD** have a UDI.
+The [Unique Device Identification System](https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics)
+(UDI System) enables users of device related data to identify the devices providing measurements
+and enables analysis of device data with regard to issues, errors, accuracy, et cetera.
+
+NOTE: The UDI **SHOULD** be the primary identifier for the device
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+WHEN
+: The <i>&lt;Device Record&gt;</i> is examined
+
+THEN
+: The <i>&lt;Device Record&gt;</i> contains a UDI for the device. 
+
+
+#### <a name='software-version-can-be-accessed'>Scenario: Software Version Can be Accessed</a>
+
+The Software Version can be access from the device or application.
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+   AND
+   : a <i>&lt;Software Version&gt;</i>
+
+   AND
+   : an <i>&lt;App&gt;</i> running on <i>&lt;App Runner&gt;</i>
+
+WHEN
+: The <i>&lt;Device&gt;</i> is connected to the <i>&lt;App&gt;</i> and <i>&lt;App Runner&gt;</i>
+
+THEN
+: the <i>&lt;Software Version&gt;</i> can be discovered 
+
+
+#### <a name='network-address-can-be-accessed'>Scenario: Network Address Can be Accessed</a>
+
+The network address (e.g., MAC, TCP IP or other identifier) can be access from the device or application.
+
+GIVEN
+: A <i>&lt;Device Record&gt;</i>
+
+   AND
+   : a <i>&lt;Network Address&gt;</i>
+
+   AND
+   : an <i>&lt;App&gt;</i> running on <i>&lt;App Runner&gt;</i>
+
+WHEN
+: The <i>&lt;Device&gt;</i> is connected to the <i>&lt;App&gt;</i> and <i>&lt;App Runner&gt;</i>
+
+THEN
+: <i>&lt;Network Address&gt;</i> can be discovered 
+
+
+#### <a name='battery-charge-can-be-accessed'>Scenario: Battery Charge Can be Accessed</a>
 
 Battery charge status can be accessed on devices which have a battery.
 

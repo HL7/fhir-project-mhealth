@@ -4,12 +4,16 @@ When this category is evaluated, the [Basic Heart Rate (a.k.a. Pulse)](basic_hea
 category must also be evaluated.  This is because blood pressure and pulse are very
 closely related measurements, and it's nearly impossible for a system to measure blood
 pressure without having some awareness of heart rate.
-###<span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='bp_measurement'>Feature: Blood Pressure Measurement</a>
+### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='bp_measurement'>Feature: Blood Pressure Measurement</a>
 
 The system **SHALL** be able to capture and report a blood pressure measurement from the user.
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-blood-pressure-measurement'>Scenario: Capture and Report Blood Pressure Measurement</a>
+The requirements for this feature when implemented with FHIR can be found in the [BpMeasurementRequirements](StructureDefinition-BpMeasurementRequirements.html) Profile.
+
+The recommendations for this feature when implemented with FHIR can be found in the [BpMeasurementRecommendations](StructureDefinition-BpMeasurementRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='capture-and-report-blood-pressure-measurement'>Scenario: Capture and Report Blood Pressure Measurement</a>
 
 
 GIVEN
@@ -40,7 +44,7 @@ THEN
    : the precision of that <i>&lt;Measurement&gt;</i> is to the unit of at least whole millimeters.
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-blood-pressure-measurement'>Scenario: LOINC Coded Blood Pressure Measurement</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-blood-pressure-measurement'>Scenario: LOINC Coded Blood Pressure Measurement</a>
 
 The measurement **SHOULD** be coded in LOINC.
 
@@ -57,7 +61,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 8480-6 Systolic blood pressure or 8462-4 Diastolic blood pressure 
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-blood-pressure-units'>Scenario: UCUM Coded Blood Pressure Units</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-blood-pressure-units'>Scenario: UCUM Coded Blood Pressure Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 
@@ -74,7 +78,7 @@ THEN
    : that <i>&lt;UCUM Unit Code&gt;</i> is 'mm[Hg]' (millimeters of mercury). 
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-blood-pressure'>Scenario: Precision and Units Are Appropriate for Blood Pressure</a>
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='precision-and-units-are-appropriate-for-blood-pressure'>Scenario: Precision and Units Are Appropriate for Blood Pressure</a>
 
 The precision and units of a blood pressure measurement **SHALL** be appropriate to the measurement.
 

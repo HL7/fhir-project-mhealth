@@ -2,12 +2,16 @@ The Clinical Height and Weight category supports additional requirements used in
 settings for the interpretation of height and weight measures.
 
 
-###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='clinical_height_and_weight_measurement'>Feature: Capture of Clinical Data With Weight Measurement.</a>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='clinical_height_and_weight_measurement'>Feature: Capture of Clinical Data With Weight Measurement.</a>
 
 The system **SHALL** be able to capture and record other data to facilitate interpretation ofheight and weight measurements.
 
 
-####<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='compute-or-report-body-mass-index'>Scenario: Compute or Report Body Mass Index</a>
+The requirements for this feature when implemented with FHIR can be found in the [ClinicalHeightAndWeightMeasurementRequirements](StructureDefinition-ClinicalHeightAndWeightMeasurementRequirements.html) Profile.
+
+The recommendations for this feature when implemented with FHIR can be found in the [ClinicalHeightAndWeightMeasurementRecommendations](StructureDefinition-ClinicalHeightAndWeightMeasurementRecommendations.html) Profile.
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='compute-or-report-body-mass-index'>Scenario: Compute or Report Body Mass Index</a>
 
 This requirement allows BMI to be detected by a device, or reported based on the
 reported height and sensed weight.  The method of computing the BMI value is not defined
@@ -26,7 +30,7 @@ THEN
 : there is a <i>&lt;Measurement&gt;</i> of <i>&lt;Body Mass Index&gt;</i> for the <i>&lt;User&gt;</i>
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='clothing-worn-during-measurement'>Scenario: Clothing Worn During Measurement</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='clothing-worn-during-measurement'>Scenario: Clothing Worn During Measurement</a>
 
 The system **SHALL** be able to capture a coded value describing the clothing worn during weight measurement.
 
@@ -43,7 +47,7 @@ THEN
 : there is an opportunity for <i>&lt;User&gt;</i> to describe the clothing worn during the measurement
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-bmi-measurement'>Scenario: LOINC Coded BMI Measurement</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='loinc-coded-bmi-measurement'>Scenario: LOINC Coded BMI Measurement</a>
 
 The system **SHOULD** provide LOINC codes along with measurements.
 
@@ -60,7 +64,7 @@ THEN
    : that <i>&lt;LOINC Code&gt;</i> is 39156-5 Body mass index (BMI) [Ratio] 
 
 
-####<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-bmi-units'>Scenario: UCUM Coded BMI Units</a>
+#### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='ucum-coded-bmi-units'>Scenario: UCUM Coded BMI Units</a>
 
 The measurement **SHOULD** use units coded in UCUM.
 

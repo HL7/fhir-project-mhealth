@@ -16,7 +16,7 @@
   "name": "WeightMeasurementRecommendations",
   "title": "Weight Measurement Recommendations",
   "status": "active",
-  "description": "The system shall be able to capture and report a weight measurement from the user.",
+  "description": "The system shall be able to capture and report a weight measurement from the user.\n\nSee [Basic Vital Signs: Weight Measurement](basic_height_and_weight.html#weight_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "requirements": "The measurement **SHOULD** be coded in LOINC.\n\nSee [Basic Vital Signs: LOINC Coded Weight Measurement](basic_height_and_weight.html#loinc-coded-weight-measurement)",
+        "requirements": "The measurement **SHOULD** be coded in LOINC.\n\nSee [Basic Vital Signs: LOINC Coded Weight Measurement](basic_height_and_weight.html#weight_measurement)",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -95,13 +95,13 @@
       {
         "id": "Observation.valueQuantity.system",
         "path": "Observation.valueQuantity.system",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Weight Units](basic_height_and_weight.html#ucum-coded-weight-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Weight Units](basic_height_and_weight.html#weight_measurement)",
         "patternUri": "http://unitsofmeasure.org"
       },
       {
         "id": "Observation.valueQuantity.code",
         "path": "Observation.valueQuantity.code",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Weight Units](basic_height_and_weight.html#ucum-coded-weight-units)",
+        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Weight Units](basic_height_and_weight.html#weight_measurement)",
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyWeightUnits"

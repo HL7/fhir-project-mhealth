@@ -16,7 +16,7 @@
   "name": "TimeStampOrDurationRequirements",
   "title": "Time Stamp Or Duration Requirements",
   "status": "active",
-  "description": "The time stamp or time period associated with a measurement shall be recorded and reported for each measurement taken,\n and the time when the measure was recorded is also tracked.\n\n Note: These requirements are checked for each measurement for which the system is\n being assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.",
+  "description": "The time stamp or time period associated with a measurement shall be recorded and reported for each measurement taken,\n and the time when the measure was recorded is also tracked.\n\n Note: These requirements are checked for each measurement for which the system is\n being assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.\n\nSee [General Observations: A Time Stamp or Time Period is Recorded for Each Measurement](general_requirements.html#time_stamp_or_duration)",
   "jurisdiction": [
     {
       "coding": [
@@ -84,7 +84,7 @@
       {
         "id": "Observation.issued",
         "path": "Observation.issued",
-        "requirements": "Measurements **SHALL** have a time stamp or time period noting the time the data was recorded\n\nSee [General Observations: Time of Recording Stored](general_requirements.html#time-of-recording-stored)",
+        "requirements": "Measurements **SHALL** have a time stamp or time period noting the time the data was recorded\n\nSee [General Observations: Time of Recording Stored](general_requirements.html#time_stamp_or_duration)",
         "min": 1,
         "mustSupport": true
       }

@@ -16,7 +16,7 @@
   "name": "PhysicalActivityAndSleepRecommendations",
   "title": "Physical Activity And Sleep Recommendations",
   "status": "active",
-  "description": "The system shall record the duration and other qualities of physical activities that it can detect.",
+  "description": "The system shall record the duration and other qualities of physical activities that it can detect.\n\nSee [Observations: Physical Activities Including Sleep is Measured](physical_activity_and_sleep.html#physical_activity_and_sleep)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "requirements": "The system **SHOULD** provide SNOMED CT or LOINC codes describing the physical activity or sleep and other quality measurements\nalong with the duration of the activity.\n\nSee [Observations: SNOMED CT Coded Measurement](physical_activity_and_sleep.html#snomed-ct-coded-measurement)",
+        "requirements": "The system **SHOULD** provide SNOMED CT or LOINC codes describing the physical activity or sleep and other quality measurements\nalong with the duration of the activity.\n\nSee [Observations: SNOMED CT Coded Measurement](physical_activity_and_sleep.html#physical_activity_and_sleep)",
         "constraint": [
           {
             "key": "PhysicalActivityAndSleepSnomedCtCodedMeasurement-1",

@@ -16,7 +16,7 @@
   "name": "UserDateOfBirthRequirements",
   "title": "User Date Of Birth Requirements",
   "status": "active",
-  "description": "The App and Infrastructure shall be able to associate a birth date with the patient.",
+  "description": "The App and Infrastructure shall be able to associate a birth date with the patient.\n\nSee [User Data: Date of Birth](user_demographics.html#user_date_of_birth)",
   "jurisdiction": [
     {
       "coding": [
@@ -64,11 +64,8 @@
   "differential": {
     "element": [
       {
-        "id": "Patient.birthDate",
-        "path": "Patient.birthDate",
-        "requirements": "The user has a date of birth.\n\nSee [User Data: Birth Date Exists](user_demographics.html#birth-date-exists)",
-        "min": 1,
-        "mustSupport": true
+        "id": "Patient",
+        "path": "Patient"
       }
     ]
   }

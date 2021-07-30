@@ -16,7 +16,7 @@
   "name": "DeviceIdentifierRequirements",
   "title": "Device Identifier Requirements",
   "status": "active",
-  "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.",
+  "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
   "jurisdiction": [
     {
       "coding": [
@@ -56,7 +56,7 @@
       {
         "id": "Device.identifier",
         "path": "Device.identifier",
-        "requirements": "The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).\nThe point of this assessment is that the mechanism by which devices are identified\nbe sufficient to demonstrate that identifiers are unique.  The device identifier can be\na unique device identifier (UDI), a MAC or physical network address (e.g., the BlueTooth device\naddress), or some other unique identifier that only applies to a single device.\n\nSee [System Data: Device Identifier is Unique](system_attributes.html#device-identifier-is-unique)",
+        "requirements": "The device identifier **SHALL** be unique within the namespace defined by the system(Device + App + Infrastructure).\nThe point of this assessment is that the mechanism by which devices are identified\nbe sufficient to demonstrate that identifiers are unique.  The device identifier can be\na unique device identifier (UDI), a MAC or physical network address (e.g., the BlueTooth device\naddress), or some other unique identifier that only applies to a single device.\n\nSee [System Data: Device Identifier is Unique](system_attributes.html#device_identifier)",
         "min": 1,
         "max": "1",
         "mustSupport": true

@@ -16,7 +16,7 @@
   "name": "UserContactInformationRequirements",
   "title": "User Contact Information Requirements",
   "status": "active",
-  "description": "The App or Infrastructure shall be able to associate the user's contact\ninformation (e.g., e-mail, address, phone number) with the user.",
+  "description": "The App or Infrastructure shall be able to associate the user's contact\ninformation (e.g., e-mail, address, phone number) with the user.\n\nSee [User Data: User Contact Information](user_demographics.html#user_contact_information)",
   "jurisdiction": [
     {
       "coding": [
@@ -65,28 +65,7 @@
     "element": [
       {
         "id": "Patient",
-        "path": "Patient",
-        "constraint": [
-          {
-            "key": "UserContactInformationContactInformationExists-1",
-            "severity": "error",
-            "human": "The user has contact information.",
-            "expression": "address.exists() or telecom.where(system = 'phone' or system = 'email').exists()",
-            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/UserContactInformationRequirements"
-          }
-        ]
-      },
-      {
-        "id": "Patient.telecom",
-        "path": "Patient.telecom",
-        "requirements": "The user has contact information.\n\nSee [User Data: Contact Information Exists](user_demographics.html#contact-information-exists)",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.address",
-        "path": "Patient.address",
-        "requirements": "The user has contact information.\n\nSee [User Data: Contact Information Exists](user_demographics.html#contact-information-exists)",
-        "mustSupport": true
+        "path": "Patient"
       }
     ]
   }

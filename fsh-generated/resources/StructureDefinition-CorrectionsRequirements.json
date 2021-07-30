@@ -16,7 +16,7 @@
   "name": "CorrectionsRequirements",
   "title": "Corrections Requirements",
   "status": "active",
-  "description": "An App should allow for the user to correct or \"delete\" incorrect data.\n\n  Users of a device or app for shall have the ability to correct or remove incorrect data.",
+  "description": "An App should allow for the user to correct or \"delete\" incorrect data.\n\n  Users of a device or app for shall have the ability to correct or remove incorrect data.\n\nSee [General Observations: Corrections and Deletions](general_requirements.html#corrections)",
   "jurisdiction": [
     {
       "coding": [
@@ -69,13 +69,8 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.status",
-        "path": "Observation.status",
-        "requirements": "Users can delete a measurement.\n\nSee [General Observations: Deletion](general_requirements.html#deletion)",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/CorrectionsAndDeletions"
-        }
+        "id": "Observation",
+        "path": "Observation"
       }
     ]
   }

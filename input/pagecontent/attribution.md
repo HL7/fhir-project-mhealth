@@ -26,7 +26,7 @@ might be shared as one person "tries it out" for a bit to see if it's something 
 want to acquire for themselves.  Devices can also be handed down or off to others as
 users upgrade and acquire new technology.
 
-###<span class='glyphicon text-success glyphicon-dashboard'/> <a name='measurement_device_identified'>Feature: Measurement Device Can be Identified</a>
+### <span class='glyphicon text-success glyphicon-dashboard'/> <a name='measurement_device_identified'>Feature: Measurement Device Can be Identified</a>
 
 The device that performs the measurement **SHALL** be uniquely identified and that identifier**SHALL** persist throughout that devices lifetime.
 
@@ -35,7 +35,9 @@ the interpretation of measurements taken by the device. Knowledge of the device 
 interpreting the results.
 
 
-####<a name='device-is-identified'>Scenario: Device is Identified</a>
+The requirements for this feature when implemented with FHIR can be found in the [MeasurementDeviceIdentifiedRequirements](StructureDefinition-MeasurementDeviceIdentifiedRequirements.html) Profile.
+
+#### <a name='device-is-identified'>Scenario: Device is Identified</a>
 
 A device is identified with a unique identifier and that can be determined from the measurement.
 
@@ -55,7 +57,7 @@ THEN
    : <i>&lt;Identifier&gt;</i> can be found from <i>&lt;Device&gt;</i>   
 
 
-####<a name='device-identifier-persists'>Scenario: Device Identifier Persists</a>
+#### <a name='device-identifier-persists'>Scenario: Device Identifier Persists</a>
 
 The unique identifier of the device is consistent across measurements.
 
@@ -90,14 +92,71 @@ THEN
    : <i>&lt;Identifier2&gt;</i> = <i>&lt;Identifier1&gt;</i>
 
 
-###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='manual_entry_detectable'>Feature: Identify Manually Entered Data and the Author of it</a>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='manual_entry_detectable'>Feature: Identify Manually Entered Data and the Author of it</a>
 
 If an app enables recording of outside measurements that app **SHALL** identify
 measures as that have been manually entered by the user of the app, and the
 user **SHALL** be identified also.
 
 
-####<a name='manually-entered-data-can-be-detected'>Scenario: Manually Entered Data Can be Detected</a>
+The requirements for this feature when implemented with FHIR can be found in the [ManualEntryDetectableRequirements](StructureDefinition-ManualEntryDetectableRequirements.html) Profile.
+
+#### <a name='device-is-identified'>Scenario: Device is Identified</a>
+
+A device is identified with a unique identifier and that can be determined from the measurement.
+
+GIVEN
+: <i>&lt;Device&gt;</i> performs a measurement
+
+   AND
+   : <i>&lt;Device&gt;</i> is uniquely identified with <i>&lt;Identifier&gt;</i>
+
+WHEN
+: <i>&lt;Measurement&gt;</i> has been obtained
+
+THEN
+: <i>&lt;Device&gt;</i> can be found from <i>&lt;Measurement&gt;</i> 
+
+   AND
+   : <i>&lt;Identifier&gt;</i> can be found from <i>&lt;Device&gt;</i>   
+
+
+#### <a name='device-identifier-persists'>Scenario: Device Identifier Persists</a>
+
+The unique identifier of the device is consistent across measurements.
+
+GIVEN
+: <i>&lt;Device&gt;</i> that can perform a measurement
+
+   AND
+   : <i>&lt;User1&gt;</i>
+
+   AND
+   : <i>&lt;User2&gt;</i>
+
+   AND
+   : an <i>&lt;App1&gt;</i> used by <i>&lt;User1&gt;</i>
+
+   AND
+   : an <i>&lt;App2&gt;</i> used by <i>&lt;User2&gt;</i> (can be the same app as for User1)
+
+WHEN
+: a <i>&lt;Measurement1&gt;</i> is taken for <i>&lt;User1&gt;</i> by <i>&lt;App1&gt;</i>
+
+   AND
+   : a <i>&lt;Measurement2&gt;</i> is taken for <i>&lt;User2&gt;</i> by <i>&lt;App2&gt;</i>
+
+THEN
+: there is an <i>&lt;Identifier1&gt;</i> in the <i>&lt;Device&gt;</i> record associated with <i>&lt;Measurement1&gt;</i>
+
+   AND
+   : there is an <i>&lt;Identifier2&gt;</i> in the <i>&lt;Device&gt;</i> record associated with <i>&lt;Measurement2&gt;</i>
+
+   AND
+   : <i>&lt;Identifier2&gt;</i> = <i>&lt;Identifier1&gt;</i>
+
+
+#### <a name='manually-entered-data-can-be-detected'>Scenario: Manually Entered Data Can be Detected</a>
 
 Manually entered data **SHALL** be distinguishable from device recorded data.
 
@@ -117,7 +176,7 @@ THEN
 : The <i>&lt;Measurement&gt;</i> can be identified as having been manually entered. 
 
 
-####<a name='the-user-who-entered-the-data-can-be-identified.'>Scenario: The User Who Entered the Data Can be Identified.</a>
+#### <a name='the-user-who-entered-the-data-can-be-identified.'>Scenario: The User Who Entered the Data Can be Identified.</a>
 
 The user manually entering data **SHALL** be recorded.
 

@@ -16,7 +16,7 @@
   "name": "UserNameRequirements",
   "title": "User Name Requirements",
   "status": "active",
-  "description": "The App or Infrastructure shall be able to associate the user's name with the user.",
+  "description": "The App or Infrastructure shall be able to associate the user's name with the user.\n\nSee [User Data: User Name](user_demographics.html#user_name)",
   "jurisdiction": [
     {
       "coding": [
@@ -64,12 +64,8 @@
   "differential": {
     "element": [
       {
-        "id": "Patient.name",
-        "path": "Patient.name",
-        "requirements": "The user has a name.\n\nSee [User Data: Name Exists](user_demographics.html#name-exists)",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "id": "Patient",
+        "path": "Patient"
       }
     ]
   }

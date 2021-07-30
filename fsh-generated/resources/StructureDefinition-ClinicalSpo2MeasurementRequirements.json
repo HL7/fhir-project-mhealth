@@ -16,7 +16,7 @@
   "name": "ClinicalSpo2MeasurementRequirements",
   "title": "Clinical Spo2 Measurement Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+  "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Oxygen Saturation Measurement](clinical_spo2.html#clinical_spo2_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each Oxygen Saturation measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_spo2.html#report-measurement-site)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each Oxygen Saturation measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_spo2.html#clinical_spo2_measurement)",
         "min": 1,
         "binding": {
           "strength": "required",

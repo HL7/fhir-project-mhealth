@@ -16,7 +16,7 @@
   "name": "ClinicalTemperatureMeasurementRequirements",
   "title": "Clinical Temperature Measurement Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+  "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Temperature Measurement](clinical_temperature.html#clinical_temperature_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each heart rate measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_temperature.html#report-measurement-site)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each heart rate measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_temperature.html#clinical_temperature_measurement)",
         "min": 1,
         "binding": {
           "strength": "required",

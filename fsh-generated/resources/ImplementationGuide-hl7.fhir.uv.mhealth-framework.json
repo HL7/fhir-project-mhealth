@@ -49,7 +49,7 @@
           "reference": "StructureDefinition/BatteryChargeRecommendations"
         },
         "name": "Battery Charge Recommendations",
-        "description": "The level of battery charge for a device should be reported.\n\n    Reporting the battery charge level for a device enables an App to alert\n    a user that the device needs recharging.\n\n    NOTE: Some devices which may be assessed using this guide may have to\n    meet more stringent requirements to ensure patient safety. That is outside\n    of the scope of this guide.",
+        "description": "The level of battery charge for a device should be reported.\n\n    Reporting the battery charge level for a device enables an App to alert\n    a user that the device needs recharging.\n\n    NOTE: Some devices which may be assessed using this guide may have to\n    meet more stringent requirements to ensure patient safety. That is outside\n    of the scope of this guide.\n\nSee [System Data: Battery Charge](system_attributes.html#battery_charge)",
         "exampleBoolean": false
       },
       {
@@ -57,7 +57,7 @@
           "reference": "StructureDefinition/BpMeasurementRecommendations"
         },
         "name": "Bp Measurement Recommendations",
-        "description": "The system shall be able to capture and report a blood pressure measurement from the user.",
+        "description": "The system shall be able to capture and report a blood pressure measurement from the user.\n\nSee [Basic Vital Signs: Blood Pressure Measurement](basic_blood_pressure.html#bp_measurement)",
         "exampleBoolean": false
       },
       {
@@ -65,7 +65,7 @@
           "reference": "StructureDefinition/BpMeasurementRequirements"
         },
         "name": "Bp Measurement Requirements",
-        "description": "The system shall be able to capture and report a blood pressure measurement from the user.",
+        "description": "The system shall be able to capture and report a blood pressure measurement from the user.\n\nSee [Basic Vital Signs: Blood Pressure Measurement](basic_blood_pressure.html#bp_measurement)",
         "exampleBoolean": false
       },
       {
@@ -73,7 +73,7 @@
           "reference": "StructureDefinition/ClinicalBpMeasurementRecommendations"
         },
         "name": "Clinical Bp Measurement Recommendations",
-        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.",
+        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.\n\nSee [Clinical Vital Signs: Clinical Blood Pressure Measurement](clinical_blood_pressure.html#clinical_bp_measurement)",
         "exampleBoolean": false
       },
       {
@@ -81,7 +81,7 @@
           "reference": "StructureDefinition/ClinicalBpMeasurementRequirements"
         },
         "name": "Clinical Bp Measurement Requirements",
-        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.",
+        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.\n\nSee [Clinical Vital Signs: Clinical Blood Pressure Measurement](clinical_blood_pressure.html#clinical_bp_measurement)",
         "exampleBoolean": false
       },
       {
@@ -89,7 +89,7 @@
           "reference": "StructureDefinition/ClinicalHeartRateMeasurementRequirements"
         },
         "name": "Clinical Heart Rate Measurement Requirements",
-        "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Heart Rate Measurement](clinical_heart_rate.html#clinical_heart_rate_measurement)",
         "exampleBoolean": false
       },
       {
@@ -97,7 +97,7 @@
           "reference": "StructureDefinition/ClinicalHeightAndWeightMeasurementRecommendations"
         },
         "name": "Clinical Height And Weight Measurement Recommendations",
-        "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.",
+        "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.\n\nSee [Clinical Vital Signs: Capture of Clinical Data With Weight Measurement.](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
         "exampleBoolean": false
       },
       {
@@ -105,7 +105,7 @@
           "reference": "StructureDefinition/ClinicalHeightAndWeightMeasurementRequirements"
         },
         "name": "Clinical Height And Weight Measurement Requirements",
-        "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.",
+        "description": "The system shall be able to capture and record other data to facilitate interpretation of\n    height and weight measurements.\n\nSee [Clinical Vital Signs: Capture of Clinical Data With Weight Measurement.](clinical_height_and_weight.html#clinical_height_and_weight_measurement)",
         "exampleBoolean": false
       },
       {
@@ -113,7 +113,7 @@
           "reference": "StructureDefinition/ClinicalRespirationRateRequirements"
         },
         "name": "Clinical Respiration Rate Requirements",
-        "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Clinical Respiration Rate Measurement](clinical_respiration.html#clinical_respiration_rate)",
         "exampleBoolean": false
       },
       {
@@ -121,7 +121,7 @@
           "reference": "StructureDefinition/ClinicalSpo2MeasurementRequirements"
         },
         "name": "Clinical Spo2 Measurement Requirements",
-        "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Oxygen Saturation Measurement](clinical_spo2.html#clinical_spo2_measurement)",
         "exampleBoolean": false
       },
       {
@@ -129,7 +129,7 @@
           "reference": "StructureDefinition/ClinicalTemperatureMeasurementRequirements"
         },
         "name": "Clinical Temperature Measurement Requirements",
-        "description": "The system shall be able to capture and report additional data used for clinical interpretation.",
+        "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nSee [Clinical Vital Signs: Temperature Measurement](clinical_temperature.html#clinical_temperature_measurement)",
         "exampleBoolean": false
       },
       {
@@ -137,7 +137,7 @@
           "reference": "StructureDefinition/CommentRecommendations"
         },
         "name": "Comment Recommendations",
-        "description": "An App should allow for recording of additional user supplied data.\n\n  Users of a device or app for tracking a particular type of measurement may also want to keep track of additional data\n  for a measure that is not captured by the device, such as recent physical activity that might affect vital signs readings,\n  or type of blood glucose reading with respect to time of most recent meal, or site used for a blood pressure reading.",
+        "description": "An App should allow for recording of additional user supplied data.\n\n  Users of a device or app for tracking a particular type of measurement may also want to keep track of additional data\n  for a measure that is not captured by the device, such as recent physical activity that might affect vital signs readings,\n  or type of blood glucose reading with respect to time of most recent meal, or site used for a blood pressure reading.\n\nSee [General Observations: Comments and Additional Data](general_requirements.html#comment)",
         "exampleBoolean": false
       },
       {
@@ -145,7 +145,7 @@
           "reference": "StructureDefinition/CorrectionsRequirements"
         },
         "name": "Corrections Requirements",
-        "description": "An App should allow for the user to correct or \"delete\" incorrect data.\n\n  Users of a device or app for shall have the ability to correct or remove incorrect data.",
+        "description": "An App should allow for the user to correct or \"delete\" incorrect data.\n\n  Users of a device or app for shall have the ability to correct or remove incorrect data.\n\nSee [General Observations: Corrections and Deletions](general_requirements.html#corrections)",
         "exampleBoolean": false
       },
       {
@@ -153,7 +153,7 @@
           "reference": "StructureDefinition/DeviceIdentifierRecommendations"
         },
         "name": "Device Identifier Recommendations",
-        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.",
+        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
         "exampleBoolean": false
       },
       {
@@ -161,7 +161,7 @@
           "reference": "StructureDefinition/DeviceIdentifierRequirements"
         },
         "name": "Device Identifier Requirements",
-        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.",
+        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
         "exampleBoolean": false
       },
       {
@@ -169,7 +169,7 @@
           "reference": "StructureDefinition/DeviceTypeRequirements"
         },
         "name": "Device Type Requirements",
-        "description": "The type of device performing the measure shall be able to be determined from the <System>\nNOTE: If a device can be associated with a Universal Device Identifier (UDI), it meets the criteria for this\nrequirement, because this information is included in device metadata accessible via UDI.",
+        "description": "The type of device performing the measure shall be able to be determined from the <System>\nNOTE: If a device can be associated with a Universal Device Identifier (UDI), it meets the criteria for this\nrequirement, because this information is included in device metadata accessible via UDI.\n\nSee [Clinical Vital Signs: Type of Device is Available](general_clinical_measurements.html#device_type)",
         "exampleBoolean": false
       },
       {
@@ -177,7 +177,7 @@
           "reference": "StructureDefinition/HeartRateMeasurementRecommendations"
         },
         "name": "Heart Rate Measurement Recommendations",
-        "description": "The system shall be able to capture and report a heart rate measurement from the user.",
+        "description": "The system shall be able to capture and report a heart rate measurement from the user.\n\nSee [Basic Vital Signs: Heart Rate Measurement](basic_heart_rate.html#heart_rate_measurement)",
         "exampleBoolean": false
       },
       {
@@ -185,7 +185,7 @@
           "reference": "StructureDefinition/HeartRateMeasurementRequirements"
         },
         "name": "Heart Rate Measurement Requirements",
-        "description": "The system shall be able to capture and report a heart rate measurement from the user.",
+        "description": "The system shall be able to capture and report a heart rate measurement from the user.\n\nSee [Basic Vital Signs: Heart Rate Measurement](basic_heart_rate.html#heart_rate_measurement)",
         "exampleBoolean": false
       },
       {
@@ -193,7 +193,7 @@
           "reference": "StructureDefinition/HeightMeasurementRecommendations"
         },
         "name": "Height Measurement Recommendations",
-        "description": "The system shall be able to capture and report a height measurement from the user.",
+        "description": "The system shall be able to capture and report a height measurement from the user.\n\nSee [Basic Vital Signs: Height Measurement](basic_height_and_weight.html#height_measurement)",
         "exampleBoolean": false
       },
       {
@@ -201,7 +201,7 @@
           "reference": "StructureDefinition/HeightMeasurementRequirements"
         },
         "name": "Height Measurement Requirements",
-        "description": "The system shall be able to capture and report a height measurement from the user.",
+        "description": "The system shall be able to capture and report a height measurement from the user.\n\nSee [Basic Vital Signs: Height Measurement](basic_height_and_weight.html#height_measurement)",
         "exampleBoolean": false
       },
       {
@@ -209,7 +209,7 @@
           "reference": "StructureDefinition/ManualEntryDetectableRequirements"
         },
         "name": "Manual Entry Detectable Requirements",
-        "description": "If an app enables recording of outside measurements that app shall identify\nmeasures as that have been manually entered by the user of the app, and the\nuser shall be identified also.",
+        "description": "If an app enables recording of outside measurements that app shall identify\nmeasures as that have been manually entered by the user of the app, and the\nuser shall be identified also.\n\nSee [Functional Requirements: Identify Manually Entered Data and the Author of it](attribution.html#manual_entry_detectable)",
         "exampleBoolean": false
       },
       {
@@ -217,7 +217,7 @@
           "reference": "StructureDefinition/MeasurementDeviceIdentifiedRequirements"
         },
         "name": "Measurement Device Identified Requirements",
-        "description": "The device that performs the measurement shall be uniquely identified and that identifier\n    shall persist throughout that devices lifetime.\n\nEach type of device has attributes with regard to precision, accuracy and quality that can impact\nthe interpretation of measurements taken by the device. Knowledge of the device helps greatly in\ninterpreting the results.",
+        "description": "The device that performs the measurement shall be uniquely identified and that identifier\n    shall persist throughout that devices lifetime.\n\nEach type of device has attributes with regard to precision, accuracy and quality that can impact\nthe interpretation of measurements taken by the device. Knowledge of the device helps greatly in\ninterpreting the results.\n\nSee [Functional Requirements: Measurement Device Can be Identified](attribution.html#measurement_device_identified)",
         "exampleBoolean": false
       },
       {
@@ -225,7 +225,7 @@
           "reference": "StructureDefinition/NetworkAddressRecommendations"
         },
         "name": "Network Address Recommendations",
-        "description": "The network address of a device should be reported.\n\n    The network address can be the physical network address (e.g., MAC address) or other identifier\n    assigned to uniquely identify the device on a network (wired or unwired)",
+        "description": "The network address of a device should be reported.\n\n    The network address can be the physical network address (e.g., MAC address) or other identifier\n    assigned to uniquely identify the device on a network (wired or unwired)\n\nSee [System Data: Network Address](system_attributes.html#network_address)",
         "exampleBoolean": false
       },
       {
@@ -233,7 +233,7 @@
           "reference": "StructureDefinition/PhysicalActivityAndSleepRecommendations"
         },
         "name": "Physical Activity And Sleep Recommendations",
-        "description": "The system shall record the duration and other qualities of physical activities that it can detect.",
+        "description": "The system shall record the duration and other qualities of physical activities that it can detect.\n\nSee [Observations: Physical Activities Including Sleep is Measured](physical_activity_and_sleep.html#physical_activity_and_sleep)",
         "exampleBoolean": false
       },
       {
@@ -241,7 +241,7 @@
           "reference": "StructureDefinition/PhysicalActivityAndSleepRequirements"
         },
         "name": "Physical Activity And Sleep Requirements",
-        "description": "The system shall record the duration and other qualities of physical activities that it can detect.",
+        "description": "The system shall record the duration and other qualities of physical activities that it can detect.\n\nSee [Observations: Physical Activities Including Sleep is Measured](physical_activity_and_sleep.html#physical_activity_and_sleep)",
         "exampleBoolean": false
       },
       {
@@ -249,7 +249,7 @@
           "reference": "StructureDefinition/RespirationRateRecommendations"
         },
         "name": "Respiration Rate Recommendations",
-        "description": "The system shall be able to capture and report a respiration rate measurement from the user.",
+        "description": "The system shall be able to capture and report a respiration rate measurement from the user.\n\nSee [Basic Vital Signs: Respiration Rate Measurement](basic_respiration.html#respiration_rate)",
         "exampleBoolean": false
       },
       {
@@ -257,7 +257,7 @@
           "reference": "StructureDefinition/RespirationRateRequirements"
         },
         "name": "Respiration Rate Requirements",
-        "description": "The system shall be able to capture and report a respiration rate measurement from the user.",
+        "description": "The system shall be able to capture and report a respiration rate measurement from the user.\n\nSee [Basic Vital Signs: Respiration Rate Measurement](basic_respiration.html#respiration_rate)",
         "exampleBoolean": false
       },
       {
@@ -265,7 +265,7 @@
           "reference": "StructureDefinition/SoftwareVersionRecommendations"
         },
         "name": "Software Version Recommendations",
-        "description": "The Software Version associated with a system should be available.\n\n    The Software Version can be the physical network address (e.g., MAC address) or other identifier\n    assigned to uniquely identify the device on a network (wired or unwired)",
+        "description": "The Software Version associated with a system should be available.\n\n    The Software Version can be the physical network address (e.g., MAC address) or other identifier\n    assigned to uniquely identify the device on a network (wired or unwired)\n\nSee [System Data: Software Version](system_attributes.html#software_version)",
         "exampleBoolean": false
       },
       {
@@ -273,7 +273,7 @@
           "reference": "StructureDefinition/Spo2MeasurementRecommendations"
         },
         "name": "Spo2 Measurement Recommendations",
-        "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.",
+        "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.\n\nSee [Basic Vital Signs: Oxygen Saturation Measurement](basic_spo2.html#spo2_measurement)",
         "exampleBoolean": false
       },
       {
@@ -281,7 +281,7 @@
           "reference": "StructureDefinition/Spo2MeasurementRequirements"
         },
         "name": "Spo2 Measurement Requirements",
-        "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.",
+        "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.\n\nSee [Basic Vital Signs: Oxygen Saturation Measurement](basic_spo2.html#spo2_measurement)",
         "exampleBoolean": false
       },
       {
@@ -289,7 +289,7 @@
           "reference": "StructureDefinition/StandardTerminologyUsedRecommendations"
         },
         "name": "Standard Terminology Used Recommendations",
-        "description": "If codes are present in measurements, standard terminology should be used for observation codes, values and units.",
+        "description": "If codes are present in measurements, standard terminology should be used for observation codes, values and units.\n\nSee [General Observations: Standards Terminology is Used for Measurements](coded_observations.html#standard_terminology_used)",
         "exampleBoolean": false
       },
       {
@@ -297,7 +297,7 @@
           "reference": "StructureDefinition/TemperatureMeasurementRecommendations"
         },
         "name": "Temperature Measurement Recommendations",
-        "description": "The system shall be able to capture and report a Temperature measurement from the user.",
+        "description": "The system shall be able to capture and report a Temperature measurement from the user.\n\nSee [Basic Vital Signs: Temperature Measurement](basic_temperature.html#temperature_measurement)",
         "exampleBoolean": false
       },
       {
@@ -305,7 +305,7 @@
           "reference": "StructureDefinition/TemperatureMeasurementRequirements"
         },
         "name": "Temperature Measurement Requirements",
-        "description": "The system shall be able to capture and report a Temperature measurement from the user.",
+        "description": "The system shall be able to capture and report a Temperature measurement from the user.\n\nSee [Basic Vital Signs: Temperature Measurement](basic_temperature.html#temperature_measurement)",
         "exampleBoolean": false
       },
       {
@@ -313,7 +313,7 @@
           "reference": "StructureDefinition/TimeStampOrDurationRequirements"
         },
         "name": "Time Stamp Or Duration Requirements",
-        "description": "The time stamp or time period associated with a measurement shall be recorded and reported for each measurement taken,\n and the time when the measure was recorded is also tracked.\n\n Note: These requirements are checked for each measurement for which the system is\n being assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.",
+        "description": "The time stamp or time period associated with a measurement shall be recorded and reported for each measurement taken,\n and the time when the measure was recorded is also tracked.\n\n Note: These requirements are checked for each measurement for which the system is\n being assessed.  If the requirement fails for **ANY** measurement, the requirement is considered to not be met.\n\nSee [General Observations: A Time Stamp or Time Period is Recorded for Each Measurement](general_requirements.html#time_stamp_or_duration)",
         "exampleBoolean": false
       },
       {
@@ -321,7 +321,7 @@
           "reference": "StructureDefinition/UniqueUserIdentityRequirements"
         },
         "name": "Unique User Identity Requirements",
-        "description": "An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used",
+        "description": "An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used\n\nSee [User Data: User Unique Identity](user_demographics.html#unique_user_identity)",
         "exampleBoolean": false
       },
       {
@@ -329,7 +329,7 @@
           "reference": "StructureDefinition/UnitsRecommendations"
         },
         "name": "Units Recommendations",
-        "description": "Fixed values used for units returned by the device or communicated by the App shall be documented.",
+        "description": "Fixed values used for units returned by the device or communicated by the App shall be documented.\n\nSee [General Observations: Value Sets for Units Used in Measurements Are Documented and Can be Mapped to Standards](numeric_observations.html#units)",
         "exampleBoolean": false
       },
       {
@@ -337,7 +337,7 @@
           "reference": "StructureDefinition/UserBirthSexRequirements"
         },
         "name": "User Birth Sex Requirements",
-        "description": "If the user's birth sex is essential to compute a measurement, the App/Infrastructure shall be able to associate/report the birth sex of the user.",
+        "description": "If the user's birth sex is essential to compute a measurement, the App/Infrastructure shall be able to associate/report the birth sex of the user.\n\nSee [User Data: Birth Sex](user_demographics.html#user_birth_sex)",
         "exampleBoolean": false
       },
       {
@@ -345,7 +345,7 @@
           "reference": "StructureDefinition/UserContactInformationRequirements"
         },
         "name": "User Contact Information Requirements",
-        "description": "The App or Infrastructure shall be able to associate the user's contact\ninformation (e.g., e-mail, address, phone number) with the user.",
+        "description": "The App or Infrastructure shall be able to associate the user's contact\ninformation (e.g., e-mail, address, phone number) with the user.\n\nSee [User Data: User Contact Information](user_demographics.html#user_contact_information)",
         "exampleBoolean": false
       },
       {
@@ -353,7 +353,7 @@
           "reference": "StructureDefinition/UserDateOfBirthRequirements"
         },
         "name": "User Date Of Birth Requirements",
-        "description": "The App and Infrastructure shall be able to associate a birth date with the patient.",
+        "description": "The App and Infrastructure shall be able to associate a birth date with the patient.\n\nSee [User Data: Date of Birth](user_demographics.html#user_date_of_birth)",
         "exampleBoolean": false
       },
       {
@@ -361,7 +361,7 @@
           "reference": "StructureDefinition/UserGenderIdentityRecommendations"
         },
         "name": "User Gender Identity Recommendations",
-        "description": "The App and Infrastructure should be able to associate a gender identity (e.g., male, female, trans, non-binary)\nwith the patient.",
+        "description": "The App and Infrastructure should be able to associate a gender identity (e.g., male, female, trans, non-binary)\nwith the patient.\n\nSee [User Data: Gender Identity](user_attributes_and_preferences.html#user_gender_identity)",
         "exampleBoolean": false
       },
       {
@@ -369,7 +369,7 @@
           "reference": "StructureDefinition/UserHeightRequirements"
         },
         "name": "User Height Requirements",
-        "description": "If User Height is essential to compute an observation the app/infra shall be\nable to capture/report the user's height as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for height include distance traveled or calories used during an\nactivity (e.g., steps or stairs climbed)",
+        "description": "If User Height is essential to compute an observation the app/infra shall be\nable to capture/report the user's height as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for height include distance traveled or calories used during an\nactivity (e.g., steps or stairs climbed)\n\nSee [User Data: User Height](user_attributes_and_preferences.html#user_height)",
         "exampleBoolean": false
       },
       {
@@ -377,7 +377,7 @@
           "reference": "StructureDefinition/UserNameRequirements"
         },
         "name": "User Name Requirements",
-        "description": "The App or Infrastructure shall be able to associate the user's name with the user.",
+        "description": "The App or Infrastructure shall be able to associate the user's name with the user.\n\nSee [User Data: User Name](user_demographics.html#user_name)",
         "exampleBoolean": false
       },
       {
@@ -385,7 +385,7 @@
           "reference": "StructureDefinition/UserWeightRequirements"
         },
         "name": "User Weight Requirements",
-        "description": "If the User's weight is essential to compute an observation the app/infra shall\n    be able to capture/report the user's weight as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for weight include calories used during an activity (e.g., steps or stairs climbed)",
+        "description": "If the User's weight is essential to compute an observation the app/infra shall\n    be able to capture/report the user's weight as an attribute of the user .\n\nNOTE: Information is considered to be essential to compute an observation\nwhen the value of that observation would change if the information changes.\nExamples for weight include calories used during an activity (e.g., steps or stairs climbed)\n\nSee [User Data: User Weight](user_attributes_and_preferences.html#user_weight)",
         "exampleBoolean": false
       },
       {
@@ -393,7 +393,7 @@
           "reference": "StructureDefinition/WeightMeasurementRecommendations"
         },
         "name": "Weight Measurement Recommendations",
-        "description": "The system shall be able to capture and report a weight measurement from the user.",
+        "description": "The system shall be able to capture and report a weight measurement from the user.\n\nSee [Basic Vital Signs: Weight Measurement](basic_height_and_weight.html#weight_measurement)",
         "exampleBoolean": false
       },
       {
@@ -401,7 +401,7 @@
           "reference": "StructureDefinition/WeightMeasurementRequirements"
         },
         "name": "Weight Measurement Requirements",
-        "description": "The system shall be able to capture and report a weight measurement from the user.",
+        "description": "The system shall be able to capture and report a weight measurement from the user.\n\nSee [Basic Vital Signs: Weight Measurement](basic_height_and_weight.html#weight_measurement)",
         "exampleBoolean": false
       },
       {
@@ -430,10 +430,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BodyTempuratureUnits"
+          "reference": "ValueSet/BodyTemperatureUnits"
         },
-        "name": "Body Tempurature Units",
-        "description": "Allowed values for body tempurature",
+        "name": "Body Temperature Units",
+        "description": "Allowed values for body temperature",
         "exampleBoolean": false
       },
       {

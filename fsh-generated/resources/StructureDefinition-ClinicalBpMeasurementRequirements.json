@@ -16,7 +16,7 @@
   "name": "ClinicalBpMeasurementRequirements",
   "title": "Clinical Bp Measurement Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.",
+  "description": "The system shall be able to capture and report additional data used for clinical interpretation.\n\nTo supplement this blood pressure observation, the mean arterial blood pressure should be computed, and the measurement site and\ncuff size (where applicable) shall be reported.\n\nSee [Clinical Vital Signs: Clinical Blood Pressure Measurement](clinical_blood_pressure.html#clinical_bp_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -84,7 +84,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each blood pressure measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_blood_pressure.html#report-measurement-site)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each blood pressure measurement\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_blood_pressure.html#clinical_bp_measurement)",
         "min": 1,
         "binding": {
           "strength": "required",

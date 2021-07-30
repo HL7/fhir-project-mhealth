@@ -1,5 +1,5 @@
 The Sharing Mechanism category ensures that sharing is possible and that the mechanism is described.
-###<span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='sharing_supported'>Feature: A System Shall Support Either Push or Pull Sharing.</a>
+### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='sharing_supported'>Feature: A System Shall Support Either Push or Pull Sharing.</a>
 
 NOTE: Reference to third party components can be made in evaluation of this requirement.
 In cases when a system supports storage in a third party component that enables push or pull
@@ -10,7 +10,7 @@ Google Health are examples of such third party (mobile operating system) compone
 provide such capabilities.
 
 
-####<a name='sharing'>Scenario: Sharing</a>
+#### <a name='sharing'>Scenario: Sharing</a>
 
 Sharing of information with other parties is supported by the system.
 
@@ -24,10 +24,24 @@ THEN
 : there is a documented method for push or pull sharing in <i>&lt;Documentation&gt;</i>
 
 
-###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='push_sharing'>Feature: The System Should be Able to Push New Data to Another Party That the User Has Shared With.</a>
+### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='push_sharing'>Feature: The System Should be Able to Push New Data to Another Party That the User Has Shared With.</a>
 
 
-####<a name='push-sharing'>Scenario: Push Sharing</a>
+#### <a name='sharing'>Scenario: Sharing</a>
+
+Sharing of information with other parties is supported by the system.
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+WHEN
+: when the <i>&lt;Documentation&gt;</i> for <i>&lt;System&gt;</i> is reviewed
+
+THEN
+: there is a documented method for push or pull sharing in <i>&lt;Documentation&gt;</i>
+
+
+#### <a name='push-sharing'>Scenario: Push Sharing</a>
 
 The system can send (push) data to other parties in electronic form.
 
@@ -47,12 +61,46 @@ THEN
 : it is sent to <i>&lt;Party&gt;</i>
 
 
-###<span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='pull_sharing'>Feature: Other Parties That the User Has Shared With Should be Able to Pull Data From the System.</a>
+### <span class='glyphicon text-info glyphicon-phone'/> <span class='glyphicon text-info glyphicon-cloud'/> <a name='pull_sharing'>Feature: Other Parties That the User Has Shared With Should be Able to Pull Data From the System.</a>
 
 
-####<a name='pull-sharing'>Scenario: Pull Sharing</a>
+#### <a name='sharing'>Scenario: Sharing</a>
 
-A third party can query for and recieve (pull) new data after being authorized by a user.
+Sharing of information with other parties is supported by the system.
+
+GIVEN
+: a <i>&lt;System&gt;</i>
+
+WHEN
+: when the <i>&lt;Documentation&gt;</i> for <i>&lt;System&gt;</i> is reviewed
+
+THEN
+: there is a documented method for push or pull sharing in <i>&lt;Documentation&gt;</i>
+
+
+#### <a name='push-sharing'>Scenario: Push Sharing</a>
+
+The system can send (push) data to other parties in electronic form.
+
+GIVEN
+: a <i>&lt;System&gt;</i> supporting push sharing
+
+   AND
+   : a <i>&lt;User&gt;</i>
+
+   AND
+   : a <i>&lt;Party&gt;</i> the user has shared with
+
+WHEN
+: new <i>&lt;Data&gt;</i> for <i>&lt;User&gt;</i> has been collected
+
+THEN
+: it is sent to <i>&lt;Party&gt;</i>
+
+
+#### <a name='pull-sharing'>Scenario: Pull Sharing</a>
+
+A third party can query for and receive (pull) new data after being authorized by a user.
 
 GIVEN
 : a <i>&lt;System&gt;</i> supporting pull sharing

@@ -16,7 +16,7 @@ Given a <Device>
 Scenario: Value Sets should be mappable to Standard Terminologies
 
 Given a <Value Set> used for a Device or App
- When the <Value Set> is compared to standard terminologies (e.g., SNOMED CT&reg;, LOINC&reg;, UCUM, et cetera)
+ When the <Value Set> is compared to standard terminologies (e.g., SNOMED CT&reg;, LOINC&reg;)
  Then the values can be readily mapped.
 
 

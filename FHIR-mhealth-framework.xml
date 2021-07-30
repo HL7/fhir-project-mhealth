@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://example.org/fhir/STU1" ciUrl="http://build.fhir.org/ig/example/example-ig" defaultVersion="0.0.1" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-project-mhealth" url="http://hl7.org/fhir/uv/mhealth-framework">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/mhealth-framework/2020May" ciUrl="http://build.fhir.org/ig/example/example-ig" defaultVersion="0.0.1" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-project-mhealth" url="http://hl7.org/fhir/uv/mhealth-framework">
 <version code="current" url="http://build.fhir.org/ig/example/example-ig"/>
-<version code="0.0.1" url="http://example.org/fhir/STU1"/>
+<version code="0.0.1" url="http://hl7.org/fhir/uv/mhealth-framework/2020May"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -9,7 +9,8 @@
 <artifact id="ValueSet/BloodPressureMeasurements" key="ValueSet-BloodPressureMeasurements" name="Blood Pressure Measurements"/>
 <artifact id="ValueSet/BodyHeight" key="ValueSet-BodyHeight" name="Body Height"/>
 <artifact id="ValueSet/BodyHeightUnits" key="ValueSet-BodyHeightUnits" name="Body Height Units"/>
-<artifact id="ValueSet/BodyTempuratureUnits" key="ValueSet-BodyTempuratureUnits" name="Body Tempurature Units"/>
+<artifact id="ValueSet/BodyTemperatureUnits" key="ValueSet-BodyTemperatureUnits" name="Body Temperature Units"/>
+<artifact deprecated="true" id="ValueSet/BodyTempuratureUnits" key="ValueSet-BodyTempuratureUnits" name="Body Tempurature Units"/>
 <artifact id="ValueSet/BodyWeightUnits" key="ValueSet-BodyWeightUnits" name="Body Weight Units"/>
 <artifact id="StructureDefinition/BpMeasurementRecommendations" key="StructureDefinition-BpMeasurementRecommendations" name="Bp Measurement Recommendations"/>
 <artifact id="StructureDefinition/BpMeasurementRequirements" key="StructureDefinition-BpMeasurementRequirements" name="Bp Measurement Requirements"/>

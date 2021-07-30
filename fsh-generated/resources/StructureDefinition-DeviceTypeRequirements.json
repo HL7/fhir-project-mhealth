@@ -16,7 +16,7 @@
   "name": "DeviceTypeRequirements",
   "title": "Device Type Requirements",
   "status": "active",
-  "description": "The type of device performing the measure shall be able to be determined from the <System>\nNOTE: If a device can be associated with a Universal Device Identifier (UDI), it meets the criteria for this\nrequirement, because this information is included in device metadata accessible via UDI.",
+  "description": "The type of device performing the measure shall be able to be determined from the <System>\nNOTE: If a device can be associated with a Universal Device Identifier (UDI), it meets the criteria for this\nrequirement, because this information is included in device metadata accessible via UDI.\n\nSee [Clinical Vital Signs: Type of Device is Available](general_clinical_measurements.html#device_type)",
   "jurisdiction": [
     {
       "coding": [
@@ -54,16 +54,8 @@
   "differential": {
     "element": [
       {
-        "id": "Device.deviceName",
-        "path": "Device.deviceName",
-        "requirements": "Information about the type of device is available through the device record.\n\nSee [Clinical Vital Signs: Type of Device](general_clinical_measurements.html#type-of-device)",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.modelNumber",
-        "path": "Device.modelNumber",
-        "requirements": "Information about the type of device is available through the device record.\n\nSee [Clinical Vital Signs: Type of Device](general_clinical_measurements.html#type-of-device)",
-        "mustSupport": true
+        "id": "Device",
+        "path": "Device"
       }
     ]
   }

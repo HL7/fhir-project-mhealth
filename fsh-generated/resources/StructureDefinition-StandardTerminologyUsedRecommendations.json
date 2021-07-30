@@ -16,7 +16,7 @@
   "name": "StandardTerminologyUsedRecommendations",
   "title": "Standard Terminology Used Recommendations",
   "status": "active",
-  "description": "If codes are present in measurements, standard terminology should be used for observation codes, values and units.",
+  "description": "If codes are present in measurements, standard terminology should be used for observation codes, values and units.\n\nSee [General Observations: Standards Terminology is Used for Measurements](coded_observations.html#standard_terminology_used)",
   "jurisdiction": [
     {
       "coding": [
@@ -70,40 +70,7 @@
     "element": [
       {
         "id": "Observation",
-        "path": "Observation",
-        "constraint": [
-          {
-            "key": "StandardTerminologyUsedCodesDescribingObservationsUseLoincOr-1",
-            "severity": "warning",
-            "human": "Measurements **SHOULD** be described using LOINC and/or SNOMED CT",
-            "expression": "Observation.where(code.system = 'http://snomed.info/sct' or code.system = 'http://loinc.org')",
-            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/StandardTerminologyUsedRecommendations"
-          },
-          {
-            "key": "StandardTerminologyUsedCodedValuesUseSnomedCtOrIcd-10-1",
-            "severity": "warning",
-            "human": "Result values in a measurement **SHOULD** use SNOMED CT or ICD-10\nNOTE: ICD-10 may include national variants (e.g., ICD-10-CM in the US)",
-            "expression": "valueCodableConcept.where(code.system = 'http://snomed.info/sct' or code.system.startsWith('http://hl7.org/fhir/sid/icd-10'))",
-            "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/StandardTerminologyUsedRecommendations"
-          }
-        ]
-      },
-      {
-        "id": "Observation.valueQuantity",
-        "path": "Observation.valueQuantity",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ]
-      },
-      {
-        "id": "Observation.valueQuantity.system",
-        "path": "Observation.valueQuantity.system",
-        "requirements": "Units **SHOULD** be coded using UCUM\n\nSee [General Observations: Units Are Coded Using the UCUM Unit Terminology System](coded_observations.html#units-are-coded-using-the-ucum-unit-terminology-system)",
-        "patternUri": "http://unitsofmeasure.org"
+        "path": "Observation"
       }
     ]
   }

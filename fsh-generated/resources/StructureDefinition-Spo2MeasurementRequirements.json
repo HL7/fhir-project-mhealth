@@ -16,7 +16,7 @@
   "name": "Spo2MeasurementRequirements",
   "title": "Spo2 Measurement Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.",
+  "description": "The system shall be able to capture and report a Oxygen Saturation measurement from the user.\n\nSee [Basic Vital Signs: Oxygen Saturation Measurement](basic_spo2.html#spo2_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -71,7 +71,7 @@
       {
         "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
-        "requirements": "The precision and units of an oxygen saturation measurement **SHALL** be appropriate to the measurement.\n\nSee [Basic Vital Signs: Precision and Units Are Appropriate for Oxygen Saturation](basic_spo2.html#precision-and-units-are-appropriate-for-oxygen-saturation)",
+        "requirements": "The precision and units of an oxygen saturation measurement **SHALL** be appropriate to the measurement.\n\nSee [Basic Vital Signs: Precision and Units Are Appropriate for Oxygen Saturation](basic_spo2.html#spo2_measurement)",
         "min": 0,
         "max": "1",
         "type": [

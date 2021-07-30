@@ -16,7 +16,7 @@
   "name": "UniqueUserIdentityRequirements",
   "title": "Unique User Identity Requirements",
   "status": "active",
-  "description": "An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used",
+  "description": "An app/infrastructure shall be able to generate/report the unique identifier for a given user association with a measurement.\n\nThis scenario demonstrates the ability of an App to associate a user with an identifier, and in the\nprocess of storing the measurement has associated the measurement with the user's identity.\n\nNOTE: Different kinds of Unique identifiers may be used\n\nSee [User Data: User Unique Identity](user_demographics.html#unique_user_identity)",
   "jurisdiction": [
     {
       "coding": [
@@ -64,11 +64,8 @@
   "differential": {
     "element": [
       {
-        "id": "Patient.identifier",
-        "path": "Patient.identifier",
-        "requirements": "Each User is uniquely identified\n\nSee [User Data: Identifier Exists](user_demographics.html#identifier-exists)",
-        "min": 1,
-        "mustSupport": true
+        "id": "Patient",
+        "path": "Patient"
       }
     ]
   }

@@ -16,7 +16,7 @@
   "name": "HeightMeasurementRequirements",
   "title": "Height Measurement Requirements",
   "status": "active",
-  "description": "The system shall be able to capture and report a height measurement from the user.",
+  "description": "The system shall be able to capture and report a height measurement from the user.\n\nSee [Basic Vital Signs: Height Measurement](basic_height_and_weight.html#height_measurement)",
   "jurisdiction": [
     {
       "coding": [
@@ -69,18 +69,9 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "requirements": "The measurement **SHOULD** be coded in LOINC.\n\nSee [Basic Vital Signs: LOINC Coded Height Measurement](basic_height_and_weight.html#loinc-coded-height-measurement)",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyHeight"
-        }
-      },
-      {
         "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
-        "requirements": "The precision and units of a height (or length) measurement **SHALL** be appropriate to the measurement.\n\nSee [Basic Vital Signs: Precision and Units Are Appropriate for Height](basic_height_and_weight.html#precision-and-units-are-appropriate-for-height)",
+        "requirements": "The precision and units of a height (or length) measurement **SHALL** be appropriate to the measurement.\n\nSee [Basic Vital Signs: Precision and Units Are Appropriate for Height](basic_height_and_weight.html#height_measurement)",
         "min": 0,
         "max": "1",
         "type": [
@@ -97,21 +88,6 @@
             "source": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/HeightMeasurementRequirements"
           }
         ]
-      },
-      {
-        "id": "Observation.valueQuantity.system",
-        "path": "Observation.valueQuantity.system",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Height Units](basic_height_and_weight.html#ucum-coded-height-units)",
-        "patternUri": "http://unitsofmeasure.org"
-      },
-      {
-        "id": "Observation.valueQuantity.code",
-        "path": "Observation.valueQuantity.code",
-        "requirements": "The measurement **SHOULD** use units coded in UCUM.\n\nSee [Basic Vital Signs: UCUM Coded Height Units](basic_height_and_weight.html#ucum-coded-height-units)",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/uv/mhealth-framework/ValueSet/BodyHeightUnits"
-        }
       }
     ]
   }
