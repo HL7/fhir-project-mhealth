@@ -10,7 +10,7 @@ Feature: Battery Charge
     of the scope of this guide.
 
 Scenario: Battery Charge can be Accessed
-	Battery charge status can be accessed on devices which have a battery.
+	Battery charge status can be accessed on devices that have a battery.
 
     Given A <Device Record>
     And a <Charge Level>

@@ -1,7 +1,7 @@
 Feature: Device can be Identified
     The device that performs a measurement shall be uniquely identified.
 
-Each type of device has attributes with regard to precision, accuracy and quality which
+Each type of device has attributes with regard to precision, accuracy and quality that
 can impact the interpretation of measurements taken by the device.  Knowledge of the
 device helps greatly in interpreting the results.
 

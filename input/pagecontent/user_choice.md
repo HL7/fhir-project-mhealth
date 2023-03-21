@@ -145,7 +145,7 @@ THEN
 
 #### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user-requests-sharing-with-another-user-or-third-party.'>Scenario: User Requests Sharing With Another User or Third Party.</a>
 
-A user **SHALL** be able to share data with others of their choosing.
+A user **SHALL** be able to share user selected data with others of their choosing.
 
 GIVEN
 : A <i>&lt;User&gt;</i>
@@ -191,4 +191,21 @@ WHEN
 
 THEN
 : <i>&lt;Party&gt;</i> can no longer access the user data (both current and historical).
+
+
+#### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-cloud'/> <a name='user-can-request-a-list-of-users-or-third-party-with-whom-data-is-being-shared.'>Scenario: User Can Request a List of Users or Third Party With Whom Data is Being Shared.</a>
+
+A user **SHALL** be able to see who data is being shared with.
+
+GIVEN
+: A <i>&lt;User&gt;</i>
+
+   AND
+   : Other <i>&lt;Parties&gt;</i> (either users or third parties) which data can be shared with
+
+WHEN
+: The <i>&lt;User&gt;</i> requests a list of data sharing recipients
+
+THEN
+: The list of <i>&lt;Parties&gt;</i> is displayed
 

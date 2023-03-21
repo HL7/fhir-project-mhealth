@@ -18,7 +18,7 @@ Given An app <App> that supports a device <Device1> of a particular <Type>
 Scenario: Replacement device
 
 Patients may replace a broken, failed, lost or otherwise non-functional
-device with a new device of the same type, not lose their existing data maintained
+device with a new device of the similar type, not lose their existing data maintained
 in the app (e.g., all measures of a given kind may be treated as a single stream),
 and yet also be able to distinguish which device took which measurement.
 

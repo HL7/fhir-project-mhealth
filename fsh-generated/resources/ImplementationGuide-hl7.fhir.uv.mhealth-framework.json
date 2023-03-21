@@ -153,7 +153,7 @@
           "reference": "StructureDefinition/DeviceIdentifierRecommendations"
         },
         "name": "Device Identifier Recommendations",
-        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
+        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality that\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
         "exampleBoolean": false
       },
       {
@@ -161,7 +161,7 @@
           "reference": "StructureDefinition/DeviceIdentifierRequirements"
         },
         "name": "Device Identifier Requirements",
-        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality which\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
+        "description": "The device that performs a measurement shall be uniquely identified.\n\nEach type of device has attributes with regard to precision, accuracy and quality that\ncan impact the interpretation of measurements taken by the device.  Knowledge of the\ndevice helps greatly in interpreting the results.\n\nSee [System Data: Device Can be Identified](system_attributes.html#device_identifier)",
         "exampleBoolean": false
       },
       {
@@ -467,6 +467,138 @@
         "name": "Respiration Rate Units",
         "description": "Allowed values for heart rate",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Device/phd-74E8FFFEFF051C00.001C05FFE874"
+        },
+        "description": "Device Example",
+        "name": "Device Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/DeviceIdentifierRequirements"
+      },
+      {
+        "reference": {
+          "reference": "Observation/battery-charge"
+        },
+        "name": "Battery Charge Example (from PHD)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/blood-glucose"
+        },
+        "description": "This is a blood glucose example for the *US Core Observation Lab Profile*.",
+        "name": "Blood Glucose Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/blood-pressure"
+        },
+        "description": "An Example Blood Pressure Observation",
+        "name": "Example Blood Pressure Observation",
+        "exampleCanonical": "http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/BpMeasurementRequirements"
+      },
+      {
+        "reference": {
+          "reference": "Observation/bloodPress-1.0.1"
+        },
+        "name": "bloodPress-1.0.1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/bmi"
+        },
+        "description": "This is a BMI example for the *Vitalsigns Profile*.",
+        "name": "BMI Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/bp-data-absent"
+        },
+        "description": "This is a bp data absent example for the *Vitalsigns Profile* showing how to reprsesent blood pressure with a missing diastolic measurement.",
+        "name": "BP Example w/ Data Absent",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/heart-rate"
+        },
+        "description": "This is a heart rate example for the *Vitalsigns Profile*.",
+        "name": "Heart Rate Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/height"
+        },
+        "description": "This is a height example for the *Vitalsigns Profile*.",
+        "name": "Height Example",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/length"
+        },
+        "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
+        "name": "Length Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/phd-spo2"
+        },
+        "name": "SPO2 Example (from PHD)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/respiratory-rate"
+        },
+        "description": "This is a respiratory rate example for the *Vitalsigns Profile*.",
+        "name": "Respiration Rate Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/satO2-fiO2"
+        },
+        "description": "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.",
+        "name": "O2 SAT Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/temperature"
+        },
+        "description": "This is a temperature example for the *Vitalsigns Profile*.",
+        "name": "Temperature Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/weight"
+        },
+        "description": "This is a weight example for the *Vitalsigns Profile*.",
+        "name": "Weight Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "description": "This is a patient example for the *US Core Patient Profile*.",
+        "name": "Patient Example (from US Core)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/sisansarahId.1.2.3.4.5.6.7.8.10"
+        },
+        "name": "Second Patient Example (from PHD)",
+        "exampleBoolean": true
       }
     ],
     "page": {

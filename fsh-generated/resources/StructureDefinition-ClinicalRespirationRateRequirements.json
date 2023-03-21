@@ -71,7 +71,7 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "requirements": "The measurement site **SHALL** be able to be reported with each respiration rate measurement.\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_respiration.html#clinical_respiration_rate)",
+        "requirements": "The measurement site **SHALL** be able to be reported with each respiration rate measurement.\nRespiration rate, like many other vital signs, can be evaluated using different devices (e.g., chest strap, wrist strap, nasal sensor) and methods;\nthough most consumer devices use some form of chest strap today.\n\nSee [Clinical Vital Signs: Report Measurement Site](clinical_respiration.html#clinical_respiration_rate)",
         "min": 1,
         "binding": {
           "strength": "required",

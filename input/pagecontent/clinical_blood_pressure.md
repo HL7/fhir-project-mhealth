@@ -1,7 +1,7 @@
 The Clinical Blood Pressure category supports the reporting of additional measurements
 supporting clinical interpretation of results.
 
-For device type and characteristics data, see [general_clinical_measurements.html]
+For device type and characteristics data, see [General Clinical Measurements](general_clinical_measurements.html)
 ### <span class='glyphicon glyphicon-phone'/> <span class='glyphicon glyphicon-dashboard'/> <span class='glyphicon glyphicon-cloud'/> <a name='clinical_bp_measurement'>Feature: Clinical Blood Pressure Measurement</a>
 
 The system **SHALL** be able to capture and report additional data used for clinical interpretation.

@@ -5,7 +5,11 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Observation/bmi" key="Observation-bmi" name="BMI Example (from US Core)"/>
+<artifact id="Observation/bp-data-absent" key="Observation-bp-data-absent" name="BP Example w/ Data Absent"/>
+<artifact id="Observation/battery-charge" key="Observation-battery-charge" name="Battery Charge Example (from PHD)"/>
 <artifact id="StructureDefinition/BatteryChargeRecommendations" key="StructureDefinition-BatteryChargeRecommendations" name="Battery Charge Recommendations"/>
+<artifact id="Observation/blood-glucose" key="Observation-blood-glucose" name="Blood Glucose Example (from US Core)"/>
 <artifact id="ValueSet/BloodPressureMeasurements" key="ValueSet-BloodPressureMeasurements" name="Blood Pressure Measurements"/>
 <artifact id="ValueSet/BodyHeight" key="ValueSet-BodyHeight" name="Body Height"/>
 <artifact id="ValueSet/BodyHeightUnits" key="ValueSet-BodyHeightUnits" name="Body Height Units"/>
@@ -25,26 +29,37 @@
 <artifact id="StructureDefinition/CommentRecommendations" key="StructureDefinition-CommentRecommendations" name="Comment Recommendations"/>
 <artifact id="StructureDefinition/CorrectionsRequirements" key="StructureDefinition-CorrectionsRequirements" name="Corrections Requirements"/>
 <artifact id="ValueSet/CorrectionsAndDeletions" key="ValueSet-CorrectionsAndDeletions" name="Corrections and Deletions"/>
+<artifact id="Device/phd-74E8FFFEFF051C00.001C05FFE874" key="Device-phd-74E8FFFEFF051C00.001C05FFE874" name="Device Example"/>
 <artifact id="StructureDefinition/DeviceIdentifierRecommendations" key="StructureDefinition-DeviceIdentifierRecommendations" name="Device Identifier Recommendations"/>
 <artifact id="StructureDefinition/DeviceIdentifierRequirements" key="StructureDefinition-DeviceIdentifierRequirements" name="Device Identifier Requirements"/>
 <artifact id="StructureDefinition/DeviceTypeRequirements" key="StructureDefinition-DeviceTypeRequirements" name="Device Type Requirements"/>
+<artifact id="Observation/blood-pressure" key="Observation-blood-pressure" name="Example Blood Pressure Observation"/>
+<artifact id="Observation/heart-rate" key="Observation-heart-rate" name="Heart Rate Example (from US Core)"/>
 <artifact id="StructureDefinition/HeartRateMeasurementRecommendations" key="StructureDefinition-HeartRateMeasurementRecommendations" name="Heart Rate Measurement Recommendations"/>
 <artifact id="StructureDefinition/HeartRateMeasurementRequirements" key="StructureDefinition-HeartRateMeasurementRequirements" name="Heart Rate Measurement Requirements"/>
 <artifact id="ValueSet/HeartRateUnits" key="ValueSet-HeartRateUnits" name="Heart Rate Units"/>
+<artifact id="Observation/height" key="Observation-height" name="Height Example"/>
 <artifact id="StructureDefinition/HeightMeasurementRecommendations" key="StructureDefinition-HeightMeasurementRecommendations" name="Height Measurement Recommendations"/>
 <artifact id="StructureDefinition/HeightMeasurementRequirements" key="StructureDefinition-HeightMeasurementRequirements" name="Height Measurement Requirements"/>
+<artifact id="Observation/length" key="Observation-length" name="Length Example (from US Core)"/>
 <artifact id="StructureDefinition/ManualEntryDetectableRequirements" key="StructureDefinition-ManualEntryDetectableRequirements" name="Manual Entry Detectable Requirements"/>
 <artifact id="StructureDefinition/MeasurementDeviceIdentifiedRequirements" key="StructureDefinition-MeasurementDeviceIdentifiedRequirements" name="Measurement Device Identified Requirements"/>
 <artifact id="StructureDefinition/NetworkAddressRecommendations" key="StructureDefinition-NetworkAddressRecommendations" name="Network Address Recommendations"/>
+<artifact id="Observation/satO2-fiO2" key="Observation-satO2-fiO2" name="O2 SAT Example (from US Core)"/>
+<artifact id="Patient/example" key="Patient-example" name="Patient Example (from US Core)"/>
 <artifact id="StructureDefinition/PhysicalActivityAndSleepRecommendations" key="StructureDefinition-PhysicalActivityAndSleepRecommendations" name="Physical Activity And Sleep Recommendations"/>
 <artifact id="StructureDefinition/PhysicalActivityAndSleepRequirements" key="StructureDefinition-PhysicalActivityAndSleepRequirements" name="Physical Activity And Sleep Requirements"/>
+<artifact id="Observation/respiratory-rate" key="Observation-respiratory-rate" name="Respiration Rate Example (from US Core)"/>
 <artifact id="StructureDefinition/RespirationRateRecommendations" key="StructureDefinition-RespirationRateRecommendations" name="Respiration Rate Recommendations"/>
 <artifact id="StructureDefinition/RespirationRateRequirements" key="StructureDefinition-RespirationRateRequirements" name="Respiration Rate Requirements"/>
 <artifact id="ValueSet/RespirationRateUnits" key="ValueSet-RespirationRateUnits" name="Respiration Rate Units"/>
+<artifact id="Observation/phd-spo2" key="Observation-phd-spo2" name="SPO2 Example (from PHD)"/>
+<artifact id="Patient/sisansarahId.1.2.3.4.5.6.7.8.10" key="Patient-sisansarahId.1.2.3.4.5.6.7.8.10" name="Second Patient Example (from PHD)"/>
 <artifact id="StructureDefinition/SoftwareVersionRecommendations" key="StructureDefinition-SoftwareVersionRecommendations" name="Software Version Recommendations"/>
 <artifact id="StructureDefinition/Spo2MeasurementRecommendations" key="StructureDefinition-Spo2MeasurementRecommendations" name="Spo2 Measurement Recommendations"/>
 <artifact id="StructureDefinition/Spo2MeasurementRequirements" key="StructureDefinition-Spo2MeasurementRequirements" name="Spo2 Measurement Requirements"/>
 <artifact id="StructureDefinition/StandardTerminologyUsedRecommendations" key="StructureDefinition-StandardTerminologyUsedRecommendations" name="Standard Terminology Used Recommendations"/>
+<artifact id="Observation/temperature" key="Observation-temperature" name="Temperature Example (from US Core)"/>
 <artifact id="StructureDefinition/TemperatureMeasurementRecommendations" key="StructureDefinition-TemperatureMeasurementRecommendations" name="Temperature Measurement Recommendations"/>
 <artifact id="StructureDefinition/TemperatureMeasurementRequirements" key="StructureDefinition-TemperatureMeasurementRequirements" name="Temperature Measurement Requirements"/>
 <artifact id="StructureDefinition/TimeStampOrDurationRequirements" key="StructureDefinition-TimeStampOrDurationRequirements" name="Time Stamp Or Duration Requirements"/>
@@ -57,8 +72,10 @@
 <artifact id="StructureDefinition/UserHeightRequirements" key="StructureDefinition-UserHeightRequirements" name="User Height Requirements"/>
 <artifact id="StructureDefinition/UserNameRequirements" key="StructureDefinition-UserNameRequirements" name="User Name Requirements"/>
 <artifact id="StructureDefinition/UserWeightRequirements" key="StructureDefinition-UserWeightRequirements" name="User Weight Requirements"/>
+<artifact id="Observation/weight" key="Observation-weight" name="Weight Example (from US Core)"/>
 <artifact id="StructureDefinition/WeightMeasurementRecommendations" key="StructureDefinition-WeightMeasurementRecommendations" name="Weight Measurement Recommendations"/>
 <artifact id="StructureDefinition/WeightMeasurementRequirements" key="StructureDefinition-WeightMeasurementRequirements" name="Weight Measurement Requirements"/>
+<artifact id="Observation/bloodPress-1.0.1" key="Observation-bloodPress-1.0.1" name="bloodPress-1.0.1"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>

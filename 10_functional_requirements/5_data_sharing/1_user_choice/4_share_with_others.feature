@@ -8,7 +8,7 @@ is beyond the scope of this section.
 
 @App-Shall @Infra-Shall
 Scenario:  User requests sharing with another user or third party.
-A user shall be able to share data with others of their choosing.
+A user shall be able to share user selected data with others of their choosing.
 
 Given A <User>
   And Another <Party> (either user or third party)
@@ -31,3 +31,12 @@ Given A <User>
   And <Data> has been recorded in/by <System>
  When The <User> requests sharing of their data stop from <System> to <Party>
  Then <Party> can no longer access the user data (both current and historical).
+
+ @App-Shall @Infra-Shall
+Scenario:  User can request a list of users or third party with whom data is being shared.
+A user shall be able to see who data is being shared with.
+
+Given A <User>
+  And Other <Parties> (either users or third parties) which data can be shared with
+ When The <User> requests a list of data sharing recipients
+ Then The list of <Parties> is displayed

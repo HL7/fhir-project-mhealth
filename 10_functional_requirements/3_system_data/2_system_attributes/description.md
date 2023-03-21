@@ -12,9 +12,8 @@ it effectively becomes a measurement.
 
 Note: Provision of device identifiers, network addresses, software versions, et cetera,
 has security ramifications that should be addressed in the overall device privacy and
-security reequirements. These issues are addressed separately in the HL7 Consumer Mobile
-Health Application Functional Framework (CMHAFF) Specification
-(https://cmhaff.healtheservice.com/Standard/ConformanceCriteria/ProductUsage/TabId/1074/Default.aspx) as
+security reequirements. These issues are addressed separately in the
+[HL7 Consumer Mobile Health Application Functional Framework (CMHAFF) Specification](https://cmhaff.healtheservice.com/Standard/ConformanceCriteria/ProductUsage/TabId/1074/Default.aspx) as
 well as in the general [Security](http://hl7.org/fhir/security.html) section of the HL7 FHIR
 R4 specification.
 

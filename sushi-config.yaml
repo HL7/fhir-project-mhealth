@@ -165,6 +165,43 @@ pages:
     title: Appendices
     generation: markdown
 
+# Resources examples
+resources:
+  Observation/blood-pressure:
+    name: Example Blood Pressure Observation
+    description: An Example Blood Pressure Observation
+    exampleCanonical: http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/BpMeasurementRequirements
+  Device/phd-74E8FFFEFF051C00.001C05FFE874:
+    name: Device Example
+    description: Device Example
+    exampleCanonical: http://hl7.org/fhir/uv/mhealth-framework/StructureDefinition/DeviceIdentifierRequirements
+  Observation/bp-data-absent:
+    name: BP Example w/ Data Absent
+  Observation/blood-glucose:
+    name: Blood Glucose Example (from US Core)
+  Observation/bmi:
+    name: BMI Example (from US Core)
+  Observation/heart-rate:
+    name: Heart Rate Example (from US Core)
+  Observation/length:
+    name: Length Example (from US Core)
+  Observation/respiratory-rate:
+    name: Respiration Rate Example (from US Core)
+  Observation/satO2-fiO2:
+    name: O2 SAT Example (from US Core)
+  Observation/temperature:
+    name: Temperature Example (from US Core)
+  Observation/weight:
+    name: Weight Example (from US Core)
+  Patient/example:
+    name: Patient Example (from US Core)
+  Observation/battery-charge:
+    name: Battery Charge Example (from PHD)
+  Observation/phd-spo2:
+    name: SPO2 Example (from PHD)
+  Patient/sisansarahId.1.2.3.4.5.6.7.8.10:
+    name: Second Patient Example (from PHD)
+
 
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To control the ig.ini using this config, uncomment and set the "template" property.           │

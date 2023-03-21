@@ -12,9 +12,8 @@ it effectively becomes a measurement.
 
 Note: Provision of device identifiers, network addresses, software versions, et cetera,
 has security ramifications that should be addressed in the overall device privacy and
-security reequirements. These issues are addressed separately in the HL7 Consumer Mobile
-Health Application Functional Framework (CMHAFF) Specification
-(https://cmhaff.healtheservice.com/Standard/ConformanceCriteria/ProductUsage/TabId/1074/Default.aspx) as
+security reequirements. These issues are addressed separately in the
+[HL7 Consumer Mobile Health Application Functional Framework (CMHAFF) Specification](https://cmhaff.healtheservice.com/Standard/ConformanceCriteria/ProductUsage/TabId/1074/Default.aspx) as
 well as in the general [Security](http://hl7.org/fhir/security.html) section of the HL7 FHIR
 R4 specification.
 
@@ -55,7 +54,7 @@ THEN
 
 The device that performs a measurement **SHALL** be uniquely identified.
 
-Each type of device has attributes with regard to precision, accuracy and quality which
+Each type of device has attributes with regard to precision, accuracy and quality that
 can impact the interpretation of measurements taken by the device.  Knowledge of the
 device helps greatly in interpreting the results.
 
@@ -443,7 +442,7 @@ THEN
 
 #### <a name='battery-charge-can-be-accessed'>Scenario: Battery Charge Can be Accessed</a>
 
-Battery charge status can be accessed on devices which have a battery.
+Battery charge status can be accessed on devices that have a battery.
 
 GIVEN
 : A <i>&lt;Device Record&gt;</i>

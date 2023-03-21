@@ -78,7 +78,7 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was recorded. 
 
 
-#### <a name='_84739718'>Background: </a>
+#### <a name='_288665596'>Background: </a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -179,7 +179,7 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was recorded. 
 
 
-#### <a name='_84739718'>Background: </a>
+#### <a name='_288665596'>Background: </a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -242,7 +242,7 @@ BUT
 : The <i>&lt;Device&gt;</i> does not need to be reconfigured (e.g., paired with) <i>&lt;MobileDevice1&gt;</i> or <i>&lt;MobileDevice2&gt;</i> before taking the measurement.
 
 
-#### <a name='_2050835901'>Background: Multiple Device Support</a>
+#### <a name='_13648335'>Background: Multiple Device Support</a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -264,7 +264,7 @@ THEN
 ##### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='replacement-device'>Scenario: Replacement Device</a>
 
 Patients may replace a broken, failed, lost or otherwise non-functional
-device with a new device of the same type, not lose their existing data maintained
+device with a new device of the similar type, not lose their existing data maintained
 in the app (e.g., all measures of a given kind may be treated as a single stream),
 and yet also be able to distinguish which device took which measurement.
 
@@ -344,7 +344,7 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was recorded. 
 
 
-#### <a name='_84739718'>Background: </a>
+#### <a name='_288665596'>Background: </a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -407,7 +407,7 @@ BUT
 : The <i>&lt;Device&gt;</i> does not need to be reconfigured (e.g., paired with) <i>&lt;MobileDevice1&gt;</i> or <i>&lt;MobileDevice2&gt;</i> before taking the measurement.
 
 
-#### <a name='_2050835901'>Background: Multiple Device Support</a>
+#### <a name='_13648335'>Background: Multiple Device Support</a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -429,7 +429,7 @@ THEN
 ##### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='replacement-device'>Scenario: Replacement Device</a>
 
 Patients may replace a broken, failed, lost or otherwise non-functional
-device with a new device of the same type, not lose their existing data maintained
+device with a new device of the similar type, not lose their existing data maintained
 in the app (e.g., all measures of a given kind may be treated as a single stream),
 and yet also be able to distinguish which device took which measurement.
 
@@ -533,7 +533,7 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was recorded. 
 
 
-#### <a name='_84739718'>Background: </a>
+#### <a name='_288665596'>Background: </a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -596,7 +596,7 @@ BUT
 : The <i>&lt;Device&gt;</i> does not need to be reconfigured (e.g., paired with) <i>&lt;MobileDevice1&gt;</i> or <i>&lt;MobileDevice2&gt;</i> before taking the measurement.
 
 
-#### <a name='_2050835901'>Background: Multiple Device Support</a>
+#### <a name='_13648335'>Background: Multiple Device Support</a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -618,7 +618,7 @@ THEN
 ##### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='replacement-device'>Scenario: Replacement Device</a>
 
 Patients may replace a broken, failed, lost or otherwise non-functional
-device with a new device of the same type, not lose their existing data maintained
+device with a new device of the similar type, not lose their existing data maintained
 in the app (e.g., all measures of a given kind may be treated as a single stream),
 and yet also be able to distinguish which device took which measurement.
 
@@ -751,7 +751,7 @@ THEN
 : that <i>&lt;Measurement&gt;</i> has a time stamp or time period indicating when it was recorded. 
 
 
-#### <a name='_84739718'>Background: </a>
+#### <a name='_288665596'>Background: </a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -814,7 +814,7 @@ BUT
 : The <i>&lt;Device&gt;</i> does not need to be reconfigured (e.g., paired with) <i>&lt;MobileDevice1&gt;</i> or <i>&lt;MobileDevice2&gt;</i> before taking the measurement.
 
 
-#### <a name='_2050835901'>Background: Multiple Device Support</a>
+#### <a name='_13648335'>Background: Multiple Device Support</a>
 
 The following scenarios describe further support requirements for similar
 and different devices.  The requirements below apply to both of the scenarios
@@ -836,7 +836,7 @@ THEN
 ##### <span class='glyphicon text-success glyphicon-phone'/> <span class='glyphicon text-success glyphicon-dashboard'/> <a name='replacement-device'>Scenario: Replacement Device</a>
 
 Patients may replace a broken, failed, lost or otherwise non-functional
-device with a new device of the same type, not lose their existing data maintained
+device with a new device of the similar type, not lose their existing data maintained
 in the app (e.g., all measures of a given kind may be treated as a single stream),
 and yet also be able to distinguish which device took which measurement.
 

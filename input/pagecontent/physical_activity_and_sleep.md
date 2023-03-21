@@ -46,3 +46,19 @@ WHEN
 THEN
 : that <i>&lt;Measurement&gt;</i> is associated with a <i>&lt;SNOMED CT Code&gt;</i> or a <i>&lt;LOINC Code&gt;</i> describing the activity or quality descriptor 
 
+
+#### <span class='glyphicon text-info glyphicon-dashboard'/> <a name='reporting-physical-activity-with-other-measurements'>Scenario: Reporting Physical Activity With Other Measurements</a>
+
+
+GIVEN
+: a <i>&lt;User&gt;</i>
+
+   AND
+   : a <i>&lt;Device&gt;</i>
+
+WHEN
+: a <i>&lt;Device&gt;</i> reports <i>&lt;Vital Sign Measurements&gt;</i>
+
+THEN
+: the <i>&lt;Device&gt;</i> should also report recent physical activity at the same time
+

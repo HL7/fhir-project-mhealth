@@ -21,3 +21,10 @@ along with the duration of the activity.
    When the <Measurement> is retrieved
    Then that <Measurement> is associated with a <SNOMED CT Code> or a <LOINC Code> describing the activity or quality descriptor [[ Observation#Measurement#PhysicalActivity: code obeys system = 'http://snomed.info/sct' or system = 'http://loinc.org' ]]
 
+
+@Device-Should
+Scenario: Reporting Physical Activity with other measurements
+Given a <User>
+  And a <Device>
+ When a <Device> reports <Vital Sign Measurements>
+ Then the <Device> should also report recent physical activity at the same time
